@@ -1,3 +1,0 @@
-/home/eyk/1code/todo-listux/build/CMakeFiles/tl.dir
-/home/eyk/1code/todo-listux/build/CMakeFiles/edit_cache.dir
-/home/eyk/1code/todo-listux/build/CMakeFiles/rebuild_cache.dir

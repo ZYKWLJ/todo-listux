@@ -50,6 +50,9 @@
         "typeinfo": "c",
         "utility": "c",
         "month.h": "c",
-        "undo.h": "c"
+        "undo.h": "c",
+        "time.h": "c",
+        "taskyear.h": "c",
+        "taskmonth.h": "c"
     }
 }

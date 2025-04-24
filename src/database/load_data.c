@@ -4,14 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-#include "../../include/include.h"
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 // 检查并创建目录
 int create_directory(const char *path)
 {
@@ -33,9 +25,10 @@ TaskYear *load_data(int year)
     // printf("Loading data for year %d.dat...\n", year);
     char filename[100];
 #ifdef _WIN32
-    snprintf(filename, sizeof(filename), "C:\\%d.dat", year);
+    // snprintf(filename, sizeof(filename), "D:\\%d.dat", year);
+    snprintf(filename, sizeof(filename), "C:\\Users\\29001\\AppData\\Local\\tl\\%d.dat", year);
     // 检查并创建目录
-    if (create_directory("C:\\") != 0)
+    if (create_directory("C:\\Users\\29001\\AppData\\Local\\tl") != 0)
     {
         printf("Failed to create directory.\n");
         return NULL;
