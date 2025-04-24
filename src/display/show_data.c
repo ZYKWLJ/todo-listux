@@ -50,13 +50,15 @@ void display_current_date_tasks(TaskYear *task_year, int year, int month, int da
 
     for (int i = 0; i < current_day_tasks->size; i++)
     {
-        if (current_day_tasks->task[i].is_done)
+        if (current_day_tasks->task[i].is_done)//默认是0
         {
-            printf(GREEN"%2d. [√] %s\n"RESET, i + 1, current_day_tasks->task[i].task);
+            // 完成了绿色
+            printf(GREEN"%2d. [-] %s\n"RESET, i + 1, current_day_tasks->task[i].task);
         }
         else
         {
-            printf(RED"%2d. [x] %s\n"RESET, i + 1, current_day_tasks->task[i].task);
+            // 未完成红色
+            printf(RED"%2d. [+] %s\n"RESET, i + 1, current_day_tasks->task[i].task);
         }
         // printf("%2d. [%s] %s\n", i + 1,
         //        current_day_tasks->task[i].is_done ? "√" : "×",

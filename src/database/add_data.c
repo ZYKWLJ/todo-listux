@@ -3,7 +3,7 @@
 void add_task(TaskYear *year_tasks, int year, int month, int day, int index, char *content)
 {
     // 参数检查...
-
+    // printf("add_task....\n");
     TaskDay *day_tasks = year_tasks->months[month - 1]->days[day - 1];
 
     // 确保有足够容量
@@ -38,6 +38,6 @@ void add_task(TaskYear *year_tasks, int year, int month, int day, int index, cha
         day_tasks->task[index].is_done = 0;
         day_tasks->size++; // 必须增加size
     }
-
+    // printf("add_task....succussed!\n");
     save_data(year_tasks, year);
 }
