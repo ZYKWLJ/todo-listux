@@ -1,19 +1,25 @@
 #include "../../include/include.h"
-// 修改数据
-void modify_task(int year, int month, int day, Task*** task_year, int index) {
-    month--;
-    day--;
-    if (index >= 0 && index < 10 && strlen(task_year[month][day][index].task) > 0) {
-        printf("Enter new task: ");
-        char input[100];
-        fgets(input, sizeof(input), stdin);
-        input[strcspn(input, "\n")] = 0;
-        free(task_year[month][day][index].task);
-        task_year[month][day][index].task = (char*)malloc(sizeof(char) * (strlen(input) + 1));
-        strcpy(task_year[month][day][index].task, input);
-        save_data(year, task_year);
-        printf("Task modified.\n");
-    } else {
-        printf("Invalid task index.\n");
+// 修改任务
+void modify_task(TaskYear *year_tasks, int year, int month, int day, int index, char *new_content)
+{
+    if (year_tasks == NULL || year != year_tasks->year || month < 1 || month > 12)
+    {
+        return;
     }
+    TaskMonth *month_tasks = &year_tasks->months[month - 1];
+    TaskDay *day_tasks = &month_tasks->days[day - 1];
+    if (index < 0 || index >= day_tasks->size)
+    {
+        return;
+    }
+    if (strlen(new_content) >= MAX_TASK_CHAR_LENGTH)
+    {
+        day_tasks->task[index].task = (char *)realloc(day_tasks->task[index].task, strlen(new_content) + 1);
+        if (day_tasks->task[index].task == NULL)
+        {
+            printf("Memory allocation failed.\n");
+            return;
+        }
+    }
+    strcpy(day_tasks->task[index].task, new_content);
 }

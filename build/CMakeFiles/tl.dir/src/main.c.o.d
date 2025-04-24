@@ -57,13 +57,26 @@ CMakeFiles/tl.dir/src/main.c.o: /home/eyk/1code/todo-listux/src/main.c \
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
  /home/eyk/1code/todo-listux/src/../include/strcutures/Task.h \
+ /home/eyk/1code/todo-listux/src/../include/strcutures/TaskDay.h \
+ /home/eyk/1code/todo-listux/src/../include/strcutures/../include.h \
+ /home/eyk/1code/todo-listux/src/../include/strcutures/TaskMonth.h \
+ /home/eyk/1code/todo-listux/src/../include/strcutures/TaskYear.h \
  /home/eyk/1code/todo-listux/src/../include/display/show_data.h \
  /home/eyk/1code/todo-listux/src/../include/display/../include.h \
  /home/eyk/1code/todo-listux/src/../include/tools/tools.h \
- /home/eyk/1code/todo-listux/src/../include/database/init.h \
- /home/eyk/1code/todo-listux/src/../include/database/../include.h \
+ /home/eyk/1code/todo-listux/src/../include/tools/MONTH.h \
  /home/eyk/1code/todo-listux/src/../include/database/load_data.h \
+ /home/eyk/1code/todo-listux/src/../include/database/../include.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
  /home/eyk/1code/todo-listux/src/../include/database/save_data.h \
  /home/eyk/1code/todo-listux/src/../include/database/delete_data.h \
  /home/eyk/1code/todo-listux/src/../include/database/modify_data.h \
- /home/eyk/1code/todo-listux/src/../include/database/add_data.h
+ /home/eyk/1code/todo-listux/src/../include/database/add_data.h \
+ /home/eyk/1code/todo-listux/src/../include/execute/find.h \
+ /home/eyk/1code/todo-listux/src/../include/execute/../include.h \
+ /home/eyk/1code/todo-listux/src/../include/execute/delete.h \
+ /home/eyk/1code/todo-listux/src/../include/execute/modify.h \
+ /home/eyk/1code/todo-listux/src/../include/execute/add.h \
+ /home/eyk/1code/todo-listux/src/../include/display/help.h

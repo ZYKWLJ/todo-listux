@@ -6,12 +6,21 @@
 #include <string.h>
 #include <time.h>
 #include "strcutures/Task.h"
+#include "strcutures/TaskDay.h"
+#include "strcutures/TaskMonth.h"
+#include "strcutures/TaskYear.h"
 #include "display/show_data.h"
 #include "tools/tools.h"
-#include "database/init.h"
+#include "tools/MONTH.h"
 #include "database/load_data.h"
 #include "database/save_data.h"
 #include "database/delete_data.h"
 #include "database/modify_data.h"
 #include "database/add_data.h"
+#include "execute/find.h"
+#include "execute/delete.h"
+#include "execute/modify.h"
+#include "execute/add.h"
+#include "display/help.h"
+
 #endif

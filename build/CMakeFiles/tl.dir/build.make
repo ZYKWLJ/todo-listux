@@ -97,24 +97,10 @@ CMakeFiles/tl.dir/src/database/delete_data.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/database/delete_data.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/1code/todo-listux/src/database/delete_data.c -o CMakeFiles/tl.dir/src/database/delete_data.c.s
 
-CMakeFiles/tl.dir/src/database/init.c.o: CMakeFiles/tl.dir/flags.make
-CMakeFiles/tl.dir/src/database/init.c.o: /home/eyk/1code/todo-listux/src/database/init.c
-CMakeFiles/tl.dir/src/database/init.c.o: CMakeFiles/tl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/tl.dir/src/database/init.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/database/init.c.o -MF CMakeFiles/tl.dir/src/database/init.c.o.d -o CMakeFiles/tl.dir/src/database/init.c.o -c /home/eyk/1code/todo-listux/src/database/init.c
-
-CMakeFiles/tl.dir/src/database/init.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/database/init.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/1code/todo-listux/src/database/init.c > CMakeFiles/tl.dir/src/database/init.c.i
-
-CMakeFiles/tl.dir/src/database/init.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/database/init.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/1code/todo-listux/src/database/init.c -o CMakeFiles/tl.dir/src/database/init.c.s
-
 CMakeFiles/tl.dir/src/database/load_data.c.o: CMakeFiles/tl.dir/flags.make
 CMakeFiles/tl.dir/src/database/load_data.c.o: /home/eyk/1code/todo-listux/src/database/load_data.c
 CMakeFiles/tl.dir/src/database/load_data.c.o: CMakeFiles/tl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/tl.dir/src/database/load_data.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/tl.dir/src/database/load_data.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/database/load_data.c.o -MF CMakeFiles/tl.dir/src/database/load_data.c.o.d -o CMakeFiles/tl.dir/src/database/load_data.c.o -c /home/eyk/1code/todo-listux/src/database/load_data.c
 
 CMakeFiles/tl.dir/src/database/load_data.c.i: cmake_force
@@ -128,7 +114,7 @@ CMakeFiles/tl.dir/src/database/load_data.c.s: cmake_force
 CMakeFiles/tl.dir/src/database/modify_data.c.o: CMakeFiles/tl.dir/flags.make
 CMakeFiles/tl.dir/src/database/modify_data.c.o: /home/eyk/1code/todo-listux/src/database/modify_data.c
 CMakeFiles/tl.dir/src/database/modify_data.c.o: CMakeFiles/tl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/tl.dir/src/database/modify_data.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/tl.dir/src/database/modify_data.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/database/modify_data.c.o -MF CMakeFiles/tl.dir/src/database/modify_data.c.o.d -o CMakeFiles/tl.dir/src/database/modify_data.c.o -c /home/eyk/1code/todo-listux/src/database/modify_data.c
 
 CMakeFiles/tl.dir/src/database/modify_data.c.i: cmake_force
@@ -142,7 +128,7 @@ CMakeFiles/tl.dir/src/database/modify_data.c.s: cmake_force
 CMakeFiles/tl.dir/src/database/save_data.c.o: CMakeFiles/tl.dir/flags.make
 CMakeFiles/tl.dir/src/database/save_data.c.o: /home/eyk/1code/todo-listux/src/database/save_data.c
 CMakeFiles/tl.dir/src/database/save_data.c.o: CMakeFiles/tl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/tl.dir/src/database/save_data.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/tl.dir/src/database/save_data.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/database/save_data.c.o -MF CMakeFiles/tl.dir/src/database/save_data.c.o.d -o CMakeFiles/tl.dir/src/database/save_data.c.o -c /home/eyk/1code/todo-listux/src/database/save_data.c
 
 CMakeFiles/tl.dir/src/database/save_data.c.i: cmake_force
@@ -152,6 +138,20 @@ CMakeFiles/tl.dir/src/database/save_data.c.i: cmake_force
 CMakeFiles/tl.dir/src/database/save_data.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/database/save_data.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/1code/todo-listux/src/database/save_data.c -o CMakeFiles/tl.dir/src/database/save_data.c.s
+
+CMakeFiles/tl.dir/src/display/help.c.o: CMakeFiles/tl.dir/flags.make
+CMakeFiles/tl.dir/src/display/help.c.o: /home/eyk/1code/todo-listux/src/display/help.c
+CMakeFiles/tl.dir/src/display/help.c.o: CMakeFiles/tl.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/tl.dir/src/display/help.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/display/help.c.o -MF CMakeFiles/tl.dir/src/display/help.c.o.d -o CMakeFiles/tl.dir/src/display/help.c.o -c /home/eyk/1code/todo-listux/src/display/help.c
+
+CMakeFiles/tl.dir/src/display/help.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/display/help.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/1code/todo-listux/src/display/help.c > CMakeFiles/tl.dir/src/display/help.c.i
+
+CMakeFiles/tl.dir/src/display/help.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/display/help.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/1code/todo-listux/src/display/help.c -o CMakeFiles/tl.dir/src/display/help.c.s
 
 CMakeFiles/tl.dir/src/display/show_data.c.o: CMakeFiles/tl.dir/flags.make
 CMakeFiles/tl.dir/src/display/show_data.c.o: /home/eyk/1code/todo-listux/src/display/show_data.c
@@ -167,10 +167,66 @@ CMakeFiles/tl.dir/src/display/show_data.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/display/show_data.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/1code/todo-listux/src/display/show_data.c -o CMakeFiles/tl.dir/src/display/show_data.c.s
 
+CMakeFiles/tl.dir/src/execute/add.c.o: CMakeFiles/tl.dir/flags.make
+CMakeFiles/tl.dir/src/execute/add.c.o: /home/eyk/1code/todo-listux/src/execute/add.c
+CMakeFiles/tl.dir/src/execute/add.c.o: CMakeFiles/tl.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/tl.dir/src/execute/add.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/execute/add.c.o -MF CMakeFiles/tl.dir/src/execute/add.c.o.d -o CMakeFiles/tl.dir/src/execute/add.c.o -c /home/eyk/1code/todo-listux/src/execute/add.c
+
+CMakeFiles/tl.dir/src/execute/add.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/execute/add.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/1code/todo-listux/src/execute/add.c > CMakeFiles/tl.dir/src/execute/add.c.i
+
+CMakeFiles/tl.dir/src/execute/add.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/execute/add.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/1code/todo-listux/src/execute/add.c -o CMakeFiles/tl.dir/src/execute/add.c.s
+
+CMakeFiles/tl.dir/src/execute/delete.c.o: CMakeFiles/tl.dir/flags.make
+CMakeFiles/tl.dir/src/execute/delete.c.o: /home/eyk/1code/todo-listux/src/execute/delete.c
+CMakeFiles/tl.dir/src/execute/delete.c.o: CMakeFiles/tl.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/tl.dir/src/execute/delete.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/execute/delete.c.o -MF CMakeFiles/tl.dir/src/execute/delete.c.o.d -o CMakeFiles/tl.dir/src/execute/delete.c.o -c /home/eyk/1code/todo-listux/src/execute/delete.c
+
+CMakeFiles/tl.dir/src/execute/delete.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/execute/delete.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/1code/todo-listux/src/execute/delete.c > CMakeFiles/tl.dir/src/execute/delete.c.i
+
+CMakeFiles/tl.dir/src/execute/delete.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/execute/delete.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/1code/todo-listux/src/execute/delete.c -o CMakeFiles/tl.dir/src/execute/delete.c.s
+
+CMakeFiles/tl.dir/src/execute/find.c.o: CMakeFiles/tl.dir/flags.make
+CMakeFiles/tl.dir/src/execute/find.c.o: /home/eyk/1code/todo-listux/src/execute/find.c
+CMakeFiles/tl.dir/src/execute/find.c.o: CMakeFiles/tl.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/tl.dir/src/execute/find.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/execute/find.c.o -MF CMakeFiles/tl.dir/src/execute/find.c.o.d -o CMakeFiles/tl.dir/src/execute/find.c.o -c /home/eyk/1code/todo-listux/src/execute/find.c
+
+CMakeFiles/tl.dir/src/execute/find.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/execute/find.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/1code/todo-listux/src/execute/find.c > CMakeFiles/tl.dir/src/execute/find.c.i
+
+CMakeFiles/tl.dir/src/execute/find.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/execute/find.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/1code/todo-listux/src/execute/find.c -o CMakeFiles/tl.dir/src/execute/find.c.s
+
+CMakeFiles/tl.dir/src/execute/modify.c.o: CMakeFiles/tl.dir/flags.make
+CMakeFiles/tl.dir/src/execute/modify.c.o: /home/eyk/1code/todo-listux/src/execute/modify.c
+CMakeFiles/tl.dir/src/execute/modify.c.o: CMakeFiles/tl.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/tl.dir/src/execute/modify.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/execute/modify.c.o -MF CMakeFiles/tl.dir/src/execute/modify.c.o.d -o CMakeFiles/tl.dir/src/execute/modify.c.o -c /home/eyk/1code/todo-listux/src/execute/modify.c
+
+CMakeFiles/tl.dir/src/execute/modify.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/execute/modify.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/1code/todo-listux/src/execute/modify.c > CMakeFiles/tl.dir/src/execute/modify.c.i
+
+CMakeFiles/tl.dir/src/execute/modify.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/execute/modify.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/1code/todo-listux/src/execute/modify.c -o CMakeFiles/tl.dir/src/execute/modify.c.s
+
 CMakeFiles/tl.dir/src/main.c.o: CMakeFiles/tl.dir/flags.make
 CMakeFiles/tl.dir/src/main.c.o: /home/eyk/1code/todo-listux/src/main.c
 CMakeFiles/tl.dir/src/main.c.o: CMakeFiles/tl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/tl.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/tl.dir/src/main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/main.c.o -MF CMakeFiles/tl.dir/src/main.c.o.d -o CMakeFiles/tl.dir/src/main.c.o -c /home/eyk/1code/todo-listux/src/main.c
 
 CMakeFiles/tl.dir/src/main.c.i: cmake_force
@@ -181,10 +237,66 @@ CMakeFiles/tl.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/1code/todo-listux/src/main.c -o CMakeFiles/tl.dir/src/main.c.s
 
+CMakeFiles/tl.dir/src/strcutures/TaskDay.c.o: CMakeFiles/tl.dir/flags.make
+CMakeFiles/tl.dir/src/strcutures/TaskDay.c.o: /home/eyk/1code/todo-listux/src/strcutures/TaskDay.c
+CMakeFiles/tl.dir/src/strcutures/TaskDay.c.o: CMakeFiles/tl.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/tl.dir/src/strcutures/TaskDay.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/strcutures/TaskDay.c.o -MF CMakeFiles/tl.dir/src/strcutures/TaskDay.c.o.d -o CMakeFiles/tl.dir/src/strcutures/TaskDay.c.o -c /home/eyk/1code/todo-listux/src/strcutures/TaskDay.c
+
+CMakeFiles/tl.dir/src/strcutures/TaskDay.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/strcutures/TaskDay.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/1code/todo-listux/src/strcutures/TaskDay.c > CMakeFiles/tl.dir/src/strcutures/TaskDay.c.i
+
+CMakeFiles/tl.dir/src/strcutures/TaskDay.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/strcutures/TaskDay.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/1code/todo-listux/src/strcutures/TaskDay.c -o CMakeFiles/tl.dir/src/strcutures/TaskDay.c.s
+
+CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.o: CMakeFiles/tl.dir/flags.make
+CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.o: /home/eyk/1code/todo-listux/src/strcutures/TaskMonth.c
+CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.o: CMakeFiles/tl.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.o -MF CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.o.d -o CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.o -c /home/eyk/1code/todo-listux/src/strcutures/TaskMonth.c
+
+CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/1code/todo-listux/src/strcutures/TaskMonth.c > CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.i
+
+CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/1code/todo-listux/src/strcutures/TaskMonth.c -o CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.s
+
+CMakeFiles/tl.dir/src/strcutures/TaskYear.c.o: CMakeFiles/tl.dir/flags.make
+CMakeFiles/tl.dir/src/strcutures/TaskYear.c.o: /home/eyk/1code/todo-listux/src/strcutures/TaskYear.c
+CMakeFiles/tl.dir/src/strcutures/TaskYear.c.o: CMakeFiles/tl.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/tl.dir/src/strcutures/TaskYear.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/strcutures/TaskYear.c.o -MF CMakeFiles/tl.dir/src/strcutures/TaskYear.c.o.d -o CMakeFiles/tl.dir/src/strcutures/TaskYear.c.o -c /home/eyk/1code/todo-listux/src/strcutures/TaskYear.c
+
+CMakeFiles/tl.dir/src/strcutures/TaskYear.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/strcutures/TaskYear.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/1code/todo-listux/src/strcutures/TaskYear.c > CMakeFiles/tl.dir/src/strcutures/TaskYear.c.i
+
+CMakeFiles/tl.dir/src/strcutures/TaskYear.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/strcutures/TaskYear.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/1code/todo-listux/src/strcutures/TaskYear.c -o CMakeFiles/tl.dir/src/strcutures/TaskYear.c.s
+
+CMakeFiles/tl.dir/src/tools/MONTH.c.o: CMakeFiles/tl.dir/flags.make
+CMakeFiles/tl.dir/src/tools/MONTH.c.o: /home/eyk/1code/todo-listux/src/tools/MONTH.c
+CMakeFiles/tl.dir/src/tools/MONTH.c.o: CMakeFiles/tl.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/tl.dir/src/tools/MONTH.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/tools/MONTH.c.o -MF CMakeFiles/tl.dir/src/tools/MONTH.c.o.d -o CMakeFiles/tl.dir/src/tools/MONTH.c.o -c /home/eyk/1code/todo-listux/src/tools/MONTH.c
+
+CMakeFiles/tl.dir/src/tools/MONTH.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/tools/MONTH.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/1code/todo-listux/src/tools/MONTH.c > CMakeFiles/tl.dir/src/tools/MONTH.c.i
+
+CMakeFiles/tl.dir/src/tools/MONTH.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/tools/MONTH.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/1code/todo-listux/src/tools/MONTH.c -o CMakeFiles/tl.dir/src/tools/MONTH.c.s
+
 CMakeFiles/tl.dir/src/tools/tools.c.o: CMakeFiles/tl.dir/flags.make
 CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/1code/todo-listux/src/tools/tools.c
 CMakeFiles/tl.dir/src/tools/tools.c.o: CMakeFiles/tl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/tl.dir/src/tools/tools.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/tl.dir/src/tools/tools.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/tools/tools.c.o -MF CMakeFiles/tl.dir/src/tools/tools.c.o.d -o CMakeFiles/tl.dir/src/tools/tools.c.o -c /home/eyk/1code/todo-listux/src/tools/tools.c
 
 CMakeFiles/tl.dir/src/tools/tools.c.i: cmake_force
@@ -199,12 +311,20 @@ CMakeFiles/tl.dir/src/tools/tools.c.s: cmake_force
 tl_OBJECTS = \
 "CMakeFiles/tl.dir/src/database/add_data.c.o" \
 "CMakeFiles/tl.dir/src/database/delete_data.c.o" \
-"CMakeFiles/tl.dir/src/database/init.c.o" \
 "CMakeFiles/tl.dir/src/database/load_data.c.o" \
 "CMakeFiles/tl.dir/src/database/modify_data.c.o" \
 "CMakeFiles/tl.dir/src/database/save_data.c.o" \
+"CMakeFiles/tl.dir/src/display/help.c.o" \
 "CMakeFiles/tl.dir/src/display/show_data.c.o" \
+"CMakeFiles/tl.dir/src/execute/add.c.o" \
+"CMakeFiles/tl.dir/src/execute/delete.c.o" \
+"CMakeFiles/tl.dir/src/execute/find.c.o" \
+"CMakeFiles/tl.dir/src/execute/modify.c.o" \
 "CMakeFiles/tl.dir/src/main.c.o" \
+"CMakeFiles/tl.dir/src/strcutures/TaskDay.c.o" \
+"CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.o" \
+"CMakeFiles/tl.dir/src/strcutures/TaskYear.c.o" \
+"CMakeFiles/tl.dir/src/tools/MONTH.c.o" \
 "CMakeFiles/tl.dir/src/tools/tools.c.o"
 
 # External object files for target tl
@@ -212,16 +332,24 @@ tl_EXTERNAL_OBJECTS =
 
 /home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/add_data.c.o
 /home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/delete_data.c.o
-/home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/init.c.o
 /home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/load_data.c.o
 /home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/modify_data.c.o
 /home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/save_data.c.o
+/home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/display/help.c.o
 /home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/display/show_data.c.o
+/home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/execute/add.c.o
+/home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/execute/delete.c.o
+/home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/execute/find.c.o
+/home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/execute/modify.c.o
 /home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/main.c.o
+/home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/strcutures/TaskDay.c.o
+/home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.o
+/home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/strcutures/TaskYear.c.o
+/home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/tools/MONTH.c.o
 /home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/src/tools/tools.c.o
 /home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/build.make
 /home/eyk/1code/todo-listux/bin/tl: CMakeFiles/tl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable /home/eyk/1code/todo-listux/bin/tl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/eyk/1code/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking C executable /home/eyk/1code/todo-listux/bin/tl"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

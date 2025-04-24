@@ -2,6 +2,6 @@
 #define SAVE_DATA_H
 #include "../include.h"
 
-// 保存数据
-void save_data(int year, Task ***task_year);
+// 保存任务数据到文件
+void save_data(TaskYear *year_tasks, int year);
 #endif

@@ -10,12 +10,20 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/eyk/1code/todo-listux/src/database/add_data.c" "CMakeFiles/tl.dir/src/database/add_data.c.o" "gcc" "CMakeFiles/tl.dir/src/database/add_data.c.o.d"
   "/home/eyk/1code/todo-listux/src/database/delete_data.c" "CMakeFiles/tl.dir/src/database/delete_data.c.o" "gcc" "CMakeFiles/tl.dir/src/database/delete_data.c.o.d"
-  "/home/eyk/1code/todo-listux/src/database/init.c" "CMakeFiles/tl.dir/src/database/init.c.o" "gcc" "CMakeFiles/tl.dir/src/database/init.c.o.d"
   "/home/eyk/1code/todo-listux/src/database/load_data.c" "CMakeFiles/tl.dir/src/database/load_data.c.o" "gcc" "CMakeFiles/tl.dir/src/database/load_data.c.o.d"
   "/home/eyk/1code/todo-listux/src/database/modify_data.c" "CMakeFiles/tl.dir/src/database/modify_data.c.o" "gcc" "CMakeFiles/tl.dir/src/database/modify_data.c.o.d"
   "/home/eyk/1code/todo-listux/src/database/save_data.c" "CMakeFiles/tl.dir/src/database/save_data.c.o" "gcc" "CMakeFiles/tl.dir/src/database/save_data.c.o.d"
+  "/home/eyk/1code/todo-listux/src/display/help.c" "CMakeFiles/tl.dir/src/display/help.c.o" "gcc" "CMakeFiles/tl.dir/src/display/help.c.o.d"
   "/home/eyk/1code/todo-listux/src/display/show_data.c" "CMakeFiles/tl.dir/src/display/show_data.c.o" "gcc" "CMakeFiles/tl.dir/src/display/show_data.c.o.d"
+  "/home/eyk/1code/todo-listux/src/execute/add.c" "CMakeFiles/tl.dir/src/execute/add.c.o" "gcc" "CMakeFiles/tl.dir/src/execute/add.c.o.d"
+  "/home/eyk/1code/todo-listux/src/execute/delete.c" "CMakeFiles/tl.dir/src/execute/delete.c.o" "gcc" "CMakeFiles/tl.dir/src/execute/delete.c.o.d"
+  "/home/eyk/1code/todo-listux/src/execute/find.c" "CMakeFiles/tl.dir/src/execute/find.c.o" "gcc" "CMakeFiles/tl.dir/src/execute/find.c.o.d"
+  "/home/eyk/1code/todo-listux/src/execute/modify.c" "CMakeFiles/tl.dir/src/execute/modify.c.o" "gcc" "CMakeFiles/tl.dir/src/execute/modify.c.o.d"
   "/home/eyk/1code/todo-listux/src/main.c" "CMakeFiles/tl.dir/src/main.c.o" "gcc" "CMakeFiles/tl.dir/src/main.c.o.d"
+  "/home/eyk/1code/todo-listux/src/strcutures/TaskDay.c" "CMakeFiles/tl.dir/src/strcutures/TaskDay.c.o" "gcc" "CMakeFiles/tl.dir/src/strcutures/TaskDay.c.o.d"
+  "/home/eyk/1code/todo-listux/src/strcutures/TaskMonth.c" "CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.o" "gcc" "CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.o.d"
+  "/home/eyk/1code/todo-listux/src/strcutures/TaskYear.c" "CMakeFiles/tl.dir/src/strcutures/TaskYear.c.o" "gcc" "CMakeFiles/tl.dir/src/strcutures/TaskYear.c.o.d"
+  "/home/eyk/1code/todo-listux/src/tools/MONTH.c" "CMakeFiles/tl.dir/src/tools/MONTH.c.o" "gcc" "CMakeFiles/tl.dir/src/tools/MONTH.c.o.d"
   "/home/eyk/1code/todo-listux/src/tools/tools.c" "CMakeFiles/tl.dir/src/tools/tools.c.o" "gcc" "CMakeFiles/tl.dir/src/tools/tools.c.o.d"
   )
 

@@ -58,13 +58,26 @@ CMakeFiles/tl.dir/src/display/show_data.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
  /home/eyk/1code/todo-listux/src/display/../../include/strcutures/Task.h \
+ /home/eyk/1code/todo-listux/src/display/../../include/strcutures/TaskDay.h \
+ /home/eyk/1code/todo-listux/src/display/../../include/strcutures/../include.h \
+ /home/eyk/1code/todo-listux/src/display/../../include/strcutures/TaskMonth.h \
+ /home/eyk/1code/todo-listux/src/display/../../include/strcutures/TaskYear.h \
  /home/eyk/1code/todo-listux/src/display/../../include/display/show_data.h \
  /home/eyk/1code/todo-listux/src/display/../../include/display/../include.h \
  /home/eyk/1code/todo-listux/src/display/../../include/tools/tools.h \
- /home/eyk/1code/todo-listux/src/display/../../include/database/init.h \
- /home/eyk/1code/todo-listux/src/display/../../include/database/../include.h \
+ /home/eyk/1code/todo-listux/src/display/../../include/tools/MONTH.h \
  /home/eyk/1code/todo-listux/src/display/../../include/database/load_data.h \
+ /home/eyk/1code/todo-listux/src/display/../../include/database/../include.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
  /home/eyk/1code/todo-listux/src/display/../../include/database/save_data.h \
  /home/eyk/1code/todo-listux/src/display/../../include/database/delete_data.h \
  /home/eyk/1code/todo-listux/src/display/../../include/database/modify_data.h \
- /home/eyk/1code/todo-listux/src/display/../../include/database/add_data.h
+ /home/eyk/1code/todo-listux/src/display/../../include/database/add_data.h \
+ /home/eyk/1code/todo-listux/src/display/../../include/execute/find.h \
+ /home/eyk/1code/todo-listux/src/display/../../include/execute/../include.h \
+ /home/eyk/1code/todo-listux/src/display/../../include/execute/delete.h \
+ /home/eyk/1code/todo-listux/src/display/../../include/execute/modify.h \
+ /home/eyk/1code/todo-listux/src/display/../../include/execute/add.h \
+ /home/eyk/1code/todo-listux/src/display/../../include/display/help.h

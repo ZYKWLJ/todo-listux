@@ -58,13 +58,26 @@ CMakeFiles/tl.dir/src/database/load_data.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
  /home/eyk/1code/todo-listux/src/database/../../include/strcutures/Task.h \
+ /home/eyk/1code/todo-listux/src/database/../../include/strcutures/TaskDay.h \
+ /home/eyk/1code/todo-listux/src/database/../../include/strcutures/../include.h \
+ /home/eyk/1code/todo-listux/src/database/../../include/strcutures/TaskMonth.h \
+ /home/eyk/1code/todo-listux/src/database/../../include/strcutures/TaskYear.h \
  /home/eyk/1code/todo-listux/src/database/../../include/display/show_data.h \
  /home/eyk/1code/todo-listux/src/database/../../include/display/../include.h \
  /home/eyk/1code/todo-listux/src/database/../../include/tools/tools.h \
- /home/eyk/1code/todo-listux/src/database/../../include/database/init.h \
- /home/eyk/1code/todo-listux/src/database/../../include/database/../include.h \
+ /home/eyk/1code/todo-listux/src/database/../../include/tools/MONTH.h \
  /home/eyk/1code/todo-listux/src/database/../../include/database/load_data.h \
+ /home/eyk/1code/todo-listux/src/database/../../include/database/../include.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
  /home/eyk/1code/todo-listux/src/database/../../include/database/save_data.h \
  /home/eyk/1code/todo-listux/src/database/../../include/database/delete_data.h \
  /home/eyk/1code/todo-listux/src/database/../../include/database/modify_data.h \
- /home/eyk/1code/todo-listux/src/database/../../include/database/add_data.h
+ /home/eyk/1code/todo-listux/src/database/../../include/database/add_data.h \
+ /home/eyk/1code/todo-listux/src/database/../../include/execute/find.h \
+ /home/eyk/1code/todo-listux/src/database/../../include/execute/../include.h \
+ /home/eyk/1code/todo-listux/src/database/../../include/execute/delete.h \
+ /home/eyk/1code/todo-listux/src/database/../../include/execute/modify.h \
+ /home/eyk/1code/todo-listux/src/database/../../include/execute/add.h \
+ /home/eyk/1code/todo-listux/src/database/../../include/display/help.h

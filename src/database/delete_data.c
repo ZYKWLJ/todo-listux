@@ -1,16 +1,23 @@
 #include "../../include/include.h"
-// 删除数据
-void delete_task(int year, int month, int day, Task*** task_year, int index) {
-    month--;
-    day--;
-    if (index >= 0 && index < 10 && strlen(task_year[month][day][index].task) > 0) {
-        free(task_year[month][day][index].task);
-        task_year[month][day][index].task = (char*)malloc(sizeof(char) * 100);
-        task_year[month][day][index].task[0] = '\0';
-        task_year[month][day][index].is_done = 0;
-        save_data(year, task_year);
-        printf("Task deleted.\n");
-    } else {
-        printf("Invalid task index.\n");
+// 删除任务
+void delete_task(TaskYear *year_tasks, int year, int month, int day, int index)
+{
+    if (year_tasks == NULL || year != year_tasks->year || month < 1 || month > 12)
+    {
+        return;
     }
+    TaskMonth *month_tasks = &year_tasks->months[month - 1];
+    TaskDay *day_tasks = &month_tasks->days[day - 1];
+    if (index < 0 || index >= day_tasks->size)
+    {
+        return;
+    }
+    free(day_tasks->task[index].task);
+    // 移动任务位置
+    for (int i = index; i < day_tasks->size - 1; i++)
+    {
+        strcpy(day_tasks->task[i].task, day_tasks->task[i + 1].task);
+        day_tasks->task[i].is_done = day_tasks->task[i + 1].is_done;
+    }
+    day_tasks->size--;
 }

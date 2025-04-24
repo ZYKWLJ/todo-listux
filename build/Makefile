@@ -177,30 +177,6 @@ src/database/delete_data.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/delete_data.c.s
 .PHONY : src/database/delete_data.c.s
 
-src/database/init.o: src/database/init.c.o
-.PHONY : src/database/init.o
-
-# target to build an object file
-src/database/init.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/init.c.o
-.PHONY : src/database/init.c.o
-
-src/database/init.i: src/database/init.c.i
-.PHONY : src/database/init.i
-
-# target to preprocess a source file
-src/database/init.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/init.c.i
-.PHONY : src/database/init.c.i
-
-src/database/init.s: src/database/init.c.s
-.PHONY : src/database/init.s
-
-# target to generate assembly for a file
-src/database/init.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/init.c.s
-.PHONY : src/database/init.c.s
-
 src/database/load_data.o: src/database/load_data.c.o
 .PHONY : src/database/load_data.o
 
@@ -273,6 +249,30 @@ src/database/save_data.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/save_data.c.s
 .PHONY : src/database/save_data.c.s
 
+src/display/help.o: src/display/help.c.o
+.PHONY : src/display/help.o
+
+# target to build an object file
+src/display/help.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/display/help.c.o
+.PHONY : src/display/help.c.o
+
+src/display/help.i: src/display/help.c.i
+.PHONY : src/display/help.i
+
+# target to preprocess a source file
+src/display/help.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/display/help.c.i
+.PHONY : src/display/help.c.i
+
+src/display/help.s: src/display/help.c.s
+.PHONY : src/display/help.s
+
+# target to generate assembly for a file
+src/display/help.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/display/help.c.s
+.PHONY : src/display/help.c.s
+
 src/display/show_data.o: src/display/show_data.c.o
 .PHONY : src/display/show_data.o
 
@@ -297,6 +297,102 @@ src/display/show_data.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/display/show_data.c.s
 .PHONY : src/display/show_data.c.s
 
+src/execute/add.o: src/execute/add.c.o
+.PHONY : src/execute/add.o
+
+# target to build an object file
+src/execute/add.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/add.c.o
+.PHONY : src/execute/add.c.o
+
+src/execute/add.i: src/execute/add.c.i
+.PHONY : src/execute/add.i
+
+# target to preprocess a source file
+src/execute/add.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/add.c.i
+.PHONY : src/execute/add.c.i
+
+src/execute/add.s: src/execute/add.c.s
+.PHONY : src/execute/add.s
+
+# target to generate assembly for a file
+src/execute/add.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/add.c.s
+.PHONY : src/execute/add.c.s
+
+src/execute/delete.o: src/execute/delete.c.o
+.PHONY : src/execute/delete.o
+
+# target to build an object file
+src/execute/delete.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/delete.c.o
+.PHONY : src/execute/delete.c.o
+
+src/execute/delete.i: src/execute/delete.c.i
+.PHONY : src/execute/delete.i
+
+# target to preprocess a source file
+src/execute/delete.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/delete.c.i
+.PHONY : src/execute/delete.c.i
+
+src/execute/delete.s: src/execute/delete.c.s
+.PHONY : src/execute/delete.s
+
+# target to generate assembly for a file
+src/execute/delete.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/delete.c.s
+.PHONY : src/execute/delete.c.s
+
+src/execute/find.o: src/execute/find.c.o
+.PHONY : src/execute/find.o
+
+# target to build an object file
+src/execute/find.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/find.c.o
+.PHONY : src/execute/find.c.o
+
+src/execute/find.i: src/execute/find.c.i
+.PHONY : src/execute/find.i
+
+# target to preprocess a source file
+src/execute/find.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/find.c.i
+.PHONY : src/execute/find.c.i
+
+src/execute/find.s: src/execute/find.c.s
+.PHONY : src/execute/find.s
+
+# target to generate assembly for a file
+src/execute/find.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/find.c.s
+.PHONY : src/execute/find.c.s
+
+src/execute/modify.o: src/execute/modify.c.o
+.PHONY : src/execute/modify.o
+
+# target to build an object file
+src/execute/modify.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/modify.c.o
+.PHONY : src/execute/modify.c.o
+
+src/execute/modify.i: src/execute/modify.c.i
+.PHONY : src/execute/modify.i
+
+# target to preprocess a source file
+src/execute/modify.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/modify.c.i
+.PHONY : src/execute/modify.c.i
+
+src/execute/modify.s: src/execute/modify.c.s
+.PHONY : src/execute/modify.s
+
+# target to generate assembly for a file
+src/execute/modify.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/modify.c.s
+.PHONY : src/execute/modify.c.s
+
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
@@ -320,6 +416,102 @@ src/main.s: src/main.c.s
 src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/main.c.s
 .PHONY : src/main.c.s
+
+src/strcutures/TaskDay.o: src/strcutures/TaskDay.c.o
+.PHONY : src/strcutures/TaskDay.o
+
+# target to build an object file
+src/strcutures/TaskDay.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/strcutures/TaskDay.c.o
+.PHONY : src/strcutures/TaskDay.c.o
+
+src/strcutures/TaskDay.i: src/strcutures/TaskDay.c.i
+.PHONY : src/strcutures/TaskDay.i
+
+# target to preprocess a source file
+src/strcutures/TaskDay.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/strcutures/TaskDay.c.i
+.PHONY : src/strcutures/TaskDay.c.i
+
+src/strcutures/TaskDay.s: src/strcutures/TaskDay.c.s
+.PHONY : src/strcutures/TaskDay.s
+
+# target to generate assembly for a file
+src/strcutures/TaskDay.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/strcutures/TaskDay.c.s
+.PHONY : src/strcutures/TaskDay.c.s
+
+src/strcutures/TaskMonth.o: src/strcutures/TaskMonth.c.o
+.PHONY : src/strcutures/TaskMonth.o
+
+# target to build an object file
+src/strcutures/TaskMonth.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.o
+.PHONY : src/strcutures/TaskMonth.c.o
+
+src/strcutures/TaskMonth.i: src/strcutures/TaskMonth.c.i
+.PHONY : src/strcutures/TaskMonth.i
+
+# target to preprocess a source file
+src/strcutures/TaskMonth.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.i
+.PHONY : src/strcutures/TaskMonth.c.i
+
+src/strcutures/TaskMonth.s: src/strcutures/TaskMonth.c.s
+.PHONY : src/strcutures/TaskMonth.s
+
+# target to generate assembly for a file
+src/strcutures/TaskMonth.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/strcutures/TaskMonth.c.s
+.PHONY : src/strcutures/TaskMonth.c.s
+
+src/strcutures/TaskYear.o: src/strcutures/TaskYear.c.o
+.PHONY : src/strcutures/TaskYear.o
+
+# target to build an object file
+src/strcutures/TaskYear.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/strcutures/TaskYear.c.o
+.PHONY : src/strcutures/TaskYear.c.o
+
+src/strcutures/TaskYear.i: src/strcutures/TaskYear.c.i
+.PHONY : src/strcutures/TaskYear.i
+
+# target to preprocess a source file
+src/strcutures/TaskYear.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/strcutures/TaskYear.c.i
+.PHONY : src/strcutures/TaskYear.c.i
+
+src/strcutures/TaskYear.s: src/strcutures/TaskYear.c.s
+.PHONY : src/strcutures/TaskYear.s
+
+# target to generate assembly for a file
+src/strcutures/TaskYear.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/strcutures/TaskYear.c.s
+.PHONY : src/strcutures/TaskYear.c.s
+
+src/tools/MONTH.o: src/tools/MONTH.c.o
+.PHONY : src/tools/MONTH.o
+
+# target to build an object file
+src/tools/MONTH.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/tools/MONTH.c.o
+.PHONY : src/tools/MONTH.c.o
+
+src/tools/MONTH.i: src/tools/MONTH.c.i
+.PHONY : src/tools/MONTH.i
+
+# target to preprocess a source file
+src/tools/MONTH.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/tools/MONTH.c.i
+.PHONY : src/tools/MONTH.c.i
+
+src/tools/MONTH.s: src/tools/MONTH.c.s
+.PHONY : src/tools/MONTH.s
+
+# target to generate assembly for a file
+src/tools/MONTH.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/tools/MONTH.c.s
+.PHONY : src/tools/MONTH.c.s
 
 src/tools/tools.o: src/tools/tools.c.o
 .PHONY : src/tools/tools.o
@@ -360,9 +552,6 @@ help:
 	@echo "... src/database/delete_data.o"
 	@echo "... src/database/delete_data.i"
 	@echo "... src/database/delete_data.s"
-	@echo "... src/database/init.o"
-	@echo "... src/database/init.i"
-	@echo "... src/database/init.s"
 	@echo "... src/database/load_data.o"
 	@echo "... src/database/load_data.i"
 	@echo "... src/database/load_data.s"
@@ -372,12 +561,39 @@ help:
 	@echo "... src/database/save_data.o"
 	@echo "... src/database/save_data.i"
 	@echo "... src/database/save_data.s"
+	@echo "... src/display/help.o"
+	@echo "... src/display/help.i"
+	@echo "... src/display/help.s"
 	@echo "... src/display/show_data.o"
 	@echo "... src/display/show_data.i"
 	@echo "... src/display/show_data.s"
+	@echo "... src/execute/add.o"
+	@echo "... src/execute/add.i"
+	@echo "... src/execute/add.s"
+	@echo "... src/execute/delete.o"
+	@echo "... src/execute/delete.i"
+	@echo "... src/execute/delete.s"
+	@echo "... src/execute/find.o"
+	@echo "... src/execute/find.i"
+	@echo "... src/execute/find.s"
+	@echo "... src/execute/modify.o"
+	@echo "... src/execute/modify.i"
+	@echo "... src/execute/modify.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/strcutures/TaskDay.o"
+	@echo "... src/strcutures/TaskDay.i"
+	@echo "... src/strcutures/TaskDay.s"
+	@echo "... src/strcutures/TaskMonth.o"
+	@echo "... src/strcutures/TaskMonth.i"
+	@echo "... src/strcutures/TaskMonth.s"
+	@echo "... src/strcutures/TaskYear.o"
+	@echo "... src/strcutures/TaskYear.i"
+	@echo "... src/strcutures/TaskYear.s"
+	@echo "... src/tools/MONTH.o"
+	@echo "... src/tools/MONTH.i"
+	@echo "... src/tools/MONTH.s"
 	@echo "... src/tools/tools.o"
 	@echo "... src/tools/tools.i"
 	@echo "... src/tools/tools.s"
