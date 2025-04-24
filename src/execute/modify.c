@@ -9,6 +9,6 @@ int modify(TaskYear *year_task, int year, int month, int day, int index, int arg
         return 1;
     }
     int modify_index = atoi(argv[2]);
-    modify_task(year_task, year, month, day, modify_index, argv[3]);
+    modify_task_content(year_task, year, month, day, modify_index-1, argv[3]);
     display_current_date_tasks(year_task, year, month, day);
 }

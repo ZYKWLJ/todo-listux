@@ -345,6 +345,30 @@ src/execute/delete.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/delete.c.s
 .PHONY : src/execute/delete.c.s
 
+src/execute/done.o: src/execute/done.c.o
+.PHONY : src/execute/done.o
+
+# target to build an object file
+src/execute/done.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/done.c.o
+.PHONY : src/execute/done.c.o
+
+src/execute/done.i: src/execute/done.c.i
+.PHONY : src/execute/done.i
+
+# target to preprocess a source file
+src/execute/done.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/done.c.i
+.PHONY : src/execute/done.c.i
+
+src/execute/done.s: src/execute/done.c.s
+.PHONY : src/execute/done.s
+
+# target to generate assembly for a file
+src/execute/done.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/done.c.s
+.PHONY : src/execute/done.c.s
+
 src/execute/find.o: src/execute/find.c.o
 .PHONY : src/execute/find.o
 
@@ -392,6 +416,30 @@ src/execute/modify.s: src/execute/modify.c.s
 src/execute/modify.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/modify.c.s
 .PHONY : src/execute/modify.c.s
+
+src/execute/undo.o: src/execute/undo.c.o
+.PHONY : src/execute/undo.o
+
+# target to build an object file
+src/execute/undo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/undo.c.o
+.PHONY : src/execute/undo.c.o
+
+src/execute/undo.i: src/execute/undo.c.i
+.PHONY : src/execute/undo.i
+
+# target to preprocess a source file
+src/execute/undo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/undo.c.i
+.PHONY : src/execute/undo.c.i
+
+src/execute/undo.s: src/execute/undo.c.s
+.PHONY : src/execute/undo.s
+
+# target to generate assembly for a file
+src/execute/undo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/execute/undo.c.s
+.PHONY : src/execute/undo.c.s
 
 src/main.o: src/main.c.o
 .PHONY : src/main.o
@@ -573,12 +621,18 @@ help:
 	@echo "... src/execute/delete.o"
 	@echo "... src/execute/delete.i"
 	@echo "... src/execute/delete.s"
+	@echo "... src/execute/done.o"
+	@echo "... src/execute/done.i"
+	@echo "... src/execute/done.s"
 	@echo "... src/execute/find.o"
 	@echo "... src/execute/find.i"
 	@echo "... src/execute/find.s"
 	@echo "... src/execute/modify.o"
 	@echo "... src/execute/modify.i"
 	@echo "... src/execute/modify.s"
+	@echo "... src/execute/undo.o"
+	@echo "... src/execute/undo.i"
+	@echo "... src/execute/undo.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

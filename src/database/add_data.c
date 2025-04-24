@@ -11,10 +11,14 @@ void add_task(TaskYear *year_tasks, int year, int month, int day, int index, cha
     {
         expand_capacity(day_tasks);
     }
-
+    if (strlen(content) > strlen(day_tasks->task[index].task))
+    {
+        day_tasks->task[index].task = (char *)realloc(day_tasks->task[index].task, strlen(content) + 1); // 扩容到刚好容下就好
+    }
     // 如果是添加到末尾
     if (index == day_tasks->size)
     {
+        // printf("添加到末尾\n");
         strcpy(day_tasks->task[index].task, content);
         day_tasks->task[index].is_done = 0;
         day_tasks->size++; // 必须增加size
@@ -22,6 +26,7 @@ void add_task(TaskYear *year_tasks, int year, int month, int day, int index, cha
     // 如果是插入到中间
     else
     {
+        // printf("插入到中间\n");
         // 移动后续任务
         for (int i = day_tasks->size; i > index; i--)
         {

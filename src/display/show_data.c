@@ -15,7 +15,7 @@ void display_current_date_tasks(TaskYear *task_year, int year, int month, int da
         return;
     }
 
-    printf("==display_current_date_tasks==\n");
+    // printf("==display_current_date_tasks==\n");
     // 月份和日期减1是因为数组索引从0开始
     month--;
     day--;
@@ -34,7 +34,7 @@ void display_current_date_tasks(TaskYear *task_year, int year, int month, int da
         return;
     }
 
-    printf("Date: %d-%d-%d\n", year, month + 1, day + 1);
+    // printf("Date: %d-%d-%d\n", year, month + 1, day + 1);
 
     // 获取当前日期的任务列表
     TaskDay *current_day_tasks = task_year->months[month]->days[day];
@@ -46,12 +46,20 @@ void display_current_date_tasks(TaskYear *task_year, int year, int month, int da
         return;
     }
 
-    printf("Tasks for %d-%d-%d (Total: %d):\n", year, month, day, current_day_tasks->size);
+    printf("Tasks for %d-%d-%d (Total: %d):\n", year, month + 1, day + 1, current_day_tasks->size);
 
     for (int i = 0; i < current_day_tasks->size; i++)
     {
-        printf("%d. [%s] %s\n", i + 1,
-               current_day_tasks->task[i].is_done ? "X" : " ",
-               current_day_tasks->task[i].task);
+        if (current_day_tasks->task[i].is_done)
+        {
+            printf(GREEN"%2d. [√] %s\n"RESET, i + 1, current_day_tasks->task[i].task);
+        }
+        else
+        {
+            printf(RED"%2d. [×] %s\n"RESET, i + 1, current_day_tasks->task[i].task);
+        }
+        // printf("%2d. [%s] %s\n", i + 1,
+        //        current_day_tasks->task[i].is_done ? "√" : "×",
+        //        current_day_tasks->task[i].task);
     }
 }

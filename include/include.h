@@ -10,6 +10,7 @@
 #include "strcutures/TaskMonth.h"
 #include "strcutures/TaskYear.h"
 #include "display/show_data.h"
+#include "display/color.h"
 #include "tools/tools.h"
 #include "tools/MONTH.h"
 #include "database/load_data.h"
@@ -22,5 +23,7 @@
 #include "execute/modify.h"
 #include "execute/add.h"
 #include "display/help.h"
+#include "execute/done.h"
+#include "execute/undo.h"
 
 #endif

@@ -18,13 +18,12 @@ void save_data(TaskYear *year_tasks, int year)
         {
             TaskDay *day_tasks = month_tasks->days[d];
             fprintf(file, "%d %d %d %d\n", m + 1, d + 1, day_tasks->size, day_tasks->capacity);
-            // printf("%d %d %d %d\n", m + 1, d + 1, day_tasks->size, day_tasks->capacity);
             for (int t = 0; t < day_tasks->size; t++)
             {
                 fprintf(file, "%s %d\n", day_tasks->task[t].task, day_tasks->task[t].is_done);
-                // printf("%s %d\n", day_tasks->task[t].task, day_tasks->task[t].is_done);
             }
         }
     }
     fclose(file);
 }
+

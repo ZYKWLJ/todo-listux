@@ -13,19 +13,20 @@ void display_current_time()
 
     // 格式化并输出时间
     char time_str[26];
-    strftime(time_str, sizeof(time_str), "%Y-%m-%d %H:%M:%S", current_time);
+    // strftime(time_str, sizeof(time_str), "%Y-%m-%d %H:%M:%S", current_time);
+    strftime(time_str, sizeof(time_str), "%H:%M:%S", current_time);
     printf("Current time: %s\n", time_str);
 }
 
 int main(int argc, char *argv[])
 {
-    printf("Welcome to TaskList!----");
+    // printf("Welcome to TaskList!----");
     display_current_time();
-    printf("\n");
     int year, month, day;
     get_current_date(&year, &month, &day);
-    printf("Today is %d-%d-%d\n", year, month, day);
+    // printf("Today is %d-%d-%d\n", year, month, day);
     TaskYear *task_year = load_data(year);
+
     if (argc < 2)
     {
         // 如果没有提供足够的命令行参数，显示帮助信息
@@ -41,7 +42,7 @@ int main(int argc, char *argv[])
     {
         index = task_year->months[month - 1]->days[day - 1]->size;
     }
-    printf("index: %d\n", index);
+    // printf("index: %d\n", index);
     // 解析命令行参数并调用相应的处理函数
     if (strcmp(argv[1], "show") == 0 || strcmp(argv[1], "s") == 0)
     {
@@ -59,6 +60,14 @@ int main(int argc, char *argv[])
     {
         modify(task_year, year, month, day, index, argc, argv);
     }
+    else if (strcmp(argv[1], "done") == 0)
+    {
+        done(task_year, year, month, day, index, argc, argv);
+    }
+    else if (strcmp(argv[1], "undo") == 0) // 撤销完成标记
+    {
+        undo(task_year, year, month, day, index, argc, argv);
+    }
     else if (strcmp(argv[1], "help") == 0 || strcmp(argv[1], "h") == 0)
     {
         help();
@@ -69,5 +78,6 @@ int main(int argc, char *argv[])
         help();
     }
     save_data(task_year, year);
+
     return 0;
 }

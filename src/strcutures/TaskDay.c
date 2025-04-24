@@ -8,7 +8,7 @@ TaskDay *init_day_tasks()
         return NULL;
     }
     day_tasks->size = 0;
-    day_tasks->capacity = 10;
+    day_tasks->capacity = INIT_TASK_CAPACITY;
     day_tasks->task = (Task *)malloc(day_tasks->capacity * sizeof(Task));
     if (day_tasks->task == NULL)
     {
@@ -17,7 +17,7 @@ TaskDay *init_day_tasks()
     }
     for (int i = 0; i < day_tasks->capacity; i++)
     {
-        day_tasks->task[i].task = (char *)malloc(100 * sizeof(char));
+        day_tasks->task[i].task = (char *)malloc(MAX_TASK_CHAR_LENGTH * sizeof(char));
         if (day_tasks->task[i].task == NULL)
         {
             for (int j = 0; j < i; j++)

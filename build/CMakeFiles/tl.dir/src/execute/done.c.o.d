@@ -1,7 +1,7 @@
-CMakeFiles/tl.dir/src/display/help.c.o: \
- /home/eyk/1code/todo-listux/src/display/help.c \
+CMakeFiles/tl.dir/src/execute/done.c.o: \
+ /home/eyk/1code/todo-listux/src/execute/done.c \
  /usr/include/stdc-predef.h \
- /home/eyk/1code/todo-listux/src/display/../../include/include.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/include.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -57,30 +57,30 @@ CMakeFiles/tl.dir/src/display/help.c.o: \
  /usr/include/x86_64-linux-gnu/bits/time.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
- /home/eyk/1code/todo-listux/src/display/../../include/strcutures/Task.h \
- /home/eyk/1code/todo-listux/src/display/../../include/strcutures/TaskDay.h \
- /home/eyk/1code/todo-listux/src/display/../../include/strcutures/../include.h \
- /home/eyk/1code/todo-listux/src/display/../../include/strcutures/TaskMonth.h \
- /home/eyk/1code/todo-listux/src/display/../../include/strcutures/TaskYear.h \
- /home/eyk/1code/todo-listux/src/display/../../include/display/show_data.h \
- /home/eyk/1code/todo-listux/src/display/../../include/display/../include.h \
- /home/eyk/1code/todo-listux/src/display/../../include/display/color.h \
- /home/eyk/1code/todo-listux/src/display/../../include/tools/tools.h \
- /home/eyk/1code/todo-listux/src/display/../../include/tools/MONTH.h \
- /home/eyk/1code/todo-listux/src/display/../../include/database/load_data.h \
- /home/eyk/1code/todo-listux/src/display/../../include/database/../include.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/strcutures/Task.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/strcutures/TaskDay.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/strcutures/../include.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/strcutures/TaskMonth.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/strcutures/TaskYear.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/display/show_data.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/display/../include.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/display/color.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/tools/tools.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/tools/MONTH.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/database/load_data.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/database/../include.h \
  /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
- /home/eyk/1code/todo-listux/src/display/../../include/database/save_data.h \
- /home/eyk/1code/todo-listux/src/display/../../include/database/delete_data.h \
- /home/eyk/1code/todo-listux/src/display/../../include/database/modify_data.h \
- /home/eyk/1code/todo-listux/src/display/../../include/database/add_data.h \
- /home/eyk/1code/todo-listux/src/display/../../include/execute/find.h \
- /home/eyk/1code/todo-listux/src/display/../../include/execute/../include.h \
- /home/eyk/1code/todo-listux/src/display/../../include/execute/delete.h \
- /home/eyk/1code/todo-listux/src/display/../../include/execute/modify.h \
- /home/eyk/1code/todo-listux/src/display/../../include/execute/add.h \
- /home/eyk/1code/todo-listux/src/display/../../include/display/help.h \
- /home/eyk/1code/todo-listux/src/display/../../include/execute/done.h \
- /home/eyk/1code/todo-listux/src/display/../../include/execute/undo.h
+ /home/eyk/1code/todo-listux/src/execute/../../include/database/save_data.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/database/delete_data.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/database/modify_data.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/database/add_data.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/execute/find.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/execute/../include.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/execute/delete.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/execute/modify.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/execute/add.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/display/help.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/execute/done.h \
+ /home/eyk/1code/todo-listux/src/execute/../../include/execute/undo.h

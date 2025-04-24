@@ -63,6 +63,7 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: \
  /home/eyk/1code/todo-listux/src/tools/../../include/strcutures/TaskYear.h \
  /home/eyk/1code/todo-listux/src/tools/../../include/display/show_data.h \
  /home/eyk/1code/todo-listux/src/tools/../../include/display/../include.h \
+ /home/eyk/1code/todo-listux/src/tools/../../include/display/color.h \
  /home/eyk/1code/todo-listux/src/tools/../../include/tools/tools.h \
  /home/eyk/1code/todo-listux/src/tools/../../include/tools/MONTH.h \
  /home/eyk/1code/todo-listux/src/tools/../../include/database/load_data.h \
@@ -79,4 +80,6 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: \
  /home/eyk/1code/todo-listux/src/tools/../../include/execute/delete.h \
  /home/eyk/1code/todo-listux/src/tools/../../include/execute/modify.h \
  /home/eyk/1code/todo-listux/src/tools/../../include/execute/add.h \
- /home/eyk/1code/todo-listux/src/tools/../../include/display/help.h
+ /home/eyk/1code/todo-listux/src/tools/../../include/display/help.h \
+ /home/eyk/1code/todo-listux/src/tools/../../include/execute/done.h \
+ /home/eyk/1code/todo-listux/src/tools/../../include/execute/undo.h
