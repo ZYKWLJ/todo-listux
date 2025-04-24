@@ -6,8 +6,8 @@ void delete_task(TaskYear *year_tasks, int year, int month, int day, int index)
     {
         return;
     }
-    TaskMonth *month_tasks = &year_tasks->months[month - 1];
-    TaskDay *day_tasks = &month_tasks->days[day - 1];
+    TaskMonth *month_tasks = year_tasks->months[month - 1];
+    TaskDay *day_tasks = month_tasks->days[day - 1];
     if (index < 0 || index >= day_tasks->size)
     {
         return;
@@ -20,4 +20,5 @@ void delete_task(TaskYear *year_tasks, int year, int month, int day, int index)
         day_tasks->task[i].is_done = day_tasks->task[i + 1].is_done;
     }
     day_tasks->size--;
+    save_data(year_tasks, year);
 }

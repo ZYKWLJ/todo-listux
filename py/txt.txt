@@ -1,3 +1,4 @@
+整体代码在这里，请你纠错
 --- File: /home/eyk/1code/todo-listux/include/include.h ---
 #ifndef INCLUDE_H
 #define INCLUDE_H
@@ -121,7 +122,7 @@ typedef struct TaskMonth
 {
     int month;     // 是几月份
     int num_days;  // 这个月有几天
-    TaskDay **days; // 这个月的每一天的任务
+    TaskDay *days; // 这个月的每一天的任务
 } TaskMonth;
 // 初始化一个月份的任务结构体
 TaskMonth *init_month_tasks(int month, int year);
@@ -138,7 +139,7 @@ void free_month_tasks(TaskMonth *month_tasks);
 typedef struct TaskYear
 {
     int year;
-    TaskMonth **months; // 指向12个月的任务结构体
+    TaskMonth *months; // 指向12个月的任务结构体
 } TaskYear;
 // 初始化某年的任务
 TaskYear *init_year_tasks(int year);
@@ -687,40 +688,63 @@ void save_data(TaskYear *year_tasks, int year)
 --- File: /home/eyk/1code/todo-listux/src/database/add_data.c ---
 #include "../../include/include.h"
 // 添加数据
+// 添加数据
 void add_task(TaskYear *year_tasks, int year, int month, int day, int index, char *content)
 {
-    // 参数检查...
+    printf("==add_task==\n");
+    if (year_tasks == NULL || year != year_tasks->year || month < 1 || month > 12)
+    {
+        return;
+    }
+    // 事实上，这一定是正确的，因为这是系统生成的！
+    TaskMonth *month_tasks = &year_tasks->months[month - 1];
+    TaskDay *day_tasks = &month_tasks->days[day - 1];
 
-    TaskDay *day_tasks = &year_tasks->months[month - 1].days[day - 1];
+    // 检查 index 是否在合理范围内
+    if (index < 0 || index > day_tasks->size)
+    {
+        printf("Invalid index\n");
+        return;
+    }
 
-    // 确保有足够容量
     if (day_tasks->size >= day_tasks->capacity)
     {
-        expand_capacity(day_tasks);
+        expand_capacity(day_tasks); // 扩充任务容量
     }
 
-    // 如果是添加到末尾
-    if (index == day_tasks->size)
+    // 移动任务位置
+    // 从后往前移动，方式覆盖
+    for (int i = day_tasks->size; i > index; i--)
     {
-        strcpy(day_tasks->task[index].task, content);
-        day_tasks->task[index].is_done = 0;
-        day_tasks->size++; // 必须增加size
-    }
-    // 如果是插入到中间
-    else
-    {
-        // 移动后续任务
-        for (int i = day_tasks->size; i > index; i--)
+        // 确保目标位置有足够的内存
+        if (strlen(day_tasks->task[i - 1].task) + 1 > MAX_TASK_CHAR_LENGTH)
         {
-            strcpy(day_tasks->task[i].task, day_tasks->task[i - 1].task);
-            day_tasks->task[i].is_done = day_tasks->task[i - 1].is_done;
+            day_tasks->task[i].task = (char *)realloc(day_tasks->task[i].task, strlen(day_tasks->task[i - 1].task) + 1);
+            if (day_tasks->task[i].task == NULL)
+            {
+                printf("Memory allocation failed during task move.\n");
+                return;
+            }
         }
-        // 插入新任务
-        strcpy(day_tasks->task[index].task, content);
-        day_tasks->task[index].is_done = 0;
-        day_tasks->size++; // 必须增加size
+        strcpy(day_tasks->task[i].task, day_tasks->task[i - 1].task);
+        day_tasks->task[i].is_done = day_tasks->task[i - 1].is_done;
     }
 
+    // 添加新任务(防止char超长，所以这里reallc扩容)
+    if (strlen(content) >= MAX_TASK_CHAR_LENGTH)
+    {
+        day_tasks->task[index].task = (char *)realloc(day_tasks->task[index].task, strlen(content) + 1);
+        if (day_tasks->task[index].task == NULL)
+        {
+            printf("Memory allocation failed.\n");
+            return;
+        }
+    }
+    strcpy(day_tasks->task[index].task, content);
+    day_tasks->task[index].is_done = 0;
+    day_tasks->size++;
+    printf("==add_task_END==\n");
+    printf("task_size=%d\n", day_tasks->size);
     save_data(year_tasks, year);
 }
 
@@ -784,14 +808,14 @@ TaskDay* init_day_tasks() {
         return NULL;
     }
     day_tasks->size = 0;
-    day_tasks->capacity = 10;
+    day_tasks->capacity = INIT_TASK_CAPACITY;//初始化20条任务，足足的！
     day_tasks->task = (Task*)malloc(day_tasks->capacity * sizeof(Task));
     if (day_tasks->task == NULL) {
         free(day_tasks);
         return NULL;
     }
     for (int i = 0; i < day_tasks->capacity; i++) {
-        day_tasks->task[i].task = (char*)malloc(100 * sizeof(char));
+        day_tasks->task[i].task = (char*)malloc(MAX_TASK_CHAR_LENGTH * sizeof(char));//每条任务200个字符
         if (day_tasks->task[i].task == NULL) {
             for (int j = 0; j < i; j++) {
                 free(day_tasks->task[j].task);
@@ -800,10 +824,37 @@ TaskDay* init_day_tasks() {
             free(day_tasks);
             return NULL;
         }
+        day_tasks->task[i].task[0] = '\0';//初始化每一条任务的字符串都为空
+        day_tasks->task[i].is_done = 0;//初始化每一条任务都未完成
+    }
+    return day_tasks;
+}
+
+// 扩容函数
+void expand_capacity(TaskDay *day_tasks) {
+    int new_capacity = day_tasks->capacity * 2;
+    Task *new_task = (Task *)realloc(day_tasks->task, new_capacity * sizeof(Task));
+    if (new_task == NULL) {
+        // 扩容失败，释放原有内存
+        free_day_tasks(day_tasks);
+        return;
+    }
+    day_tasks->task = new_task;
+    day_tasks->capacity = new_capacity;
+    for (int i = day_tasks->size; i < new_capacity; i++) {
+        day_tasks->task[i].task = (char *)malloc(200 * sizeof(char));
+        if (day_tasks->task[i].task == NULL) {
+            // 内存分配失败，释放已分配的内存
+            for (int j = 0; j < i; j++) {
+                free(day_tasks->task[j].task);
+            }
+            free(day_tasks->task);
+            free(day_tasks);
+            return;
+        }
         day_tasks->task[i].task[0] = '\0';
         day_tasks->task[i].is_done = 0;
     }
-    return day_tasks;
 }
 
 // 释放当天任务内存
@@ -815,55 +866,82 @@ void free_day_tasks(TaskDay *day_tasks) {
     free(day_tasks);
 }    
 
+
 --- File: /home/eyk/1code/todo-listux/src/strcutures/TaskMonth.c ---
 #include "../../include/include.h"
-// 初始化某个月的任务// 初始化当月任务
+// 初始化某个月的任务
 TaskMonth *init_month_tasks(int month, int year)
 {
+    if (month < 1 || month > 12)
+    {
+        return NULL;
+    }
+
+    // 将某个月初始化
     TaskMonth *month_tasks = (TaskMonth *)malloc(sizeof(TaskMonth));
+
     if (month_tasks == NULL)
     {
         return NULL;
     }
+    // 月份赋值
     month_tasks->month = month;
-    int month_days[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    // 月份天数赋值
     if (is_leap_year(year))
     {
-        month_days[1] = 29;
+        month_tasks->num_days = 29;
     }
-    month_tasks->num_days = month_days[month - 1];
-    month_tasks->days = (TaskDay **)malloc(month_tasks->num_days * sizeof(TaskDay *));
+    else
+    {
+        month_tasks->num_days = MONTHS[month - 1];
+    }
+
+    // 分配 TaskDay 指针数组
+    month_tasks->days = (TaskDay *)malloc(month_tasks->num_days * sizeof(TaskDay));
     if (month_tasks->days == NULL)
     {
         free(month_tasks);
         return NULL;
     }
+
+    // 初始化每一天的任务
     for (int i = 0; i < month_tasks->num_days; i++)
     {
-        month_tasks->days[i] = init_day_tasks();
-        if (month_tasks->days[i] == NULL)
+        month_tasks->days[i] = *init_day_tasks();
+        if (month_tasks->days[i].task == NULL)
         {
-            // 释放已分配内存
+            // 初始化失败，释放已分配的内存
             for (int j = 0; j < i; j++)
             {
-                free(month_tasks->days[j]);
+                free_day_tasks(&month_tasks->days[j]);
             }
             free(month_tasks->days);
             free(month_tasks);
             return NULL;
         }
     }
+
     return month_tasks;
 }
 
-// 释放当月任务内存
+// 释放某个月的任务内存
 void free_month_tasks(TaskMonth *month_tasks)
 {
+    if (month_tasks == NULL)
+    {
+        return;
+    }
+
+    // 先释放每一天的任务
     for (int i = 0; i < month_tasks->num_days; i++)
     {
-        free_day_tasks(month_tasks->days[i]);
+        free_day_tasks(&month_tasks->days[i]);
     }
+
+    // 再释放 TaskDay 指针数组
     free(month_tasks->days);
+
+    // 最后释放 TaskMonth 本身
     free(month_tasks);
 }
 
@@ -873,41 +951,35 @@ void free_month_tasks(TaskMonth *month_tasks)
 --- File: /home/eyk/1code/todo-listux/src/strcutures/TaskYear.c ---
 #include "../../include/include.h"
 // 初始化这一年的任务
-// 初始化当年任务
-TaskYear* init_year_tasks(int year) {
-    TaskYear *year_tasks = (TaskYear*)malloc(sizeof(TaskYear));
-    if (year_tasks == NULL) {
+TaskYear *init_year_tasks(int year)
+{
+    TaskYear *year_tasks = (TaskYear *)malloc(sizeof(TaskYear));
+    if (year_tasks == NULL)
+    {
         return NULL;
     }
     year_tasks->year = year;
-    year_tasks->months = (TaskMonth **)malloc(12 * sizeof(TaskMonth *));
-    if (year_tasks->months == NULL) {
+    year_tasks->months = (TaskMonth *)malloc(sizeof(TaskMonth) * 12);
+    if (year_tasks->months == NULL)
+    {
         free(year_tasks);
         return NULL;
     }
-    for (int i = 1; i <= 12; i++) {
-        year_tasks->months[i - 1] = init_month_tasks(i, year);
-        if (year_tasks->months[i - 1] == NULL) {
-            // 释放已分配内存
-            for (int j = 0; j < i; j++) {
-                free_month_tasks(year_tasks->months[j]);
-            }
-            free(year_tasks->months);
-            free(year_tasks);
-            return NULL;
-        }
+    for (int i = 0; i < 12; i++)
+    {
+        year_tasks->months[i] = *init_month_tasks(i + 1, year); // 修正这里
     }
     return year_tasks;
 }
-
-// 释放当年任务内存
-void free_year_tasks(TaskYear *year_tasks) {
-    for (int i = 0; i < 12; i++) {
-        free_month_tasks(year_tasks->months[i]);
+// 释放某一年的任务
+void free_year_tasks(TaskYear *year_tasks)
+{
+    for (int i = 0; i < 12; i++)
+    {
+        free_month_tasks(year_tasks->months); // 释放每个月的任务
     }
-    free(year_tasks->months);
-    free(year_tasks);
-}    
+    free(year_tasks); // 最后释放本身
+}
 
 --- File: /home/eyk/1code/todo-listux/src/display/help.c ---
 #include "../../include/include.h"
@@ -927,17 +999,14 @@ void help()
 --- File: /home/eyk/1code/todo-listux/src/display/show_data.c ---
 #include "../../include/include.h"
 // 显示当前日期的所有数据
-void display_current_date_tasks(TaskYear *task_year, int year, int month, int day)
-{
+void display_current_date_tasks( TaskYear* task_year,int year, int month, int day) {
     // 检查 task_year 是否为空
-    if (task_year == NULL)
-    {
+    if (task_year == NULL) {
         printf("task_year is NULL\n");
         return;
     }
     // 检查 months 数组是否为空
-    if (task_year->months == NULL)
-    {
+    if (task_year->months == NULL) {
         printf("task_year->months is NULL\n");
         return;
     }
@@ -948,15 +1017,13 @@ void display_current_date_tasks(TaskYear *task_year, int year, int month, int da
     day--;
 
     // 检查月份是否合法
-    if (month < 0 || month >= 12)
-    {
+    if (month < 0 || month >= 12) {
         printf("Invalid month\n");
         return;
     }
 
     // 检查 days 指针是否为空
-    if (task_year->months[month].days == NULL)
-    {
+    if (task_year->months[month].days == NULL) {
         printf("task_year->months[%d].days is NULL\n", month);
         return;
     }
@@ -964,22 +1031,18 @@ void display_current_date_tasks(TaskYear *task_year, int year, int month, int da
     printf("Date: %d-%d-%d\n", year, month + 1, day + 1);
 
     // 获取当前日期的任务列表
-    TaskDay *current_day_tasks = &task_year->months[month].days[day];
+    TaskDay* current_day_tasks = &task_year->months[month].days[day];
 
     // 检查当天是否有任务
-    if (current_day_tasks->size == 0)
-    {
+    if (current_day_tasks->size == 0) {
         printf("No tasks for this day\n");
         return;
     }
 
-    printf("Tasks for %d-%d-%d (Total: %d):\n", year, month, day, current_day_tasks->size);
-
-    for (int i = 0; i < current_day_tasks->size; i++)
-    {
-        printf("%d. [%s] %s\n", i + 1,
-               current_day_tasks->task[i].is_done ? "X" : " ",
-               current_day_tasks->task[i].task);
+    // 遍历任务列表并打印任务
+    for (int i = 0; i < current_day_tasks->size; i++) {
+        printf("[%s] %s\n", current_day_tasks->task[i].is_done? "X" : " ", current_day_tasks->task[i].task);
     }
 }
 
+每一次tl a content后，都无法正确更新size，数据也无法追加，只是覆盖，当天的查询也无法正确查询到，但是确实添加了数据。

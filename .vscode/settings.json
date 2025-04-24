@@ -48,6 +48,7 @@
         "system_error": "c",
         "tuple": "c",
         "typeinfo": "c",
-        "utility": "c"
+        "utility": "c",
+        "month.h": "c"
     }
 }

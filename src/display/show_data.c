@@ -1,21 +1,57 @@
 #include "../../include/include.h"
 // 显示当前日期的所有数据
-void display_current_date_tasks( TaskYear* task_year,int year, int month, int day) {
-    // 这里假设存在函数 day_of_year 用于计算日期是一年中的第几天
-    // 但函数未给出具体实现，需要你根据实际情况补充
-    int doy = day_of_year(year, month, day); 
+void display_current_date_tasks(TaskYear *task_year, int year, int month, int day)
+{
+    // 检查 task_year 是否为空
+    if (task_year == NULL)
+    {
+        printf("task_year is NULL\n");
+        return;
+    }
+    // 检查 months 数组是否为空
+    if (task_year->months == NULL)
+    {
+        printf("task_year->months is NULL\n");
+        return;
+    }
 
+    printf("==display_current_date_tasks==\n");
     // 月份和日期减1是因为数组索引从0开始
     month--;
     day--;
 
+    // 检查月份是否合法
+    if (month < 0 || month >= 12)
+    {
+        printf("Invalid month\n");
+        return;
+    }
+
+    // 检查 days 指针是否为空
+    if (task_year->months[month]->days == NULL)
+    {
+        printf("task_year->months[%d].days is NULL\n", month);
+        return;
+    }
+
     printf("Date: %d-%d-%d\n", year, month + 1, day + 1);
 
     // 获取当前日期的任务列表
-    TaskDay* current_day_tasks = task_year->months[month].days;
+    TaskDay *current_day_tasks = task_year->months[month]->days[day];
 
-    // 遍历任务列表并打印任务
-    for (int i = 0; i < current_day_tasks->size; i++) {
-        printf("[%s] %s\n", current_day_tasks->task[i].is_done? "X" : " ", current_day_tasks->task[i].task);
+    // 检查当天是否有任务
+    if (current_day_tasks->size == 0)
+    {
+        printf("No tasks for this day\n");
+        return;
+    }
+
+    printf("Tasks for %d-%d-%d (Total: %d):\n", year, month, day, current_day_tasks->size);
+
+    for (int i = 0; i < current_day_tasks->size; i++)
+    {
+        printf("%d. [%s] %s\n", i + 1,
+               current_day_tasks->task[i].is_done ? "X" : " ",
+               current_day_tasks->task[i].task);
     }
 }

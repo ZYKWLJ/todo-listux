@@ -6,8 +6,8 @@ void modify_task(TaskYear *year_tasks, int year, int month, int day, int index, 
     {
         return;
     }
-    TaskMonth *month_tasks = &year_tasks->months[month - 1];
-    TaskDay *day_tasks = &month_tasks->days[day - 1];
+    TaskMonth *month_tasks =year_tasks->months[month - 1];
+    TaskDay *day_tasks =month_tasks->days[day - 1];
     if (index < 0 || index >= day_tasks->size)
     {
         return;
@@ -22,4 +22,5 @@ void modify_task(TaskYear *year_tasks, int year, int month, int day, int index, 
         }
     }
     strcpy(day_tasks->task[index].task, new_content);
+    save_data(year_tasks, year);
 }
