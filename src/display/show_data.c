@@ -56,7 +56,7 @@ void display_current_date_tasks(TaskYear *task_year, int year, int month, int da
         }
         else
         {
-            printf(RED"%2d. [×] %s\n"RESET, i + 1, current_day_tasks->task[i].task);
+            printf(RED"%2d. [x] %s\n"RESET, i + 1, current_day_tasks->task[i].task);
         }
         // printf("%2d. [%s] %s\n", i + 1,
         //        current_day_tasks->task[i].is_done ? "√" : "×",
