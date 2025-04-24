@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "include.h": "c",
+        "init.h": "c",
+        "load_data.h": "c",
+        "modify_data.h": "c"
+    }
+}
