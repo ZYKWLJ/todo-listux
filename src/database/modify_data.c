@@ -42,7 +42,7 @@ void modify_task_state(TaskYear *year_tasks, int year, int month, int day, int i
             day_tasks->task[i].is_done = new_state;
         }
     }
-    else if (index < 1 || index >= day_tasks->size)
+    else if (index < 0 || index >= day_tasks->size)
     {
         printf("Invalid task index.\n");
         return;
