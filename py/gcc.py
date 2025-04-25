@@ -1,7 +1,7 @@
 import os
 
 # 源文件目录
-src_dir = r"D:\3software\todo-listux\src"
+src_dir = r"D:\3software\todo-listux-1\todo-listux\src"
 
 # 收集所有 .c 文件
 c_files = []

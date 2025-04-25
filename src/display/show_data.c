@@ -28,7 +28,7 @@ void display_current_date_tasks(TaskYear *task_year, int year, int month, int da
     }
 
     // 检查 days 指针是否为空
-    if (task_year->months[month]->days == NULL)
+    if (task_year->months[month].days == NULL)
     {
         printf("task_year->months[%d].days is NULL\n", month);
         return;
@@ -37,7 +37,7 @@ void display_current_date_tasks(TaskYear *task_year, int year, int month, int da
     // printf("Date: %d-%d-%d\n", year, month + 1, day + 1);
 
     // 获取当前日期的任务列表
-    TaskDay *current_day_tasks = task_year->months[month]->days[day];
+    TaskDay *current_day_tasks = &task_year->months[month].days[day];
 
     // 检查当天是否有任务
     if (current_day_tasks->size == 0)

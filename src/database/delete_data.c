@@ -2,13 +2,13 @@
 // 删除任务
 void delete_task(TaskYear *year_tasks, int year, int month, int day, int index)
 {
-    printf("delete_task---%d\n", index);
+    // printf("delete_task---%d\n", index);
     if (year_tasks == NULL || year != year_tasks->year || month < 1 || month > 12)
     {
         return;
     }
-    TaskMonth *month_tasks = year_tasks->months[month - 1];
-    TaskDay *day_tasks = month_tasks->days[day - 1];
+    TaskMonth *month_tasks = &year_tasks->months[month - 1];
+    TaskDay *day_tasks = &month_tasks->days[day - 1];
     if (index < 0 || index >= day_tasks->size)
     {
         printf("Invalid task index.\n");

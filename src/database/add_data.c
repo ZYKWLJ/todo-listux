@@ -4,7 +4,7 @@ void add_task(TaskYear *year_tasks, int year, int month, int day, int index, cha
 {
     // 参数检查...
     // printf("add_task....\n");
-    TaskDay *day_tasks = year_tasks->months[month - 1]->days[day - 1];
+    TaskDay *day_tasks =&year_tasks->months[month - 1].days[day - 1];
 
     // 确保有足够容量
     if (day_tasks->size >= day_tasks->capacity)

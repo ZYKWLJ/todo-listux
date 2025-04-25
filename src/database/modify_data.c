@@ -6,8 +6,8 @@ void modify_task_content(TaskYear *year_tasks, int year, int month, int day, int
     {
         return;
     }
-    TaskMonth *month_tasks = year_tasks->months[month - 1];
-    TaskDay *day_tasks = month_tasks->days[day - 1];
+    TaskMonth *month_tasks = &year_tasks->months[month - 1];
+    TaskDay *day_tasks = &month_tasks->days[day - 1];
     if (index < 0 || index >= day_tasks->size)
     {
         printf("Invalid task index.\n");
@@ -32,8 +32,8 @@ void modify_task_state(TaskYear *year_tasks, int year, int month, int day, int i
     {
         return;
     }
-    TaskMonth *month_tasks = year_tasks->months[month - 1];
-    TaskDay *day_tasks = month_tasks->days[day - 1];
+    TaskMonth *month_tasks = &year_tasks->months[month - 1];
+    TaskDay *day_tasks = &month_tasks->days[day - 1];
 
     if (index == -1) // 全部完成或者不完成
     {

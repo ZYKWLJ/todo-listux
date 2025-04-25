@@ -99,11 +99,11 @@ void save_data(TaskYear *year_tasks, int year) {
 
     // 写入每月数据
     for (int m = 0; m < 12; m++) {
-        TaskMonth *month_tasks = year_tasks->months[m];
+        TaskMonth *month_tasks = &year_tasks->months[m];
         if (month_tasks == NULL) continue;
 
         for (int d = 0; d < month_tasks->num_days; d++) {
-            TaskDay *day_tasks = month_tasks->days[d];
+            TaskDay *day_tasks = &month_tasks->days[d];
             if (day_tasks == NULL) continue;
 
             // 写入日期信息和任务数量

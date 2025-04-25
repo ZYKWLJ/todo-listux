@@ -289,10 +289,10 @@ TaskYear *load_data(int year)
 
         for (int m = 0; m < 12; m++)
         {
-            TaskMonth *month_tasks = year_tasks->months[m];
+            TaskMonth *month_tasks = &year_tasks->months[m];
             for (int d = 0; d < month_tasks->num_days; d++)
             {
-                TaskDay *day_tasks = month_tasks->days[d];
+                TaskDay *day_tasks = &month_tasks->days[d];
                 int month_num, day_num, size, capacity;
                 if (fscanf(file, "%d %d %d %d\n", &month_num, &day_num, &size, &capacity) != 4)
                 {

@@ -14,7 +14,7 @@ TaskMonth *init_month_tasks(int month, int year)
         month_days[1] = 29;
     }
     month_tasks->num_days = month_days[month - 1];
-    month_tasks->days = (TaskDay **)malloc(month_tasks->num_days * sizeof(TaskDay *));
+    month_tasks->days = (TaskDay *)malloc(month_tasks->num_days * sizeof(TaskDay));
     if (month_tasks->days == NULL)
     {
         free(month_tasks);
@@ -22,13 +22,13 @@ TaskMonth *init_month_tasks(int month, int year)
     }
     for (int i = 0; i < month_tasks->num_days; i++)
     {
-        month_tasks->days[i] = init_day_tasks();
-        if (month_tasks->days[i] == NULL)
+        month_tasks->days[i] = *init_day_tasks();
+        if (&month_tasks->days[i] == NULL)
         {
             // 释放已分配内存
             for (int j = 0; j < i; j++)
             {
-                free(month_tasks->days[j]);
+                free(&month_tasks->days[j]);
             }
             free(month_tasks->days);
             free(month_tasks);
@@ -43,7 +43,7 @@ void free_month_tasks(TaskMonth *month_tasks)
 {
     for (int i = 0; i < month_tasks->num_days; i++)
     {
-        free_day_tasks(month_tasks->days[i]);
+        free_day_tasks(&month_tasks->days[i]);
     }
     free(month_tasks->days);
     free(month_tasks);
