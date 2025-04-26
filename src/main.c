@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     LOG_PRINT("Today is %d-%d-%d\n", year, month, day);
     LOG_PRINT("loading data......\n", year, month, day);
 #endif
-    TaskYear *task_year = load_data(year);
+    Day_Year_Task *task_year = load_data(year);
     // 先读取设置
     Setting *setting = malloc(sizeof(Setting));
     setting = read_setting(setting);
@@ -36,7 +36,14 @@ int main(int argc, char *argv[])
         help();
         return 1;
     }
-    // 修正这里
+    // 检查是否提供了日期参数
+    if(argv[2] != NULL &&argv[2][0]== '-'){
+        // 解析日期参数
+        printf("这里接入了日期参数接口\n");
+        
+    }else{
+        printf("这里没有加日参数，那就是默认的显示当天的任务\n");
+    }
     int index = 0;
     if (task_year != NULL && task_year->months != NULL &&
         month - 1 >= 0 && month - 1 < 12 &&

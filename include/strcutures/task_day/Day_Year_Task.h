@@ -2,14 +2,14 @@
 #define TASKYEAR_H
 #include "../../include.h"
 // 当年任务结构体
-typedef struct TaskYear
+typedef struct Day_Year_Task
 {
     int year;
     TaskMonth *months; // 指向12个月的任务结构体
-} TaskYear;
+} Day_Year_Task;
 
 // 初始化某年的任务
-TaskYear *init_year_tasks(int year);
+Day_Year_Task *init_year_tasks(int year);
 // 释放某一年的任务
-void free_year_tasks(TaskYear *year_tasks);
+void free_year_tasks(Day_Year_Task *year_tasks);
 #endif

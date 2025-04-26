@@ -7,5 +7,5 @@
 #include <sys/stat.h>
 #endif
 // 加载数据
-TaskYear *load_data(int year);
+Day_Year_Task *load_data(int year);
 #endif

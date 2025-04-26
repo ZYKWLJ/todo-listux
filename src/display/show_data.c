@@ -1,6 +1,6 @@
 #include "../../include/include.h"
 // 显示当前日期的所有数据
-void display_current_date_tasks(TaskYear *task_year, int year, int month, int day, Setting *setting)
+void display_current_date_tasks(Day_Year_Task *task_year, int year, int month, int day, Setting *setting)
 {
     // 检查 task_year 是否为空
     if (task_year == NULL)

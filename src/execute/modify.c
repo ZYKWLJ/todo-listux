@@ -1,6 +1,6 @@
 #include "../../include/include.h"
 
-int modify(TaskYear *year_task, int year, int month, int day, int index, int argc, char **argv,Setting *setting)
+int modify(Day_Year_Task *year_task, int year, int month, int day, int index, int argc, char **argv,Setting *setting)
 {
     if (argc != 4)// 目前只能等于4，多少都不行！tl modify <task_index> <new_content>
     {

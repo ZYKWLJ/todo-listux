@@ -1,8 +1,8 @@
 #include "../../../include/include.h"
 // 初始化这一年的任务
 // 初始化当年任务
-TaskYear* init_year_tasks(int year) {
-    TaskYear *year_tasks = (TaskYear*)malloc(sizeof(TaskYear));
+Day_Year_Task* init_year_tasks(int year) {
+    Day_Year_Task *year_tasks = (Day_Year_Task*)malloc(sizeof(Day_Year_Task));
     if (year_tasks == NULL) {
         return NULL;
     }
@@ -28,7 +28,7 @@ TaskYear* init_year_tasks(int year) {
 }
 
 // 释放当年任务内存
-void free_year_tasks(TaskYear *year_tasks) {
+void free_year_tasks(Day_Year_Task *year_tasks) {
     for (int i = 0; i < 12; i++) {
         free_month_tasks(&year_tasks->months[i]);
     }

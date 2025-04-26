@@ -61,6 +61,7 @@
         "month_year_task.h": "c",
         "month_task.h": "c",
         "week_task.h": "c",
-        "date.h": "c"
+        "date.h": "c",
+        "day_year_task.h": "c"
     }
 }

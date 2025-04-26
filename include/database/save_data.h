@@ -3,5 +3,5 @@
 #include "../include.h"
 
 // 保存任务数据到文件
-void save_data(TaskYear *year_tasks, int year);
+void save_data(Day_Year_Task *year_tasks, int year);
 #endif

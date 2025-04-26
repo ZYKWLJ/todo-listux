@@ -1,6 +1,6 @@
 #include "../../include/include.h"
 // 添加数据
-void add_task(TaskYear *year_tasks, int year, int month, int day, int index, char *content)
+void add_task(Day_Year_Task *year_tasks, int year, int month, int day, int index, char *content)
 {
     // 参数检查...
     LOG_PRINT("add_task....\n");

@@ -1,6 +1,6 @@
 #include "../../include/include.h"
 // 删除任务
-void delete_task(TaskYear *year_tasks, int year, int month, int day, int index)
+void delete_task(Day_Year_Task *year_tasks, int year, int month, int day, int index)
 {
     // printf("delete_task---%d\n", index);
     if (year_tasks == NULL || year != year_tasks->year || month < 1 || month > 12)

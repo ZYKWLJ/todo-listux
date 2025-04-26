@@ -1,6 +1,6 @@
 #include "../../include/include.h"
 // 修改任务
-void modify_task_content(TaskYear *year_tasks, int year, int month, int day, int index, char *new_content)
+void modify_task_content(Day_Year_Task *year_tasks, int year, int month, int day, int index, char *new_content)
 {
     if (year_tasks == NULL || year != year_tasks->year || month < 1 || month > 12)
     {
@@ -27,7 +27,7 @@ void modify_task_content(TaskYear *year_tasks, int year, int month, int day, int
     save_data(year_tasks, year);
 }
 
-void modify_task_state(TaskYear *year_tasks, int year, int month, int day, int index, int new_state)
+void modify_task_state(Day_Year_Task *year_tasks, int year, int month, int day, int index, int new_state)
 {
     if (year_tasks == NULL || year != year_tasks->year || month < 1 || month > 12)
     {

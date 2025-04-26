@@ -1,6 +1,6 @@
 #include "../../include/include.h"
 
-int delete_(TaskYear *year_task, int year, int month, int day, int index, int argc, char **argv,Setting *setting)
+int delete_(Day_Year_Task *year_task, int year, int month, int day, int index, int argc, char **argv,Setting *setting)
 {
     if (argc != 3) // 目前只能等于3，多少都不行！
     {

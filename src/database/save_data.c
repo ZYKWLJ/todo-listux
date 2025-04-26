@@ -40,7 +40,7 @@ const char* get_appdata_path1() {
 }
 
 // 跨平台保存数据
-void save_data(TaskYear *year_tasks, int year) {
+void save_data(Day_Year_Task *year_tasks, int year) {
     if (year_tasks == NULL) {
         fprintf(stderr, "Error: Null year_tasks pointer\n");
         return;

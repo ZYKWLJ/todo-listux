@@ -12,45 +12,19 @@ typedef enum Date_Type
     WEEK,
     DAY,
 } Date_Type;
-
-typedef struct Date_Year
-{
-    int year; // 具体的年份
-} Date_Year;
-typedef struct Date_Month
-{
-    int year;  // 具体的年份
-    int month; // 具体的月份
-} Date_Month;
-
-typedef struct Date_Week
-{
-    int year;  // 具体的年份
-    int month; // 具体的月份
-    int week;  // 具体的周
-} Date_Week;
-
-typedef struct Date_Day
-{
-    int year;  // 具体的年份
-    int month; // 具体的月份
-    int day;   // 具体的日
-} Date_Day;
-
 #define ERROR_FORMAT -1;
-typedef struct Date_Error
-{
-    int error_code; // 错误码
-} Date_Error;
-// 四者只能四选一！
+// 这就是完备的日期类型！
 typedef struct Date
 {
-    Date_Year *Year;
-    Date_Month *Month;
-    Date_Week *Week;
-    Date_Day *Day;
-    Date_Error *Error;
+    int year;  // 当年
+    int month; // 当月
+    int week;  // 当周
+    int day;   // 当天
+    int error; // 是否满足
 } Date;
+
+void init_date(Date *date);
+void free_date(Date *date);
 
 // 解析第3个参数,判断日期类型
 Date_Type parse_date_type(char *date_type);

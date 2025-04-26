@@ -16,7 +16,7 @@
 
 // #define LOG
 
-TaskYear *load_data(int year)
+Day_Year_Task *load_data(int year)
 {
     LOG_PRINT("loading data......\n");
 
@@ -51,7 +51,7 @@ TaskYear *load_data(int year)
         }
     }
 
-    TaskYear *year_tasks = init_year_tasks(year);
+    Day_Year_Task *year_tasks = init_year_tasks(year);
     if (!year_tasks)
     {
         return NULL;

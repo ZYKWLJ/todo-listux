@@ -1,6 +1,6 @@
 #include "../../include/include.h"
 
-int add(TaskYear *year_task, int year, int month, int day, int index, int argc, char **argv,Setting *setting)
+int add(Day_Year_Task *year_task, int year, int month, int day, int index, int argc, char **argv,Setting *setting)
 {
     if (argc != 3)
     {
