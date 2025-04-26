@@ -26,7 +26,9 @@ int main(int argc, char *argv[])
     get_current_date(&year, &month, &day);
     // printf("Today is %d-%d-%d\n", year, month, day);
     TaskYear *task_year = load_data(year);
-
+    // 先读取设置
+    Setting *setting = malloc(sizeof(Setting));
+    setting = read_setting(setting);
     if (argc < 2)
     {
         // 如果没有提供足够的命令行参数，显示帮助信息
@@ -44,29 +46,30 @@ int main(int argc, char *argv[])
     }
     // printf("index: %d\n", index);
     // 解析命令行参数并调用相应的处理函数
+    
     if (strcmp(argv[1], "show") == 0 || strcmp(argv[1], "s") == 0)
     {
-        display_current_date_tasks(task_year, year, month, day);
+        display_current_date_tasks(task_year, year, month, day,setting);
     }
     else if (strcmp(argv[1], "add") == 0 || strcmp(argv[1], "a") == 0)
     {
-        add(task_year, year, month, day, index, argc, argv);
+        add(task_year, year, month, day, index, argc, argv,setting);
     }
     else if (strcmp(argv[1], "delete") == 0 || strcmp(argv[1], "d") == 0)
     {
-        delete_(task_year, year, month, day, index, argc, argv);
+        delete_(task_year, year, month, day, index, argc, argv,setting);
     }
     else if (strcmp(argv[1], "modify") == 0 || strcmp(argv[1], "m") == 0)
     {
-        modify(task_year, year, month, day, index, argc, argv);
+        modify(task_year, year, month, day, index, argc, argv,setting);
     }
     else if (strcmp(argv[1], "done") == 0)
     {
-        done(task_year, year, month, day, index, argc, argv);
+        done(task_year, year, month, day, index, argc, argv,setting);
     }
     else if (strcmp(argv[1], "undo") == 0) // 撤销完成标记
     {
-        undo(task_year, year, month, day, index, argc, argv);
+        undo(task_year, year, month, day, index, argc, argv,setting);
     }else if (strcmp(argv[1], "set") == 0) // 进入设置
     {
         set_setting(argc, argv);
@@ -81,7 +84,7 @@ int main(int argc, char *argv[])
         help();
     }
     save_data(task_year, year);
-
+    free(setting);
     return 0;
 }
 // 编译最原始的命令！
@@ -89,4 +92,7 @@ int main(int argc, char *argv[])
 // gcc D:/3software/todo-listux/src/main.c D:/3software/todo-listux/src/database/add_data.c D:/3software/todo-listux/src/database/delete_data.c D:/3software/todo-listux/src/database/load_data.c D:/3software/todo-listux/src/database/modify_data.c D:/3software/todo-listux/src/database/save_data.c D:/3software/todo-listux/src/display/help.c D:/3software/todo-listux/src/display/show_data.c D:/3software/todo-listux/src/execute/add.c D:/3software/todo-listux/src/execute/delete.c D:/3software/todo-listux/src/execute/done.c D:/3software/todo-listux/src/execute/find.c D:/3software/todo-listux/src/execute/modify.c D:/3software/todo-listux/src/execute/undo.c D:/3software/todo-listux/src/strcutures/TaskDay.c D:/3software/todo-listux/src/strcutures/TaskMonth.c D:/3software/todo-listux/src/strcutures/TaskYear.c D:/3software/todo-listux/src/tools/MONTH.c D:/3software/todo-listux/src/tools/tools.c -o D:\3software\todo-listux\bin\tl
 // gcc D:/3software/todo-listux/src/main.c D:/3software/todo-listux/src/database/add_data.c D:/3software/todo-listux/src/database/delete_data.c D:/3software/todo-listux/src/database/load_data.c D:/3software/todo-listux/src/database/modify_data.c D:/3software/todo-listux/src/database/save_data.c D:/3software/todo-listux/src/display/help.c D:/3software/todo-listux/src/display/show_data.c D:/3software/todo-listux/src/execute/add.c D:/3software/todo-listux/src/execute/delete.c D:/3software/todo-listux/src/execute/done.c D:/3software/todo-listux/src/execute/find.c D:/3software/todo-listux/src/execute/modify.c D:/3software/todo-listux/src/execute/undo.c D:/3software/todo-listux/src/strcutures/TaskDay.c D:/3software/todo-listux/src/strcutures/TaskMonth.c D:/3software/todo-listux/src/strcutures/TaskYear.c D:/3software/todo-listux/src/tools/MONTH.c D:/3software/todo-listux/src/tools/tools.c -o D:\3software\todo-listux\bin\tl
 // gcc D:/3software/todo-listux-1/todo-listux/src/main.c D:/3software/todo-listux-1/todo-listux/src/database/add_data.c D:/3software/todo-listux-1/todo-listux/src/database/delete_data.c D:/3software/todo-listux-1/todo-listux/src/database/load_data.c D:/3software/todo-listux-1/todo-listux/src/database/modify_data.c D:/3software/todo-listux-1/todo-listux/src/database/save_data.c D:/3software/todo-listux-1/todo-listux/src/display/help.c D:/3software/todo-listux-1/todo-listux/src/display/show_data.c D:/3software/todo-listux-1/todo-listux/src/execute/add.c D:/3software/todo-listux-1/todo-listux/src/execute/delete.c D:/3software/todo-listux-1/todo-listux/src/execute/done.c D:/3software/todo-listux-1/todo-listux/src/execute/find.c D:/3software/todo-listux-1/todo-listux/src/execute/modify.c D:/3software/todo-listux-1/todo-listux/src/execute/undo.c D:/3software/todo-listux-1/todo-listux/src/strcutures/TaskDay.c D:/3software/todo-listux-1/todo-listux/src/strcutures/TaskMonth.c D:/3software/todo-listux-1/todo-listux/src/strcutures/TaskYear.c D:/3software/todo-listux-1/todo-listux/src/tools/MONTH.c D:/3software/todo-listux-1/todo-listux/src/tools/tools.c -o D:\3software\todo-listux-1\todo-listux\bin\tl
+// gcc D:/3software/todo-listux-1/todo-listux/src/main.c D:/3software/todo-listux-1/todo-listux/src/database/add_data.c D:/3software/todo-listux-1/todo-listux/src/database/delete_data.c D:/3software/todo-listux-1/todo-listux/src/database/load_data.c D:/3software/todo-listux-1/todo-listux/src/database/modify_data.c D:/3software/todo-listux-1/todo-listux/src/database/save_data.c D:/3software/todo-listux-1/todo-listux/src/display/help.c D:/3software/todo-listux-1/todo-listux/src/display/show_data.c D:/3software/todo-listux-1/todo-listux/src/execute/add.c D:/3software/todo-listux-1/todo-listux/src/execute/delete.c D:/3software/todo-listux-1/todo-listux/src/execute/done.c D:/3software/todo-listux-1/todo-listux/src/execute/find.c D:/3software/todo-listux-1/todo-listux/src/execute/modify.c D:/3software/todo-listux-1/todo-listux/src/execute/undo.c D:/3software/todo-listux-1/todo-listux/src/strcutures/TaskDay.c D:/3software/todo-listux-1/todo-listux/src/strcutures/TaskMonth.c D:/3software/todo-listux-1/todo-listux/src/strcutures/TaskYear.c D:/3software/todo-listux-1/todo-listux/src/tools/MONTH.c D:/3software/todo-listux-1/todo-listux/src/tools/tools.c -o D:\3software\todo-listux-1\todo-listux\bin\tl
 // D:/3software/todo-listux-1/todo-listux/src/main.c
+
+//  python D:\3software\todo-listux-1\todo-listux\py\gcc.py

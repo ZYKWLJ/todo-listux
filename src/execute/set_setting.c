@@ -98,25 +98,25 @@ void set_setting(int argc, char **argv)
     }
 }
 
-int main(int argc, char **argv)
-{
-    if (argc < 2)
-    {
-        fprintf(stderr, "Usage: %s <command> [arguments]\n", argv[0]);
-        return 1;
-    }
+// int main(int argc, char **argv)
+// {
+//     if (argc < 2)
+//     {
+//         fprintf(stderr, "Usage: %s <command> [arguments]\n", argv[0]);
+//         return 1;
+//     }
 
-    if (strcmp(argv[1], "set") == 0)
-    {
-        set_setting(argc, argv);
-    }
-    else
-    {
-        fprintf(stderr, "Unrecognized command: %s\n", argv[1]);
-    }
+//     if (strcmp(argv[1], "set") == 0)
+//     {
+//         set_setting(argc, argv);
+//     }
+//     else
+//     {
+//         fprintf(stderr, "Unrecognized command: %s\n", argv[1]);
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
 
 // gcc D:\3software\todo-listux-1\todo-listux\src\execute\set_setting.c  D:\3software\todo-listux-1\todo-listux\src\database\save_setting.c D:\3software\todo-listux-1\todo-listux\src\database\filePath.c D:\3software\todo-listux-1\todo-listux\src\strcutures\setting.c -o D:\3software\todo-listux-1\todo-listux\src\execute\set_tings
 // 以下假设其他函数的定义（save_setting, read_setting, get_appdata_path, create_directory）都已经包含在相应的头文件或其他源文件中

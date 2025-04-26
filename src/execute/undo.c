@@ -1,6 +1,6 @@
 #include "../../include/include.h"
 
-int undo(TaskYear *year_task, int year, int month, int day, int index, int argc, char **argv)
+int undo(TaskYear *year_task, int year, int month, int day, int index, int argc, char **argv,Setting *setting)
 {
     if (argc != 3) // 目前只能等于3，多少都不行！
     {
@@ -18,6 +18,6 @@ int undo(TaskYear *year_task, int year, int month, int day, int index, int argc,
         modify_task_state(year_task, year, month, day, task_index - 1, 0); // 撤销完成标记某个任务
     }
 
-    display_current_date_tasks(year_task, year, month, day);
+    display_current_date_tasks(year_task, year, month, day,setting);
     return 0;
 }

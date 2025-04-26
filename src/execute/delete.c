@@ -1,6 +1,6 @@
 #include "../../include/include.h"
 
-int delete_(TaskYear *year_task, int year, int month, int day, int index, int argc, char **argv)
+int delete_(TaskYear *year_task, int year, int month, int day, int index, int argc, char **argv,Setting *setting)
 {
     if (argc != 3) // 目前只能等于3，多少都不行！
     {
@@ -11,6 +11,6 @@ int delete_(TaskYear *year_task, int year, int month, int day, int index, int ar
     int task_index = atoi(argv[2]);
     // printf("task_index: %d\n", task_index-1);
     delete_task(year_task, year, month, day, task_index-1);
-    display_current_date_tasks(year_task, year, month, day);
+    display_current_date_tasks(year_task, year, month, day,setting);
     return 0;
 }

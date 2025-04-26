@@ -1,6 +1,6 @@
 #include "../../include/include.h"
 
-int modify(TaskYear *year_task, int year, int month, int day, int index, int argc, char **argv)
+int modify(TaskYear *year_task, int year, int month, int day, int index, int argc, char **argv,Setting *setting)
 {
     if (argc != 4)// 目前只能等于4，多少都不行！tl modify <task_index> <new_content>
     {
@@ -10,5 +10,5 @@ int modify(TaskYear *year_task, int year, int month, int day, int index, int arg
     }
     int modify_index = atoi(argv[2]);
     modify_task_content(year_task, year, month, day, modify_index-1, argv[3]);
-    display_current_date_tasks(year_task, year, month, day);
+    display_current_date_tasks(year_task, year, month, day,setting);
 }
