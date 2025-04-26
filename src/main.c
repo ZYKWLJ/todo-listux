@@ -1,19 +1,16 @@
 #include "../include/include.h"
+// #define LOG
 // 实时显示时间的函数
 void display_current_time()
 {
     time_t now;
     struct tm *current_time;
-
     // 获取当前时间
     time(&now);
-
     // 将时间转换为结构体
     current_time = localtime(&now);
-
     // 格式化并输出时间
     char time_str[26];
-    // strftime(time_str, sizeof(time_str), "%Y-%m-%d %H:%M:%S", current_time);
     strftime(time_str, sizeof(time_str), "%H:%M:%S", current_time);
     printf("Current time: %s\n", time_str);
 }
@@ -24,7 +21,11 @@ int main(int argc, char *argv[])
     display_current_time();
     int year, month, day;
     get_current_date(&year, &month, &day);
-    // printf("Today is %d-%d-%d\n", year, month, day);
+
+#ifdef LOG
+    LOG_PRINT("Today is %d-%d-%d\n", year, month, day);
+    LOG_PRINT("loading data......\n", year, month, day);
+#endif
     TaskYear *task_year = load_data(year);
     // 先读取设置
     Setting *setting = malloc(sizeof(Setting));
@@ -44,33 +45,39 @@ int main(int argc, char *argv[])
     {
         index = task_year->months[month - 1].days[day - 1].size;
     }
-    // printf("index: %d\n", index);
+#ifdef LOG
+    LOG_PRINT("index: %d\n", index);
+#endif
     // 解析命令行参数并调用相应的处理函数
-    
+
     if (strcmp(argv[1], "show") == 0 || strcmp(argv[1], "s") == 0)
     {
-        display_current_date_tasks(task_year, year, month, day,setting);
+        display_current_date_tasks(task_year, year, month, day, setting);
     }
     else if (strcmp(argv[1], "add") == 0 || strcmp(argv[1], "a") == 0)
     {
-        add(task_year, year, month, day, index, argc, argv,setting);
+#ifdef LOG
+        printf("add---\n");
+#endif
+        add(task_year, year, month, day, index, argc, argv, setting);
     }
     else if (strcmp(argv[1], "delete") == 0 || strcmp(argv[1], "d") == 0)
     {
-        delete_(task_year, year, month, day, index, argc, argv,setting);
+        delete_(task_year, year, month, day, index, argc, argv, setting);
     }
     else if (strcmp(argv[1], "modify") == 0 || strcmp(argv[1], "m") == 0)
     {
-        modify(task_year, year, month, day, index, argc, argv,setting);
+        modify(task_year, year, month, day, index, argc, argv, setting);
     }
     else if (strcmp(argv[1], "done") == 0)
     {
-        done(task_year, year, month, day, index, argc, argv,setting);
+        done(task_year, year, month, day, index, argc, argv, setting);
     }
     else if (strcmp(argv[1], "undo") == 0) // 撤销完成标记
     {
-        undo(task_year, year, month, day, index, argc, argv,setting);
-    }else if (strcmp(argv[1], "set") == 0) // 进入设置
+        undo(task_year, year, month, day, index, argc, argv, setting);
+    }
+    else if (strcmp(argv[1], "set") == 0) // 进入设置
     {
         set_setting(argc, argv);
     }
@@ -85,6 +92,8 @@ int main(int argc, char *argv[])
     }
     save_data(task_year, year);
     free(setting);
+    // free_task_year(task_year);
+    printf("todo-listux end------!\n");
     return 0;
 }
 // 编译最原始的命令！

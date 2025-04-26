@@ -13,9 +13,13 @@
 #else
 #include <unistd.h>
 #endif
+
+// #define LOG
+
 TaskYear *load_data(int year)
 {
-    // printf("load_data....\n");
+    LOG_PRINT("loading data......\n");
+
     char filename[MAX_PATH];
     const char *base_path = get_appdata_path();
 
@@ -57,24 +61,31 @@ TaskYear *load_data(int year)
     if (file)
     {
         // 检查文件是否为空
-        if (buffer.st_size == 0)
+        if (fseek(file, 0, SEEK_END) == 0)
         {
-            fclose(file);
-            return year_tasks;
+            long file_size = ftell(file);
+            if (file_size == 0)
+            {
+                fclose(file);
+                return year_tasks;
+            }
+            fseek(file, 0, SEEK_SET);
         }
 
         int loaded_year;
-        if (fscanf(file, "%d\n", &loaded_year) != 1)
+        if (fscanf(file, "%d", &loaded_year) != 1)
         {
-            printf("Failed to read year from file.\n");
+            LOG_PRINT("Failed to read year from file.\n");
             fclose(file);
             free_year_tasks(year_tasks);
             return NULL;
         }
+        // 消耗换行符
+        fgetc(file);
 
         if (loaded_year != year)
         {
-            printf("Year in file does not match requested year.\n");
+            LOG_PRINT("Year in file does not match requested year.\n");
             fclose(file);
             free_year_tasks(year_tasks);
             return NULL;
@@ -87,13 +98,38 @@ TaskYear *load_data(int year)
             {
                 TaskDay *day_tasks = &month_tasks->days[d];
                 int month_num, day_num, size, capacity;
-                if (fscanf(file, "%d %d %d %d\n", &month_num, &day_num, &size, &capacity) != 4)
+
+                // 检查文件结束
+                if (feof(file))
                 {
-                    printf("Failed to read day tasks information from file.\n");
+                    // 文件正常结束，没有更多数据
                     fclose(file);
-                    free_year_tasks(year_tasks);
-                    return NULL;
+                    return year_tasks;
                 }
+
+                // 读取4个整数
+                int read_count = fscanf(file, "%d %d %d %d", &month_num, &day_num, &size, &capacity);
+                LOG_PRINT("month_num=%d,day_num=%d,size=%d,capacity=%d\n", month_num, day_num, size, capacity);
+
+                if (read_count != 4)
+                {
+                    // 可能是文件结束或格式错误
+                    if (feof(file))
+                    {
+                        // 文件正常结束
+                        fclose(file);
+                        return year_tasks;
+                    }
+                    else
+                    {
+                        LOG_PRINT("Failed to read day tasks information from file.\n");
+                        fclose(file);
+                        free_year_tasks(year_tasks);
+                        return NULL;
+                    }
+                }
+                // 消耗换行符
+                fgetc(file);
 
                 // 检查并扩展容量
                 while (size > day_tasks->capacity)
@@ -106,37 +142,64 @@ TaskYear *load_data(int year)
 
                 for (int t = 0; t < size; t++)
                 {
-                    char line[256];
+                    char line[1000000]; // 开的足够大，不怕读取不了！
                     if (fgets(line, sizeof(line), file) == NULL)
                     {
-                        printf("Failed to read task line from file.\n");
+                        LOG_PRINT("Failed to read task line from file.\n");
                         fclose(file);
                         free_year_tasks(year_tasks);
                         return NULL;
                     }
-                    char *token = strtok(line, " ");
-                    // 检查并扩展任务字符串容量
-                    size_t content_length = strlen(token);
+
+                    // 移除末尾的换行符
+                    line[strcspn(line, "\n")] = '\0';
+
+                    // 查找最后一个空格来分隔任务内容和完成状态
+                    char *last_space = strrchr(line, ' ');
+                    if (last_space == NULL)
+                    {
+
+                        LOG_PRINT("Invalid task format: %s\n", line);
+                        fclose(file);
+                        free_year_tasks(year_tasks);
+                        return NULL;
+                    }
+
+                    // 分隔任务内容和完成状态
+                    *last_space = '\0';
+                    char *task_content = line;
+                    char *done_str = last_space + 1;
+
+                    // 分配任务内存
+                    size_t content_length = strlen(task_content);
                     if (content_length >= MAX_TASK_CHAR_LENGTH)
                     {
-                        char *new_task_str = (char *)realloc(day_tasks->task[t].task, (content_length + 1) * sizeof(char));
+                        char *new_task_str = (char *)realloc(day_tasks->task[t].task,
+                                                             (content_length + 1) * sizeof(char));
                         if (new_task_str == NULL)
                         {
-                            printf("Memory allocation failed.\n");
+                            LOG_PRINT("Memory allocation failed.\n");
                             fclose(file);
                             free_year_tasks(year_tasks);
                             return NULL;
                         }
                         day_tasks->task[t].task = new_task_str;
                     }
-                    strcpy(day_tasks->task[t].task, token);
-                    token = strtok(NULL, " \n");
-                    day_tasks->task[t].is_done = atoi(token);
+                    strcpy(day_tasks->task[t].task, task_content);
+                    day_tasks->task[t].is_done = atoi(done_str);
                 }
             }
         }
         fclose(file);
     }
-    // printf("Data loaded successfully.\n");
+#ifdef LOG
+    LOG_PRINT("Data loaded successfully.\n");
+#endif
     return year_tasks;
 }
+
+// int main(){
+//     for(int i=0;i<1000;i++)
+//     printf("d");
+//     return 0;
+// }

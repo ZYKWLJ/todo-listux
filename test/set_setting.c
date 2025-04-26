@@ -13,6 +13,10 @@
 #include <sys/stat.h>
 #endif
 
+#define LOG
+#ifdef LOG
+
+#endif
 // 保存设置到文件
 void save_setting(Setting *setting)
 {
@@ -42,15 +46,21 @@ void save_setting(Setting *setting)
         fprintf(file, "color=%s\n", setting->color);
         fprintf(file, "show=%s\n", setting->show);
         fclose(file);
+#ifdef LOG
         printf("Settings saved successfully.\n");
         printf("File path: %s\n", filename);
         printf("color: %s\n", setting->color);
         printf("show: %s\n", setting->show);
+#endif
+
         // 检查文件是否存在
         struct stat st;
-        if (stat(filename, &st) == 0) {
+        if (stat(filename, &st) == 0)
+        {
             printf("File exists, size: %ld bytes\n", (long)st.st_size);
-        } else {
+        }
+        else
+        {
             perror("Failed to check file existence");
         }
     }
@@ -72,8 +82,9 @@ Setting *read_setting(Setting *setting)
 #else
     snprintf(filename, sizeof(filename), "%s/settings.ini", base_path);
 #endif
-
+#ifdef LOG
     printf("Reading settings from file: %s\n", filename);
+#endif
 
     FILE *file = fopen(filename, "r");
     if (file)
@@ -98,7 +109,9 @@ Setting *read_setting(Setting *setting)
             }
         }
         fclose(file);
+#ifdef LOG
         printf("Settings read successfully.\n");
+#endif
     }
     else
     {
@@ -134,7 +147,7 @@ void set_setting(int argc, char **argv)
 
             // 读取当前设置
             Setting setting;
-            Setting* result = read_setting(&setting);
+            Setting *result = read_setting(&setting);
             if (result == NULL)
             {
                 // 处理读取失败的情况
@@ -174,7 +187,10 @@ void set_setting(int argc, char **argv)
 
             // 保存更新后的设置
             save_setting(&setting);
+
+#ifdef LOG
             printf("Setting updated successfully.\n");
+#endif
         }
         else
         {

@@ -38,10 +38,11 @@ void save_setting(Setting *setting)
         fprintf(file, "color=%s\n", setting->color);
         fprintf(file, "show=%s\n", setting->show);
         fclose(file);
-        printf("saving settings to file: %s\n", filename);
-        printf("color: %s\n", setting->color);
-        printf("show: %s\n", setting->show);
-        // printf("settings saved in %s\n", filename);
+        
+        LOG_PRINT("saving settings to file: %s\n", filename);
+        LOG_PRINT("color: %s\n", setting->color);
+        LOG_PRINT("show: %s\n", setting->show);
+        LOG_PRINT("settings saved in %s\n", filename);
     }
     else
     {
@@ -83,9 +84,11 @@ Setting *read_setting(Setting *setting)
                 }
             }
         }
-        printf("reading settings from file: %s\n", filename);
-        printf("color: %s\n", setting->color);
-        printf("show: %s\n", setting->show);
+        #ifdef LOG
+        LOG_PRINT("reading settings from file: %s\n", filename);
+        LOG_PRINT("color: %s\n", setting->color);
+        LOG_PRINT("show: %s\n", setting->show);
+        #endif
         fclose(file);
         // printf("settings read from %s over\n", filename);
     }

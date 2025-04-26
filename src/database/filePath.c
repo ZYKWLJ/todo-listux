@@ -1,5 +1,6 @@
 #include "../../include/include.h"
 // 获取应用数据目录（跨平台）
+// #define LOG
 const char *get_appdata_path()
 {
     static char path[MAX_PATH] = {0};
@@ -27,7 +28,9 @@ const char *get_appdata_path()
     strcpy(path, "/tmp/tl");
     mkdir(path, 0755); // 创建目录并设置权限
 #endif
-
+#ifdef LOG
+    printf("%s,%s,%d,AppData path: %s\n",__FILE__,__func__,__LINE__, path);
+#endif
     return path;
 }
 
@@ -46,6 +49,11 @@ int create_directory(const char *path)
     // 尝试直接创建目录
     if (_wmkdir(wpath) == 0)
     {
+#ifdef LOG
+        // printf("cerate_directory: %s\n");
+        printf("%s,%s,%d,cerate_directory: %s\n",__FILE__,__func__,__LINE__, "successed!");
+#endif
+
         return 0; // 创建成功
     }
 

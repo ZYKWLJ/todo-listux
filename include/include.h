@@ -29,5 +29,5 @@
 #include "execute/done.h"
 #include "execute/undo.h"
 #include "execute/set_setting.h"
-
+#include "log/log.h"
 #endif

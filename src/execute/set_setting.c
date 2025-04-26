@@ -81,7 +81,8 @@ void set_setting(int argc, char **argv)
 
             // 保存更新后的设置
             save_setting(setting);
-            printf("Setting updated successfully.\n");
+
+            LOG_PRINT("Setting updated successfully.\n");
 
             free(setting); // 释放已分配的内存
         }
