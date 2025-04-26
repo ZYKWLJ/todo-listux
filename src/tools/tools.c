@@ -1,5 +1,7 @@
 #include "../../include/include.h"
 // 判断是否为闰年
+const int MONTH_DAYS_IS_LEAP[] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+const int MONTH_DAYS_IS_NOT_LEAP[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 int is_leap_year(int year) {
     return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 }

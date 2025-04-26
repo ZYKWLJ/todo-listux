@@ -5,11 +5,16 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include "strcutures/Task.h"
-#include "strcutures/TaskDay.h"
-#include "strcutures/TaskMonth.h"
-#include "strcutures/TaskYear.h"
-#include "strcutures/setting.h"
+#include "strcutures/task_day/Task.h"
+#include "strcutures/task_day/TaskDay.h"
+#include "strcutures/task_day/TaskMonth.h"
+#include "strcutures/task_day/TaskYear.h"
+#include "strcutures/task_week/Week_Task.h"
+#include "strcutures/task_Week/Week_Year_Task.h"
+#include "strcutures/task_month/Month_Task.h"
+#include "strcutures/task_month/Month_Year_Task.h"
+#include "strcutures/task_year/Year_Task.h"
+#include "setting/setting.h"
 #include "display/show_data.h"
 #include "display/color.h"
 #include "tools/tools.h"
@@ -30,4 +35,5 @@
 #include "execute/undo.h"
 #include "execute/set_setting.h"
 #include "log/log.h"
+#include "lexer/date.h"
 #endif

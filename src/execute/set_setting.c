@@ -94,8 +94,8 @@ void set_setting(int argc, char **argv)
     else if (argc != 3)
     {
         // 显示设置的正确方法
-        fprintf(stderr, "Usage: %s <command> <setting>\n", argv[0]);
-        fprintf(stderr, "Example: %s set color=yes\n", argv[0]);
+        fprintf(stderr, "Usage: tl <command> <setting>\n");
+        fprintf(stderr, "Example: tl set color=on\n");
     }
 }
 

@@ -1,4 +1,4 @@
-#include "../../include/include.h"
+#include "../../../include/include.h"
 // 初始化当天任务
 TaskDay *init_day_tasks()
 {
@@ -17,7 +17,7 @@ TaskDay *init_day_tasks()
     }
     for (int i = 0; i < day_tasks->capacity; i++)
     {
-        day_tasks->task[i].task = (char *)malloc(MAX_TASK_CHAR_LENGTH * sizeof(char));
+        day_tasks->task[i].task = (char *)malloc(DEFALUT_TASK_CHAR_LENGTH * sizeof(char));
         if (day_tasks->task[i].task == NULL)
         {
             for (int j = 0; j < i; j++)
@@ -56,7 +56,7 @@ void expand_capacity(TaskDay *day_tasks)
     // 初始化新分配的任务空间
     for (int i = day_tasks->size; i < new_capacity; i++)
     {
-        day_tasks->task[i].task = (char *)malloc(MAX_TASK_CHAR_LENGTH * sizeof(char));
+        day_tasks->task[i].task = (char *)malloc(DEFALUT_TASK_CHAR_LENGTH * sizeof(char));
         if (day_tasks->task[i].task == NULL)
         {
             // 内存分配失败，释放已分配的内存

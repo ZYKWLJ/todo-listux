@@ -43,6 +43,7 @@ void save_setting(Setting *setting)
         LOG_PRINT("color: %s\n", setting->color);
         LOG_PRINT("show: %s\n", setting->show);
         LOG_PRINT("settings saved in %s\n", filename);
+        printf("settings saved\n");
     }
     else
     {

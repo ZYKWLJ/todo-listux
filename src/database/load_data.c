@@ -172,7 +172,7 @@ TaskYear *load_data(int year)
 
                     // 分配任务内存
                     size_t content_length = strlen(task_content);
-                    if (content_length >= MAX_TASK_CHAR_LENGTH)
+                    if (content_length >= DEFALUT_TASK_CHAR_LENGTH)
                     {
                         char *new_task_str = (char *)realloc(day_tasks->task[t].task,
                                                              (content_length + 1) * sizeof(char));

@@ -56,6 +56,11 @@
         "taskmonth.h": "c",
         "set_setting.h": "c",
         "setting.h": "c",
-        "log.h": "c"
+        "log.h": "c",
+        "week_year_task.h": "c",
+        "month_year_task.h": "c",
+        "month_task.h": "c",
+        "week_task.h": "c",
+        "date.h": "c"
     }
 }

@@ -15,7 +15,7 @@ void add_task(TaskYear *year_tasks, int year, int month, int day, int index, cha
     if (strlen(content) > strlen(day_tasks->task[index].task))
     {
         LOG_PRINT("add_task....content is too long! ready to realloc......\n");
-        day_tasks->task[index].task = (char *)realloc(day_tasks->task[index].task, strlen(content) + 1 > 999999 ? 999999 : strlen(content) + 1); // 扩容到刚好容下就好，并且防止最大的溢出，我们起到了保险措施，最多存在1百万的字，事实上，也存不到这么多，只是为了健壮罢了
+        day_tasks->task[index].task = (char *)realloc(day_tasks->task[index].task, strlen(content) + 1 > MAX_TASK_SIZE ? MAX_TASK_SIZE : strlen(content) + 1); // 扩容到刚好容下就好，并且防止最大的溢出，我们起到了保险措施，最多存在1百万的字，事实上，也存不到这么多，只是为了健壮罢了
     }
     // 如果是添加到末尾
     if (index == day_tasks->size)
