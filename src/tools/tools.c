@@ -28,3 +28,21 @@ int day_of_year(int year, int month, int day) {
     doy += day;
     return doy;
 }
+
+int get_year(int* year){
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    *year = tm.tm_year + 1900;
+}
+
+int get_month(int* month){
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    *month = tm.tm_mon + 1;
+}
+
+int get_day(int* day){
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    *day = tm.tm_mday;
+}

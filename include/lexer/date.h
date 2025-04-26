@@ -37,6 +37,11 @@ typedef struct Date_Day
     int day;   // 具体的日
 } Date_Day;
 
+#define ERROR_FORMAT -1;
+typedef struct Date_Error
+{
+    int error_code; // 错误码
+} Date_Error;
 // 四者只能四选一！
 typedef union Date
 {
@@ -44,10 +49,11 @@ typedef union Date
     Date_Month month;
     Date_Week week;
     Date_Day day;  
+    Date_Error error;
 }Date;
 
 // 解析第3个参数,判断日期类型
 Date_Type parse_date_type(char *date_type);
 
 // 解析第4个参数,判断日期类型下的具体日期
-Date parse_date(Date_Type date_type,char *date);
+Date parse_date(Date_Type date_type, char *date_str, Date *date);
