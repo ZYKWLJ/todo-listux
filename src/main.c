@@ -67,6 +67,9 @@ int main(int argc, char *argv[])
     else if (strcmp(argv[1], "undo") == 0) // 撤销完成标记
     {
         undo(task_year, year, month, day, index, argc, argv);
+    }else if (strcmp(argv[1], "set") == 0) // 进入设置
+    {
+        set_setting(argc, argv);
     }
     else if (strcmp(argv[1], "help") == 0 || strcmp(argv[1], "h") == 0)
     {

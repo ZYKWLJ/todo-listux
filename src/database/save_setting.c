@@ -38,6 +38,9 @@ void save_setting(Setting *setting)
         fprintf(file, "color=%s\n", setting->color);
         fprintf(file, "show=%s\n", setting->show);
         fclose(file);
+        printf("saving settings to file: %s\n", filename);
+        printf("color: %s\n", setting->color);
+        printf("show: %s\n", setting->show);
         // printf("settings saved in %s\n", filename);
     }
     else
@@ -47,7 +50,7 @@ void save_setting(Setting *setting)
 }
 
 // 从文件读取设置到结构体
-void read_setting(Setting *setting)
+Setting *read_setting(Setting *setting)
 {
     char filename[MAX_PATH];
     const char *base_path = get_appdata_path();
@@ -80,6 +83,9 @@ void read_setting(Setting *setting)
                 }
             }
         }
+        printf("reading settings from file: %s\n", filename);
+        printf("color: %s\n", setting->color);
+        printf("show: %s\n", setting->show);
         fclose(file);
         // printf("settings read from %s over\n", filename);
     }
@@ -87,26 +93,16 @@ void read_setting(Setting *setting)
     {
         fprintf(stderr, "can't open file %s to read\n", filename);
     }
+
+    // 添加返回语句，返回传入的 setting 指针
+    return setting;
 }
 
-int main()
-{
-    Setting setting;
-    strcpy(setting.color, "on");
-    strcpy(setting.show, "day");
+// int main()
+// {
+//     Setting setting;
+//     read_setting(&setting);
+//     return 0;
+// }
 
-    // 保存设置
-    save_setting(&setting);
-
-    // 清空设置结构体
-    memset(&setting, 0, sizeof(setting));
-
-    // 读取设置
-    read_setting(&setting);
-
-    // 打印读取到的设置
-    printf("Color: %s\n", setting.color);
-    printf("Show: %s\n", setting.show);
-
-    return 0;
-}
+// gcc D:\3software\todo-listux-1\todo-listux\src\database\save_setting.c D:\3software\todo-listux-1\todo-listux\src\database\filePath.c -o D:\3software\todo-listux-1\todo-listux\src\database\setting

@@ -53,6 +53,8 @@
         "undo.h": "c",
         "time.h": "c",
         "taskyear.h": "c",
-        "taskmonth.h": "c"
+        "taskmonth.h": "c",
+        "set_setting.h": "c",
+        "setting.h": "c"
     }
 }

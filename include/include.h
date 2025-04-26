@@ -28,5 +28,6 @@
 #include "display/help.h"
 #include "execute/done.h"
 #include "execute/undo.h"
+#include "execute/set_setting.h"
 
 #endif
