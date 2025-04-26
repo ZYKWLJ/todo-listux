@@ -32,42 +32,20 @@ int is_all_digits(const char *str)
     return 1; // 所有字符都是数字，返回1
 }
 
-// 检查日期字符串中的分隔符是否一致且无连续分隔符
-// 参数:
-//   date - 要检查的日期字符串
-//   delimiter - 用于返回找到的分隔符
-// 返回值:
-//   1 - 格式正确
-//   0 - 格式错误
-// 规定只能使用.作为分割符号
+// 固定数据结构，2025.01.04
 
-// 返回日期范畴并且返回具体的日期
-
-// 新增数据结构，可以直接返回日期与格式类型！
-
-typedef struct Date_Expected
-{
-    Date *date; // 返回日期！
-    int expect; // 正确为1.错误为0
-} Date_Expected;
-// 深复制 Date 类型的函数示例
-void copy_date(Date *destination, Date_Expected *source)
-{
-    memcpy(destination, &(source->date), sizeof(Date));
-}
-
-void validate_year_format(const char *date_str, Date_Expected *date_expected)
+void validate_year_format(const char *date_str, Date *date)
 {
     // 基础检查
     if (strlen(date_str) != 4)
     {
-        date_expected->expect = 0;
+        date->Error->error_code = 1;
         return;
     }
 
     if (!(is_all_digits(date_str)))
     {
-        date_expected->expect = 0;
+        date->Error->error_code = 1;
         return;
     }
 
@@ -80,23 +58,22 @@ void validate_year_format(const char *date_str, Date_Expected *date_expected)
     get_current_date(&current_year, &current_month, &current_day);
     if (year < current_year)
     {
-        date_expected->expect = 0;
+        date->Error->error_code = 1;
         return;
     }
-    date_expected->date->year.year = year;
-    date_expected->expect = 1;
-    printf("date_expected->date->year.year: %d\n", date_expected->date->year.year);
+    date->Year->year = year;
+    date->Error->error_code = 0;
     printf("year parser passed!!!\n");
 }
 
 // 重构validate_year_month_format函数
 // 2025.09
-void validate_year_month_format(const char *date_str, Date_Expected *date_expected)
+void validate_year_month_format(const char *date_str, Date *date)
 {
     // 基础检查
     if (strlen(date_str) != 7)
     {
-        date_expected->expect = 0;
+        date->Error->error_code = 1;
         return;
     }
 
@@ -105,7 +82,7 @@ void validate_year_month_format(const char *date_str, Date_Expected *date_expect
     {
         if ((i == 4) ? (date_str[i] != '.') : (!isdigit(date_str[i])))
         {
-            date_expected->expect = 0;
+            date->Error->error_code = 1;
             return;
         }
     }
@@ -120,26 +97,23 @@ void validate_year_month_format(const char *date_str, Date_Expected *date_expect
     get_current_date(&current_year, &current_month, &current_day);
     if (year < current_year || (year == current_year && month < current_month))
     {
-        date_expected->expect = 0;
+        date->Error->error_code = 1;
         return;
     }
-    date_expected->date->year.year = year;
-    date_expected->date->month.month = month;
-    date_expected->expect = 1;
-    printf("date_expected->date->year.year: %d\n", date_expected->date->year.year);
-    printf("date_expected->date->month.month: %d\n", date_expected->date->month.month);
-
+    date->Year->year = year;
+    date->Month->month = month;
+    date->Error->error_code = 0;
     printf("month parser passed!!!\n");
 }
 
 // 重构validate_date_format函数
-void validate_date_format(const char *date_str, Date_Expected *date_expected)
+void validate_date_format(const char *date_str, Date *date)
 {
     // 基础格式检查
     // if (!basic_check(date_str, 10, 10))
     if (strlen(date_str) != 10)
     {
-        date_expected->expect = 0;
+        date->Error->error_code = 1;
         return;
     }
 
@@ -148,7 +122,7 @@ void validate_date_format(const char *date_str, Date_Expected *date_expected)
     {
         if ((i == 4 || i == 7) ? (date_str[i] != '.') : (!isdigit(date_str[i])))
         {
-            date_expected->expect = 0;
+            date->Error->error_code = 1;
             return;
         }
     }
@@ -166,21 +140,21 @@ void validate_date_format(const char *date_str, Date_Expected *date_expected)
     // 检查日期不小于今天
     if (year < current_year)
     {
-        date_expected->expect = 0;
+        date->Error->error_code = 1;
         return;
     }
     else if (year == current_year)
     {
         if (month < current_month)
         {
-            date_expected->expect = 0;
+            date->Error->error_code = 1;
             return;
         }
         else if (month == current_month)
         {
             if (day < current_day)
             {
-                date_expected->expect = 0;
+                date->Error->error_code = 1;
                 return;
             }
         }
@@ -189,7 +163,7 @@ void validate_date_format(const char *date_str, Date_Expected *date_expected)
     // 月份检查
     if (month < 1 || month > 12)
     {
-        date_expected->expect = 0;
+        date->Error->error_code = 1;
         return;
     }
 
@@ -212,17 +186,15 @@ void validate_date_format(const char *date_str, Date_Expected *date_expected)
 
     if (day < 1 || day > max_day)
     {
-        date_expected->expect = 0;
+        date->Error->error_code = 1;
         return;
     }
 
-    date_expected->date->year.year = year;
-    date_expected->date->month.month = month;
-    date_expected->date->day.day = day;
-    date_expected->expect = 1;
-    printf("date_expected->date->year.year: %d\n", date_expected->date->year.year);
-    printf("date_expected->date->month.month: %d\n", date_expected->date->month.month);
-    printf("date_expected->date->day.day: %d\n", date_expected->date->day.day);
+    date->Year->year = year;
+    date->Month->month = month;
+    date->Day->day = day;
+    date->Error->error_code = 0;
+
     printf("date parser passed!!!\n");
 }
 
@@ -239,30 +211,30 @@ int calculate_week_number(int day)
 }
 
 // 重构validate_week_format函数
-void validate_week_format(const char *date, Date_Expected *date_expected)
+void validate_week_format(const char *date_str, Date *date)
 {
     // 基础格式检查
-    if (strlen(date) != 9)
+    if (strlen(date_str) != 9)
     {
-        date_expected->expect = 0;
+        date->Error->error_code = 1;
         return;
     }
 
     // 检查字符组成(和分隔符)
     for (int i = 0; i < 9; i++)
     {
-        if ((i == 4 || i == 7) ? (date[i] != '.') : (!isdigit(date[i])))
+        if ((i == 4 || i == 7) ? (date_str[i] != '.') : (!isdigit(date_str[i])))
         {
-            date_expected->expect = 0;
+            date->Error->error_code = 1;
             return;
         }
     }
 
     // 提取数值
-    int week = (date[8] - '0');
-    int month = (date[5] - '0') * 10 + (date[6] - '0');
-    int year = (date[0] - '0') * 1000 + (date[1] - '0') * 100 +
-               (date[2] - '0') * 10 + (date[3] - '0');
+    int week = (date_str[8] - '0');
+    int month = (date_str[5] - '0') * 10 + (date_str[6] - '0');
+    int year = (date_str[0] - '0') * 1000 + (date_str[1] - '0') * 100 +
+               (date_str[2] - '0') * 10 + (date_str[3] - '0');
 
     // 获取当前日期
     int current_year, current_month, current_day;
@@ -271,177 +243,267 @@ void validate_week_format(const char *date, Date_Expected *date_expected)
     // 检查日期不小于今天
     if (year < current_year)
     {
-        date_expected->expect = 0;
+        date->Error->error_code = 1;
         return;
     }
     else if (year == current_year)
     {
         if (month < current_month || month < 1 || month > 12)
         {
-            date_expected->expect = 0;
+            date->Error->error_code = 1;
             return;
         }
         else if (month == current_month)
         {
             if (week < calculate_week_number(current_day)) // 不能小于当前周
             {
-                date_expected->expect = 0;
+                date->Error->error_code = 1;
                 return;
             }
         }
     }
-    date_expected->date->year.year = year;
-    date_expected->date->month.month = month;
-    date_expected->date->week.week = week; // 这里day存周数
-    date_expected->expect = 1;
-    printf("date_expected->date->year.year: %d\n", date_expected->date->year.year);
-    printf("date_expected->date->month.month: %d\n", date_expected->date->month.month);
-    printf("date_expected->date->week.week: %d\n", date_expected->date->week.week);
+    date->Year->year = year;
+    date->Month->month = month;
+    date->Week->week = week; // 这里day存周数
+    date->Error->error_code = 0;
     printf("week parser passed!!!\n");
 }
 
-Date parse_date(Date_Type date_type, char *date_str, Date *date)
+Date* parse_date(Date_Type date_type, char *date_str,Date*date)
 {
-    Date_Expected *date_expected = (Date_Expected *)malloc(sizeof(Date_Expected));
-    date_expected->expect = 0;
-    date_expected->date = (Date *)malloc(sizeof(Date));
+    // Date date = {0};
     switch (date_type)
     {
     case DAY:
-        validate_date_format(date_str, date_expected);
+        validate_date_format(date_str, date);
         break;
     case WEEK:
-        validate_week_format(date_str, date_expected);
+        validate_week_format(date_str, date);
         break;
     case MONTH:
-        validate_year_month_format(date_str, date_expected);
+        validate_year_month_format(date_str, date);
         break;
     case YEAR:
-        validate_year_format(date_str, date_expected);
+        validate_year_format(date_str, date);
         break;
     }
-    // 有效的
-    if (date_expected->expect == 1)
-    {
-        printf("date_expected->expect == 1-valid date format\n");
-        date_expected->date->error.error_code = 0;
-        date->error.error_code = 0;
-        copy_date(date, date_expected);
-        printf("date_expected->date->error.error_code: %d\n", date_expected->date->error.error_code);
-        printf("date->error.error_code: %d\n", date->error.error_code);
-        printf("date_expected->date->year.year: %d\n", date_expected->date->year.year);
-        printf("date->year.year: %d\n", date->year.year);
-        printf("date_expected->date->month.month: %d\n", date_expected->date->month.month);
-        printf("date->month.month: %d\n", date->month.month);
-        printf("date_expected->date->week.week: %d\n", date_expected->date->week.week);
-        printf("date->week.week: %d\n", date->week.week);
-        printf("date_expected->date->day.day: %d\n", date_expected->date->day.day);
-        printf("date->day.day: %d\n", date->day.day);
-
-        return *date;
-    }
-    // 无效的
-    else
-    {
-        printf("date_expected->expect == 0-InValid date format\n");
-        date_expected->date->error.error_code = 1;
-        date->error.error_code = 1;
-        printf("date_expected->date->error.error_code: %d\n", date_expected->date->error.error_code);
-        printf("date->error.error_code: %d\n", date->error.error_code);
-        printf("date_expected->date->year.year: %d\n", date_expected->date->year.year);
-        printf("date->year.year: %d\n", date->year.year);
-        printf("date_expected->date->month.month: %d\n", date_expected->date->month.month);
-        printf("date->month.month: %d\n", date->month.month);
-        printf("date_expected->date->week.week: %d\n", date_expected->date->week.week);
-        printf("date->week.week: %d\n", date->week.week);
-        printf("date_expected->date->day.day: %d\n", date_expected->date->day.day);
-        printf("date->day.day: %d\n", date->day.day);
-        return *date;
-    }
+    return date;
 }
 
-int main()
-{
-    // 测试 YEAR 类型
-    {
-        char date_str[] = "2025";
-        Date_Type date_type = YEAR;
-        Date *date = (Date *)malloc(sizeof(Date));
-        Date result = parse_date(date_type, date_str, date);
-        if (result.error.error_code == 0)
-        {
-            printf("YEAR - Valid. Year: %d\n", result.year.year);
-        }
-        else
-        {
-            printf("YEAR - Invalid\n");
-        }
-    }
 
-    // // 测试 MONTH 类型
-    // {
-    //     char date_str[] = "2025.08";
-    //     Date_Type date_type = MONTH;
-    //     Date *date = (Date *)malloc(sizeof(Date));
-    //     Date result = parse_date(date_type, date_str, date);
-    //     if (result.error.error_code == 0)
-    //     {
-    //         printf("MONTH - Valid. Year: %d, Month: %d\n", result.month.year, result.month.month);
-    //     }
-    //     else
-    //     {
-    //         printf("MONTH - Invalid\n");
-    //     }
-    // }
+// int main()
+// {
+//     // 测试 YEAR 类型 - 有效
+//     {
+//         char date_str[] = "2025";
+//         Date* result = (Date*)malloc(sizeof(Date));
+//         result->Day=(Date_Day*)malloc(sizeof(Date_Day));
+//         result->Month=(Date_Month*)malloc(sizeof(Date_Month));
+//         result->Week=(Date_Week*)malloc(sizeof(Date_Week));
+//         result->Year=(Date_Year*)malloc(sizeof(Date_Year));
+//         result->Error=(Date_Error*)malloc(sizeof(Date_Error));
+//         result = parse_date(YEAR, date_str,result);
+//         if (result->Error->error_code == 0)
+//         {
+//             printf("YEAR - Valid. Year: %d\n", result->Year->year);
+//         }
+//         else
+//         {
+//             printf("YEAR - Invalid\n");
+//         }
+//         free(result->Day);
+//         free(result->Month);
+//         free(result->Week);
+//         free(result->Year);
+//         free(result->Error);
+//         free(result);
+//     }
 
-    // // 测试 WEEK 类型
-    // {
-    //     char date_str[] = "2025.08.3";
-    //     Date_Type date_type = WEEK;
-    //     Date *date = (Date *)malloc(sizeof(Date));
-    //     Date result = parse_date(date_type, date_str, date);
-    //     if (result.error.error_code == 0)
-    //     {
-    //         printf("WEEK - Valid. Year: %d, Month: %d, Week: %d\n", result.week.year, result.week.month, result.week.week);
-    //     }
-    //     else
-    //     {
-    //         printf("WEEK - Invalid\n");
-    //     }
-    // }
+//     // 测试 YEAR 类型 - 无效（年份过小）
+//     {
+//         char date_str[] = "2000";
+//         Date* result = (Date*)malloc(sizeof(Date));
+//         result->Day=(Date_Day*)malloc(sizeof(Date_Day));
+//         result->Month=(Date_Month*)malloc(sizeof(Date_Month));
+//         result->Week=(Date_Week*)malloc(sizeof(Date_Week));
+//         result->Year=(Date_Year*)malloc(sizeof(Date_Year));
+//         result->Error=(Date_Error*)malloc(sizeof(Date_Error));
+//         result = parse_date(YEAR, date_str,result);
+//         if (result->Error->error_code == 0)
+//         {
+//             printf("YEAR - Valid (should be invalid)\n");
+//         }
+//         else
+//         {
+//             printf("YEAR - Invalid (correct)\n");
+//         }
+//         free(result->Day);
+//         free(result->Month);
+//         free(result->Week);
+//         free(result->Year);
+//         free(result->Error);
+//         free(result);
+//     }
 
-    // // 测试 DAY 类型
-    // {
-    //     char date_str[] = "2025.08.15";
-    //     Date_Type date_type = DAY;
-    //     Date *date = (Date *)malloc(sizeof(Date));
-    //     Date result = parse_date(date_type, date_str, date);
-    //     if (result.error.error_code == 0)
-    //     {
-    //         printf("DAY - Valid. Year: %d, Month: %d, Day: %d\n", result.day.year, result.day.month, result.day.day);
-    //     }
-    //     else
-    //     {
-    //         printf("DAY - Invalid\n");
-    //     }
-    // }
+//     // 测试 MONTH 类型 - 有效
+//     {
+//         char date_str[] = "2025.08";
+//         Date* result = (Date*)malloc(sizeof(Date));
+//         result->Day=(Date_Day*)malloc(sizeof(Date_Day));
+//         result->Month=(Date_Month*)malloc(sizeof(Date_Month));
+//         result->Week=(Date_Week*)malloc(sizeof(Date_Week));
+//         result->Year=(Date_Year*)malloc(sizeof(Date_Year));
+//         result->Error=(Date_Error*)malloc(sizeof(Date_Error));
+//         result = parse_date(MONTH, date_str,result);
+//         if (result->Error->error_code == 0)
+//         {
+//             printf("MONTH - Valid. Year: %d, Month: %d\n",
+//                    result->Year->year, result->Month->month);
+//         }
+//         else
+//         {
+//             printf("MONTH - Invalid\n");
+//         }
+//         free(result->Day);
+//         free(result->Month);
+//         free(result->Week);
+//         free(result->Year);
+//         free(result->Error);
+//         free(result);
+//     }
 
-    // // 测试错误格式的情况
-    // {
-    //     char date_str[] = "2025-08"; // 错误的分隔符
-    //     Date_Type date_type = MONTH;
-    //     Date *date = (Date *)malloc(sizeof(Date));
-    //     Date result = parse_date(date_type, date_str, date);
-    //     if (result.error.error_code == 0)
-    //     {
-    //         printf("Error Case - Valid (should be invalid)\n");
-    //     }
-    //     else
-    //     {
-    //         printf("Error Case - Invalid (correct)\n");
-    //     }
-    // }
+//     // 测试 MONTH 类型 - 无效（格式错误）
+//     {
+//         char date_str[] = "2025/08";
+//         Date* result = (Date*)malloc(sizeof(Date));
+//         result->Day=(Date_Day*)malloc(sizeof(Date_Day));
+//         result->Month=(Date_Month*)malloc(sizeof(Date_Month));
+//         result->Week=(Date_Week*)malloc(sizeof(Date_Week));
+//         result->Year=(Date_Year*)malloc(sizeof(Date_Year));
+//         result->Error=(Date_Error*)malloc(sizeof(Date_Error));
+//         result = parse_date(MONTH, date_str,result);
+//         if (result->Error->error_code == 0)
+//         {
+//             printf("MONTH - Valid (should be invalid)\n");
+//         }
+//         else
+//         {
+//             printf("MONTH - Invalid (correct)\n");
+//         }
+//         free(result->Day);
+//         free(result->Month);
+//         free(result->Week);
+//         free(result->Year);
+//         free(result->Error);
+//         free(result);
+//     }
 
-    return 0;
-}
+//     // 测试 WEEK 类型 - 有效
+//     {
+//         char date_str[] = "2025.08.3";
+//         Date* result = (Date*)malloc(sizeof(Date));
+//         result->Day=(Date_Day*)malloc(sizeof(Date_Day));
+//         result->Month=(Date_Month*)malloc(sizeof(Date_Month));
+//         result->Week=(Date_Week*)malloc(sizeof(Date_Week));
+//         result->Year=(Date_Year*)malloc(sizeof(Date_Year));
+//         result->Error=(Date_Error*)malloc(sizeof(Date_Error));
+//         result = parse_date(WEEK, date_str,result);
+//         if (result->Error->error_code == 0)
+//         {
+//             printf("WEEK - Valid. Year: %d, Month: %d, Week: %d\n",
+//                    result->Year->year, result->Month->month, result->Week->week);
+//         }
+//         else
+//         {
+//             printf("WEEK - Invalid\n");
+//         }
+//         free(result->Day);
+//         free(result->Month);
+//         free(result->Week);
+//         free(result->Year);
+//         free(result->Error);
+//         free(result);
+//     }
+
+//     // 测试 WEEK 类型 - 无效（周数过大）
+//     {
+//         char date_str[] = "2025.08.5";
+//         Date* result = (Date*)malloc(sizeof(Date));
+//         result->Day=(Date_Day*)malloc(sizeof(Date_Day));
+//         result->Month=(Date_Month*)malloc(sizeof(Date_Month));
+//         result->Week=(Date_Week*)malloc(sizeof(Date_Week));
+//         result->Year=(Date_Year*)malloc(sizeof(Date_Year));
+//         result->Error=(Date_Error*)malloc(sizeof(Date_Error));
+//         result = parse_date(WEEK, date_str,result);
+//         if (result->Error->error_code == 0)
+//         {
+//             printf("WEEK - Valid (should be invalid)\n");
+//         }
+//         else
+//         {
+//             printf("WEEK - Invalid (correct)\n");
+//         }
+//         free(result->Day);
+//         free(result->Month);
+//         free(result->Week);
+//         free(result->Year);
+//         free(result->Error);
+//         free(result);
+//     }
+
+//     // 测试 DAY 类型 - 有效
+//     {
+//         char date_str[] = "2025.08.15";
+//         Date* result = (Date*)malloc(sizeof(Date));
+//         result->Day=(Date_Day*)malloc(sizeof(Date_Day));
+//         result->Month=(Date_Month*)malloc(sizeof(Date_Month));
+//         result->Week=(Date_Week*)malloc(sizeof(Date_Week));
+//         result->Year=(Date_Year*)malloc(sizeof(Date_Year));
+//         result->Error=(Date_Error*)malloc(sizeof(Date_Error));
+//         result = parse_date(DAY, date_str,result);
+//         if (result->Error->error_code == 0)
+//         {
+//             printf("DAY - Valid. Year: %d, Month: %d, Day: %d\n",
+//                    result->Year->year, result->Month->month, result->Day->day);
+//         }
+//         else
+//         {
+//             printf("DAY - Invalid\n");
+//         }
+//         free(result->Day);
+//         free(result->Month);
+//         free(result->Week);
+//         free(result->Year);
+//         free(result->Error);
+//         free(result);
+//     }
+
+//     // 测试 DAY 类型 - 无效（日期不存在）
+//     {
+//         char date_str[] = "2025.02.30";
+//         Date* result = (Date*)malloc(sizeof(Date));
+//         result->Day=(Date_Day*)malloc(sizeof(Date_Day));
+//         result->Month=(Date_Month*)malloc(sizeof(Date_Month));
+//         result->Week=(Date_Week*)malloc(sizeof(Date_Week));
+//         result->Year=(Date_Year*)malloc(sizeof(Date_Year));
+//         result->Error=(Date_Error*)malloc(sizeof(Date_Error));
+//         result = parse_date(DAY, date_str,result);
+//         if (result->Error->error_code == 0)
+//         {
+//             printf("DAY - Valid (should be invalid)\n");
+//         }
+//         else
+//         {
+//             printf("DAY - Invalid (correct)\n");
+//         }
+//         free(result->Day);
+//         free(result->Month);
+//         free(result->Week);
+//         free(result->Year);
+//         free(result->Error);
+//         free(result);
+//     }
+
+//     return 0;
+// }
 // gcc D:\3software\todo-listux-1\todo-listux\src\lexer\date.c  D:\3software\todo-listux-1\todo-listux\src\tools\tools.c -o  D:\3software\todo-listux-1\todo-listux\src\lexer\date
