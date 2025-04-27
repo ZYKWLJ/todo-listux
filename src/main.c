@@ -47,24 +47,6 @@ int main(int argc, char *argv[])
     free(total_file_year_date);
 }
 
-void get_all_command_to_error(char *command, int argc, char *argv[])
-{
-    for (int i = 0; i < argc; i++)
-    {
-        strcat(command, argv[i]);
-    }
-    command[strlen(command)] = '\0';
-}
-
-int get_all_command_len(int *len, int argc, char *argv[])
-{
-    // int len = 0;
-    for (int i = 0; i < argc; i++)
-    {
-        *len += strlen(argv[i]);
-    }
-    return *len;
-}
 
 // 编译最原始的命令！
 // gcc D:/3software/todo-listux/src/main.c D:/3software/todo-listux/src/database/add_data.c D:/3software/todo-listux/src/database/delete_data.c D:/3software/todo-listux/src/database/load_data.c D:/3software/todo-listux/src/database/modify_data.c D:/3software/todo-listux/src/database/save_data.c D:/3software/todo-listux/src/display/help.c D:/3software/todo-listux/src/display/show_data.c D:/3software/todo-listux/src/execute/add.c D:/3software/todo-listux/src/execute/delete.c D:/3software/todo-listux/src/execute/done.c D:/3software/todo-listux/src/execute/find.c D:/3software/todo-listux/src/execute/modify.c D:/3software/todo-listux/src/execute/undo.c D:/3software/todo-listux/src/strcutures/TaskDay.c D:/3software/todo-listux/src/strcutures/TaskMonth.c D:/3software/todo-listux/src/strcutures/TaskYear.c D:/3software/todo-listux/src/tools/MONTH.c D:/3software/todo-listux/src/tools/tools.c -o D:\3software\todo-listux\bin\tl

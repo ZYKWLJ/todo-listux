@@ -11,11 +11,19 @@ void all_execute(Date *date /*指定的日期，不指定默认为当前的日�
         if (argc < 4)
         {
             printf("未提供日期参数\n");
+            exit(EXIT_FAILURE);
         }
         printf("all_execute: date_type!=CURRENT_DAY\n");
         // 这里开始读取第4个参数，也就是日期
         parse_date(*date_type, argv[3], date); // 所有的内容都通过指针传递！
     }
+    else if (date_type == CURRENT_DAY)
+    {
+        if (argc < 2)
+            printf("all_execute: date_type==CURRENT_DAY\n");
+        exit(EXIT_FAILURE);
+    }
+    
     // 具体的判断还是在单独的函数中进行判断
     // 不断是指没指定日期，命令都是第二个参数，所以这里的函数命令统一为argv[1]！
     if (strcmp(argv[1], "show") == 0 || strcmp(argv[1], "s") == 0)
@@ -52,9 +60,10 @@ void all_execute(Date *date /*指定的日期，不指定默认为当前的日�
     {
         // 所有的进入在详细判断！
         set_setting(argc, argv);
-    }else{
-        
-        printf("%s--未找到命令\n", argv[1]);
+    }
+    else
+    {
+        COMMAND_ERROR(setting, argc, argv); // 专用的错误处理
     }
 }
 #ifdef draft

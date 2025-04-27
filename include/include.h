@@ -23,6 +23,7 @@
 #include "display/color.h"
 #include "tools/tools.h"
 #include "tools/MONTH.h"
+#include "tools/command_error.h"
 #include "database/load_data.h"
 #include "database/save_data.h"
 #include "database/delete_data.h"

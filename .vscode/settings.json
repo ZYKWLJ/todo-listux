@@ -70,6 +70,8 @@
         "all_execute.h": "c",
         "color.h": "c",
         "display.h": "c",
-        "tools.h": "c"
+        "tools.h": "c",
+        "command_error.h": "c",
+        "date_validate_format.h": "c"
     }
 }
