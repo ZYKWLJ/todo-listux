@@ -1,16 +1,5 @@
 #include "../../include/include.h"
-int is_all_digits(const char *str)
-{
-    int len = strlen(str);
-    for (int i = 0; i < len; i++)
-    {
-        if (!isdigit(str[i]))
-        {
-            return 0; // 只要有一个字符不是数字，返回0
-        }
-    }
-    return 1; // 所有字符都是数字，返回1
-}
+
 
 // 固定数据结构，2025.01.04
 

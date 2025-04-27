@@ -20,6 +20,7 @@ void lexer(Date *date, Date_Type *date_type, Total_File_Year_Date *total_file_ye
         // -xxxx格式错误，直接返回了！
         if (*date_type == ERROR)
         {
+            COMMAND_ERROR(setting, argc, argv);
             printf("Invalid date type argument.\n");
             return;
         }
@@ -27,7 +28,7 @@ void lexer(Date *date, Date_Type *date_type, Total_File_Year_Date *total_file_ye
     //  最后到这里才来执行任何任务！
     all_execute(date, date_type, total_file_year_date, setting, argc, argv);
     LOG_PRINT("todo-listux end------!\n");
-    return 0;
+    // return;
 }
 
 #ifdef MAIN

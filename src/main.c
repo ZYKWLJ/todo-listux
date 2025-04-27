@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     if (argc == 1)
     { // 单独输入tl,仅仅显示帮助手册
         help();
-        return;
+        exit(0);
     }
     int year, month, week, day;
     get_current_date(&year, &month, &day);
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     date->year = year;
     date->month = month;
     date->week = week;
-    date->day = date;
+    date->day = day;
     date->error = 0;
     // 获取总文件数据
     Total_File_Year_Date *total_file_year_date = (Total_File_Year_Date *)malloc(sizeof(Total_File_Year_Date));

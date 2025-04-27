@@ -23,8 +23,6 @@ Date_Type parse_date_type(char *date_type)
     }
     else
     {
-        // date_type=ERROR;
-        printf("未知的日期参数\n");
         return ERROR;
     }
 }

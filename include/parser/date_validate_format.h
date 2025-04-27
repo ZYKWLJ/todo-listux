@@ -1,5 +1,5 @@
 #include "../include.h"
-int is_all_digits(const char *str);
+
 // 固定数据结构，2025.01.04
 void validate_year_format(const char *date_str, Date *date);
 

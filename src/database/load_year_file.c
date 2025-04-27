@@ -38,7 +38,7 @@ void load_year_data(int year, Year_Task *year_task)
     if (create_directory(base_path) != 0)
     {
         fprintf(stderr, "无法创建数据目录: %s\n", base_path);
-        return NULL;
+        return;
     }
 
     struct stat buffer;
@@ -56,7 +56,7 @@ void load_year_data(int year, Year_Task *year_task)
     Day_Year_Task *year_tasks = init_year_tasks(year);
     if (!year_tasks)
     {
-        return NULL;
+        return;
     }
 
     file = fopen(filename, "r");
@@ -69,7 +69,7 @@ void load_year_data(int year, Year_Task *year_task)
             if (file_size == 0)
             {
                 fclose(file);
-                return year_tasks;
+                return;
             }
             fseek(file, 0, SEEK_SET);
         }
@@ -80,7 +80,7 @@ void load_year_data(int year, Year_Task *year_task)
             LOG_PRINT("Failed to read year from file.\n");
             fclose(file);
             free_year_tasks(year_tasks);
-            return NULL;
+            return;
         }
         // 消耗换行符
         fgetc(file);
@@ -90,7 +90,7 @@ void load_year_data(int year, Year_Task *year_task)
             LOG_PRINT("Year in file does not match requested year.\n");
             fclose(file);
             free_year_tasks(year_tasks);
-            return NULL;
+            return;
         }
 
         for (int m = 0; m < 12; m++)
@@ -106,7 +106,7 @@ void load_year_data(int year, Year_Task *year_task)
                 {
                     // 文件正常结束，没有更多数据
                     fclose(file);
-                    return year_tasks;
+                    return;
                 }
 
                 // 读取4个整数
@@ -120,14 +120,14 @@ void load_year_data(int year, Year_Task *year_task)
                     {
                         // 文件正常结束
                         fclose(file);
-                        return year_tasks;
+                        return;
                     }
                     else
                     {
                         LOG_PRINT("Failed to read day tasks information from file.\n");
                         fclose(file);
                         free_year_tasks(year_tasks);
-                        return NULL;
+                        return;
                     }
                 }
                 // 消耗换行符
@@ -150,7 +150,7 @@ void load_year_data(int year, Year_Task *year_task)
                         LOG_PRINT("Failed to read task line from file.\n");
                         fclose(file);
                         free_year_tasks(year_tasks);
-                        return NULL;
+                        return;
                     }
 
                     // 移除末尾的换行符
@@ -164,7 +164,7 @@ void load_year_data(int year, Year_Task *year_task)
                         LOG_PRINT("Invalid task format: %s\n", line);
                         fclose(file);
                         free_year_tasks(year_tasks);
-                        return NULL;
+                        return;
                     }
 
                     // 分隔任务内容和完成状态
@@ -183,7 +183,7 @@ void load_year_data(int year, Year_Task *year_task)
                             LOG_PRINT("Memory allocation failed.\n");
                             fclose(file);
                             free_year_tasks(year_tasks);
-                            return NULL;
+                            return;
                         }
                         day_tasks->task[t].task = new_task_str;
                     }
@@ -197,7 +197,7 @@ void load_year_data(int year, Year_Task *year_task)
 #ifdef LOG
     LOG_PRINT("Data loaded successfully.\n");
 #endif
-    return year_tasks;
+    return;
 }
 
 // int main(){

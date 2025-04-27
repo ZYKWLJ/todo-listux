@@ -40,11 +40,11 @@ void set_setting(int argc, char **argv)
                 return;
             }
 
-            Setting* result = read_setting(setting);
-            if (result == NULL) {
-                free(setting); // 释放已分配的内存
-                return;
-            }
+            read_setting(setting);
+            // if (result == NULL) {
+            //     free(setting); // 释放已分配的内存
+            //     return;
+            // }
 
             // 根据键更新设置
             if (strcmp(key, "color") == 0)

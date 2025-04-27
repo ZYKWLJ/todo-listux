@@ -29,11 +29,11 @@ void COMMAND_ERROR(Setting *setting, int argc, char *argv[])
     }
 }
 
-// int main(int argc, char *argv[])
-// {
-//     // 初始化设置
-//     Setting config = {.color = "on"}; // 启用彩色输出
-//     COMMAND_ERROR(&config, argc - 1, argv + 1);
+int main(int argc, char *argv[])
+{
+    // 初始化设置
+    Setting config = {.color = "on"}; // 启用彩色输出
+    COMMAND_ERROR(&config, argc - 1, argv + 1);
 
-//     return 0;
-// }
+    return 0;
+}
