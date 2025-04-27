@@ -1,16 +1,9 @@
 #include "../../include/include.h"
-
-int delete_(Day_Year_Task *year_task, int year, int month, int day, int index, int argc, char **argv,Setting *setting)
+// #include "delete.h"
+void delete_(Date *date, Date_Type *date_type, Total_File_Year_Date *total_file_year_date, Setting *setting, int argc, char **argv)
 {
-    if (argc != 3) // 目前只能等于3，多少都不行！
-    {
-        printf("Usage: tl delete <task_index>\n");
-        save_data(year_task, year);
-        return 1;
-    }
-    int task_index = atoi(argv[2]);
-    // printf("task_index: %d\n", task_index-1);
-    delete_task(year_task, year, month, day, task_index-1);
-    display_current_date_tasks(year_task, year, month, day,setting);
-    return 0;
+    if (argc != 3)
+            {
+                printf("too many arguments!将展示正确的delete命令的使用\n");
+            }
 }

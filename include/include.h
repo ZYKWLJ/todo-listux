@@ -6,6 +6,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include <time.h>
+#include <stdarg.h>
 #include "strcutures/task_day/Task.h"
 #include "strcutures/task_day/TaskDay.h"
 #include "strcutures/task_day/TaskMonth.h"
@@ -15,9 +16,10 @@
 #include "strcutures/task_month/Month_Task.h"
 #include "strcutures/task_month/Month_Year_Task.h"
 #include "strcutures/task_year/Year_Task.h"
+#include "strcutures/Total_File_Year_Date.h"
 #include "strcutures/date/date.h"
 #include "setting/setting.h"
-#include "display/show_data.h"
+#include "display/display.h"
 #include "display/color.h"
 #include "tools/tools.h"
 #include "tools/MONTH.h"
@@ -28,6 +30,10 @@
 #include "database/add_data.h"
 #include "database/filePath.h"
 #include "database/save_setting.h"
+#include "database/load_day_year_file.h"
+#include "database/load_week_year_file.h"
+#include "database/load_month_year_file.h"
+#include "database/load_year_file.h"
 #include "execute/find.h"
 #include "execute/delete.h"
 #include "execute/modify.h"
@@ -36,6 +42,10 @@
 #include "execute/done.h"
 #include "execute/undo.h"
 #include "execute/set_setting.h"
+#include "execute/all_execute.h"
 #include "log/log.h"
-// #include "/date.h"
+#include "lexer/lexer_date.h"
+#include "parser/date_validate_format.h"
+#include "parser/parse_date.h"
+#include "parser/parse_date_type.h"
 #endif

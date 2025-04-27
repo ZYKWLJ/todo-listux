@@ -52,7 +52,7 @@ void save_setting(Setting *setting)
 }
 
 // 从文件读取设置到结构体
-Setting *read_setting(Setting *setting)
+void read_setting(Setting *setting)
 {
     char filename[MAX_PATH];
     const char *base_path = get_appdata_path();
@@ -97,9 +97,6 @@ Setting *read_setting(Setting *setting)
     {
         fprintf(stderr, "can't open file %s to read\n", filename);
     }
-
-    // 添加返回语句，返回传入的 setting 指针
-    return setting;
 }
 
 // int main()

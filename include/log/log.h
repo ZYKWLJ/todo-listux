@@ -4,3 +4,5 @@
 #else
     #define LOG_PRINT(format, ...) do {} while(0)
 #endif
+
+// #define COMMAND_ERROR(format, ...) printf("[%s --Unkown Comand] ")

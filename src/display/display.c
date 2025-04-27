@@ -1,7 +1,47 @@
 #include "../../include/include.h"
+#include "display.h"
 // 显示当前日期的所有数据
-void display_current_date_tasks(Day_Year_Task *task_year, int year, int month, int day, Setting *setting)
+void display_DAY_tasks(Date *date, Total_File_Year_Date *total_file_year_date, Setting *setting, int argc, char **argv)
 {
+    if (argc != 2) // 当天的显示只能是tl s,可能是tl s xxxx,那就报错，因为不允许，这是严谨性
+    {
+        printf("too many arguments!将展示正确的show命令的使用\n");
+    }
+    // 到这一步一定是tl s/tl show了
+
+}
+void display(Date *date, Date_Type *date_type, Total_File_Year_Date *total_file_year_date, Setting *setting, int argc, char **argv)
+{
+    // 当天显示
+    if (date_type == CURRENT_DAY)
+    {
+    }
+    // 计算指定的日期，到这里才计算？
+
+    // 指定显示
+    switch (*date_type)
+    {
+    case CURRENT_DAY:
+        display_DAY_tasks(date, total_file_year_date, setting, argc, argv);
+        break;
+    case DAY:
+        display_DAY_tasks(date, total_file_year_date, setting, argc, argv);
+        break;
+    case WEEK:
+        display_WEEK_tasks(date, total_file_year_date, setting, argc, argv);
+        break;
+    case MONTH:
+        display_MONTH_tasks(date, total_file_year_date, setting, argc, argv);
+        break;
+    case YEAR:
+        display_YEAR_tasks(date, total_file_year_date, setting, argc, argv);
+        break;
+    default:
+        printf("Invalid date type\n");
+        break;
+    }
+
+#ifdef LOG
     // 检查 task_year 是否为空
     if (task_year == NULL)
     {
@@ -78,3 +118,4 @@ void display_current_date_tasks(Day_Year_Task *task_year, int year, int month, i
         }
     }
 }
+#endif

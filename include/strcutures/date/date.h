@@ -11,6 +11,8 @@ typedef enum Date_Type
     MONTH,
     WEEK,
     DAY,
+    CURRENT_DAY,//当天的，默认显示
+    ERROR,
 } Date_Type;
 #define ERROR_FORMAT -1;
 // 这就是完备的日期类型！
@@ -25,10 +27,3 @@ typedef struct Date
 
 void init_date(Date *date);
 void free_date(Date *date);
-
-// 解析第3个参数,判断日期类型
-Date_Type parse_date_type(char *date_type);
-
-// 解析第4个参数,判断日期类型下的具体日期
-
-Date *parse_date(Date_Type date_type, char *date_str, Date *date);

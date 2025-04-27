@@ -1,4 +1,5 @@
 #include "../../include/include.h"
+#include "undo.h"
 
 int undo(Day_Year_Task *year_task, int year, int month, int day, int index, int argc, char **argv,Setting *setting)
 {
@@ -20,4 +21,11 @@ int undo(Day_Year_Task *year_task, int year, int month, int day, int index, int 
 
     display_current_date_tasks(year_task, year, month, day,setting);
     return 0;
+}
+void undo(Date *date, Date_Type *date_type, Total_File_Year_Date *total_file_year_date, Setting *setting, int argc, char **argv)
+{
+    if (argc != 3)
+            {
+                printf("too many arguments!将展示正确的delete命令的使用\n");
+            }
 }

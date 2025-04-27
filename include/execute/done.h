@@ -1,5 +1,5 @@
 # ifndef DONE_H
 # define DONE_H
 #include "../include.h"
-int done(Day_Year_Task *year_task, int year, int month, int day, int index, int argc, char **argv,Setting *setting);
+void done(Date *date, Date_Type *date_type, Total_File_Year_Date *total_file_year_date, Setting *setting, int argc, char **argv);
 #endif

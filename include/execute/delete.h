@@ -1,5 +1,5 @@
-# ifndef DELETE_H
-# define DELETE_H
+#ifndef DELETE_H
+#define DELETE_H
 #include "../include.h"
-int delete_(Day_Year_Task *year_task, int year, int month, int day, int index, int argc, char **argv,Setting *setting);
+void delete_(Date *date, Date_Type *date_type, Total_File_Year_Date *total_file_year_date, Setting *setting, int argc, char **argv);
 #endif

@@ -62,6 +62,14 @@
         "month_task.h": "c",
         "week_task.h": "c",
         "date.h": "c",
-        "day_year_task.h": "c"
+        "day_year_task.h": "c",
+        "total_file_year_date.h": "c",
+        "lexer_date.h": "c",
+        "load_year_file.h": "c",
+        "shlobj.h": "c",
+        "all_execute.h": "c",
+        "color.h": "c",
+        "display.h": "c",
+        "tools.h": "c"
     }
 }

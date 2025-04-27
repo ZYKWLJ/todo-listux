@@ -1,13 +1,9 @@
 #include "../../include/include.h"
-
-int add(Day_Year_Task *year_task, int year, int month, int day, int index, int argc, char **argv,Setting *setting)
+#include "add.h"
+void add(Date *date, Date_Type *date_type, Total_File_Year_Date *total_file_year_date, Setting *setting, int argc, char **argv)
 {
     if (argc != 3)
     {
-        printf("Usage: tl add <task_content>\n");
-        return 0;
+        printf("too many arguments!将展示正确的add命令的使用\n");
     }
-    add_task(year_task, year, month, day, index, argv[2]);
-    display_current_date_tasks(year_task, year, month, day,setting);
-    return 1;
 }
