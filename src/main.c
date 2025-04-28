@@ -18,12 +18,10 @@ void display_current_time()
 int main(int argc, char *argv[])
 {
     // printf("Welcome to TaskList!----");
-    display_current_time();
-    if (argc == 1)
-    { // 单独输入tl,仅仅显示帮助手册
-        help();
-        exit(0);
-    }
+    display_current_time(); // 获取设置文件
+    Setting *setting = (Setting *)malloc(sizeof(Setting));
+    // 指令个数判断再次结束
+    judge_command_nums(setting, argc, argv);
     int year, month, week, day;
     get_current_date(&year, &month, &day);
     week = calculate_week_number(day);
@@ -36,8 +34,7 @@ int main(int argc, char *argv[])
     date->error = 0;
     // 获取总文件数据
     Total_File_Year_Date *total_file_year_date = (Total_File_Year_Date *)malloc(sizeof(Total_File_Year_Date));
-    // 获取设置文件
-    Setting *setting = (Setting *)malloc(sizeof(Setting));
+
     // 初始化数据类型文件
     Date_Type *date_type = (Date_Type *)malloc(sizeof(Date_Type));
     *date_type = CURRENT_DAY;                                                                                       // 默认的日期类型
@@ -46,7 +43,6 @@ int main(int argc, char *argv[])
     free(date_type);
     free(total_file_year_date);
 }
-
 
 // 编译最原始的命令！
 // gcc D:/3software/todo-listux/src/main.c D:/3software/todo-listux/src/database/add_data.c D:/3software/todo-listux/src/database/delete_data.c D:/3software/todo-listux/src/database/load_data.c D:/3software/todo-listux/src/database/modify_data.c D:/3software/todo-listux/src/database/save_data.c D:/3software/todo-listux/src/display/help.c D:/3software/todo-listux/src/display/show_data.c D:/3software/todo-listux/src/execute/add.c D:/3software/todo-listux/src/execute/delete.c D:/3software/todo-listux/src/execute/done.c D:/3software/todo-listux/src/execute/find.c D:/3software/todo-listux/src/execute/modify.c D:/3software/todo-listux/src/execute/undo.c D:/3software/todo-listux/src/strcutures/TaskDay.c D:/3software/todo-listux/src/strcutures/TaskMonth.c D:/3software/todo-listux/src/strcutures/TaskYear.c D:/3software/todo-listux/src/tools/MONTH.c D:/3software/todo-listux/src/tools/tools.c -o D:\3software\todo-listux\bin\tl

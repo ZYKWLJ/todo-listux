@@ -1,6 +1,4 @@
-#include "../../include/include.h"
-// 用户手册
-
+#include <stdio.h>
 
 void help()
 {
@@ -42,4 +40,10 @@ void help()
     printf("      Available keys:\n");
     printf("      - color: on/off       Enable/disable colored output\n");
     printf("      - view: week/day      Default display mode\n");
+}
+
+int main()
+{
+    help();
+    return 0;
 }
