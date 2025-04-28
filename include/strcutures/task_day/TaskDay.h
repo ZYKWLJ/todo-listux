@@ -9,7 +9,8 @@ typedef struct TaskDay
     Task *task;   // 当天的任务列表
 } TaskDay;
 // 初始化当天任务
-TaskDay* init_day_tasks();
+// TaskDay* init_day_tasks();
+void set_day_tasks(TaskDay *day_tasks, int size, Task *task, int capacity);
 // 扩展任务容量
 void expand_capacity(TaskDay *day_tasks) ;
 // 释放当天任务内存

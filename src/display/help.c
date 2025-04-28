@@ -29,13 +29,12 @@ void help()
     printf("  tl ~ index -dateType YYYY.MM.DD Toggle task (specific date)\n\n");
 
     printf("EDIT COMMANDS:\n");
-    printf("  Today Operations:\n");
-    printf("    tl = index \"new_content\"       Replace task (today)\n");
-    printf("    tl = index \"new_content\" -dateType YYYY.MM.DD  Replace task (specific date)\n");
-    printf("    tl =%% index \"prefix_content\"           Prepend to task(today)\n");
-    printf("    tl =%% index \"prefix_content\" -dateType YYYY.MM.DD Prepend to task(specific date)\n");
-    printf("    tl %%= index \"suffix_content\"           Append to task(today)\n");
-    printf("    tl %%= index \"suffix_content\" -dateType YYYY.MM.DD Append to task (specific date)\n\n");
+    printf("  tl = index \"new_content\"       Replace task (today)\n");
+    printf("  tl = index \"new_content\" -dateType YYYY.MM.DD  Replace task (specific date)\n");
+    printf("  tl =%% index \"prefix_content\"           Prepend to task(today)\n");
+    printf("  tl =%% index \"prefix_content\" -dateType YYYY.MM.DD Prepend to task(specific date)\n");
+    printf("  tl %%= index \"suffix_content\"           Append to task(today)\n");
+    printf("  tl %%= index \"suffix_content\" -dateType YYYY.MM.DD Append to task (specific date)\n\n");
 
     printf("CONFIGURATION:\n");
     printf("  tl $ key=value            Set configuration\n");

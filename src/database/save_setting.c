@@ -11,6 +11,8 @@
 #include <unistd.h>
 #include <sys/stat.h>
 #endif
+
+#ifdef LOG1
 // 保存设置到文件
 void save_setting(Setting *setting)
 {
@@ -99,6 +101,7 @@ void read_setting(Setting *setting)
     }
 }
 
+#endif
 // int main()
 // {
 //     Setting setting;

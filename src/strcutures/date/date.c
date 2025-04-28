@@ -2,7 +2,7 @@
 // #include "date.h"
 // #include "date.h"
 // 即解析第3个参数，第四个参数
-void init_date(Date *date)
+void set_date(Date *date, int year, int month, int week, int day, Date_Type date_type)
 {
     if (date == NULL)
     {
@@ -14,6 +14,7 @@ void init_date(Date *date)
     date->week = 0;
     date->day = 0;
     date->week = 0;
+    date_type;
 }
 
 void free_date(Date *date)

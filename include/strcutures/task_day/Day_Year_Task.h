@@ -9,7 +9,8 @@ typedef struct Day_Year_Task
 } Day_Year_Task;
 
 // 初始化某年的任务
-Day_Year_Task *init_year_tasks(int year);
+// Day_Year_Task *init_year_tasks(int year);
+void set_day_year_tasks(Day_Year_Task *year_tasks, int year, TaskMonth *months);
 // 释放某一年的任务
-void free_year_tasks(Day_Year_Task *year_tasks);
+void free_day_year_tasks(Day_Year_Task *year_tasks);
 #endif

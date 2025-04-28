@@ -72,6 +72,9 @@
         "display.h": "c",
         "tools.h": "c",
         "command_error.h": "c",
-        "date_validate_format.h": "c"
+        "date_validate_format.h": "c",
+        "command_type.h": "c",
+        "all_files.h": "c",
+        "week_month_task.h": "c"
     }
 }

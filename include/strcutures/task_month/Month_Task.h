@@ -8,3 +8,6 @@ typedef struct Month_Task
 } Month_Task;
 // 扩容函数，(初始化函数在下面结构体中调用)
 void Month_Task_expand_capacity(Month_Task *month_task);
+
+void set_month_month_task(Month_Task *month_task, int month, int size,int capacity, Task *task);
+void free_month_month_task(Month_Task *month_task);

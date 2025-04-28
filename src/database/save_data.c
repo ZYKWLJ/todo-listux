@@ -84,9 +84,9 @@ void save_data(Day_Year_Task *year_tasks, int year) {
 
             // 写入任务详情
             for (int t = 0; t < day_tasks->size; t++) {
-                if (day_tasks->task[t].task == NULL) continue;
+                if (day_tasks->task[t].content == NULL) continue;
                 fprintf(file, "%s %d\n", 
-                       day_tasks->task[t].task, 
+                       day_tasks->task[t].content, 
                        day_tasks->task[t].is_done);
             }
         }

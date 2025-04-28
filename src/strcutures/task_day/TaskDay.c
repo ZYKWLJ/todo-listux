@@ -1,41 +1,22 @@
 #include "../../../include/include.h"
+// #include "TaskDay.h"
 // 初始化当天任务
-TaskDay *init_day_tasks()
+void set_day_tasks(TaskDay *day_tasks, int size, Task *task, int capacity)
 {
-    TaskDay *day_tasks = (TaskDay *)malloc(sizeof(TaskDay));
-    if (day_tasks == NULL)
-    {
-        return NULL;
+    if(day_tasks == NULL){
+        LOG_PRINT("set_task_day: day_tasks == NULL\n");
+        exit(EXIT_FAILURE);
     }
-    day_tasks->size = 0;
-    day_tasks->capacity = INIT_TASK_CAPACITY;
-    day_tasks->task = (Task *)malloc(day_tasks->capacity * sizeof(Task));
-    if (day_tasks->task == NULL)
-    {
-        free(day_tasks);
-        return NULL;
+    if(task == NULL){
+        LOG_PRINT("set_task_day: task == NULL\n");
+        exit(EXIT_FAILURE);
     }
-    for (int i = 0; i < day_tasks->capacity; i++)
-    {
-        day_tasks->task[i].task = (char *)malloc(DEFALUT_TASK_CHAR_LENGTH * sizeof(char));
-        if (day_tasks->task[i].task == NULL)
-        {
-            for (int j = 0; j < i; j++)
-            {
-                free(day_tasks->task[j].task);
-            }
-            free(day_tasks->task);
-            free(day_tasks);
-            return NULL;
-        }
-        day_tasks->task[i].task[0] = '\0';
-        day_tasks->task[i].is_done = 0;
-    }
-    return day_tasks;
+    day_tasks->size = size;
+    day_tasks->capacity = capacity;
+    day_tasks->task = task;
 }
-
 // 扩容函数
-void expand_capacity(TaskDay *day_tasks)
+void expand_capacity(TaskDay *day_tasks) 
 {
     // 新容量为原容量的两倍
     int new_capacity = day_tasks->capacity * 2;
@@ -56,19 +37,19 @@ void expand_capacity(TaskDay *day_tasks)
     // 初始化新分配的任务空间
     for (int i = day_tasks->size; i < new_capacity; i++)
     {
-        day_tasks->task[i].task = (char *)malloc(DEFALUT_TASK_CHAR_LENGTH * sizeof(char));
-        if (day_tasks->task[i].task == NULL)
+        day_tasks->task[i].content = (char *)malloc(DEFALUT_TASK_CHAR_LENGTH * sizeof(char));
+        if (day_tasks->task[i].content == NULL)
         {
             // 内存分配失败，释放已分配的内存
             for (int j = 0; j < i; j++)
             {
-                free(day_tasks->task[j].task);
+                free(day_tasks->task[j].content);
             }
             free(day_tasks->task);
             free(day_tasks);
             return;
         }
-        day_tasks->task[i].task[0] = '\0';
+        day_tasks->task[i].content[0] = '\0';
         day_tasks->task[i].is_done = 0;
     }
 }
@@ -78,7 +59,7 @@ void free_day_tasks(TaskDay *day_tasks)
 {
     for (int i = 0; i < day_tasks->size; i++)
     {
-        free(day_tasks->task[i].task);
+        free(day_tasks->task[i].content);
     }
     free(day_tasks->task);
     free(day_tasks);

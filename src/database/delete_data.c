@@ -16,12 +16,12 @@ void delete_task(Day_Year_Task *year_tasks, int year, int month, int day, int in
     }
 
     // 释放任务内存
-    free(day_tasks->task[index].task);
+    free(day_tasks->task[index].content);
 
     for (int i = index; i < day_tasks->size - 1; i++)
     {
         // 复制任务字符串
-        strcpy(day_tasks->task[i].task, day_tasks->task[i + 1].task);
+        strcpy(day_tasks->task[i].content, day_tasks->task[i + 1].content);
         // 复制任务完成状态
         day_tasks->task[i].is_done = day_tasks->task[i + 1].is_done;
     }
@@ -30,6 +30,6 @@ void delete_task(Day_Year_Task *year_tasks, int year, int month, int day, int in
     // 将最后一个任务的 task 指针设置为 NULL
     if (day_tasks->size > 0)
     {
-        day_tasks->task[day_tasks->size].task = NULL;
+        day_tasks->task[day_tasks->size].content = NULL;
     }
 }

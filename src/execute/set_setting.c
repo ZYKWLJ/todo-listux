@@ -1,18 +1,9 @@
-// #include "../../include/include.h"
-// // tl set color=yes
-// // 读到第一个=为止，前面的是k，后面的是v
-// // void set_setting(int argc, char**argv){
-// //     if(argc==3){
-// //         // 读到第一个=为止，前面的是k，后面的是v
-// //     }else if(argc!=3){
-// //         // 显示设置的正确方法
-// //     }
-// // }
 #include "../../include/include.h"
 
 // 设置设置
 void set_setting(int argc, char **argv)
 {
+#ifdef DO
     if (argc == 3)
     {
         // 找到第一个 '=' 的位置
@@ -34,8 +25,9 @@ void set_setting(int argc, char **argv)
             }
 
             // 读取当前设置
-            Setting* setting = (Setting*)malloc(sizeof(Setting));
-            if (setting == NULL) {
+            Setting *setting = (Setting *)malloc(sizeof(Setting));
+            if (setting == NULL)
+            {
                 fprintf(stderr, "Memory allocation failed.\n");
                 return;
             }
@@ -97,6 +89,7 @@ void set_setting(int argc, char **argv)
         fprintf(stderr, "Usage: tl <command> <setting>\n");
         fprintf(stderr, "Example: tl set color=on\n");
     }
+#endif
 }
 
 // int main(int argc, char **argv)

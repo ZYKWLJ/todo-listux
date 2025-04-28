@@ -8,7 +8,7 @@ typedef struct Year_Task
 } Year_Task;
 
 // 初始化某年的任务
-Year_Task *init_Year_Task(int year);
+void set_year_task(Year_Task *year_task, int year,int size,int capacity, Task *task);
 // 释放某一年的任务
-void free_Year_Task(Year_Task *year_tasks);
-void Year_Task_expand_capacity(Year_Task *year_task);
+void free_year_task(Year_Task *year_tasks);
+void year_task_expand_capacity(Year_Task *year_task);

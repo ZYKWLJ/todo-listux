@@ -1,29 +1,25 @@
 #include "../../include/include.h"
 // #include "display.h"
 // 显示当前日期的所有数据
-
+#define LOG
 // void print_dates(int size,)
-void display_DAY_tasks(Date *date, Date_Type *date_type, Total_File_Year_Date *total_file_year_date, Setting *setting, int argc, char **argv)
+void display_DAY_tasks(All_Files *all_files, DISPLAY_NODE *display_node)
 {
 
-    if (*date_type == CURRENT_DAY) // 当天的显示只能是tl s [-day xxxx.xx.xx],可能是tl s xxxx,如果不是这两种情况，那就报错，因为不允许，这是严谨性
+    if (display_node->date->date_type == CURRENT_DAY) // 当天的显示只能是tl s [-day xxxx.xx.xx],可能是tl s xxxx,如果不是这两种情况，那就报错，因为不允许，这是严谨性
     {
-        if (argc != 2)
-        {
-            COMMAND_ERROR(setting, argc-1, argv+1);
-            printf("too many arguments!\n");
-            exit(EXIT_FAILURE);
-        }
+
+        LOG_PRINT("%s", "show current day task......\n");
     }
-    if (*date_type != CURRENT_DAY) // 当天的显示只能是tl s [-day xxxx.xx.xx],可能是tl s xxxx,如果不是这两种情况，那就报错，因为不允许，这是严谨性
+    else // 当天的显示只能是tl s [-day xxxx.xx.xx],可能是tl s xxxx,如果不是这两种情况，那就报错，因为不允许，这是严谨性
     {
-        if (argc != 4)
-        {
-            COMMAND_ERROR(setting, argc-1, argv+1);
-            printf("too many arguments!\n");
-            exit(EXIT_FAILURE);
-        }
+        LOG_PRINT("%s", "show specific day task......\n");
     }
+#ifdef LOG
+    LOG_PRINT("display_DAY_tasks\n");
+
+#endif
+#ifdef DO
     // 到这一步一定是tl s/tl show了
     // 之前数据已经加载在total_file_year_date里面了！
     TaskDay *current_day_tasks = total_file_year_date->day_year_task->months->days;
@@ -48,18 +44,17 @@ void display_DAY_tasks(Date *date, Date_Type *date_type, Total_File_Year_Date *t
                current_day_tasks->task[i].task,
                color_suffix);
     }
+#endif
 }
 
-void display_WEEK_tasks(Date *date, Total_File_Year_Date *total_file_year_date, Setting *setting, int argc, char **argv)
+void display_WEEK_tasks(All_Files *all_files, DISPLAY_NODE *display_node)
 {
-    if (argc != 4) // 当天的显示只能是tl s [-day xxxx.xx.xx],可能是tl s xxxx,如果不是这两种情况，那就报错，因为不允许，这是严谨性
-    {
-        COMMAND_ERROR(setting, argc-1, argv+1);
-        printf("too many arguments!\n");
-        exit(EXIT_FAILURE);
-    }
-    // 到这一步一定是tl s/tl show了
-    // 之前数据已经加载在total_file_year_date里面了！
+
+    LOG_PRINT("display_WEEK_tasks\n");
+    // if(display_node->)
+// 到这一步一定是tl s/tl show了
+// 之前数据已经加载在total_file_year_date里面了！
+#ifdef DO
     Week_Task *week_tasks = total_file_year_date->week_year_task->weeks;
     printf("Tasks for %d-%d-%d (Total: %d):\n", date->year, date->month, date->week, week_tasks->size);
 
@@ -82,15 +77,13 @@ void display_WEEK_tasks(Date *date, Total_File_Year_Date *total_file_year_date, 
                week_tasks->task[i].task,
                color_suffix);
     }
+#endif
 }
-void display_MONTH_tasks(Date *date, Total_File_Year_Date *total_file_year_date, Setting *setting, int argc, char **argv)
+void display_MONTH_tasks(All_Files *all_files, DISPLAY_NODE *display_node)
 {
-    if (argc != 4) // 当天的显示只能是tl s [-day xxxx.xx.xx],可能是tl s xxxx,如果不是这两种情况，那就报错，因为不允许，这是严谨性
-    {
-        COMMAND_ERROR(setting, argc-1, argv+1);
-        printf("too many arguments!\n");
-        exit(EXIT_FAILURE);
-    }
+
+    LOG_PRINT("display_MONTH_tasks\n");
+#ifdef DO
     // 到这一步一定是tl s/tl show了
     // 之前数据已经加载在total_file_year_date里面了！
     Month_Task *month_tasks = total_file_year_date->month_year_task->months;
@@ -115,15 +108,15 @@ void display_MONTH_tasks(Date *date, Total_File_Year_Date *total_file_year_date,
                month_tasks->task[i].task,
                color_suffix);
     }
+#endif
 }
-void display_YEAR_tasks(Date *date, Total_File_Year_Date *total_file_year_date, Setting *setting, int argc, char **argv)
+void display_YEAR_tasks(All_Files *all_files, DISPLAY_NODE *display_node)
 {
-    if (argc != 4) // 当天的显示只能是tl s [-day xxxx.xx.xx],可能是tl s xxxx,如果不是这两种情况，那就报错，因为不允许，这是严谨性
-    {
-        COMMAND_ERROR(setting, argc-1, argv+1);
-        printf("too many arguments!\n");
-        exit(EXIT_FAILURE);
-    }
+
+    LOG_PRINT("display_YEAR_tasks\n");
+
+#ifdef DO
+
     // 到这一步一定是tl s/tl show了
     // 之前数据已经加载在total_file_year_date里面了！
     Year_Task *year_tasks = total_file_year_date->year_task;
@@ -148,108 +141,29 @@ void display_YEAR_tasks(Date *date, Total_File_Year_Date *total_file_year_date, 
                year_tasks->task[i].task,
                color_suffix);
     }
+#endif
 }
 
-void display(Date *date, Date_Type *date_type, Total_File_Year_Date *total_file_year_date, Setting *setting, int argc, char **argv)
+void display(All_Files *all_files, NODE *node)
 {
     // 计算指定的日期，到这里才计算？
     // 指定显示
-    switch (*date_type)
+    switch (node->display_node->date->date_type)
     {
     case CURRENT_DAY:
     case DAY:
-        display_DAY_tasks(date, date_type, total_file_year_date, setting, argc, argv);
+        display_DAY_tasks(all_files, node->display_node);
         break;
     case WEEK:
-        display_WEEK_tasks(date, total_file_year_date, setting, argc, argv);
+        display_WEEK_tasks(all_files, node->display_node);
         break;
     case MONTH:
-        display_MONTH_tasks(date, total_file_year_date, setting, argc, argv);
+        display_MONTH_tasks(all_files, node->display_node);
         break;
     case YEAR:
-        display_YEAR_tasks(date, total_file_year_date, setting, argc, argv);
+        display_YEAR_tasks(all_files, node->display_node);
         break;
     default:
-        COMMAND_ERROR(setting, argc-1, argv+1);
-        printf("Invalid date type\n");
         break;
     }
 }
-#ifdef LOG
-// 检查 task_year 是否为空
-if (task_year == NULL)
-{
-    printf("task_year is NULL\n");
-    return;
-}
-// 检查 months 数组是否为空
-if (task_year->months == NULL)
-{
-    printf("task_year->months is NULL\n");
-    return;
-}
-
-// printf("==display_current_date_tasks==\n");
-// 月份和日期减1是因为数组索引从0开始
-month--;
-day--;
-
-// 检查月份是否合法
-if (month < 0 || month >= 12)
-{
-    printf("Invalid month\n");
-    return;
-}
-
-// 检查 days 指针是否为空
-if (task_year->months[month].days == NULL)
-{
-    printf("task_year->months[%d].days is NULL\n", month);
-    return;
-}
-
-// printf("Date: %d-%d-%d\n", year, month + 1, day + 1);
-
-// 获取当前日期的任务列表
-TaskDay *current_day_tasks = &task_year->months[month].days[day];
-
-// 检查当天是否有任务
-if (current_day_tasks->size == 0)
-{
-    printf("No tasks for this day\n");
-    return;
-}
-
-printf("Tasks for %d-%d-%d (Total: %d):\n", year, month + 1, day + 1, current_day_tasks->size);
-
-for (int i = 0; i < current_day_tasks->size; i++)
-{
-    if (strcmp(setting->color, "on") == 0)
-    {
-        if (current_day_tasks->task[i].is_done) // 默认是0
-        {
-            // 完成了绿色
-            printf(GREEN "%2d. [-] %s\n" RESET, i + 1, current_day_tasks->task[i].task);
-        }
-        else
-        {
-            // 未完成红色
-            printf(RED "%2d. [+] %s\n" RESET, i + 1, current_day_tasks->task[i].task);
-        }
-    }
-    else
-    {
-        if (current_day_tasks->task[i].is_done) // 默认是0
-        {
-            // 完成了绿色
-            printf("%2d. [-] %s\n", i + 1, current_day_tasks->task[i].task);
-        }
-        else
-        {
-            // 未完成红色
-            printf("%2d. [+] %s\n", i + 1, current_day_tasks->task[i].task);
-        }
-    }
-}
-}
-#endif

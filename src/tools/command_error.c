@@ -3,7 +3,7 @@
 void COMMAND_ERROR(Setting *setting, int argc, char *argv[])
 {
     // 打印颜色前缀（如果设置颜色为"on"）
-    if (setting != NULL && strcmp(setting->color, "on") == 0)
+    if (setting != NULL && strcmp(setting->color->value_set, "on") == 0)
     {
         printf("%s", RED);
     }
@@ -19,7 +19,7 @@ void COMMAND_ERROR(Setting *setting, int argc, char *argv[])
     }
 
     // 打印错误后缀并重置颜色
-    if (setting != NULL && strcmp(setting->color, "on") == 0)
+    if (setting != NULL && strcmp(setting->color->value_set, "on") == 0)
     {
         printf("%s --Unknown command\n", RESET);
     }

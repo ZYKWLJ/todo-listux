@@ -8,13 +8,14 @@ int is_leap_year(int year)
 }
 
 // 获取当前日期
-void get_current_date(int *year, int *month, int *day)
+void get_current_date(Date *date)
 {
     time_t t = time(NULL);
     struct tm tm = *localtime(&t);
-    *year = tm.tm_year + 1900;
-    *month = tm.tm_mon + 1;
-    *day = tm.tm_mday;
+    date->year = tm.tm_year + 1900;
+    date->month = tm.tm_mon + 1;
+    date->day = tm.tm_mday;
+    date->week = calculate_week_number(date->day);
 }
 
 // 计算当年第几天

@@ -5,7 +5,9 @@
 // 单条任务的结构体
 typedef struct Task
 {
-    char *task;
+    char *content;
     int is_done;
 } Task;
+void set_task(Task *task, char *content, int is_done);
+void free_task(Task *task);
 #endif

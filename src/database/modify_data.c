@@ -16,14 +16,14 @@ void modify_task_content(Day_Year_Task *year_tasks, int year, int month, int day
     if (strlen(new_content) >= DEFALUT_TASK_CHAR_LENGTH)
     {
         LOG_PRINT("add_task....content is too long! ready to realloc......\n");
-        day_tasks->task[index].task = (char *)realloc(day_tasks->task[index].task, strlen(new_content) + 1 > MAX_TASK_SIZE ? MAX_TASK_SIZE : strlen(new_content) + 1); // 扩容到刚好容下就好，并且防止最大的溢出，我们起到了保险措施，最多存在1百万的字，事实上，也存不到这么多，只是为了健壮罢了
-        if (day_tasks->task[index].task == NULL)
+        day_tasks->task[index].content = (char *)realloc(day_tasks->task[index].content, strlen(new_content) + 1 > MAX_TASK_SIZE ? MAX_TASK_SIZE : strlen(new_content) + 1); // 扩容到刚好容下就好，并且防止最大的溢出，我们起到了保险措施，最多存在1百万的字，事实上，也存不到这么多，只是为了健壮罢了
+        if (day_tasks->task[index].content == NULL)
         {
             printf("Memory allocation failed.\n");
             return;
         }
     }
-    strcpy(day_tasks->task[index].task, new_content);
+    strcpy(day_tasks->task[index].content, new_content);
     save_data(year_tasks, year);
 }
 

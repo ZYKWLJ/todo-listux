@@ -12,7 +12,7 @@ typedef enum Date_Type
     WEEK,
     DAY,
     CURRENT_DAY,//当天的，默认显示
-    ERROR,
+    ERROR_DATE_TYPE,
 } Date_Type;
 #define ERROR_FORMAT -1;
 // 这就是完备的日期类型！
@@ -22,8 +22,9 @@ typedef struct Date
     int month; // 当月
     int week;  // 当周
     int day;   // 当天
-    int error; // 是否满足
+    int error; // 是否满足格式！
+    Date_Type date_type;
 } Date;
 
-void init_date(Date *date);
+void set_date(Date *date,int year,int month,int week,int day,Date_Type date_type);
 void free_date(Date *date);

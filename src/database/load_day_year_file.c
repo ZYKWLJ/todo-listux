@@ -16,6 +16,7 @@
 #endif
 
 // #define LOG
+#ifdef LOG1
 
 void load_day_year_data(int year, Day_Year_Task *day_year_task)
 {
@@ -78,7 +79,7 @@ void load_day_year_data(int year, Day_Year_Task *day_year_task)
         {
             LOG_PRINT("Failed to read year from file.\n");
             fclose(file);
-            free_year_tasks(year_tasks);
+            free_day_year_tasks(year_tasks);
             return ;
         }
         // 消耗换行符
@@ -88,7 +89,7 @@ void load_day_year_data(int year, Day_Year_Task *day_year_task)
         {
             LOG_PRINT("Year in file does not match requested year.\n");
             fclose(file);
-            free_year_tasks(year_tasks);
+            free_day_year_tasks(year_tasks);
             return ;
         }
 
@@ -125,7 +126,7 @@ void load_day_year_data(int year, Day_Year_Task *day_year_task)
                     {
                         LOG_PRINT("Failed to read day tasks information from file.\n");
                         fclose(file);
-                        free_year_tasks(year_tasks);
+                        free_day_year_tasks(year_tasks);
                         return ;
                     }
                 }
@@ -148,7 +149,7 @@ void load_day_year_data(int year, Day_Year_Task *day_year_task)
                     {
                         LOG_PRINT("Failed to read task line from file.\n");
                         fclose(file);
-                        free_year_tasks(year_tasks);
+                        free_day_year_tasks(year_tasks);
                         return ;
                     }
 
@@ -162,7 +163,7 @@ void load_day_year_data(int year, Day_Year_Task *day_year_task)
 
                         LOG_PRINT("Invalid task format: %s\n", line);
                         fclose(file);
-                        free_year_tasks(year_tasks);
+                        free_day_year_tasks(year_tasks);
                         return ;
                     }
 
@@ -175,18 +176,18 @@ void load_day_year_data(int year, Day_Year_Task *day_year_task)
                     size_t content_length = strlen(task_content);
                     if (content_length >= DEFALUT_TASK_CHAR_LENGTH)
                     {
-                        char *new_task_str = (char *)realloc(day_tasks->task[t].task,
+                        char *new_task_str = (char *)realloc(day_tasks->task[t].content,
                                                              (content_length + 1) * sizeof(char));
                         if (new_task_str == NULL)
                         {
                             LOG_PRINT("Memory allocation failed.\n");
                             fclose(file);
-                            free_year_tasks(year_tasks);
+                            free_day_year_tasks(year_tasks);
                             return ;
                         }
-                        day_tasks->task[t].task = new_task_str;
+                        day_tasks->task[t].content = new_task_str;
                     }
-                    strcpy(day_tasks->task[t].task, task_content);
+                    strcpy(day_tasks->task[t].content, task_content);
                     day_tasks->task[t].is_done = atoi(done_str);
                 }
             }
@@ -198,6 +199,8 @@ void load_day_year_data(int year, Day_Year_Task *day_year_task)
 #endif
     return;
 }
+
+#endif
 
 // int main(){
 //     for(int i=0;i<1000;i++)

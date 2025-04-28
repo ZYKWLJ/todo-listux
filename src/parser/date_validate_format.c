@@ -1,9 +1,8 @@
 #include "../../include/include.h"
 
-
 // 固定数据结构，2025.01.04
 
-void validate_year_format(const char *date_str, Date *date)
+void validate_year_format(char *date_str, Date *date)
 {
     // 基础检查
     if (strlen(date_str) != 4)
@@ -23,21 +22,24 @@ void validate_year_format(const char *date_str, Date *date)
                (date_str[2] - '0') * 10 + (date_str[3] - '0');
 
     // 获取当前日期
-    int current_year, current_month, current_day;
-    get_current_date(&current_year, &current_month, &current_day);
-    if (year < current_year)
+    // intdate->year, date->month, date->day;
+    get_current_date(date);
+    if (year < date->year)
     {
         date->error = 1;
+        LOG_PRINT("exit!!!\n");
+
+        exit(EXIT_FAILURE);
         return;
     }
     date->year = year;
     date->error = 0;
-    // printf("year parser passed!!!\n");
+    // LOG_PRINT("year parser passed!!!\n");
 }
 
 // 重构validate_year_month_format函数
 // 2025.09
-void validate_year_month_format(const char *date_str, Date *date)
+void validate_year_month_format(char *date_str, Date *date)
 {
     // 基础检查
     if (strlen(date_str) != 7)
@@ -62,9 +64,9 @@ void validate_year_month_format(const char *date_str, Date *date)
                (date_str[2] - '0') * 10 + (date_str[3] - '0');
 
     // 获取当前日期
-    int current_year, current_month, current_day;
-    get_current_date(&current_year, &current_month, &current_day);
-    if (year < current_year || (year == current_year && month < current_month))
+    // intdate->year, date->month, date->day;
+    get_current_date(date);
+    if (year < date->year || (year == date->year && month < date->month))
     {
         date->error = 1;
         return;
@@ -72,17 +74,20 @@ void validate_year_month_format(const char *date_str, Date *date)
     date->year = year;
     date->month = month;
     date->error = 0;
-    // printf("month parser passed!!!\n");
+    // LOG_PRINT("month parser passed!!!\n");
 }
 
 // 重构validate_date_format函数
-void validate_date_format(const char *date_str, Date *date)
+void validate_date_format(char *date_str, Date *date)
 {
     // 基础格式检查
     // if (!basic_check(date_str, 10, 10))
     if (strlen(date_str) != 10)
     {
         date->error = 1;
+        LOG_PRINT("exit!!!\n");
+
+        exit(EXIT_FAILURE);
         return;
     }
 
@@ -92,6 +97,9 @@ void validate_date_format(const char *date_str, Date *date)
         if ((i == 4 || i == 7) ? (date_str[i] != '.') : (!isdigit(date_str[i])))
         {
             date->error = 1;
+            LOG_PRINT("exit!!!\n");
+
+            exit(EXIT_FAILURE);
             return;
         }
     }
@@ -103,28 +111,36 @@ void validate_date_format(const char *date_str, Date *date)
                (date_str[2] - '0') * 10 + (date_str[3] - '0');
 
     // 获取当前日期
-    int current_year, current_month, current_day;
-    get_current_date(&current_year, &current_month, &current_day);
+    // intdate->year, date->month, date->day;
+    get_current_date(date);
 
     // 检查日期不小于今天
-    if (year < current_year)
+    if (year < date->year)
     {
         date->error = 1;
+        LOG_PRINT("exit!!!\n");
+
+        exit(EXIT_FAILURE);
         return;
     }
-    else if (year == current_year)
+    else if (year == date->year)
     {
-        if (month < current_month)
+        if (month < date->month)
         {
             date->error = 1;
+            LOG_PRINT("exit!!!\n");
+
+            exit(EXIT_FAILURE);
             return;
         }
-        else if (month == current_month)
+        else if (month == date->month)
         {
-            if (day < current_day)
+            if (day < date->day)
             {
                 date->error = 1;
-                return;
+                LOG_PRINT("exit!!!\n");
+
+                exit(EXIT_FAILURE);
             }
         }
     }
@@ -133,7 +149,9 @@ void validate_date_format(const char *date_str, Date *date)
     if (month < 1 || month > 12)
     {
         date->error = 1;
-        return;
+        LOG_PRINT("exit!!!\n");
+
+        exit(EXIT_FAILURE);
     }
 
     // 日期检查
@@ -156,7 +174,9 @@ void validate_date_format(const char *date_str, Date *date)
     if (day < 1 || day > max_day)
     {
         date->error = 1;
-        return;
+        LOG_PRINT("exit!!!\n");
+
+        exit(EXIT_FAILURE);
     }
 
     date->year = year;
@@ -164,7 +184,7 @@ void validate_date_format(const char *date_str, Date *date)
     date->day = day;
     date->error = 0;
 
-    // printf("date parser passed!!!\n");
+    LOG_PRINT("date parser passed!!!\n");
 }
 
 // 计算指定日期属于哪一周（每月固定4周）
@@ -180,53 +200,75 @@ int calculate_week_number(int day)
 }
 
 // 重构validate_week_format函数
-void validate_week_format(const char *date_str, Date *date)
+void validate_week_format(char *date_str, Date *date)
 {
     // 基础格式检查
-    if (strlen(date_str) != 9)
+    if (strlen(date_str) != 10)
     {
         date->error = 1;
+        LOG_PRINT("exit!!!\n");
+
+        exit(EXIT_FAILURE);
         return;
     }
 
     // 检查字符组成(和分隔符)
-    for (int i = 0; i < 9; i++)
+    for (int i = 0; i < 10; i++)
     {
         if ((i == 4 || i == 7) ? (date_str[i] != '.') : (!isdigit(date_str[i])))
         {
             date->error = 1;
+            LOG_PRINT("exit!!!\n");
+            exit(EXIT_FAILURE);
             return;
         }
     }
 
     // 提取数值
-    int week = (date_str[8] - '0');
+    int week = (date_str[8] - '0') * 10 + (date_str[9] - '0');
     int month = (date_str[5] - '0') * 10 + (date_str[6] - '0');
     int year = (date_str[0] - '0') * 1000 + (date_str[1] - '0') * 100 +
                (date_str[2] - '0') * 10 + (date_str[3] - '0');
 
     // 获取当前日期
-    int current_year, current_month, current_day;
-    get_current_date(&current_year, &current_month, &current_day);
+    // intdate->year, date->month, date->day;
+    get_current_date(date);
 
     // 检查日期不小于今天
-    if (year < current_year)
+    if (year < date->year)
     {
         date->error = 1;
+        LOG_PRINT("exit!!!\n");
+
+        exit(EXIT_FAILURE);
         return;
     }
-    else if (year == current_year)
+    else if (year == date->year)
     {
-        if (month < current_month || month < 1 || month > 12)
+
+        if (month < date->month || month < 1 || month > 12)
         {
             date->error = 1;
+            LOG_PRINT("exit!!!\n");
+
+            exit(EXIT_FAILURE);
             return;
         }
-        else if (month == current_month)
+        if (week > 4 || week < 0)
         {
-            if (week < calculate_week_number(current_day)) // 不能小于当前周
+            date->error = 1;
+            LOG_PRINT("exit!!!\n");
+
+            exit(EXIT_FAILURE);
+            return;
+        }
+        else if (month == date->month)
+        {
+            if (week < calculate_week_number(date->day)) // 不能小于当前周
             {
                 date->error = 1;
+                LOG_PRINT("exit!!!\n");
+                exit(EXIT_FAILURE);
                 return;
             }
         }
@@ -235,6 +277,5 @@ void validate_week_format(const char *date_str, Date *date)
     date->month = month;
     date->week = week; // 这里day存周数
     date->error = 0;
-    // printf("week parser passed!!!\n");
+    LOG_PRINT("week parser passed!!!\n");
 }
-

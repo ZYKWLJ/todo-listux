@@ -15,6 +15,7 @@
 #endif
 
 // #define LOG
+#ifdef LOG1
 //将所有的内容通过指针传入即可，一般返回值均为void
 void load_data(Date *date, Total_File_Year_Date *total_file_year_date)
 {
@@ -25,6 +26,8 @@ void load_data(Date *date, Total_File_Year_Date *total_file_year_date)
     load_day_year_data(date->year,total_file_year_date->day_year_task);
     LOG_PRINT("loading total data over......\n");
 }
+
+#endif
 
 // int main(){
 //     for(int i=0;i<1000;i++)
