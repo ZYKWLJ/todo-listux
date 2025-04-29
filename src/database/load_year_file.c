@@ -12,7 +12,7 @@
 #include <direct.h> // 用于 _wmkdir
 #else
 #include <unistd.h>
-#include "load_year_file.h"
+// #include "load_year_file.h"
 #endif
 
 // #define LOG

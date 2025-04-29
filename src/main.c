@@ -25,9 +25,11 @@ int main(int argc, char *argv[])
     Date *date = (Date *)malloc(sizeof(Date));
     {
         date->date_type = CURRENT_DAY; // 默认设置为当天
-        date->error = ERROR;
+        date->error = ERROR_DATE_TYPE;
         get_current_date(date);
     }
+    LOG_PRINT("%s", "Date malloc passed!!\n");
+
     // printf("Welcome to TaskList!----");
     display_current_time();
     // 2.再解析命令，构造命令节点，防止命令是错的还加载，浪费资源
@@ -35,51 +37,73 @@ int main(int argc, char *argv[])
     {
         DISPLAY_NODE *display_node = (DISPLAY_NODE *)malloc(sizeof(DISPLAY_NODE));
         {
-            display_node->date->date_type = CURRENT_DAY;
+            {
+                display_node->date = (Date *)malloc(sizeof(Date));
+                display_node->date = date;
+            }
         }
         LOG_PRINT("%s", "display malloc passed!!\n");
         ADD_NODE *add_node = (ADD_NODE *)malloc(sizeof(ADD_NODE));
         {
-            add_node->date = date;
-            char *content = (char *)malloc(sizeof(char) * DEFALUT_TASK_CHAR_LENGTH);
-            add_node->content = content;
+
+            {
+                add_node->date = (Date *)malloc(sizeof(Date));
+                add_node->date = date;
+                add_node->content = (char *)malloc(sizeof(char) * DEFALUT_TASK_CHAR_LENGTH);
+            }
         }
         LOG_PRINT("%s", "add_node malloc passed!!\n");
 
         DELETE_NODE *delete_node = (DELETE_NODE *)malloc(sizeof(DELETE_NODE));
         {
-
-            delete_node->date = date;
-            delete_node->num = 1;
+            {
+                delete_node->date = (Date *)malloc(sizeof(Date));
+                delete_node->date = date;
+                delete_node->num = 1;
+            }
         }
         LOG_PRINT("%s", "delete_node malloc passed!!\n");
 
         EDIT_NODE *edit_node = (EDIT_NODE *)malloc(sizeof(EDIT_NODE));
         {
-            edit_node->date = date;
-            edit_node->num = 1;
-            char *content = (char *)malloc(sizeof(char) * DEFALUT_TASK_CHAR_LENGTH);
-            edit_node->content = content;
-            edit_node->edit_type = EDIT_ALL; // 默认全换
+            {
+                edit_node->date = (Date *)malloc(sizeof(Date));
+                edit_node->date = date;
+                edit_node->num = 1;
+                char *content = (char *)malloc(sizeof(char) * DEFALUT_TASK_CHAR_LENGTH);
+                edit_node->content = content;
+                edit_node->edit_type = EDIT_ALL; // 默认全换
+            }
         }
         LOG_PRINT("%s", "edit_node malloc passed!!\n");
         COMPLETE_NODE *complete_node = (COMPLETE_NODE *)malloc(sizeof(COMPLETE_NODE));
         {
-            complete_node->date = date;
-            complete_node->num = 1;
+            {
+                complete_node->date = (Date *)malloc(sizeof(Date));
+                complete_node->date = date;
+                complete_node->num = 1;
+            }
         }
         LOG_PRINT("%s", "complete_node malloc passed!!\n");
         TOGGLE_NODE *toggle_node = (TOGGLE_NODE *)malloc(sizeof(TOGGLE_NODE));
         {
-            toggle_node->date = date;
-            toggle_node->num = 1;
+            {
+
+                toggle_node->date = (Date *)malloc(sizeof(Date));
+                toggle_node->date = date;
+                toggle_node->num = 1;
+            }
         }
         LOG_PRINT("%s", "toggle_node malloc passed!!\n");
 
         CONFIGURATION_NODE *configuration_node = (CONFIGURATION_NODE *)malloc(sizeof(CONFIGURATION_NODE));
         {
-            configuration_node->KEY = strdup("config_key");
-            configuration_node->VALUE = strdup("config_value");
+            {
+                configuration_node->KEY = (char *)malloc(sizeof(char) * DEFALUT_TASK_CHAR_LENGTH);
+                configuration_node->VALUE = (char *)malloc(sizeof(char) * DEFALUT_TASK_CHAR_LENGTH);
+                configuration_node->KEY = strdup("config_key");
+                configuration_node->VALUE = strdup("config_value");
+            }
         }
         LOG_PRINT("%s", "configuration_node malloc passed!!\n");
 
@@ -208,13 +232,4 @@ int main(int argc, char *argv[])
     execute(all_files, node, command); // 这就是完备的集合了！
     LOG_PRINT("%s", "execute passed!!\n");
 }
-
-// 编译最原始的命令！
-// gcc D:/3software/todo-listux/src/main.c D:/3software/todo-listux/src/database/add_data.c D:/3software/todo-listux/src/database/delete_data.c D:/3software/todo-listux/src/database/load_data.c D:/3software/todo-listux/src/database/modify_data.c D:/3software/todo-listux/src/database/save_data.c D:/3software/todo-listux/src/display/help.c D:/3software/todo-listux/src/display/show_data.c D:/3software/todo-listux/src/execute/add.c D:/3software/todo-listux/src/execute/delete.c D:/3software/todo-listux/src/execute/done.c D:/3software/todo-listux/src/execute/find.c D:/3software/todo-listux/src/execute/modify.c D:/3software/todo-listux/src/execute/undo.c D:/3software/todo-listux/src/strcutures/TaskDay.c D:/3software/todo-listux/src/strcutures/TaskMonth.c D:/3software/todo-listux/src/strcutures/TaskYear.c D:/3software/todo-listux/src/tools/MONTH.c D:/3software/todo-listux/src/tools/tools.c -o D:\3software\todo-listux\bin\tl
-// gcc D:/3software/todo-listux/src/main.c D:/3software/todo-listux/src/database/add_data.c D:/3software/todo-listux/src/database/delete_data.c D:/3software/todo-listux/src/database/load_data.c D:/3software/todo-listux/src/database/modify_data.c D:/3software/todo-listux/src/database/save_data.c D:/3software/todo-listux/src/display/help.c D:/3software/todo-listux/src/display/show_data.c D:/3software/todo-listux/src/execute/add.c D:/3software/todo-listux/src/execute/delete.c D:/3software/todo-listux/src/execute/done.c D:/3software/todo-listux/src/execute/find.c D:/3software/todo-listux/src/execute/modify.c D:/3software/todo-listux/src/execute/undo.c D:/3software/todo-listux/src/strcutures/TaskDay.c D:/3software/todo-listux/src/strcutures/TaskMonth.c D:/3software/todo-listux/src/strcutures/TaskYear.c D:/3software/todo-listux/src/tools/MONTH.c D:/3software/todo-listux/src/tools/tools.c -o D:\3software\todo-listux\bin\tl
-// gcc D:/3software/todo-listux/src/main.c D:/3software/todo-listux/src/database/add_data.c D:/3software/todo-listux/src/database/delete_data.c D:/3software/todo-listux/src/database/load_data.c D:/3software/todo-listux/src/database/modify_data.c D:/3software/todo-listux/src/database/save_data.c D:/3software/todo-listux/src/display/help.c D:/3software/todo-listux/src/display/show_data.c D:/3software/todo-listux/src/execute/add.c D:/3software/todo-listux/src/execute/delete.c D:/3software/todo-listux/src/execute/done.c D:/3software/todo-listux/src/execute/find.c D:/3software/todo-listux/src/execute/modify.c D:/3software/todo-listux/src/execute/undo.c D:/3software/todo-listux/src/strcutures/TaskDay.c D:/3software/todo-listux/src/strcutures/TaskMonth.c D:/3software/todo-listux/src/strcutures/TaskYear.c D:/3software/todo-listux/src/tools/MONTH.c D:/3software/todo-listux/src/tools/tools.c -o D:\3software\todo-listux\bin\tl
-// gcc D:/3software/todo-listux-1/todo-listux/src/main.c D:/3software/todo-listux-1/todo-listux/src/database/add_data.c D:/3software/todo-listux-1/todo-listux/src/database/delete_data.c D:/3software/todo-listux-1/todo-listux/src/database/load_data.c D:/3software/todo-listux-1/todo-listux/src/database/modify_data.c D:/3software/todo-listux-1/todo-listux/src/database/save_data.c D:/3software/todo-listux-1/todo-listux/src/display/help.c D:/3software/todo-listux-1/todo-listux/src/display/show_data.c D:/3software/todo-listux-1/todo-listux/src/execute/add.c D:/3software/todo-listux-1/todo-listux/src/execute/delete.c D:/3software/todo-listux-1/todo-listux/src/execute/done.c D:/3software/todo-listux-1/todo-listux/src/execute/find.c D:/3software/todo-listux-1/todo-listux/src/execute/modify.c D:/3software/todo-listux-1/todo-listux/src/execute/undo.c D:/3software/todo-listux-1/todo-listux/src/strcutures/TaskDay.c D:/3software/todo-listux-1/todo-listux/src/strcutures/TaskMonth.c D:/3software/todo-listux-1/todo-listux/src/strcutures/TaskYear.c D:/3software/todo-listux-1/todo-listux/src/tools/MONTH.c D:/3software/todo-listux-1/todo-listux/src/tools/tools.c -o D:\3software\todo-listux-1\todo-listux\bin\tl
-// gcc D:/3software/todo-listux-1/todo-listux/src/main.c D:/3software/todo-listux-1/todo-listux/src/database/add_data.c D:/3software/todo-listux-1/todo-listux/src/database/delete_data.c D:/3software/todo-listux-1/todo-listux/src/database/load_data.c D:/3software/todo-listux-1/todo-listux/src/database/modify_data.c D:/3software/todo-listux-1/todo-listux/src/database/save_data.c D:/3software/todo-listux-1/todo-listux/src/display/help.c D:/3software/todo-listux-1/todo-listux/src/display/show_data.c D:/3software/todo-listux-1/todo-listux/src/execute/add.c D:/3software/todo-listux-1/todo-listux/src/execute/delete.c D:/3software/todo-listux-1/todo-listux/src/execute/done.c D:/3software/todo-listux-1/todo-listux/src/execute/find.c D:/3software/todo-listux-1/todo-listux/src/execute/modify.c D:/3software/todo-listux-1/todo-listux/src/execute/undo.c D:/3software/todo-listux-1/todo-listux/src/strcutures/TaskDay.c D:/3software/todo-listux-1/todo-listux/src/strcutures/TaskMonth.c D:/3software/todo-listux-1/todo-listux/src/strcutures/TaskYear.c D:/3software/todo-listux-1/todo-listux/src/tools/MONTH.c D:/3software/todo-listux-1/todo-listux/src/tools/tools.c -o D:\3software\todo-listux-1\todo-listux\bin\tl
-// D:/3software/todo-listux-1/todo-listux/src/main.c
-
 //  python D:\3software\todo-listux-1\todo-listux\py\gcc.py

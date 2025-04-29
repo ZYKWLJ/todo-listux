@@ -23,6 +23,6 @@ Date_Type parse_date_type(char *date_type)
     }
     else
     {
-        return ERROR;
+        return ERROR_DATE_TYPE;
     }
 }

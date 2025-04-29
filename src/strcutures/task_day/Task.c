@@ -12,11 +12,6 @@ void set_task(Task *task, char *content, int is_done)
         LOG_PRINT("set_task: task_str is NULL\n");
         exit(EXIT_FAILURE);
     }
-    if (strlen(content) == 0)
-    {
-        LOG_PRINT("set_task: task_str is empty\n");
-        exit(EXIT_FAILURE);
-    }
     task->content = content;
     task->is_done = is_done;
 }

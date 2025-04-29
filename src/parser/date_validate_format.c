@@ -127,9 +127,9 @@ void validate_date_format(char *date_str, Date *date)
     {
         if (month < date->month)
         {
+            // 这里注意需要判断是什么命令，如果是^,那显然可以查看，如果其他的，前面的日期不等你操作！
             date->error = 1;
             LOG_PRINT("exit!!!\n");
-
             exit(EXIT_FAILURE);
             return;
         }
@@ -277,5 +277,7 @@ void validate_week_format(char *date_str, Date *date)
     date->month = month;
     date->week = week; // 这里day存周数
     date->error = 0;
+
+    printf("year: %d,month: %d week: %d\n", date->year, date->month, date->week);
     LOG_PRINT("week parser passed!!!\n");
 }

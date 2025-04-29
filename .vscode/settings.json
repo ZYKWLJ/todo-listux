@@ -75,6 +75,13 @@
         "date_validate_format.h": "c",
         "command_type.h": "c",
         "all_files.h": "c",
-        "week_month_task.h": "c"
+        "week_month_task.h": "c",
+        "stdout_color_sinks.h": "c",
+        "args_5.h": "c",
+        "args_4.h": "c",
+        "args_define.h": "c",
+        "args_3.h": "c",
+        "args_6.h": "c",
+        "log_for_node.h": "c"
     }
 }

@@ -1,4 +1,23 @@
 #include "../../include/include.h"
+
+// extern "C"
+// {
+//     void log_init()
+//     {
+//         auto logger = spdlog::stdout_color_mt("console");
+//         // 你可以在这里进行更多的日志配置
+//     }
+
+//     void log_info(const char *message)
+//     {
+//         spdlog::get("console")->info(message);
+//     }
+
+//     void log_error(const char *message)
+//     {
+//         spdlog::get("console")->error(message);
+//     }
+// }
 // #ifdef LOG
 //     #define LOG_PRINT(format, ...) printf("[%s %s %s:%s :%d] " format, __DATE__, __TIME__, __FILE__, __func__, __LINE__, ##__VA_ARGS__)
 // #else

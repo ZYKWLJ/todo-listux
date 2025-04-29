@@ -3,6 +3,16 @@
 #include "../../include.h"
 // 这是命令实体，传参就传这一个就好了
 // 大命令再划分为小日期命令
+#define DISPLAY_TOKEN "^"
+#define ADD_TOKEN "+"
+#define COMPLETE_TOKEN "-"
+#define DELETE_TOKEN "/"
+#define TOGGLE_TOKEN "!"
+#define CONFIGURATION_TOKEN "$"
+#define EDIT_ALL_TOKEN "="
+#define EDIT_PREFIX_TOKEN "=%"
+#define EDIT_SUFFIX_TOKEN "%="
+
 typedef enum Node_Type
 {
     DISPLAY,
@@ -13,7 +23,7 @@ typedef enum Node_Type
     TOGGLE,
     CONFIGURATION,
     HELP,
-    ERROR_NODE,//默认
+    ERROR_NODE, // 默认
 } Node_Type;
 
 typedef struct DISPLAY_NODE
@@ -72,8 +82,8 @@ typedef struct CONFIGURATION_NODE
 // 任何一个命令实体都是一个NODE，里面包含日期，命令类型
 typedef struct NODE
 {
-    Node_Type node_type; // 命令类型,初始化下面的，然后根据命令类型对应执行命令实体！
-    DISPLAY_NODE *display_node;//
+    Node_Type node_type;        // 命令类型,初始化下面的，然后根据命令类型对应执行命令实体！
+    DISPLAY_NODE *display_node; //
     ADD_NODE *add_node;
     DELETE_NODE *delete_node;
     EDIT_NODE *edit_node;
@@ -111,6 +121,5 @@ void set_node(NODE *node, Node_Type node_type, void *arg);
 void init_node(NODE *node, Node_Type node_type, DISPLAY_NODE *display_node, ADD_NODE *add_node,
                DELETE_NODE *delete_node, EDIT_NODE *edit_node, COMPLETE_NODE *complete_node,
                TOGGLE_NODE *toggle_node, CONFIGURATION_NODE *configuration_node);
-
 
 #endif

@@ -85,7 +85,7 @@ void set_node(NODE *node, Node_Type node_type, void *arg /*可以传入任何参
             free(node->add_node);
         }
         break;
-    case DELETE:
+    case DELETE_:
         free(node->delete_node);
         break;
     case EDIT:
@@ -123,7 +123,7 @@ void set_node(NODE *node, Node_Type node_type, void *arg /*可以传入任何参
     case ADD:
         node->add_node = (ADD_NODE *)arg;
         break;
-    case DELETE:
+    case DELETE_:
         node->delete_node = (DELETE_NODE *)arg;
         break;
     case EDIT:

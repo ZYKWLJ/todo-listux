@@ -14,6 +14,7 @@
 #include <unistd.h>
 #include <sys/stat.h>
 #endif
+#define MAX_PATH 260
 
 // 获取应用数据目录（跨平台）
 const char *get_appdata_path();
