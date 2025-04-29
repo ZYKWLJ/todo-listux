@@ -82,6 +82,12 @@
         "args_define.h": "c",
         "args_3.h": "c",
         "args_6.h": "c",
-        "log_for_node.h": "c"
+        "log_for_node.h": "c",
+        "unistd.h": "c",
+        "string.h": "c",
+        "errno.h": "c",
+        "delete_data.h": "c",
+        "load_setting_file.h": "c",
+        "stat.h": "c"
     }
 }

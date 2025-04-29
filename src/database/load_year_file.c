@@ -15,16 +15,16 @@
 // #include "load_year_file.h"
 #endif
 
-// #define LOG
+#define LOG1
 
 #ifdef LOG1
-void load_year_data(int year, Year_Task *year_task)
+void load_year_data(const char *all_files, int year)
 {
     LOG_PRINT("loading data......\n");
 
     char filename[MAX_PATH];
-    const char *base_path = get_appdata_path();
-
+    const char *base_path = get_appdata_path(year, DATE_FILE);
+    // 这里还需要找一个年份的路径，里面才是具体的该年份下的各个文件
     snprintf(filename, sizeof(filename), "%s%c%d.dat",
              base_path,
 #ifdef _WIN32

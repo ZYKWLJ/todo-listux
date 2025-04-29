@@ -3,9 +3,10 @@
 #ifndef SETTING_H_
 #define SETTING_H_
 
-#define DATA_FILE_PATH
+// #define DATA_FILE_PATH // 配置文件的路径（get_setting_files）
+// #define SETTING_FILE_PATH "setting.ini" // 配置文件的路径（get_setting_files）
 // day_task
-#define DEFALUT_DAY_TASK_SIZE 20 //一天最多20天任务，后面再扩容
+#define DEFALUT_DAY_TASK_SIZE 20      // 一天最多20天任务，后面再扩容
 #define DEFALUT_TASK_CHAR_LENGTH 2000 // 默认的任务描述字符长度，足够了
 #define INIT_TASK_CAPACITY 20
 #define MAX_TASK_SIZE 1000000 // 百万的字，为单条最大的任务，超过了也会截止这么多！
@@ -28,12 +29,20 @@
 #define SETTING_SHOW_ALLOW_DAY "day"
 #define SETTING_SHOW_ALLOW_CURRENT_DAY "current_day"
 #define SETTING_SHOW_ALLOW_ALL "all"
+#define SHOW_DAY_1 "-d"
+#define SHOW_DAY_2 "-day"
+#define SHOW_WEEK_1 "-w"
+#define SHOW_WEEK_2 "-week"
+#define SHOW_MONTH_1 "-m"
+#define SHOW_MONTH_2 "-month"
+#define SHOW_YEAR_1 "-y"
+#define SHOW_YEAR_2 "-year"
 
 // 假设这些结构体已经在别处定义
 typedef struct
 {
-    char *key;             // 设置key
-    char *value_set;       // 实际传入的
+    char *key;          // 设置key
+    char *value_set;    // 实际传入的
     char **value_allow; // 允许的值
 } SettingItem;
 

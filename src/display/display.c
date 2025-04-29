@@ -6,15 +6,17 @@
 void display_DAY_tasks(All_Files *all_files, DISPLAY_NODE *display_node)
 {
 
-    if (display_node->date->date_type == CURRENT_DAY) // 当天的显示只能是tl s [-day xxxx.xx.xx],可能是tl s xxxx,如果不是这两种情况，那就报错，因为不允许，这是严谨性
-    {
+    // if (display_node->date->date_type == CURRENT_DAY) // 当天的显示只能是tl s [-day xxxx.xx.xx],可能是tl s xxxx,如果不是这两种情况，那就报错，因为不允许，这是严谨性
+    // {
 
-        LOG_PRINT("%s", "show current day task......\n");
-    }
-    else // 当天的显示只能是tl s [-day xxxx.xx.xx],可能是tl s xxxx,如果不是这两种情况，那就报错，因为不允许，这是严谨性
-    {
-        LOG_PRINT("%s", "show specific day task......\n");
-    }
+    //     LOG_PRINT("%s", "show current day task......\n");
+    // }
+    // else // 当天的显示只能是tl s [-day xxxx.xx.xx],可能是tl s xxxx,如果不是这两种情况，那就报错，因为不允许，这是严谨性
+    // {
+    //     LOG_PRINT("%s", "show specific day task......\n");
+    // }
+    // 不管是特定日期还是当天的，都是查找特定日期，统一的逻辑
+    
 #ifdef LOG
     LOG_PRINT("display_DAY_tasks\n");
 

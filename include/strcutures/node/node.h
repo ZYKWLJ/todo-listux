@@ -3,6 +3,7 @@
 #include "../../include.h"
 // 这是命令实体，传参就传这一个就好了
 // 大命令再划分为小日期命令
+#define SOFTWARE_NAME "tl"
 #define DISPLAY_TOKEN "^"
 #define ADD_TOKEN "+"
 #define COMPLETE_TOKEN "-"
@@ -12,7 +13,7 @@
 #define EDIT_ALL_TOKEN "="
 #define EDIT_PREFIX_TOKEN "=%"
 #define EDIT_SUFFIX_TOKEN "%="
-
+#define EQUAL "="
 typedef enum Node_Type
 {
     DISPLAY,
@@ -121,5 +122,5 @@ void set_node(NODE *node, Node_Type node_type, void *arg);
 void init_node(NODE *node, Node_Type node_type, DISPLAY_NODE *display_node, ADD_NODE *add_node,
                DELETE_NODE *delete_node, EDIT_NODE *edit_node, COMPLETE_NODE *complete_node,
                TOGGLE_NODE *toggle_node, CONFIGURATION_NODE *configuration_node);
-
+void init_node1(NODE *node,Date*date);
 #endif

@@ -145,7 +145,7 @@ void set_node(NODE *node, Node_Type node_type, void *arg /*可以传入任何参
         break; // 未知类型
     }
 }
-void init_node(NODE *node, Node_Type node_type, DISPLAY_NODE *display_node, ADD_NODE *add_node,DELETE_NODE *delete_node, EDIT_NODE *edit_node, COMPLETE_NODE *complete_node,TOGGLE_NODE *toggle_node, CONFIGURATION_NODE *configuration_node)
+void init_node(NODE *node, Node_Type node_type, DISPLAY_NODE *display_node, ADD_NODE *add_node, DELETE_NODE *delete_node, EDIT_NODE *edit_node, COMPLETE_NODE *complete_node, TOGGLE_NODE *toggle_node, CONFIGURATION_NODE *configuration_node)
 {
     if (!node || !node_type || !display_node || !add_node || !delete_node || !edit_node ||
         !complete_node || !toggle_node || !configuration_node)
@@ -164,4 +164,83 @@ void init_node(NODE *node, Node_Type node_type, DISPLAY_NODE *display_node, ADD_
 
     // 根据 date_type 初始化日期相关信息
     Date *date = display_node->date;
+}
+
+void init_node1(NODE *node, Date *date)
+{
+
+    DISPLAY_NODE *display_node = (DISPLAY_NODE *)malloc(sizeof(DISPLAY_NODE));
+    {
+        {
+            display_node->date = (Date *)malloc(sizeof(Date));
+            display_node->date = date;
+        }
+    }
+    LOG_PRINT("%s", "display malloc passed!!\n");
+    ADD_NODE *add_node = (ADD_NODE *)malloc(sizeof(ADD_NODE));
+    {
+
+        {
+            add_node->date = (Date *)malloc(sizeof(Date));
+            add_node->date = date;
+            add_node->content = (char *)malloc(sizeof(char) * DEFALUT_TASK_CHAR_LENGTH);
+        }
+    }
+    LOG_PRINT("%s", "add_node malloc passed!!\n");
+
+    DELETE_NODE *delete_node = (DELETE_NODE *)malloc(sizeof(DELETE_NODE));
+    {
+        {
+            delete_node->date = (Date *)malloc(sizeof(Date));
+            delete_node->date = date;
+            delete_node->num = 1;
+        }
+    }
+    LOG_PRINT("%s", "delete_node malloc passed!!\n");
+
+    EDIT_NODE *edit_node = (EDIT_NODE *)malloc(sizeof(EDIT_NODE));
+    {
+        {
+            edit_node->date = (Date *)malloc(sizeof(Date));
+            edit_node->date = date;
+            edit_node->num = 1;
+            char *content = (char *)malloc(sizeof(char) * DEFALUT_TASK_CHAR_LENGTH);
+            edit_node->content = content;
+            edit_node->edit_type = EDIT_ALL; // 默认全换
+        }
+    }
+    LOG_PRINT("%s", "edit_node malloc passed!!\n");
+    COMPLETE_NODE *complete_node = (COMPLETE_NODE *)malloc(sizeof(COMPLETE_NODE));
+    {
+        {
+            complete_node->date = (Date *)malloc(sizeof(Date));
+            complete_node->date = date;
+            complete_node->num = 1;
+        }
+    }
+    LOG_PRINT("%s", "complete_node malloc passed!!\n");
+    TOGGLE_NODE *toggle_node = (TOGGLE_NODE *)malloc(sizeof(TOGGLE_NODE));
+    {
+        {
+
+            toggle_node->date = (Date *)malloc(sizeof(Date));
+            toggle_node->date = date;
+            toggle_node->num = 1;
+        }
+    }
+    LOG_PRINT("%s", "toggle_node malloc passed!!\n");
+
+    CONFIGURATION_NODE *configuration_node = (CONFIGURATION_NODE *)malloc(sizeof(CONFIGURATION_NODE));
+    {
+        {
+            configuration_node->KEY = (char *)malloc(sizeof(char) * DEFALUT_TASK_CHAR_LENGTH);
+            configuration_node->VALUE = (char *)malloc(sizeof(char) * DEFALUT_TASK_CHAR_LENGTH);
+            configuration_node->KEY = strdup("config_key");
+            configuration_node->VALUE = strdup("config_value");
+        }
+    }
+    LOG_PRINT("%s", "configuration_node malloc passed!!\n");
+
+    // init Node
+    init_node(node, ERROR_NODE, display_node, add_node, delete_node, edit_node, complete_node, toggle_node, configuration_node);
 }

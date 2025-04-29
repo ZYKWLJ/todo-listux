@@ -39,5 +39,6 @@ typedef struct All_Files
 
 void set_all_files(All_Files *all_files, Total_File_Year_Date *total_file_year_date, Setting *setting);
 void free_all_files(All_Files *all_files);
-
+void init_all_files(All_Files *all_files,Date*date);
+void load_all_files(All_Files *all_files,Date*date);
 #endif
