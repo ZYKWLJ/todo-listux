@@ -7,5 +7,5 @@
 #include <sys/stat.h>
 #endif
 // 加载数据
-void load_data(Date *date, Total_File_Year_Date *total_file_year_date);
+void load_all_files(Total_File_Year_Date *total_file_year_date, const char *all_files_paths, Date *date);
 #endif

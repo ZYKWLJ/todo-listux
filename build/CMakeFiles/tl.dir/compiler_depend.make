@@ -5,11 +5,9 @@ CMakeFiles/tl.dir/src/database/add_data.c.o: /home/eyk/桌面/todo-listux/todo-l
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -18,6 +16,8 @@ CMakeFiles/tl.dir/src/database/add_data.c.o: /home/eyk/桌面/todo-listux/todo-l
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -79,6 +79,7 @@ CMakeFiles/tl.dir/src/database/add_data.c.o: /home/eyk/桌面/todo-listux/todo-l
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -86,6 +87,8 @@ CMakeFiles/tl.dir/src/database/add_data.c.o: /home/eyk/桌面/todo-listux/todo-l
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -99,6 +102,7 @@ CMakeFiles/tl.dir/src/database/add_data.c.o: /home/eyk/桌面/todo-listux/todo-l
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -127,6 +131,7 @@ CMakeFiles/tl.dir/src/database/add_data.c.o: /home/eyk/桌面/todo-listux/todo-l
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -135,11 +140,14 @@ CMakeFiles/tl.dir/src/database/add_data.c.o: /home/eyk/桌面/todo-listux/todo-l
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -155,11 +163,9 @@ CMakeFiles/tl.dir/src/database/delete_data.c.o: /home/eyk/桌面/todo-listux/tod
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -168,6 +174,8 @@ CMakeFiles/tl.dir/src/database/delete_data.c.o: /home/eyk/桌面/todo-listux/tod
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -229,6 +237,7 @@ CMakeFiles/tl.dir/src/database/delete_data.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -236,6 +245,8 @@ CMakeFiles/tl.dir/src/database/delete_data.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -249,6 +260,7 @@ CMakeFiles/tl.dir/src/database/delete_data.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -277,6 +289,7 @@ CMakeFiles/tl.dir/src/database/delete_data.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -285,11 +298,14 @@ CMakeFiles/tl.dir/src/database/delete_data.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -301,15 +317,13 @@ CMakeFiles/tl.dir/src/database/delete_data.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
-CMakeFiles/tl.dir/src/database/filePath.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/database/filePath.c \
+CMakeFiles/tl.dir/src/database/get_file_Path.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/database/get_file_Path.c \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -318,6 +332,8 @@ CMakeFiles/tl.dir/src/database/filePath.c.o: /home/eyk/桌面/todo-listux/todo-l
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -379,6 +395,7 @@ CMakeFiles/tl.dir/src/database/filePath.c.o: /home/eyk/桌面/todo-listux/todo-l
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -386,6 +403,8 @@ CMakeFiles/tl.dir/src/database/filePath.c.o: /home/eyk/桌面/todo-listux/todo-l
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -399,6 +418,7 @@ CMakeFiles/tl.dir/src/database/filePath.c.o: /home/eyk/桌面/todo-listux/todo-l
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -427,6 +447,7 @@ CMakeFiles/tl.dir/src/database/filePath.c.o: /home/eyk/桌面/todo-listux/todo-l
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -435,11 +456,14 @@ CMakeFiles/tl.dir/src/database/filePath.c.o: /home/eyk/桌面/todo-listux/todo-l
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -455,11 +479,9 @@ CMakeFiles/tl.dir/src/database/load_data.c.o: /home/eyk/桌面/todo-listux/todo-
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -468,6 +490,8 @@ CMakeFiles/tl.dir/src/database/load_data.c.o: /home/eyk/桌面/todo-listux/todo-
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -529,6 +553,7 @@ CMakeFiles/tl.dir/src/database/load_data.c.o: /home/eyk/桌面/todo-listux/todo-
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -536,6 +561,8 @@ CMakeFiles/tl.dir/src/database/load_data.c.o: /home/eyk/桌面/todo-listux/todo-
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -549,6 +576,7 @@ CMakeFiles/tl.dir/src/database/load_data.c.o: /home/eyk/桌面/todo-listux/todo-
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -577,6 +605,7 @@ CMakeFiles/tl.dir/src/database/load_data.c.o: /home/eyk/桌面/todo-listux/todo-
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -585,11 +614,14 @@ CMakeFiles/tl.dir/src/database/load_data.c.o: /home/eyk/桌面/todo-listux/todo-
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -601,15 +633,13 @@ CMakeFiles/tl.dir/src/database/load_data.c.o: /home/eyk/桌面/todo-listux/todo-
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
-CMakeFiles/tl.dir/src/database/load_day_year_file.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/database/load_day_year_file.c \
+CMakeFiles/tl.dir/src/database/load_setting_file.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/database/load_setting_file.c \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -618,6 +648,8 @@ CMakeFiles/tl.dir/src/database/load_day_year_file.c.o: /home/eyk/桌面/todo-lis
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -679,6 +711,7 @@ CMakeFiles/tl.dir/src/database/load_day_year_file.c.o: /home/eyk/桌面/todo-lis
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -686,6 +719,8 @@ CMakeFiles/tl.dir/src/database/load_day_year_file.c.o: /home/eyk/桌面/todo-lis
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -699,6 +734,7 @@ CMakeFiles/tl.dir/src/database/load_day_year_file.c.o: /home/eyk/桌面/todo-lis
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -727,6 +763,7 @@ CMakeFiles/tl.dir/src/database/load_day_year_file.c.o: /home/eyk/桌面/todo-lis
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -735,311 +772,14 @@ CMakeFiles/tl.dir/src/database/load_day_year_file.c.o: /home/eyk/桌面/todo-lis
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/sys/stat.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/tl.dir/src/database/load_month_year_file.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/database/load_month_year_file.c \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/save_setting.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/execute/done.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/execute/execute.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/execute/find.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/execute/modify.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/execute/set_setting.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/execute/undo.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/log/log.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/log/log_for_node.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_2.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_3.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_4.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_5.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_6.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_define.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/date_validate_format.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/parse_command.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/parse_date.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/parse_date_type.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/All_Files.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/Total_File_Year_Date.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/command.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/date/date.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/node/node.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/setting/setting.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/Day_Year_Task.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/Task.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/TaskDay.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/TaskMonth.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_month/Month_Task.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_month/Month_Year_Task.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_week/Week_Month_Task.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_week/Week_Task.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_week/Week_Year_Task.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_year/Year_Task.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/tools/MONTH.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/tools/command_error.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/tools/tools.h \
-  /usr/include/alloca.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/ctype.h \
-  /usr/include/endian.h \
-  /usr/include/errno.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/linux/errno.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/time.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/asm/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/sys/stat.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/tl.dir/src/database/load_week_year_file.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/database/load_week_year_file.c \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/save_setting.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/execute/done.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/execute/execute.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/execute/find.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/execute/modify.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/execute/set_setting.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/execute/undo.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/log/log.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/log/log_for_node.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_2.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_3.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_4.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_5.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_6.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_define.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/date_validate_format.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/parse_command.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/parse_date.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/parser/parse_date_type.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/All_Files.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/Total_File_Year_Date.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/command.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/date/date.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/node/node.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/setting/setting.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/Day_Year_Task.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/Task.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/TaskDay.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/TaskMonth.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_month/Month_Task.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_month/Month_Year_Task.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_week/Week_Month_Task.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_week/Week_Task.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_week/Week_Year_Task.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_year/Year_Task.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/tools/MONTH.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/tools/command_error.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/tools/tools.h \
-  /usr/include/alloca.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/ctype.h \
-  /usr/include/endian.h \
-  /usr/include/errno.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/linux/errno.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/time.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/asm/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/time.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -1055,11 +795,9 @@ CMakeFiles/tl.dir/src/database/load_year_file.c.o: /home/eyk/桌面/todo-listux/
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -1068,6 +806,8 @@ CMakeFiles/tl.dir/src/database/load_year_file.c.o: /home/eyk/桌面/todo-listux/
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -1129,6 +869,7 @@ CMakeFiles/tl.dir/src/database/load_year_file.c.o: /home/eyk/桌面/todo-listux/
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -1136,6 +877,8 @@ CMakeFiles/tl.dir/src/database/load_year_file.c.o: /home/eyk/桌面/todo-listux/
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -1149,6 +892,7 @@ CMakeFiles/tl.dir/src/database/load_year_file.c.o: /home/eyk/桌面/todo-listux/
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -1177,6 +921,7 @@ CMakeFiles/tl.dir/src/database/load_year_file.c.o: /home/eyk/桌面/todo-listux/
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -1185,11 +930,14 @@ CMakeFiles/tl.dir/src/database/load_year_file.c.o: /home/eyk/桌面/todo-listux/
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -1205,11 +953,9 @@ CMakeFiles/tl.dir/src/database/modify_data.c.o: /home/eyk/桌面/todo-listux/tod
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -1218,6 +964,8 @@ CMakeFiles/tl.dir/src/database/modify_data.c.o: /home/eyk/桌面/todo-listux/tod
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -1279,6 +1027,7 @@ CMakeFiles/tl.dir/src/database/modify_data.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -1286,6 +1035,8 @@ CMakeFiles/tl.dir/src/database/modify_data.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -1299,6 +1050,7 @@ CMakeFiles/tl.dir/src/database/modify_data.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -1327,6 +1079,7 @@ CMakeFiles/tl.dir/src/database/modify_data.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -1335,11 +1088,14 @@ CMakeFiles/tl.dir/src/database/modify_data.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -1355,11 +1111,9 @@ CMakeFiles/tl.dir/src/database/save_data.c.o: /home/eyk/桌面/todo-listux/todo-
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -1368,6 +1122,8 @@ CMakeFiles/tl.dir/src/database/save_data.c.o: /home/eyk/桌面/todo-listux/todo-
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -1429,6 +1185,7 @@ CMakeFiles/tl.dir/src/database/save_data.c.o: /home/eyk/桌面/todo-listux/todo-
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -1436,6 +1193,8 @@ CMakeFiles/tl.dir/src/database/save_data.c.o: /home/eyk/桌面/todo-listux/todo-
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -1449,6 +1208,7 @@ CMakeFiles/tl.dir/src/database/save_data.c.o: /home/eyk/桌面/todo-listux/todo-
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -1477,6 +1237,7 @@ CMakeFiles/tl.dir/src/database/save_data.c.o: /home/eyk/桌面/todo-listux/todo-
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -1485,11 +1246,14 @@ CMakeFiles/tl.dir/src/database/save_data.c.o: /home/eyk/桌面/todo-listux/todo-
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -1505,11 +1269,9 @@ CMakeFiles/tl.dir/src/database/save_setting.c.o: /home/eyk/桌面/todo-listux/to
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -1518,6 +1280,8 @@ CMakeFiles/tl.dir/src/database/save_setting.c.o: /home/eyk/桌面/todo-listux/to
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -1579,6 +1343,7 @@ CMakeFiles/tl.dir/src/database/save_setting.c.o: /home/eyk/桌面/todo-listux/to
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -1586,6 +1351,8 @@ CMakeFiles/tl.dir/src/database/save_setting.c.o: /home/eyk/桌面/todo-listux/to
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -1599,6 +1366,7 @@ CMakeFiles/tl.dir/src/database/save_setting.c.o: /home/eyk/桌面/todo-listux/to
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -1627,6 +1395,7 @@ CMakeFiles/tl.dir/src/database/save_setting.c.o: /home/eyk/桌面/todo-listux/to
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -1635,11 +1404,14 @@ CMakeFiles/tl.dir/src/database/save_setting.c.o: /home/eyk/桌面/todo-listux/to
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -1655,11 +1427,9 @@ CMakeFiles/tl.dir/src/display/display.c.o: /home/eyk/桌面/todo-listux/todo-lis
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -1668,6 +1438,8 @@ CMakeFiles/tl.dir/src/display/display.c.o: /home/eyk/桌面/todo-listux/todo-lis
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -1729,6 +1501,7 @@ CMakeFiles/tl.dir/src/display/display.c.o: /home/eyk/桌面/todo-listux/todo-lis
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -1736,6 +1509,8 @@ CMakeFiles/tl.dir/src/display/display.c.o: /home/eyk/桌面/todo-listux/todo-lis
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -1749,6 +1524,7 @@ CMakeFiles/tl.dir/src/display/display.c.o: /home/eyk/桌面/todo-listux/todo-lis
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -1777,6 +1553,7 @@ CMakeFiles/tl.dir/src/display/display.c.o: /home/eyk/桌面/todo-listux/todo-lis
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -1785,11 +1562,14 @@ CMakeFiles/tl.dir/src/display/display.c.o: /home/eyk/桌面/todo-listux/todo-lis
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -1805,11 +1585,9 @@ CMakeFiles/tl.dir/src/display/help.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -1818,6 +1596,8 @@ CMakeFiles/tl.dir/src/display/help.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -1879,6 +1659,7 @@ CMakeFiles/tl.dir/src/display/help.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -1886,6 +1667,8 @@ CMakeFiles/tl.dir/src/display/help.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -1899,6 +1682,7 @@ CMakeFiles/tl.dir/src/display/help.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -1927,6 +1711,7 @@ CMakeFiles/tl.dir/src/display/help.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -1935,11 +1720,330 @@ CMakeFiles/tl.dir/src/display/help.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/stat.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
+
+CMakeFiles/tl.dir/src/display/text_display_width.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/display/text_display_width.c \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/save_setting.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/execute/done.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/execute/execute.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/execute/find.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/execute/modify.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/execute/set_setting.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/execute/undo.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/log/log.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/log/log_for_node.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_2.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_3.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_4.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_5.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_6.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_define.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/date_validate_format.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/parse_command.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/parse_date.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/parse_date_type.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/All_Files.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/Total_File_Year_Date.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/command.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/date/date.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/node/node.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/setting/setting.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/Day_Year_Task.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/Task.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/TaskDay.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/TaskMonth.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_month/Month_Task.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_month/Month_Year_Task.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_week/Week_Month_Task.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_week/Week_Task.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_week/Week_Year_Task.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_year/Year_Task.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/tools/MONTH.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/tools/command_error.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/tools/tools.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/linux/errno.h \
+  /usr/include/locale.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/time.h \
+  /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/stat.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
+
+CMakeFiles/tl.dir/src/display/text_print_help.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/display/text_print_help.c \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/save_setting.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/execute/done.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/execute/execute.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/execute/find.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/execute/modify.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/execute/set_setting.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/execute/undo.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/log/log.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/log/log_for_node.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_2.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_3.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_4.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_5.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_6.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_define.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/date_validate_format.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/parse_command.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/parse_date.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/parser/parse_date_type.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/All_Files.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/Total_File_Year_Date.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/command.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/date/date.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/node/node.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/setting/setting.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/Day_Year_Task.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/Task.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/TaskDay.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/TaskMonth.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_month/Month_Task.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_month/Month_Year_Task.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_week/Week_Month_Task.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_week/Week_Task.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_week/Week_Year_Task.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_year/Year_Task.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/tools/MONTH.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/tools/command_error.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/tools/tools.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/linux/errno.h \
+  /usr/include/locale.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/time.h \
+  /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -1955,11 +2059,9 @@ CMakeFiles/tl.dir/src/execute/add.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -1968,6 +2070,8 @@ CMakeFiles/tl.dir/src/execute/add.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -2029,6 +2133,7 @@ CMakeFiles/tl.dir/src/execute/add.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -2036,6 +2141,8 @@ CMakeFiles/tl.dir/src/execute/add.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -2049,6 +2156,7 @@ CMakeFiles/tl.dir/src/execute/add.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -2077,6 +2185,7 @@ CMakeFiles/tl.dir/src/execute/add.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -2085,11 +2194,14 @@ CMakeFiles/tl.dir/src/execute/add.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -2105,11 +2217,9 @@ CMakeFiles/tl.dir/src/execute/all_execute.c.o: /home/eyk/桌面/todo-listux/todo
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -2118,6 +2228,8 @@ CMakeFiles/tl.dir/src/execute/all_execute.c.o: /home/eyk/桌面/todo-listux/todo
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -2179,6 +2291,7 @@ CMakeFiles/tl.dir/src/execute/all_execute.c.o: /home/eyk/桌面/todo-listux/todo
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -2186,6 +2299,8 @@ CMakeFiles/tl.dir/src/execute/all_execute.c.o: /home/eyk/桌面/todo-listux/todo
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -2199,6 +2314,7 @@ CMakeFiles/tl.dir/src/execute/all_execute.c.o: /home/eyk/桌面/todo-listux/todo
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -2227,6 +2343,7 @@ CMakeFiles/tl.dir/src/execute/all_execute.c.o: /home/eyk/桌面/todo-listux/todo
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -2235,11 +2352,14 @@ CMakeFiles/tl.dir/src/execute/all_execute.c.o: /home/eyk/桌面/todo-listux/todo
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -2255,11 +2375,9 @@ CMakeFiles/tl.dir/src/execute/delete.c.o: /home/eyk/桌面/todo-listux/todo-list
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -2268,6 +2386,8 @@ CMakeFiles/tl.dir/src/execute/delete.c.o: /home/eyk/桌面/todo-listux/todo-list
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -2329,6 +2449,7 @@ CMakeFiles/tl.dir/src/execute/delete.c.o: /home/eyk/桌面/todo-listux/todo-list
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -2336,6 +2457,8 @@ CMakeFiles/tl.dir/src/execute/delete.c.o: /home/eyk/桌面/todo-listux/todo-list
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -2349,6 +2472,7 @@ CMakeFiles/tl.dir/src/execute/delete.c.o: /home/eyk/桌面/todo-listux/todo-list
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -2377,6 +2501,7 @@ CMakeFiles/tl.dir/src/execute/delete.c.o: /home/eyk/桌面/todo-listux/todo-list
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -2385,11 +2510,14 @@ CMakeFiles/tl.dir/src/execute/delete.c.o: /home/eyk/桌面/todo-listux/todo-list
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -2405,11 +2533,9 @@ CMakeFiles/tl.dir/src/execute/done.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -2418,6 +2544,8 @@ CMakeFiles/tl.dir/src/execute/done.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -2479,6 +2607,7 @@ CMakeFiles/tl.dir/src/execute/done.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -2486,6 +2615,8 @@ CMakeFiles/tl.dir/src/execute/done.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -2499,6 +2630,7 @@ CMakeFiles/tl.dir/src/execute/done.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -2527,6 +2659,7 @@ CMakeFiles/tl.dir/src/execute/done.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -2535,11 +2668,14 @@ CMakeFiles/tl.dir/src/execute/done.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -2558,11 +2694,9 @@ CMakeFiles/tl.dir/src/execute/modify.c.o: /home/eyk/桌面/todo-listux/todo-list
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -2571,6 +2705,8 @@ CMakeFiles/tl.dir/src/execute/modify.c.o: /home/eyk/桌面/todo-listux/todo-list
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -2632,6 +2768,7 @@ CMakeFiles/tl.dir/src/execute/modify.c.o: /home/eyk/桌面/todo-listux/todo-list
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -2639,6 +2776,8 @@ CMakeFiles/tl.dir/src/execute/modify.c.o: /home/eyk/桌面/todo-listux/todo-list
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -2652,6 +2791,7 @@ CMakeFiles/tl.dir/src/execute/modify.c.o: /home/eyk/桌面/todo-listux/todo-list
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -2680,6 +2820,7 @@ CMakeFiles/tl.dir/src/execute/modify.c.o: /home/eyk/桌面/todo-listux/todo-list
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -2688,11 +2829,14 @@ CMakeFiles/tl.dir/src/execute/modify.c.o: /home/eyk/桌面/todo-listux/todo-list
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -2708,11 +2852,9 @@ CMakeFiles/tl.dir/src/execute/set_setting.c.o: /home/eyk/桌面/todo-listux/todo
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -2721,6 +2863,8 @@ CMakeFiles/tl.dir/src/execute/set_setting.c.o: /home/eyk/桌面/todo-listux/todo
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -2782,6 +2926,7 @@ CMakeFiles/tl.dir/src/execute/set_setting.c.o: /home/eyk/桌面/todo-listux/todo
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -2789,6 +2934,8 @@ CMakeFiles/tl.dir/src/execute/set_setting.c.o: /home/eyk/桌面/todo-listux/todo
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -2802,6 +2949,7 @@ CMakeFiles/tl.dir/src/execute/set_setting.c.o: /home/eyk/桌面/todo-listux/todo
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -2830,6 +2978,7 @@ CMakeFiles/tl.dir/src/execute/set_setting.c.o: /home/eyk/桌面/todo-listux/todo
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -2838,11 +2987,14 @@ CMakeFiles/tl.dir/src/execute/set_setting.c.o: /home/eyk/桌面/todo-listux/todo
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -2858,11 +3010,9 @@ CMakeFiles/tl.dir/src/execute/undo.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -2871,6 +3021,8 @@ CMakeFiles/tl.dir/src/execute/undo.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -2932,6 +3084,7 @@ CMakeFiles/tl.dir/src/execute/undo.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -2939,6 +3092,8 @@ CMakeFiles/tl.dir/src/execute/undo.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -2952,6 +3107,7 @@ CMakeFiles/tl.dir/src/execute/undo.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -2980,6 +3136,7 @@ CMakeFiles/tl.dir/src/execute/undo.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -2988,11 +3145,14 @@ CMakeFiles/tl.dir/src/execute/undo.c.o: /home/eyk/桌面/todo-listux/todo-listux
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -3008,11 +3168,9 @@ CMakeFiles/tl.dir/src/log/log.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -3021,6 +3179,8 @@ CMakeFiles/tl.dir/src/log/log.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -3082,6 +3242,7 @@ CMakeFiles/tl.dir/src/log/log.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -3089,6 +3250,8 @@ CMakeFiles/tl.dir/src/log/log.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -3102,6 +3265,7 @@ CMakeFiles/tl.dir/src/log/log.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -3130,6 +3294,7 @@ CMakeFiles/tl.dir/src/log/log.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -3138,11 +3303,14 @@ CMakeFiles/tl.dir/src/log/log.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -3158,11 +3326,9 @@ CMakeFiles/tl.dir/src/log/log_for_node.c.o: /home/eyk/桌面/todo-listux/todo-li
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -3171,6 +3337,8 @@ CMakeFiles/tl.dir/src/log/log_for_node.c.o: /home/eyk/桌面/todo-listux/todo-li
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -3232,6 +3400,7 @@ CMakeFiles/tl.dir/src/log/log_for_node.c.o: /home/eyk/桌面/todo-listux/todo-li
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -3239,6 +3408,8 @@ CMakeFiles/tl.dir/src/log/log_for_node.c.o: /home/eyk/桌面/todo-listux/todo-li
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -3252,6 +3423,7 @@ CMakeFiles/tl.dir/src/log/log_for_node.c.o: /home/eyk/桌面/todo-listux/todo-li
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -3280,6 +3452,7 @@ CMakeFiles/tl.dir/src/log/log_for_node.c.o: /home/eyk/桌面/todo-listux/todo-li
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -3288,11 +3461,14 @@ CMakeFiles/tl.dir/src/log/log_for_node.c.o: /home/eyk/桌面/todo-listux/todo-li
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -3308,11 +3484,9 @@ CMakeFiles/tl.dir/src/main.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/mai
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -3321,6 +3495,8 @@ CMakeFiles/tl.dir/src/main.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/mai
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -3382,6 +3558,7 @@ CMakeFiles/tl.dir/src/main.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/mai
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -3389,6 +3566,8 @@ CMakeFiles/tl.dir/src/main.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/mai
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -3402,6 +3581,7 @@ CMakeFiles/tl.dir/src/main.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/mai
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -3430,6 +3610,7 @@ CMakeFiles/tl.dir/src/main.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/mai
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -3438,11 +3619,14 @@ CMakeFiles/tl.dir/src/main.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/mai
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -3458,11 +3642,9 @@ CMakeFiles/tl.dir/src/parser/args_num/args_2.c.o: /home/eyk/桌面/todo-listux/t
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -3471,6 +3653,8 @@ CMakeFiles/tl.dir/src/parser/args_num/args_2.c.o: /home/eyk/桌面/todo-listux/t
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -3532,6 +3716,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_2.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -3539,6 +3724,8 @@ CMakeFiles/tl.dir/src/parser/args_num/args_2.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -3552,6 +3739,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_2.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -3580,6 +3768,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_2.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -3588,11 +3777,14 @@ CMakeFiles/tl.dir/src/parser/args_num/args_2.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -3608,11 +3800,9 @@ CMakeFiles/tl.dir/src/parser/args_num/args_3.c.o: /home/eyk/桌面/todo-listux/t
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -3621,6 +3811,8 @@ CMakeFiles/tl.dir/src/parser/args_num/args_3.c.o: /home/eyk/桌面/todo-listux/t
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -3682,6 +3874,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_3.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -3689,6 +3882,8 @@ CMakeFiles/tl.dir/src/parser/args_num/args_3.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -3702,6 +3897,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_3.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -3730,6 +3926,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_3.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -3738,11 +3935,14 @@ CMakeFiles/tl.dir/src/parser/args_num/args_3.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -3758,11 +3958,9 @@ CMakeFiles/tl.dir/src/parser/args_num/args_4.c.o: /home/eyk/桌面/todo-listux/t
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -3771,6 +3969,8 @@ CMakeFiles/tl.dir/src/parser/args_num/args_4.c.o: /home/eyk/桌面/todo-listux/t
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -3832,6 +4032,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_4.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -3839,6 +4040,8 @@ CMakeFiles/tl.dir/src/parser/args_num/args_4.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -3852,6 +4055,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_4.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -3880,6 +4084,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_4.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -3888,11 +4093,14 @@ CMakeFiles/tl.dir/src/parser/args_num/args_4.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -3908,11 +4116,9 @@ CMakeFiles/tl.dir/src/parser/args_num/args_5.c.o: /home/eyk/桌面/todo-listux/t
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -3921,6 +4127,8 @@ CMakeFiles/tl.dir/src/parser/args_num/args_5.c.o: /home/eyk/桌面/todo-listux/t
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -3982,6 +4190,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_5.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -3989,6 +4198,8 @@ CMakeFiles/tl.dir/src/parser/args_num/args_5.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -4002,6 +4213,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_5.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -4030,6 +4242,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_5.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -4038,11 +4251,14 @@ CMakeFiles/tl.dir/src/parser/args_num/args_5.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -4058,11 +4274,9 @@ CMakeFiles/tl.dir/src/parser/args_num/args_6.c.o: /home/eyk/桌面/todo-listux/t
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -4071,6 +4285,8 @@ CMakeFiles/tl.dir/src/parser/args_num/args_6.c.o: /home/eyk/桌面/todo-listux/t
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -4132,6 +4348,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_6.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -4139,6 +4356,8 @@ CMakeFiles/tl.dir/src/parser/args_num/args_6.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -4152,6 +4371,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_6.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -4180,6 +4400,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_6.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -4188,11 +4409,14 @@ CMakeFiles/tl.dir/src/parser/args_num/args_6.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -4208,11 +4432,9 @@ CMakeFiles/tl.dir/src/parser/args_num/args_define.c.o: /home/eyk/桌面/todo-lis
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -4221,6 +4443,8 @@ CMakeFiles/tl.dir/src/parser/args_num/args_define.c.o: /home/eyk/桌面/todo-lis
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -4282,6 +4506,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_define.c.o: /home/eyk/桌面/todo-lis
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -4289,6 +4514,8 @@ CMakeFiles/tl.dir/src/parser/args_num/args_define.c.o: /home/eyk/桌面/todo-lis
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -4302,6 +4529,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_define.c.o: /home/eyk/桌面/todo-lis
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -4330,6 +4558,7 @@ CMakeFiles/tl.dir/src/parser/args_num/args_define.c.o: /home/eyk/桌面/todo-lis
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -4338,11 +4567,14 @@ CMakeFiles/tl.dir/src/parser/args_num/args_define.c.o: /home/eyk/桌面/todo-lis
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -4358,11 +4590,9 @@ CMakeFiles/tl.dir/src/parser/date_validate_format.c.o: /home/eyk/桌面/todo-lis
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -4371,6 +4601,8 @@ CMakeFiles/tl.dir/src/parser/date_validate_format.c.o: /home/eyk/桌面/todo-lis
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -4432,6 +4664,7 @@ CMakeFiles/tl.dir/src/parser/date_validate_format.c.o: /home/eyk/桌面/todo-lis
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -4439,6 +4672,8 @@ CMakeFiles/tl.dir/src/parser/date_validate_format.c.o: /home/eyk/桌面/todo-lis
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -4452,6 +4687,7 @@ CMakeFiles/tl.dir/src/parser/date_validate_format.c.o: /home/eyk/桌面/todo-lis
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -4480,6 +4716,7 @@ CMakeFiles/tl.dir/src/parser/date_validate_format.c.o: /home/eyk/桌面/todo-lis
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -4488,11 +4725,14 @@ CMakeFiles/tl.dir/src/parser/date_validate_format.c.o: /home/eyk/桌面/todo-lis
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -4508,11 +4748,9 @@ CMakeFiles/tl.dir/src/parser/parse_command.c.o: /home/eyk/桌面/todo-listux/tod
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -4521,6 +4759,8 @@ CMakeFiles/tl.dir/src/parser/parse_command.c.o: /home/eyk/桌面/todo-listux/tod
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -4582,6 +4822,7 @@ CMakeFiles/tl.dir/src/parser/parse_command.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -4589,6 +4830,8 @@ CMakeFiles/tl.dir/src/parser/parse_command.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -4602,6 +4845,7 @@ CMakeFiles/tl.dir/src/parser/parse_command.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -4630,6 +4874,7 @@ CMakeFiles/tl.dir/src/parser/parse_command.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -4638,11 +4883,14 @@ CMakeFiles/tl.dir/src/parser/parse_command.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -4658,11 +4906,9 @@ CMakeFiles/tl.dir/src/parser/parse_date.c.o: /home/eyk/桌面/todo-listux/todo-l
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -4671,6 +4917,8 @@ CMakeFiles/tl.dir/src/parser/parse_date.c.o: /home/eyk/桌面/todo-listux/todo-l
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -4732,6 +4980,7 @@ CMakeFiles/tl.dir/src/parser/parse_date.c.o: /home/eyk/桌面/todo-listux/todo-l
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -4739,6 +4988,8 @@ CMakeFiles/tl.dir/src/parser/parse_date.c.o: /home/eyk/桌面/todo-listux/todo-l
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -4752,6 +5003,7 @@ CMakeFiles/tl.dir/src/parser/parse_date.c.o: /home/eyk/桌面/todo-listux/todo-l
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -4780,6 +5032,7 @@ CMakeFiles/tl.dir/src/parser/parse_date.c.o: /home/eyk/桌面/todo-listux/todo-l
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -4788,11 +5041,14 @@ CMakeFiles/tl.dir/src/parser/parse_date.c.o: /home/eyk/桌面/todo-listux/todo-l
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -4808,11 +5064,9 @@ CMakeFiles/tl.dir/src/parser/parse_date_type.c.o: /home/eyk/桌面/todo-listux/t
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -4821,6 +5075,8 @@ CMakeFiles/tl.dir/src/parser/parse_date_type.c.o: /home/eyk/桌面/todo-listux/t
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -4882,6 +5138,7 @@ CMakeFiles/tl.dir/src/parser/parse_date_type.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -4889,6 +5146,8 @@ CMakeFiles/tl.dir/src/parser/parse_date_type.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -4902,6 +5161,7 @@ CMakeFiles/tl.dir/src/parser/parse_date_type.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -4930,6 +5190,7 @@ CMakeFiles/tl.dir/src/parser/parse_date_type.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -4938,11 +5199,14 @@ CMakeFiles/tl.dir/src/parser/parse_date_type.c.o: /home/eyk/桌面/todo-listux/t
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -4958,11 +5222,9 @@ CMakeFiles/tl.dir/src/parser/parse_k_v.c.o: /home/eyk/桌面/todo-listux/todo-li
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -4971,6 +5233,8 @@ CMakeFiles/tl.dir/src/parser/parse_k_v.c.o: /home/eyk/桌面/todo-listux/todo-li
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -5032,6 +5296,7 @@ CMakeFiles/tl.dir/src/parser/parse_k_v.c.o: /home/eyk/桌面/todo-listux/todo-li
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -5039,6 +5304,8 @@ CMakeFiles/tl.dir/src/parser/parse_k_v.c.o: /home/eyk/桌面/todo-listux/todo-li
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -5052,6 +5319,7 @@ CMakeFiles/tl.dir/src/parser/parse_k_v.c.o: /home/eyk/桌面/todo-listux/todo-li
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -5080,6 +5348,7 @@ CMakeFiles/tl.dir/src/parser/parse_k_v.c.o: /home/eyk/桌面/todo-listux/todo-li
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -5088,11 +5357,14 @@ CMakeFiles/tl.dir/src/parser/parse_k_v.c.o: /home/eyk/桌面/todo-listux/todo-li
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -5108,11 +5380,9 @@ CMakeFiles/tl.dir/src/strcutures/All_Files.c.o: /home/eyk/桌面/todo-listux/tod
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -5121,6 +5391,8 @@ CMakeFiles/tl.dir/src/strcutures/All_Files.c.o: /home/eyk/桌面/todo-listux/tod
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -5182,6 +5454,7 @@ CMakeFiles/tl.dir/src/strcutures/All_Files.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -5189,6 +5462,8 @@ CMakeFiles/tl.dir/src/strcutures/All_Files.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -5202,6 +5477,7 @@ CMakeFiles/tl.dir/src/strcutures/All_Files.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -5230,6 +5506,7 @@ CMakeFiles/tl.dir/src/strcutures/All_Files.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -5238,11 +5515,14 @@ CMakeFiles/tl.dir/src/strcutures/All_Files.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -5258,11 +5538,9 @@ CMakeFiles/tl.dir/src/strcutures/Total_File_Year_Date.c.o: /home/eyk/桌面/todo
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -5271,6 +5549,8 @@ CMakeFiles/tl.dir/src/strcutures/Total_File_Year_Date.c.o: /home/eyk/桌面/todo
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -5332,6 +5612,7 @@ CMakeFiles/tl.dir/src/strcutures/Total_File_Year_Date.c.o: /home/eyk/桌面/todo
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -5339,6 +5620,8 @@ CMakeFiles/tl.dir/src/strcutures/Total_File_Year_Date.c.o: /home/eyk/桌面/todo
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -5352,6 +5635,7 @@ CMakeFiles/tl.dir/src/strcutures/Total_File_Year_Date.c.o: /home/eyk/桌面/todo
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -5380,6 +5664,7 @@ CMakeFiles/tl.dir/src/strcutures/Total_File_Year_Date.c.o: /home/eyk/桌面/todo
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -5388,11 +5673,14 @@ CMakeFiles/tl.dir/src/strcutures/Total_File_Year_Date.c.o: /home/eyk/桌面/todo
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -5408,11 +5696,9 @@ CMakeFiles/tl.dir/src/strcutures/command.c.o: /home/eyk/桌面/todo-listux/todo-
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -5421,6 +5707,8 @@ CMakeFiles/tl.dir/src/strcutures/command.c.o: /home/eyk/桌面/todo-listux/todo-
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -5482,6 +5770,7 @@ CMakeFiles/tl.dir/src/strcutures/command.c.o: /home/eyk/桌面/todo-listux/todo-
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -5489,6 +5778,8 @@ CMakeFiles/tl.dir/src/strcutures/command.c.o: /home/eyk/桌面/todo-listux/todo-
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -5502,6 +5793,7 @@ CMakeFiles/tl.dir/src/strcutures/command.c.o: /home/eyk/桌面/todo-listux/todo-
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -5530,6 +5822,7 @@ CMakeFiles/tl.dir/src/strcutures/command.c.o: /home/eyk/桌面/todo-listux/todo-
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -5538,11 +5831,14 @@ CMakeFiles/tl.dir/src/strcutures/command.c.o: /home/eyk/桌面/todo-listux/todo-
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -5558,11 +5854,9 @@ CMakeFiles/tl.dir/src/strcutures/date/date.c.o: /home/eyk/桌面/todo-listux/tod
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -5571,6 +5865,8 @@ CMakeFiles/tl.dir/src/strcutures/date/date.c.o: /home/eyk/桌面/todo-listux/tod
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -5632,6 +5928,7 @@ CMakeFiles/tl.dir/src/strcutures/date/date.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -5639,6 +5936,8 @@ CMakeFiles/tl.dir/src/strcutures/date/date.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -5652,6 +5951,7 @@ CMakeFiles/tl.dir/src/strcutures/date/date.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -5680,6 +5980,7 @@ CMakeFiles/tl.dir/src/strcutures/date/date.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -5688,11 +5989,14 @@ CMakeFiles/tl.dir/src/strcutures/date/date.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -5708,11 +6012,9 @@ CMakeFiles/tl.dir/src/strcutures/node/node.c.o: /home/eyk/桌面/todo-listux/tod
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -5721,6 +6023,8 @@ CMakeFiles/tl.dir/src/strcutures/node/node.c.o: /home/eyk/桌面/todo-listux/tod
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -5782,6 +6086,7 @@ CMakeFiles/tl.dir/src/strcutures/node/node.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -5789,6 +6094,8 @@ CMakeFiles/tl.dir/src/strcutures/node/node.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -5802,6 +6109,7 @@ CMakeFiles/tl.dir/src/strcutures/node/node.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -5830,6 +6138,7 @@ CMakeFiles/tl.dir/src/strcutures/node/node.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -5838,11 +6147,14 @@ CMakeFiles/tl.dir/src/strcutures/node/node.c.o: /home/eyk/桌面/todo-listux/tod
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -5858,11 +6170,9 @@ CMakeFiles/tl.dir/src/strcutures/setting/setting.c.o: /home/eyk/桌面/todo-list
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -5871,6 +6181,8 @@ CMakeFiles/tl.dir/src/strcutures/setting/setting.c.o: /home/eyk/桌面/todo-list
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -5932,6 +6244,7 @@ CMakeFiles/tl.dir/src/strcutures/setting/setting.c.o: /home/eyk/桌面/todo-list
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -5939,6 +6252,8 @@ CMakeFiles/tl.dir/src/strcutures/setting/setting.c.o: /home/eyk/桌面/todo-list
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -5952,6 +6267,7 @@ CMakeFiles/tl.dir/src/strcutures/setting/setting.c.o: /home/eyk/桌面/todo-list
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -5980,6 +6296,7 @@ CMakeFiles/tl.dir/src/strcutures/setting/setting.c.o: /home/eyk/桌面/todo-list
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -5988,11 +6305,14 @@ CMakeFiles/tl.dir/src/strcutures/setting/setting.c.o: /home/eyk/桌面/todo-list
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -6008,11 +6328,9 @@ CMakeFiles/tl.dir/src/strcutures/task_day/Task.c.o: /home/eyk/桌面/todo-listux
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -6021,6 +6339,8 @@ CMakeFiles/tl.dir/src/strcutures/task_day/Task.c.o: /home/eyk/桌面/todo-listux
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -6082,6 +6402,7 @@ CMakeFiles/tl.dir/src/strcutures/task_day/Task.c.o: /home/eyk/桌面/todo-listux
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -6089,6 +6410,8 @@ CMakeFiles/tl.dir/src/strcutures/task_day/Task.c.o: /home/eyk/桌面/todo-listux
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -6102,6 +6425,7 @@ CMakeFiles/tl.dir/src/strcutures/task_day/Task.c.o: /home/eyk/桌面/todo-listux
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -6130,6 +6454,7 @@ CMakeFiles/tl.dir/src/strcutures/task_day/Task.c.o: /home/eyk/桌面/todo-listux
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -6138,11 +6463,14 @@ CMakeFiles/tl.dir/src/strcutures/task_day/Task.c.o: /home/eyk/桌面/todo-listux
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -6158,11 +6486,9 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskDay.c.o: /home/eyk/桌面/todo-lis
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -6171,6 +6497,8 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskDay.c.o: /home/eyk/桌面/todo-lis
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -6232,6 +6560,7 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskDay.c.o: /home/eyk/桌面/todo-lis
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -6239,6 +6568,8 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskDay.c.o: /home/eyk/桌面/todo-lis
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -6252,6 +6583,7 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskDay.c.o: /home/eyk/桌面/todo-lis
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -6280,6 +6612,7 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskDay.c.o: /home/eyk/桌面/todo-lis
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -6288,11 +6621,14 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskDay.c.o: /home/eyk/桌面/todo-lis
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -6308,11 +6644,9 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskMonth.c.o: /home/eyk/桌面/todo-l
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -6321,6 +6655,8 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskMonth.c.o: /home/eyk/桌面/todo-l
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -6382,6 +6718,7 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskMonth.c.o: /home/eyk/桌面/todo-l
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -6389,6 +6726,8 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskMonth.c.o: /home/eyk/桌面/todo-l
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -6402,6 +6741,7 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskMonth.c.o: /home/eyk/桌面/todo-l
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -6430,6 +6770,7 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskMonth.c.o: /home/eyk/桌面/todo-l
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -6438,11 +6779,14 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskMonth.c.o: /home/eyk/桌面/todo-l
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -6458,11 +6802,9 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskYear.c.o: /home/eyk/桌面/todo-li
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -6471,6 +6813,8 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskYear.c.o: /home/eyk/桌面/todo-li
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -6532,6 +6876,7 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskYear.c.o: /home/eyk/桌面/todo-li
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -6539,6 +6884,8 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskYear.c.o: /home/eyk/桌面/todo-li
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -6552,6 +6899,7 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskYear.c.o: /home/eyk/桌面/todo-li
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -6580,6 +6928,7 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskYear.c.o: /home/eyk/桌面/todo-li
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -6588,11 +6937,14 @@ CMakeFiles/tl.dir/src/strcutures/task_day/TaskYear.c.o: /home/eyk/桌面/todo-li
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -6608,11 +6960,9 @@ CMakeFiles/tl.dir/src/strcutures/task_month/Month_Task.c.o: /home/eyk/桌面/tod
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -6621,6 +6971,8 @@ CMakeFiles/tl.dir/src/strcutures/task_month/Month_Task.c.o: /home/eyk/桌面/tod
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -6682,6 +7034,7 @@ CMakeFiles/tl.dir/src/strcutures/task_month/Month_Task.c.o: /home/eyk/桌面/tod
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -6689,6 +7042,8 @@ CMakeFiles/tl.dir/src/strcutures/task_month/Month_Task.c.o: /home/eyk/桌面/tod
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -6702,6 +7057,7 @@ CMakeFiles/tl.dir/src/strcutures/task_month/Month_Task.c.o: /home/eyk/桌面/tod
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -6730,6 +7086,7 @@ CMakeFiles/tl.dir/src/strcutures/task_month/Month_Task.c.o: /home/eyk/桌面/tod
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -6738,11 +7095,14 @@ CMakeFiles/tl.dir/src/strcutures/task_month/Month_Task.c.o: /home/eyk/桌面/tod
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -6758,11 +7118,9 @@ CMakeFiles/tl.dir/src/strcutures/task_month/Month_Year_Task.c.o: /home/eyk/桌�
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -6771,6 +7129,8 @@ CMakeFiles/tl.dir/src/strcutures/task_month/Month_Year_Task.c.o: /home/eyk/桌�
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -6832,6 +7192,7 @@ CMakeFiles/tl.dir/src/strcutures/task_month/Month_Year_Task.c.o: /home/eyk/桌�
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -6839,6 +7200,8 @@ CMakeFiles/tl.dir/src/strcutures/task_month/Month_Year_Task.c.o: /home/eyk/桌�
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -6852,6 +7215,7 @@ CMakeFiles/tl.dir/src/strcutures/task_month/Month_Year_Task.c.o: /home/eyk/桌�
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -6880,6 +7244,7 @@ CMakeFiles/tl.dir/src/strcutures/task_month/Month_Year_Task.c.o: /home/eyk/桌�
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -6888,11 +7253,14 @@ CMakeFiles/tl.dir/src/strcutures/task_month/Month_Year_Task.c.o: /home/eyk/桌�
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -6908,11 +7276,9 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Month_Task.c.o: /home/eyk/桌面
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -6921,6 +7287,8 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Month_Task.c.o: /home/eyk/桌面
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -6982,6 +7350,7 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Month_Task.c.o: /home/eyk/桌面
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -6989,6 +7358,8 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Month_Task.c.o: /home/eyk/桌面
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -7002,6 +7373,7 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Month_Task.c.o: /home/eyk/桌面
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -7030,6 +7402,7 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Month_Task.c.o: /home/eyk/桌面
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -7038,11 +7411,14 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Month_Task.c.o: /home/eyk/桌面
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -7058,11 +7434,9 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Task.c.o: /home/eyk/桌面/todo-
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -7071,6 +7445,8 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Task.c.o: /home/eyk/桌面/todo-
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -7132,6 +7508,7 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Task.c.o: /home/eyk/桌面/todo-
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -7139,6 +7516,8 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Task.c.o: /home/eyk/桌面/todo-
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -7152,6 +7531,7 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Task.c.o: /home/eyk/桌面/todo-
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -7180,6 +7560,7 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Task.c.o: /home/eyk/桌面/todo-
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -7188,11 +7569,14 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Task.c.o: /home/eyk/桌面/todo-
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -7208,11 +7592,9 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Year_Task.c.o: /home/eyk/桌面/
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -7221,6 +7603,8 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Year_Task.c.o: /home/eyk/桌面/
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -7282,6 +7666,7 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Year_Task.c.o: /home/eyk/桌面/
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -7289,6 +7674,8 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Year_Task.c.o: /home/eyk/桌面/
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -7302,6 +7689,7 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Year_Task.c.o: /home/eyk/桌面/
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -7330,6 +7718,7 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Year_Task.c.o: /home/eyk/桌面/
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -7338,11 +7727,14 @@ CMakeFiles/tl.dir/src/strcutures/task_week/Week_Year_Task.c.o: /home/eyk/桌面/
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -7358,11 +7750,9 @@ CMakeFiles/tl.dir/src/strcutures/task_year/Year_Task.c.o: /home/eyk/桌面/todo-
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -7371,6 +7761,8 @@ CMakeFiles/tl.dir/src/strcutures/task_year/Year_Task.c.o: /home/eyk/桌面/todo-
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -7432,6 +7824,7 @@ CMakeFiles/tl.dir/src/strcutures/task_year/Year_Task.c.o: /home/eyk/桌面/todo-
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -7439,6 +7832,8 @@ CMakeFiles/tl.dir/src/strcutures/task_year/Year_Task.c.o: /home/eyk/桌面/todo-
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -7452,6 +7847,7 @@ CMakeFiles/tl.dir/src/strcutures/task_year/Year_Task.c.o: /home/eyk/桌面/todo-
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -7480,6 +7876,7 @@ CMakeFiles/tl.dir/src/strcutures/task_year/Year_Task.c.o: /home/eyk/桌面/todo-
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -7488,11 +7885,14 @@ CMakeFiles/tl.dir/src/strcutures/task_year/Year_Task.c.o: /home/eyk/桌面/todo-
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -7508,11 +7908,9 @@ CMakeFiles/tl.dir/src/tools/MONTH.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -7521,6 +7919,8 @@ CMakeFiles/tl.dir/src/tools/MONTH.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -7582,6 +7982,7 @@ CMakeFiles/tl.dir/src/tools/MONTH.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -7589,6 +7990,8 @@ CMakeFiles/tl.dir/src/tools/MONTH.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -7602,6 +8005,7 @@ CMakeFiles/tl.dir/src/tools/MONTH.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -7630,6 +8034,7 @@ CMakeFiles/tl.dir/src/tools/MONTH.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -7638,11 +8043,14 @@ CMakeFiles/tl.dir/src/tools/MONTH.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -7658,11 +8066,9 @@ CMakeFiles/tl.dir/src/tools/command_error.c.o: /home/eyk/桌面/todo-listux/todo
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -7671,6 +8077,8 @@ CMakeFiles/tl.dir/src/tools/command_error.c.o: /home/eyk/桌面/todo-listux/todo
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -7732,6 +8140,7 @@ CMakeFiles/tl.dir/src/tools/command_error.c.o: /home/eyk/桌面/todo-listux/todo
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -7739,6 +8148,8 @@ CMakeFiles/tl.dir/src/tools/command_error.c.o: /home/eyk/桌面/todo-listux/todo
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -7752,6 +8163,7 @@ CMakeFiles/tl.dir/src/tools/command_error.c.o: /home/eyk/桌面/todo-listux/todo
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -7780,6 +8192,7 @@ CMakeFiles/tl.dir/src/tools/command_error.c.o: /home/eyk/桌面/todo-listux/todo
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -7788,11 +8201,14 @@ CMakeFiles/tl.dir/src/tools/command_error.c.o: /home/eyk/桌面/todo-listux/todo
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -7808,11 +8224,9 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/add_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h \
-  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h \
@@ -7821,6 +8235,8 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /home/eyk/桌面/todo-listux/todo-listux/include/display/color.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/display.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/display/help.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h \
+  /home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/include.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h \
   /home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h \
@@ -7882,6 +8298,7 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
@@ -7889,6 +8306,8 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -7902,6 +8321,7 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -7930,6 +8350,7 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
@@ -7938,11 +8359,14 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -7983,6 +8407,8 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
 
 /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/command.c:
 
+/home/eyk/桌面/todo-listux/todo-listux/src/strcutures/Total_File_Year_Date.c:
+
 /home/eyk/桌面/todo-listux/todo-listux/src/parser/parse_command.c:
 
 /home/eyk/桌面/todo-listux/todo-listux/src/parser/args_num/args_define.c:
@@ -7997,6 +8423,10 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
 
 /home/eyk/桌面/todo-listux/todo-listux/src/log/log.c:
 
+/home/eyk/桌面/todo-listux/todo-listux/src/parser/args_num/args_5.c:
+
+/home/eyk/桌面/todo-listux/todo-listux/src/execute/set_setting.c:
+
 /home/eyk/桌面/todo-listux/todo-listux/src/execute/modify.c:
 
 /home/eyk/桌面/todo-listux/todo-listux/src/parser/date_validate_format.c:
@@ -8007,9 +8437,11 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
 
 /home/eyk/桌面/todo-listux/todo-listux/src/execute/delete.c:
 
-/home/eyk/桌面/todo-listux/todo-listux/src/execute/all_execute.c:
-
 /home/eyk/桌面/todo-listux/todo-listux/src/execute/add.c:
+
+/home/eyk/桌面/todo-listux/todo-listux/src/display/text_print_help.c:
+
+/home/eyk/桌面/todo-listux/todo-listux/src/display/text_display_width.c:
 
 /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/task_year/Year_Task.c:
 
@@ -8017,19 +8449,27 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
 
 /home/eyk/桌面/todo-listux/todo-listux/src/database/modify_data.c:
 
-/home/eyk/桌面/todo-listux/todo-listux/src/parser/args_num/args_5.c:
+/home/eyk/桌面/todo-listux/todo-listux/src/execute/all_execute.c:
 
-/home/eyk/桌面/todo-listux/todo-listux/src/execute/set_setting.c:
+/home/eyk/桌面/todo-listux/todo-listux/src/database/load_setting_file.c:
 
-/home/eyk/桌面/todo-listux/todo-listux/src/database/load_month_year_file.c:
-
-/home/eyk/桌面/todo-listux/todo-listux/src/database/load_day_year_file.c:
-
-/home/eyk/桌面/todo-listux/todo-listux/src/database/filePath.c:
+/home/eyk/桌面/todo-listux/todo-listux/src/database/delete_data.c:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/sys/stat.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
 /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/node/node.c:
 
@@ -8041,13 +8481,13 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
 
 /home/eyk/桌面/todo-listux/todo-listux/include/tools/tools.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+
 /home/eyk/桌面/todo-listux/todo-listux/src/tools/MONTH.c:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /home/eyk/桌面/todo-listux/todo-listux/include/tools/command_error.h:
-
-/usr/include/time.h:
 
 /usr/include/ctype.h:
 
@@ -8083,71 +8523,21 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
 
 /home/eyk/桌面/todo-listux/todo-listux/include/execute/execute.h:
 
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
-
 /home/eyk/桌面/todo-listux/todo-listux/include/parser/date_validate_format.h:
 
 /home/eyk/桌面/todo-listux/todo-listux/src/database/save_setting.c:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
-/home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_6.h:
+/usr/include/time.h:
 
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+/home/eyk/桌面/todo-listux/todo-listux/include/display/text_print_help.h:
+
+/usr/include/asm-generic/errno-base.h:
 
 /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_5.h:
 
-/usr/include/x86_64-linux-gnu/sys/stat.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h:
-
-/home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h:
-
-/usr/include/alloca.h:
-
-/home/eyk/桌面/todo-listux/todo-listux/include/execute/find.h:
-
-/home/eyk/桌面/todo-listux/todo-listux/src/parser/parse_date.c:
-
-/home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h:
-
-/usr/include/stdlib.h:
-
-/home/eyk/桌面/todo-listux/todo-listux/include/database/filePath.h:
-
-/home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_month/Month_Task.h:
-
-/home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h:
-
-/home/eyk/桌面/todo-listux/todo-listux/include/parser/parse_date_type.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
-/home/eyk/桌面/todo-listux/todo-listux/include/strcutures/All_Files.h:
-
-/home/eyk/桌面/todo-listux/todo-listux/include/log/log.h:
-
-/home/eyk/桌面/todo-listux/todo-listux/src/database/save_data.c:
-
-/usr/include/endian.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
-/home/eyk/桌面/todo-listux/todo-listux/src/database/delete_data.c:
-
-/home/eyk/桌面/todo-listux/todo-listux/include/database/load_day_year_file.h:
-
-/home/eyk/桌面/todo-listux/todo-listux/src/display/help.c:
-
-/usr/include/linux/errno.h:
-
-/usr/include/asm-generic/errno-base.h:
+/home/eyk/桌面/todo-listux/todo-listux/include/display/text_display_width.h:
 
 /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/command.h:
 
@@ -8159,17 +8549,19 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
+/home/eyk/桌面/todo-listux/todo-listux/include/execute/find.h:
+
+/usr/include/alloca.h:
+
+/home/eyk/桌面/todo-listux/todo-listux/include/database/modify_data.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
 /home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/Day_Year_Task.h:
 
-/home/eyk/桌面/todo-listux/todo-listux/include/database/load_week_year_file.h:
-
 /home/eyk/桌面/todo-listux/todo-listux/include/parser/parse_date.h:
-
-/home/eyk/桌面/todo-listux/todo-listux/src/strcutures/Total_File_Year_Date.c:
-
-/home/eyk/桌面/todo-listux/todo-listux/include/database/load_month_year_file.h:
-
-/home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/TaskDay.h:
 
 /home/eyk/桌面/todo-listux/todo-listux/src/database/load_year_file.c:
 
@@ -8177,19 +8569,75 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
-/home/eyk/桌面/todo-listux/todo-listux/include/display/color.h:
+/home/eyk/桌面/todo-listux/todo-listux/src/parser/parse_date.c:
 
-/home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h:
+/home/eyk/桌面/todo-listux/todo-listux/include/database/load_data.h:
 
-/usr/include/x86_64-linux-gnu/bits/errno.h:
+/usr/include/stdlib.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
+/home/eyk/桌面/todo-listux/todo-listux/include/log/log_for_node.h:
+
+/home/eyk/桌面/todo-listux/todo-listux/src/database/get_file_Path.c:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /home/eyk/桌面/todo-listux/todo-listux/include/database/save_data.h:
 
 /usr/include/errno.h:
+
+/home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_month/Month_Task.h:
+
+/home/eyk/桌面/todo-listux/todo-listux/include/database/delete_data.h:
+
+/home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_6.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/home/eyk/桌面/todo-listux/todo-listux/include/database/load_setting_file.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/home/eyk/桌面/todo-listux/todo-listux/include/parser/parse_date_type.h:
+
+/usr/include/wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
+/home/eyk/桌面/todo-listux/todo-listux/include/database/get_file_Path.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/home/eyk/桌面/todo-listux/todo-listux/include/strcutures/All_Files.h:
+
+/home/eyk/桌面/todo-listux/todo-listux/include/log/log.h:
+
+/home/eyk/桌面/todo-listux/todo-listux/src/database/save_data.c:
+
+/usr/include/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+/home/eyk/桌面/todo-listux/todo-listux/src/display/help.c:
+
+/usr/include/linux/errno.h:
+
+/home/eyk/桌面/todo-listux/todo-listux/include/display/color.h:
+
+/home/eyk/桌面/todo-listux/todo-listux/include/execute/add.h:
+
+/usr/include/wctype.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
+
+/home/eyk/桌面/todo-listux/todo-listux/include/execute/delete.h:
 
 /home/eyk/桌面/todo-listux/todo-listux/src/database/load_data.c:
 
@@ -8207,7 +8655,7 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
-/home/eyk/桌面/todo-listux/todo-listux/include/log/log_for_node.h:
+/home/eyk/桌面/todo-listux/todo-listux/include/strcutures/task_day/TaskDay.h:
 
 /home/eyk/桌面/todo-listux/todo-listux/include/parser/args_num/args_define.h:
 
@@ -8234,12 +8682,6 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
 /usr/include/features-time64.h:
 
 /usr/include/features.h:
-
-/usr/include/stdc-predef.h:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/stdio.h:
 
@@ -8269,8 +8711,6 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
 /home/eyk/桌面/todo-listux/todo-listux/include/database/load_year_file.h:
@@ -8282,6 +8722,8 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /home/eyk/桌面/todo-listux/todo-listux/include/execute/modify.h:
+
+/usr/include/locale.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
@@ -8311,22 +8753,20 @@ CMakeFiles/tl.dir/src/tools/tools.c.o: /home/eyk/桌面/todo-listux/todo-listux/
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
-/home/eyk/桌面/todo-listux/todo-listux/src/database/load_week_year_file.c:
-
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:

@@ -177,29 +177,29 @@ src/database/delete_data.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/delete_data.c.s
 .PHONY : src/database/delete_data.c.s
 
-src/database/filePath.o: src/database/filePath.c.o
-.PHONY : src/database/filePath.o
+src/database/get_file_Path.o: src/database/get_file_Path.c.o
+.PHONY : src/database/get_file_Path.o
 
 # target to build an object file
-src/database/filePath.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/filePath.c.o
-.PHONY : src/database/filePath.c.o
+src/database/get_file_Path.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/get_file_Path.c.o
+.PHONY : src/database/get_file_Path.c.o
 
-src/database/filePath.i: src/database/filePath.c.i
-.PHONY : src/database/filePath.i
+src/database/get_file_Path.i: src/database/get_file_Path.c.i
+.PHONY : src/database/get_file_Path.i
 
 # target to preprocess a source file
-src/database/filePath.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/filePath.c.i
-.PHONY : src/database/filePath.c.i
+src/database/get_file_Path.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/get_file_Path.c.i
+.PHONY : src/database/get_file_Path.c.i
 
-src/database/filePath.s: src/database/filePath.c.s
-.PHONY : src/database/filePath.s
+src/database/get_file_Path.s: src/database/get_file_Path.c.s
+.PHONY : src/database/get_file_Path.s
 
 # target to generate assembly for a file
-src/database/filePath.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/filePath.c.s
-.PHONY : src/database/filePath.c.s
+src/database/get_file_Path.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/get_file_Path.c.s
+.PHONY : src/database/get_file_Path.c.s
 
 src/database/load_data.o: src/database/load_data.c.o
 .PHONY : src/database/load_data.o
@@ -225,77 +225,29 @@ src/database/load_data.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/load_data.c.s
 .PHONY : src/database/load_data.c.s
 
-src/database/load_day_year_file.o: src/database/load_day_year_file.c.o
-.PHONY : src/database/load_day_year_file.o
+src/database/load_setting_file.o: src/database/load_setting_file.c.o
+.PHONY : src/database/load_setting_file.o
 
 # target to build an object file
-src/database/load_day_year_file.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/load_day_year_file.c.o
-.PHONY : src/database/load_day_year_file.c.o
+src/database/load_setting_file.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/load_setting_file.c.o
+.PHONY : src/database/load_setting_file.c.o
 
-src/database/load_day_year_file.i: src/database/load_day_year_file.c.i
-.PHONY : src/database/load_day_year_file.i
-
-# target to preprocess a source file
-src/database/load_day_year_file.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/load_day_year_file.c.i
-.PHONY : src/database/load_day_year_file.c.i
-
-src/database/load_day_year_file.s: src/database/load_day_year_file.c.s
-.PHONY : src/database/load_day_year_file.s
-
-# target to generate assembly for a file
-src/database/load_day_year_file.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/load_day_year_file.c.s
-.PHONY : src/database/load_day_year_file.c.s
-
-src/database/load_month_year_file.o: src/database/load_month_year_file.c.o
-.PHONY : src/database/load_month_year_file.o
-
-# target to build an object file
-src/database/load_month_year_file.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/load_month_year_file.c.o
-.PHONY : src/database/load_month_year_file.c.o
-
-src/database/load_month_year_file.i: src/database/load_month_year_file.c.i
-.PHONY : src/database/load_month_year_file.i
+src/database/load_setting_file.i: src/database/load_setting_file.c.i
+.PHONY : src/database/load_setting_file.i
 
 # target to preprocess a source file
-src/database/load_month_year_file.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/load_month_year_file.c.i
-.PHONY : src/database/load_month_year_file.c.i
+src/database/load_setting_file.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/load_setting_file.c.i
+.PHONY : src/database/load_setting_file.c.i
 
-src/database/load_month_year_file.s: src/database/load_month_year_file.c.s
-.PHONY : src/database/load_month_year_file.s
-
-# target to generate assembly for a file
-src/database/load_month_year_file.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/load_month_year_file.c.s
-.PHONY : src/database/load_month_year_file.c.s
-
-src/database/load_week_year_file.o: src/database/load_week_year_file.c.o
-.PHONY : src/database/load_week_year_file.o
-
-# target to build an object file
-src/database/load_week_year_file.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/load_week_year_file.c.o
-.PHONY : src/database/load_week_year_file.c.o
-
-src/database/load_week_year_file.i: src/database/load_week_year_file.c.i
-.PHONY : src/database/load_week_year_file.i
-
-# target to preprocess a source file
-src/database/load_week_year_file.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/load_week_year_file.c.i
-.PHONY : src/database/load_week_year_file.c.i
-
-src/database/load_week_year_file.s: src/database/load_week_year_file.c.s
-.PHONY : src/database/load_week_year_file.s
+src/database/load_setting_file.s: src/database/load_setting_file.c.s
+.PHONY : src/database/load_setting_file.s
 
 # target to generate assembly for a file
-src/database/load_week_year_file.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/load_week_year_file.c.s
-.PHONY : src/database/load_week_year_file.c.s
+src/database/load_setting_file.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/database/load_setting_file.c.s
+.PHONY : src/database/load_setting_file.c.s
 
 src/database/load_year_file.o: src/database/load_year_file.c.o
 .PHONY : src/database/load_year_file.o
@@ -440,6 +392,54 @@ src/display/help.s: src/display/help.c.s
 src/display/help.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/display/help.c.s
 .PHONY : src/display/help.c.s
+
+src/display/text_display_width.o: src/display/text_display_width.c.o
+.PHONY : src/display/text_display_width.o
+
+# target to build an object file
+src/display/text_display_width.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/display/text_display_width.c.o
+.PHONY : src/display/text_display_width.c.o
+
+src/display/text_display_width.i: src/display/text_display_width.c.i
+.PHONY : src/display/text_display_width.i
+
+# target to preprocess a source file
+src/display/text_display_width.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/display/text_display_width.c.i
+.PHONY : src/display/text_display_width.c.i
+
+src/display/text_display_width.s: src/display/text_display_width.c.s
+.PHONY : src/display/text_display_width.s
+
+# target to generate assembly for a file
+src/display/text_display_width.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/display/text_display_width.c.s
+.PHONY : src/display/text_display_width.c.s
+
+src/display/text_print_help.o: src/display/text_print_help.c.o
+.PHONY : src/display/text_print_help.o
+
+# target to build an object file
+src/display/text_print_help.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/display/text_print_help.c.o
+.PHONY : src/display/text_print_help.c.o
+
+src/display/text_print_help.i: src/display/text_print_help.c.i
+.PHONY : src/display/text_print_help.i
+
+# target to preprocess a source file
+src/display/text_print_help.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/display/text_print_help.c.i
+.PHONY : src/display/text_print_help.c.i
+
+src/display/text_print_help.s: src/display/text_print_help.c.s
+.PHONY : src/display/text_print_help.s
+
+# target to generate assembly for a file
+src/display/text_print_help.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tl.dir/build.make CMakeFiles/tl.dir/src/display/text_print_help.c.s
+.PHONY : src/display/text_print_help.c.s
 
 src/execute/add.o: src/execute/add.c.o
 .PHONY : src/execute/add.o
@@ -1440,21 +1440,15 @@ help:
 	@echo "... src/database/delete_data.o"
 	@echo "... src/database/delete_data.i"
 	@echo "... src/database/delete_data.s"
-	@echo "... src/database/filePath.o"
-	@echo "... src/database/filePath.i"
-	@echo "... src/database/filePath.s"
+	@echo "... src/database/get_file_Path.o"
+	@echo "... src/database/get_file_Path.i"
+	@echo "... src/database/get_file_Path.s"
 	@echo "... src/database/load_data.o"
 	@echo "... src/database/load_data.i"
 	@echo "... src/database/load_data.s"
-	@echo "... src/database/load_day_year_file.o"
-	@echo "... src/database/load_day_year_file.i"
-	@echo "... src/database/load_day_year_file.s"
-	@echo "... src/database/load_month_year_file.o"
-	@echo "... src/database/load_month_year_file.i"
-	@echo "... src/database/load_month_year_file.s"
-	@echo "... src/database/load_week_year_file.o"
-	@echo "... src/database/load_week_year_file.i"
-	@echo "... src/database/load_week_year_file.s"
+	@echo "... src/database/load_setting_file.o"
+	@echo "... src/database/load_setting_file.i"
+	@echo "... src/database/load_setting_file.s"
 	@echo "... src/database/load_year_file.o"
 	@echo "... src/database/load_year_file.i"
 	@echo "... src/database/load_year_file.s"
@@ -1473,6 +1467,12 @@ help:
 	@echo "... src/display/help.o"
 	@echo "... src/display/help.i"
 	@echo "... src/display/help.s"
+	@echo "... src/display/text_display_width.o"
+	@echo "... src/display/text_display_width.i"
+	@echo "... src/display/text_display_width.s"
+	@echo "... src/display/text_print_help.o"
+	@echo "... src/display/text_print_help.i"
+	@echo "... src/display/text_print_help.s"
 	@echo "... src/execute/add.o"
 	@echo "... src/execute/add.i"
 	@echo "... src/execute/add.s"

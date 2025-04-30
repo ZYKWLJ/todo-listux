@@ -88,6 +88,8 @@
         "errno.h": "c",
         "delete_data.h": "c",
         "load_setting_file.h": "c",
-        "stat.h": "c"
+        "stat.h": "c",
+        "chrono": "c",
+        "variant": "c"
     }
 }

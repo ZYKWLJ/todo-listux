@@ -3,7 +3,6 @@
 #include "../../include.h"
 // 这是命令实体，传参就传这一个就好了
 // 大命令再划分为小日期命令
-#define SOFTWARE_NAME "tl"
 #define DISPLAY_TOKEN "^"
 #define ADD_TOKEN "+"
 #define COMPLETE_TOKEN "-"

@@ -85,6 +85,13 @@ CMakeFiles/tl.dir/src/database/save_setting.c.o: \
  /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/display/display.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/display/../include.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/display/color.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/display/text_print_help.h \
+ /usr/include/locale.h /usr/include/x86_64-linux-gnu/bits/locale.h \
+ /usr/include/wchar.h /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/display/text_display_width.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/tools/tools.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/tools/MONTH.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/tools/command_error.h \
@@ -100,7 +107,7 @@ CMakeFiles/tl.dir/src/database/save_setting.c.o: \
  /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/database/delete_data.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/database/modify_data.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/database/add_data.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/database/filePath.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/database/get_file_Path.h \
  /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
@@ -111,10 +118,8 @@ CMakeFiles/tl.dir/src/database/save_setting.c.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/database/save_setting.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/database/load_day_year_file.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/database/load_week_year_file.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/database/load_month_year_file.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/database/load_year_file.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/database/load_setting_file.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/execute/find.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/execute/../include.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/database/../../include/execute/delete.h \

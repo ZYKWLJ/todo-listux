@@ -97,19 +97,19 @@ CMakeFiles/tl.dir/src/database/delete_data.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/database/delete_data.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/桌面/todo-listux/todo-listux/src/database/delete_data.c -o CMakeFiles/tl.dir/src/database/delete_data.c.s
 
-CMakeFiles/tl.dir/src/database/filePath.c.o: CMakeFiles/tl.dir/flags.make
-CMakeFiles/tl.dir/src/database/filePath.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/database/filePath.c
-CMakeFiles/tl.dir/src/database/filePath.c.o: CMakeFiles/tl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/tl.dir/src/database/filePath.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/database/filePath.c.o -MF CMakeFiles/tl.dir/src/database/filePath.c.o.d -o CMakeFiles/tl.dir/src/database/filePath.c.o -c /home/eyk/桌面/todo-listux/todo-listux/src/database/filePath.c
+CMakeFiles/tl.dir/src/database/get_file_Path.c.o: CMakeFiles/tl.dir/flags.make
+CMakeFiles/tl.dir/src/database/get_file_Path.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/database/get_file_Path.c
+CMakeFiles/tl.dir/src/database/get_file_Path.c.o: CMakeFiles/tl.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/tl.dir/src/database/get_file_Path.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/database/get_file_Path.c.o -MF CMakeFiles/tl.dir/src/database/get_file_Path.c.o.d -o CMakeFiles/tl.dir/src/database/get_file_Path.c.o -c /home/eyk/桌面/todo-listux/todo-listux/src/database/get_file_Path.c
 
-CMakeFiles/tl.dir/src/database/filePath.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/database/filePath.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/桌面/todo-listux/todo-listux/src/database/filePath.c > CMakeFiles/tl.dir/src/database/filePath.c.i
+CMakeFiles/tl.dir/src/database/get_file_Path.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/database/get_file_Path.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/桌面/todo-listux/todo-listux/src/database/get_file_Path.c > CMakeFiles/tl.dir/src/database/get_file_Path.c.i
 
-CMakeFiles/tl.dir/src/database/filePath.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/database/filePath.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/桌面/todo-listux/todo-listux/src/database/filePath.c -o CMakeFiles/tl.dir/src/database/filePath.c.s
+CMakeFiles/tl.dir/src/database/get_file_Path.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/database/get_file_Path.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/桌面/todo-listux/todo-listux/src/database/get_file_Path.c -o CMakeFiles/tl.dir/src/database/get_file_Path.c.s
 
 CMakeFiles/tl.dir/src/database/load_data.c.o: CMakeFiles/tl.dir/flags.make
 CMakeFiles/tl.dir/src/database/load_data.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/database/load_data.c
@@ -125,52 +125,24 @@ CMakeFiles/tl.dir/src/database/load_data.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/database/load_data.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/桌面/todo-listux/todo-listux/src/database/load_data.c -o CMakeFiles/tl.dir/src/database/load_data.c.s
 
-CMakeFiles/tl.dir/src/database/load_day_year_file.c.o: CMakeFiles/tl.dir/flags.make
-CMakeFiles/tl.dir/src/database/load_day_year_file.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/database/load_day_year_file.c
-CMakeFiles/tl.dir/src/database/load_day_year_file.c.o: CMakeFiles/tl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/tl.dir/src/database/load_day_year_file.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/database/load_day_year_file.c.o -MF CMakeFiles/tl.dir/src/database/load_day_year_file.c.o.d -o CMakeFiles/tl.dir/src/database/load_day_year_file.c.o -c /home/eyk/桌面/todo-listux/todo-listux/src/database/load_day_year_file.c
+CMakeFiles/tl.dir/src/database/load_setting_file.c.o: CMakeFiles/tl.dir/flags.make
+CMakeFiles/tl.dir/src/database/load_setting_file.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/database/load_setting_file.c
+CMakeFiles/tl.dir/src/database/load_setting_file.c.o: CMakeFiles/tl.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/tl.dir/src/database/load_setting_file.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/database/load_setting_file.c.o -MF CMakeFiles/tl.dir/src/database/load_setting_file.c.o.d -o CMakeFiles/tl.dir/src/database/load_setting_file.c.o -c /home/eyk/桌面/todo-listux/todo-listux/src/database/load_setting_file.c
 
-CMakeFiles/tl.dir/src/database/load_day_year_file.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/database/load_day_year_file.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/桌面/todo-listux/todo-listux/src/database/load_day_year_file.c > CMakeFiles/tl.dir/src/database/load_day_year_file.c.i
+CMakeFiles/tl.dir/src/database/load_setting_file.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/database/load_setting_file.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/桌面/todo-listux/todo-listux/src/database/load_setting_file.c > CMakeFiles/tl.dir/src/database/load_setting_file.c.i
 
-CMakeFiles/tl.dir/src/database/load_day_year_file.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/database/load_day_year_file.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/桌面/todo-listux/todo-listux/src/database/load_day_year_file.c -o CMakeFiles/tl.dir/src/database/load_day_year_file.c.s
-
-CMakeFiles/tl.dir/src/database/load_month_year_file.c.o: CMakeFiles/tl.dir/flags.make
-CMakeFiles/tl.dir/src/database/load_month_year_file.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/database/load_month_year_file.c
-CMakeFiles/tl.dir/src/database/load_month_year_file.c.o: CMakeFiles/tl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/tl.dir/src/database/load_month_year_file.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/database/load_month_year_file.c.o -MF CMakeFiles/tl.dir/src/database/load_month_year_file.c.o.d -o CMakeFiles/tl.dir/src/database/load_month_year_file.c.o -c /home/eyk/桌面/todo-listux/todo-listux/src/database/load_month_year_file.c
-
-CMakeFiles/tl.dir/src/database/load_month_year_file.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/database/load_month_year_file.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/桌面/todo-listux/todo-listux/src/database/load_month_year_file.c > CMakeFiles/tl.dir/src/database/load_month_year_file.c.i
-
-CMakeFiles/tl.dir/src/database/load_month_year_file.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/database/load_month_year_file.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/桌面/todo-listux/todo-listux/src/database/load_month_year_file.c -o CMakeFiles/tl.dir/src/database/load_month_year_file.c.s
-
-CMakeFiles/tl.dir/src/database/load_week_year_file.c.o: CMakeFiles/tl.dir/flags.make
-CMakeFiles/tl.dir/src/database/load_week_year_file.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/database/load_week_year_file.c
-CMakeFiles/tl.dir/src/database/load_week_year_file.c.o: CMakeFiles/tl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/tl.dir/src/database/load_week_year_file.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/database/load_week_year_file.c.o -MF CMakeFiles/tl.dir/src/database/load_week_year_file.c.o.d -o CMakeFiles/tl.dir/src/database/load_week_year_file.c.o -c /home/eyk/桌面/todo-listux/todo-listux/src/database/load_week_year_file.c
-
-CMakeFiles/tl.dir/src/database/load_week_year_file.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/database/load_week_year_file.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/桌面/todo-listux/todo-listux/src/database/load_week_year_file.c > CMakeFiles/tl.dir/src/database/load_week_year_file.c.i
-
-CMakeFiles/tl.dir/src/database/load_week_year_file.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/database/load_week_year_file.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/桌面/todo-listux/todo-listux/src/database/load_week_year_file.c -o CMakeFiles/tl.dir/src/database/load_week_year_file.c.s
+CMakeFiles/tl.dir/src/database/load_setting_file.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/database/load_setting_file.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/桌面/todo-listux/todo-listux/src/database/load_setting_file.c -o CMakeFiles/tl.dir/src/database/load_setting_file.c.s
 
 CMakeFiles/tl.dir/src/database/load_year_file.c.o: CMakeFiles/tl.dir/flags.make
 CMakeFiles/tl.dir/src/database/load_year_file.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/database/load_year_file.c
 CMakeFiles/tl.dir/src/database/load_year_file.c.o: CMakeFiles/tl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/tl.dir/src/database/load_year_file.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/tl.dir/src/database/load_year_file.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/database/load_year_file.c.o -MF CMakeFiles/tl.dir/src/database/load_year_file.c.o.d -o CMakeFiles/tl.dir/src/database/load_year_file.c.o -c /home/eyk/桌面/todo-listux/todo-listux/src/database/load_year_file.c
 
 CMakeFiles/tl.dir/src/database/load_year_file.c.i: cmake_force
@@ -184,7 +156,7 @@ CMakeFiles/tl.dir/src/database/load_year_file.c.s: cmake_force
 CMakeFiles/tl.dir/src/database/modify_data.c.o: CMakeFiles/tl.dir/flags.make
 CMakeFiles/tl.dir/src/database/modify_data.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/database/modify_data.c
 CMakeFiles/tl.dir/src/database/modify_data.c.o: CMakeFiles/tl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/tl.dir/src/database/modify_data.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/tl.dir/src/database/modify_data.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/database/modify_data.c.o -MF CMakeFiles/tl.dir/src/database/modify_data.c.o.d -o CMakeFiles/tl.dir/src/database/modify_data.c.o -c /home/eyk/桌面/todo-listux/todo-listux/src/database/modify_data.c
 
 CMakeFiles/tl.dir/src/database/modify_data.c.i: cmake_force
@@ -198,7 +170,7 @@ CMakeFiles/tl.dir/src/database/modify_data.c.s: cmake_force
 CMakeFiles/tl.dir/src/database/save_data.c.o: CMakeFiles/tl.dir/flags.make
 CMakeFiles/tl.dir/src/database/save_data.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/database/save_data.c
 CMakeFiles/tl.dir/src/database/save_data.c.o: CMakeFiles/tl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/tl.dir/src/database/save_data.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/tl.dir/src/database/save_data.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/database/save_data.c.o -MF CMakeFiles/tl.dir/src/database/save_data.c.o.d -o CMakeFiles/tl.dir/src/database/save_data.c.o -c /home/eyk/桌面/todo-listux/todo-listux/src/database/save_data.c
 
 CMakeFiles/tl.dir/src/database/save_data.c.i: cmake_force
@@ -212,7 +184,7 @@ CMakeFiles/tl.dir/src/database/save_data.c.s: cmake_force
 CMakeFiles/tl.dir/src/database/save_setting.c.o: CMakeFiles/tl.dir/flags.make
 CMakeFiles/tl.dir/src/database/save_setting.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/database/save_setting.c
 CMakeFiles/tl.dir/src/database/save_setting.c.o: CMakeFiles/tl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/tl.dir/src/database/save_setting.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/tl.dir/src/database/save_setting.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/database/save_setting.c.o -MF CMakeFiles/tl.dir/src/database/save_setting.c.o.d -o CMakeFiles/tl.dir/src/database/save_setting.c.o -c /home/eyk/桌面/todo-listux/todo-listux/src/database/save_setting.c
 
 CMakeFiles/tl.dir/src/database/save_setting.c.i: cmake_force
@@ -226,7 +198,7 @@ CMakeFiles/tl.dir/src/database/save_setting.c.s: cmake_force
 CMakeFiles/tl.dir/src/display/display.c.o: CMakeFiles/tl.dir/flags.make
 CMakeFiles/tl.dir/src/display/display.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/display/display.c
 CMakeFiles/tl.dir/src/display/display.c.o: CMakeFiles/tl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/tl.dir/src/display/display.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/tl.dir/src/display/display.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/display/display.c.o -MF CMakeFiles/tl.dir/src/display/display.c.o.d -o CMakeFiles/tl.dir/src/display/display.c.o -c /home/eyk/桌面/todo-listux/todo-listux/src/display/display.c
 
 CMakeFiles/tl.dir/src/display/display.c.i: cmake_force
@@ -240,7 +212,7 @@ CMakeFiles/tl.dir/src/display/display.c.s: cmake_force
 CMakeFiles/tl.dir/src/display/help.c.o: CMakeFiles/tl.dir/flags.make
 CMakeFiles/tl.dir/src/display/help.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/display/help.c
 CMakeFiles/tl.dir/src/display/help.c.o: CMakeFiles/tl.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/tl.dir/src/display/help.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/tl.dir/src/display/help.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/display/help.c.o -MF CMakeFiles/tl.dir/src/display/help.c.o.d -o CMakeFiles/tl.dir/src/display/help.c.o -c /home/eyk/桌面/todo-listux/todo-listux/src/display/help.c
 
 CMakeFiles/tl.dir/src/display/help.c.i: cmake_force
@@ -250,6 +222,34 @@ CMakeFiles/tl.dir/src/display/help.c.i: cmake_force
 CMakeFiles/tl.dir/src/display/help.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/display/help.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/桌面/todo-listux/todo-listux/src/display/help.c -o CMakeFiles/tl.dir/src/display/help.c.s
+
+CMakeFiles/tl.dir/src/display/text_display_width.c.o: CMakeFiles/tl.dir/flags.make
+CMakeFiles/tl.dir/src/display/text_display_width.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/display/text_display_width.c
+CMakeFiles/tl.dir/src/display/text_display_width.c.o: CMakeFiles/tl.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/tl.dir/src/display/text_display_width.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/display/text_display_width.c.o -MF CMakeFiles/tl.dir/src/display/text_display_width.c.o.d -o CMakeFiles/tl.dir/src/display/text_display_width.c.o -c /home/eyk/桌面/todo-listux/todo-listux/src/display/text_display_width.c
+
+CMakeFiles/tl.dir/src/display/text_display_width.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/display/text_display_width.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/桌面/todo-listux/todo-listux/src/display/text_display_width.c > CMakeFiles/tl.dir/src/display/text_display_width.c.i
+
+CMakeFiles/tl.dir/src/display/text_display_width.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/display/text_display_width.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/桌面/todo-listux/todo-listux/src/display/text_display_width.c -o CMakeFiles/tl.dir/src/display/text_display_width.c.s
+
+CMakeFiles/tl.dir/src/display/text_print_help.c.o: CMakeFiles/tl.dir/flags.make
+CMakeFiles/tl.dir/src/display/text_print_help.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/display/text_print_help.c
+CMakeFiles/tl.dir/src/display/text_print_help.c.o: CMakeFiles/tl.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/todo-listux/todo-listux/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/tl.dir/src/display/text_print_help.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tl.dir/src/display/text_print_help.c.o -MF CMakeFiles/tl.dir/src/display/text_print_help.c.o.d -o CMakeFiles/tl.dir/src/display/text_print_help.c.o -c /home/eyk/桌面/todo-listux/todo-listux/src/display/text_print_help.c
+
+CMakeFiles/tl.dir/src/display/text_print_help.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tl.dir/src/display/text_print_help.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/桌面/todo-listux/todo-listux/src/display/text_print_help.c > CMakeFiles/tl.dir/src/display/text_print_help.c.i
+
+CMakeFiles/tl.dir/src/display/text_print_help.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tl.dir/src/display/text_print_help.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/桌面/todo-listux/todo-listux/src/display/text_print_help.c -o CMakeFiles/tl.dir/src/display/text_print_help.c.s
 
 CMakeFiles/tl.dir/src/execute/add.c.o: CMakeFiles/tl.dir/flags.make
 CMakeFiles/tl.dir/src/execute/add.c.o: /home/eyk/桌面/todo-listux/todo-listux/src/execute/add.c
@@ -829,17 +829,17 @@ CMakeFiles/tl.dir/src/tools/tools.c.s: cmake_force
 tl_OBJECTS = \
 "CMakeFiles/tl.dir/src/database/add_data.c.o" \
 "CMakeFiles/tl.dir/src/database/delete_data.c.o" \
-"CMakeFiles/tl.dir/src/database/filePath.c.o" \
+"CMakeFiles/tl.dir/src/database/get_file_Path.c.o" \
 "CMakeFiles/tl.dir/src/database/load_data.c.o" \
-"CMakeFiles/tl.dir/src/database/load_day_year_file.c.o" \
-"CMakeFiles/tl.dir/src/database/load_month_year_file.c.o" \
-"CMakeFiles/tl.dir/src/database/load_week_year_file.c.o" \
+"CMakeFiles/tl.dir/src/database/load_setting_file.c.o" \
 "CMakeFiles/tl.dir/src/database/load_year_file.c.o" \
 "CMakeFiles/tl.dir/src/database/modify_data.c.o" \
 "CMakeFiles/tl.dir/src/database/save_data.c.o" \
 "CMakeFiles/tl.dir/src/database/save_setting.c.o" \
 "CMakeFiles/tl.dir/src/display/display.c.o" \
 "CMakeFiles/tl.dir/src/display/help.c.o" \
+"CMakeFiles/tl.dir/src/display/text_display_width.c.o" \
+"CMakeFiles/tl.dir/src/display/text_print_help.c.o" \
 "CMakeFiles/tl.dir/src/execute/add.c.o" \
 "CMakeFiles/tl.dir/src/execute/all_execute.c.o" \
 "CMakeFiles/tl.dir/src/execute/delete.c.o" \
@@ -887,17 +887,17 @@ tl_EXTERNAL_OBJECTS =
 
 /home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/add_data.c.o
 /home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/delete_data.c.o
-/home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/filePath.c.o
+/home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/get_file_Path.c.o
 /home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/load_data.c.o
-/home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/load_day_year_file.c.o
-/home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/load_month_year_file.c.o
-/home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/load_week_year_file.c.o
+/home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/load_setting_file.c.o
 /home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/load_year_file.c.o
 /home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/modify_data.c.o
 /home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/save_data.c.o
 /home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/database/save_setting.c.o
 /home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/display/display.c.o
 /home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/display/help.c.o
+/home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/display/text_display_width.c.o
+/home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/display/text_print_help.c.o
 /home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/execute/add.c.o
 /home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/execute/all_execute.c.o
 /home/eyk/桌面/todo-listux/todo-listux/bin/tl: CMakeFiles/tl.dir/src/execute/delete.c.o

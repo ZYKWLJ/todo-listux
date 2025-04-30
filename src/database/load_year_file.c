@@ -15,7 +15,7 @@
 // #include "load_year_file.h"
 #endif
 
-#define LOG1
+// #define LOG1
 
 #ifdef LOG1
 void load_year_data(const char *all_files, int year)
