@@ -12,38 +12,30 @@
 #include <sys/stat.h>
 #endif
 
-#ifdef LOG1
+// #ifdef LOG1
 // 保存设置到文件
 void save_setting(Setting *setting)
 {
     char filename[MAX_PATH];
-    const char *base_path = get_appdata_path();
-
+    const char *setting_path = get_appdata_path(0, SETTING_FILE);
+    LOG_PRINT("setting_path=%s\n", setting_path);
     // 构建 settings.ini 文件路径
 #ifdef _WIN32
-    snprintf(filename, sizeof(filename), "%s\\settings.ini", base_path);
+    snprintf(filename, sizeof(filename), "%s", setting_path);
 #else
-    snprintf(filename, sizeof(filename), "%s/settings.ini", base_path);
+    snprintf(filename, sizeof(filename), "%s", setting_path);
 #endif
-
-    // 后续创建目录、文件写入等代码保持不变
-    // 创建目录（如果不存在）
-    if (create_directory(base_path) != 0)
-    {
-        fprintf(stderr, "can't create dir: %s\n", base_path);
-        return;
-    }
 
     FILE *file = fopen(filename, "w");
     if (file)
     {
-        fprintf(file, "color=%s\n", setting->color);
-        fprintf(file, "show=%s\n", setting->show);
+        fprintf(file, "%s=%s\n", setting->color->key, setting->color->value_set);
+        fprintf(file, "%s=%s\n", setting->show->key, setting->show->value_set);
         fclose(file);
-        
+
         LOG_PRINT("saving settings to file: %s\n", filename);
-        LOG_PRINT("color: %s\n", setting->color);
-        LOG_PRINT("show: %s\n", setting->show);
+        LOG_PRINT("%s=%s\n", setting->color->key, setting->color->value_set);
+        LOG_PRINT("%s=%s\n", setting->show->key, setting->show->value_set);
         LOG_PRINT("settings saved in %s\n", filename);
         printf("settings saved\n");
     }
@@ -53,55 +45,55 @@ void save_setting(Setting *setting)
     }
 }
 
-// 从文件读取设置到结构体
-void read_setting(Setting *setting)
-{
-    char filename[MAX_PATH];
-    const char *base_path = get_appdata_path();
+// // 从文件读取设置到结构体
+// void read_setting(Setting *setting)
+// {
+//     char filename[MAX_PATH];
+//     const char *base_path = get_appdata_path();
 
-    // 构建 settings.ini 文件路径
-#ifdef _WIN32
-    snprintf(filename, sizeof(filename), "%s\\settings.ini", base_path);
-#else
-    snprintf(filename, sizeof(filename), "%s/settings.ini", base_path);
-#endif
+//     // 构建 settings.ini 文件路径
+// #ifdef _WIN32
+//     snprintf(filename, sizeof(filename), "%s\\settings.ini",setting_path);
+// #else
+//     snprintf(filename, sizeof(filename), "%s/settings.ini",setting_path);
+// #endif
 
-    FILE *file = fopen(filename, "r");
-    if (file)
-    {
-        char line[256];
-        while (fgets(line, sizeof(line), file))
-        {
-            char key[64], value[64];
-            if (sscanf(line, "%63[^=]=%63[^\n]", key, value) == 2)
-            {
-                if (strcmp(key, "color") == 0)
-                {
-                    strncpy(setting->color, value, sizeof(setting->color) - 1);
-                    setting->color[sizeof(setting->color) - 1] = '\0';
-                }
-                else if (strcmp(key, "show") == 0)
-                {
-                    strncpy(setting->show, value, sizeof(setting->show) - 1);
-                    setting->show[sizeof(setting->show) - 1] = '\0';
-                }
-            }
-        }
-        #ifdef LOG
-        LOG_PRINT("reading settings from file: %s\n", filename);
-        LOG_PRINT("color: %s\n", setting->color);
-        LOG_PRINT("show: %s\n", setting->show);
-        #endif
-        fclose(file);
-        // printf("settings read from %s over\n", filename);
-    }
-    else
-    {
-        fprintf(stderr, "can't open file %s to read\n", filename);
-    }
-}
+//     FILE *file = fopen(filename, "r");
+//     if (file)
+//     {
+//         char line[256];
+//         while (fgets(line, sizeof(line), file))
+//         {
+//             char key[64], value[64];
+//             if (sscanf(line, "%63[^=]=%63[^\n]", key, value) == 2)
+//             {
+//                 if (strcmp(key, "color") == 0)
+//                 {
+//                     strncpy(setting->color, value, sizeof(setting->color) - 1);
+//                     setting->color[sizeof(setting->color) - 1] = '\0';
+//                 }
+//                 else if (strcmp(key, "show") == 0)
+//                 {
+//                     strncpy(setting->show, value, sizeof(setting->show) - 1);
+//                     setting->show[sizeof(setting->show) - 1] = '\0';
+//                 }
+//             }
+//         }
+// #ifdef LOG
+//         LOG_PRINT("reading settings from file: %s\n", filename);
+//         LOG_PRINT("color: %s\n", setting->color);
+//         LOG_PRINT("show: %s\n", setting->show);
+// #endif
+//         fclose(file);
+//         // printf("settings read from %s over\n", filename);
+//     }
+//     else
+//     {
+//         fprintf(stderr, "can't open file %s to read\n", filename);
+//     }
+// }
 
-#endif
+// #endif
 // int main()
 // {
 //     Setting setting;

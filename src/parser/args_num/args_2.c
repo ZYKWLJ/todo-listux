@@ -11,8 +11,8 @@ void parse_command_args_2(NODE *node, All_Files *all_files, Command *command)
     {
         node->node_type = HELP;
         // 先指定节点，后续统一执行
-        help();
-        exit(0);
+        // help();
+        return;
     }
     else if (command->argc == 2)
     { // 一定只有tl ^ 查询

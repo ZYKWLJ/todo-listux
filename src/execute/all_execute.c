@@ -5,6 +5,11 @@ void execute(All_Files *all_files, NODE *node, Command *command)
     printf("todo-listux execute start------!\n");
     switch (node->node_type)
     {
+    case HELP:
+    {
+        help();
+        break;
+    }
     case DISPLAY:
     {
         printDisplayNodeLog(node->display_node);
@@ -52,6 +57,7 @@ void execute(All_Files *all_files, NODE *node, Command *command)
     {
         printConfigurationNodeLog(node->configuration_node);
         printf("Performing configuration operation\n");
+        save_setting(all_files->setting);
         // Add specific configuration function code here, such as calling a configuration - related function
         break;
     }

@@ -142,6 +142,8 @@ void init_all_files(All_Files *all_files, Date *date)
         setting->color = color;
         setting->show = show;
         LOG_PRINT("%s", "Begin to malloc setting\n");
+        // 在这里，设置就已经默认配置了！
+        LOG_PRINT("%s", "Begin to init setting.......\n");
         set_settings_init(setting);
         LOG_PRINT("%s", " set_settings_init(setting) malloc passed!!\n");
     }
@@ -149,4 +151,3 @@ void init_all_files(All_Files *all_files, Date *date)
     set_all_files(all_files, total_file_year_date, setting);
     LOG_PRINT("%s", " set_all_files malloc passed!!\n");
 }
-

@@ -59,7 +59,6 @@ int main(int argc, char *argv[])
     parse_command(node, all_files, command);
     LOG_PRINT("%s", "parse_command passed!!\n");
     // 5.执行了
-
     load_all_files(all_files->total_file_year_date, get_appdata_path(date->year, DATE_FILE), date); // 这里日期解析出来了，可以加载对应的文件了！
     execute(all_files, node, command);                                        // 这就是完备的集合了！
     LOG_PRINT("%s", "execute passed!!\n");

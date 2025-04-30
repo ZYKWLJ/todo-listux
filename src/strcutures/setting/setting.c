@@ -26,6 +26,8 @@ void free_setting(Setting *s)
 // set_settings_init 修正
 void set_settings_init(Setting *settings)
 {
+    // 首先判断是不是存在了默认配置,这个不需要，因为我们一定会在后面加载默认配置的！
+
     if (!settings)
     {
         LOG_PRINT("set_settings_allow: settings is NULL\n");
