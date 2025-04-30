@@ -24,7 +24,7 @@ void modify_task_content(Day_Year_Task *year_tasks, int year, int month, int day
         }
     }
     strcpy(day_tasks->task[index].content, new_content);
-    save_data(year_tasks, year);
+    // save_data(year_tasks, year);
 }
 
 void modify_task_state(Day_Year_Task *year_tasks, int year, int month, int day, int index, int new_state)

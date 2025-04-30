@@ -145,7 +145,7 @@ void set_node(NODE *node, Node_Type node_type, void *arg /*可以传入任何参
         break; // 未知类型
     }
 }
-void init_node(NODE *node, Node_Type node_type, DISPLAY_NODE *display_node, ADD_NODE *add_node, DELETE_NODE *delete_node, EDIT_NODE *edit_node, COMPLETE_NODE *complete_node, TOGGLE_NODE *toggle_node, CONFIGURATION_NODE *configuration_node)
+void init_node(NODE *node, Node_Type node_type, DISPLAY_NODE *display_node, ADD_NODE *add_node, DELETE_NODE *delete_node, EDIT_NODE *edit_node, COMPLETE_NODE *complete_node, TOGGLE_NODE *toggle_node, CONFIGURATION_NODE *configuration_node, Date *node_date)
 {
     if (!node || !node_type || !display_node || !add_node || !delete_node || !edit_node ||
         !complete_node || !toggle_node || !configuration_node)
@@ -161,7 +161,7 @@ void init_node(NODE *node, Node_Type node_type, DISPLAY_NODE *display_node, ADD_
     node->complete_node = complete_node;
     node->toggle_node = toggle_node;
     node->configuration_node = configuration_node;
-
+    node->date = node_date;
     // 根据 date_type 初始化日期相关信息
     Date *date = display_node->date;
 }
@@ -242,5 +242,5 @@ void init_node1(NODE *node, Date *date)
     LOG_PRINT("%s", "configuration_node malloc passed!!\n");
 
     // init Node
-    init_node(node, ERROR_NODE, display_node, add_node, delete_node, edit_node, complete_node, toggle_node, configuration_node);
+    init_node(node, ERROR_NODE, display_node, add_node, delete_node, edit_node, complete_node, toggle_node, configuration_node, date);
 }

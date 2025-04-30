@@ -16,16 +16,22 @@ void display_DAY_tasks(All_Files *all_files, DISPLAY_NODE *display_node)
     //     LOG_PRINT("%s", "show specific day task......\n");
     // }
     // 不管是特定日期还是当天的，都是查找特定日期，统一的逻辑
-    
+
 #ifdef LOG
     LOG_PRINT("display_DAY_tasks\n");
 
 #endif
-#ifdef DO
+#define DO1
+#ifdef DO1
     // 到这一步一定是tl s/tl show了
     // 之前数据已经加载在total_file_year_date里面了！
-    TaskDay *current_day_tasks = total_file_year_date->day_year_task->months->days;
-    printf("Tasks for %d-%d-%d (Total: %d):\n", date->year, date->month, date->day, current_day_tasks->size);
+    LOG_PRINT("current_day_tasks over\n");
+
+    TaskDay *current_day_tasks = all_files->total_file_year_date->day_year_task->months->days;
+    LOG_PRINT("dayTask_size=%d", current_day_tasks->size);
+    LOG_PRINT("dayTask_size=%d", current_day_tasks->size);
+    LOG_PRINT("current_day_tasks over\n");
+    printf("Tasks for %d-%d-%d (Total: %d):\n", display_node->date->year, display_node->date->month, display_node->date->day, current_day_tasks->size);
 
     for (int i = 0; i < current_day_tasks->size; i++)
     {
@@ -33,7 +39,7 @@ void display_DAY_tasks(All_Files *all_files, DISPLAY_NODE *display_node)
         const char *color_suffix = "";
         const char *status = current_day_tasks->task[i].is_done ? "[-]" : "[+]";
 
-        if (strcmp(setting->color, "on") == 0)
+        if (strcmp(all_files->setting->color->key, "on") == 0)
         {
             color_prefix = current_day_tasks->task[i].is_done ? GREEN : RED;
             color_suffix = RESET;
@@ -43,7 +49,7 @@ void display_DAY_tasks(All_Files *all_files, DISPLAY_NODE *display_node)
                color_prefix,
                i + 1,
                status,
-               current_day_tasks->task[i].task,
+               current_day_tasks->task[i].content,
                color_suffix);
     }
 #endif

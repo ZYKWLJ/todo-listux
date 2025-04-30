@@ -91,6 +91,7 @@ typedef struct NODE
     TOGGLE_NODE *toggle_node;
     // HELP_NODE *help_node;
     CONFIGURATION_NODE *configuration_node;
+    Date *date;
 } NODE;
 
 // 初始化 DISPLAY_NODE
@@ -120,6 +121,7 @@ void set_node(NODE *node, Node_Type node_type, void *arg);
 // 初始化 NODE 结构体的函数
 void init_node(NODE *node, Node_Type node_type, DISPLAY_NODE *display_node, ADD_NODE *add_node,
                DELETE_NODE *delete_node, EDIT_NODE *edit_node, COMPLETE_NODE *complete_node,
-               TOGGLE_NODE *toggle_node, CONFIGURATION_NODE *configuration_node);
-void init_node1(NODE *node,Date*date);
+               TOGGLE_NODE *toggle_node, CONFIGURATION_NODE *configuration_node,Date*date);
+void init_node1(NODE *node, Date *date);
+
 #endif

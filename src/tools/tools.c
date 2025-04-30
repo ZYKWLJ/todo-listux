@@ -7,6 +7,10 @@ int is_leap_year(int year)
     return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 }
 
+int get_month_of_day(int year,int month)
+{
+    return is_leap_year(year) ? MONTH_DAYS_IS_LEAP[month] : MONTH_DAYS_IS_NOT_LEAP[month];
+}
 // 获取当前日期
 void get_current_date(Date *date)
 {

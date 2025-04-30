@@ -59,6 +59,10 @@ CMakeFiles/tl.dir/src/strcutures/date/date.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
  /usr/include/ctype.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/strcutures/date/date.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/strcutures/node/node.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/strcutures/node/../../include.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/strcutures/command.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/strcutures/task_day/Task.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/strcutures/task_day/TaskDay.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/strcutures/task_day/../../include.h \
@@ -75,38 +79,23 @@ CMakeFiles/tl.dir/src/strcutures/date/date.c.o: \
  /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/strcutures/task_year/../../include.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/strcutures/Total_File_Year_Date.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/strcutures/../include.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/strcutures/command.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/strcutures/date/date.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/strcutures/node/node.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/strcutures/node/../../include.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/strcutures/setting/setting.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/strcutures/setting/../../include.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/strcutures/All_Files.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/display/display.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/display/../include.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/display/color.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/display/text_print_help.h \
- /usr/include/locale.h /usr/include/x86_64-linux-gnu/bits/locale.h \
- /usr/include/wchar.h /usr/include/x86_64-linux-gnu/bits/wchar.h \
- /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
- /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/display/text_display_width.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/tools/tools.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/tools/MONTH.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/tools/command_error.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/tools/../include.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/parse_command.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/../include.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/load_data.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/../include.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/load_date/load_data.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/load_date/../../include.h \
  /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/save_data.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/tools/MONTH.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/tools/tools.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/tools/command_error.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/tools/../include.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/save_date/save_setting.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/save_date/../../include.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/save_date/save_data.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/delete_data.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/modify_data.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/add_data.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/../include.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/get_file_Path.h \
  /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
@@ -117,29 +106,47 @@ CMakeFiles/tl.dir/src/strcutures/date/date.c.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/save_setting.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/load_year_file.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/load_setting_file.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/execute/find.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/execute/../include.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/execute/delete.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/execute/modify.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/execute/add.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/display/help.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/execute/done.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/execute/undo.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/execute/set_setting.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/modify_data.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/add_data.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/load_date/load_month_year_file.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/load_date/load_day_year_file.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/load_date/load_year_year_file.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/load_date/load_year_file.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/load_date/load_week_year_file.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/database/load_date/load_setting_file.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/execute/execute.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/log/log.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/log/../include.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/execute/../include.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/execute/set_setting.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/execute/modify.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/execute/undo.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/execute/done.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/execute/add.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/execute/delete.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/execute/find.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/display/display.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/display/../include.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/display/help.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/display/text_display_width.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/display/text_print_help.h \
+ /usr/include/locale.h /usr/include/x86_64-linux-gnu/bits/locale.h \
+ /usr/include/wchar.h /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/display/color.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/log/log_for_node.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/date_validate_format.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/log/../include.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/log/log_all_files.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/log/log.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/parse_command.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/../include.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/parse_date.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/date_validate_format.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/parse_date_type.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/args_num/args_2.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/args_num/../../include.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/args_num/args_3.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/args_num/args_4.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/args_num/args_5.h \
  /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/args_num/args_6.h \
- /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/args_num/args_define.h
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/args_num/../../include.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/args_num/args_define.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/args_num/args_2.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/args_num/args_5.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/args_num/args_3.h \
+ /home/eyk/桌面/todo-listux/todo-listux/src/strcutures/date/../../../include/parser/args_num/args_4.h

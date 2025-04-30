@@ -16,7 +16,6 @@ void set_day_year_tasks(Day_Year_Task *year_tasks, int year, TaskMonth *months)
 // 释放当年任务内存
 void free_day_year_tasks(Day_Year_Task *year_tasks)
 {
-
-    free(year_tasks->months);
+    free_day_month_tasks(year_tasks->months);
     free(year_tasks);
 }

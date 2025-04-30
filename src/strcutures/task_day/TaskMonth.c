@@ -18,6 +18,6 @@ void set_day_month_tasks(TaskMonth *month_tasks, int month, int num_days, TaskDa
 // 释放当月任务内存
 void free_day_month_tasks(TaskMonth *month_tasks)
 {
-    free(month_tasks->days);
+    free_day_tasks(month_tasks->days);
     free(month_tasks);
 }

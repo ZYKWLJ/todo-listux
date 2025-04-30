@@ -90,6 +90,17 @@
         "load_setting_file.h": "c",
         "stat.h": "c",
         "chrono": "c",
-        "variant": "c"
+        "variant": "c",
+        "types.h": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "parse_command.h": "c",
+        "text_display_width.h": "c",
+        "log_all_files.h": "c",
+        "command.h": "c",
+        "node.h": "c",
+        "save_setting.h": "c",
+        "load_month_year_file.h": "c",
+        "get_file_path.h": "c"
     }
 }

@@ -29,7 +29,8 @@ void parse_command_args_5(NODE *node, All_Files *all_files, Command *command)
         exit(EXIT_FAILURE);
     }
     LOG_PRINT("passed date!!!\n");
-
+    node->date = date;
+    LOG_PRINT("%s\n", "date assigned");
     // 第一重防线
     // 五个参数的，只有+-/~
 

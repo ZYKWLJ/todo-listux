@@ -13,83 +13,6 @@
 
 #define MAX_PATH 260
 // #define LOG1
-
-// 获取应用数据目录（跨平台）
-const char *get_appdata_path(int year, FILE_TYPE file_type) // 通用，如果是date类型，还需要使用year以判断进一层路径，如果是setting类型，就直接返回路径
-{
-    char *path = (char *)malloc(MAX_PATH * sizeof(char));
-    if (path == NULL)
-    {
-        fprintf(stderr, "Memory allocation failed\n");
-        return NULL;
-    }
-    path[0] = '\0';
-
-#ifdef _WIN32
-    // Windows获取AppData路径
-    wchar_t wpath[MAX_PATH];
-    if (SUCCEEDED(SHGetFolderPathW(NULL, CSIDL_LOCAL_APPDATA, NULL, 0, wpath)))
-    {
-        WideCharToMultiByte(CP_UTF8, 0, wpath, -1, path, MAX_PATH, NULL, NULL);
-        strcat(path, "\\tl");
-        // 确保目录存在
-        _mkdir(path);
-    }
-    else
-    {
-        strcpy(path, ".\\data"); // 回退到当前目录
-        _mkdir(path);
-    }
-#else
-    // Linux/macOS使用/tmp/tl
-    strcpy(path, "/tmp/tl");
-    if (mkdir(path, 0755) == -1 && errno != EEXIST)
-    {
-        perror("Failed to create directory");
-    }
-#endif
-
-    if (file_type == DATE_FILE)
-    {
-        char year_str[10];
-        snprintf(year_str, sizeof(year_str), "%d", year);
-#ifdef _WIN32
-        strcat(path, "\\");
-#else
-        strcat(path, "/");
-#endif
-        strcat(path, year_str);
-        if (create_directory(path) != 0)
-        {
-            fprintf(stderr, "Failed to create year directory: %s\n", path);
-        }
-        // 添加 DATE_FILE 对应的文件名
-        char filename[20];
-        snprintf(filename, sizeof(filename), "%d.dat", year);
-#ifdef _WIN32
-        strcat(path, "\\");
-#else
-        strcat(path, "/");
-#endif
-        strcat(path, filename);
-    }
-    else if (file_type == SETTING_FILE)
-    {
-        // 添加 SETTING_FILE 对应的文件名
-#ifdef _WIN32
-        strcat(path, "\\");
-#else
-        strcat(path, "/");
-#endif
-        strcat(path, "setting.ini");
-    }
-
-#ifdef LOG1
-    printf("%s,%s,%d,AppData path: %s\n", __FILE__, __func__, __LINE__, path);
-#endif
-    return path;
-}
-
 // 跨平台安全的目录创建函数
 int create_directory(const char *path)
 {
@@ -141,4 +64,80 @@ int create_directory(const char *path)
     snprintf(command, sizeof(command), "mkdir -p \"%s\"", path);
     return system(command);
 #endif
+}
+// 获取应用数据目录（跨平台）
+char *get_appdata_path(int year, FILE_TYPE file_type) // 通用，如果是date类型，还需要使用year以判断进一层路径，如果是setting类型，就直接返回路径
+{
+    char *path = (char *)malloc(MAX_PATH * sizeof(char));
+    if (path == NULL)
+    {
+        fprintf(stderr, "Memory allocation failed\n");
+        return NULL;
+    }
+    path[0] = '\0';
+
+#ifdef _WIN32
+    // Windows获取AppData路径
+    wchar_t wpath[MAX_PATH];
+    if (SUCCEEDED(SHGetFolderPathW(NULL, CSIDL_LOCAL_APPDATA, NULL, 0, wpath)))
+    {
+        WideCharToMultiByte(CP_UTF8, 0, wpath, -1, path, MAX_PATH, NULL, NULL);
+        strcat(path, "\\tl");
+        // 确保目录存在
+        _mkdir(path);
+    }
+    else
+    {
+        strcpy(path, ".\\data"); // 回退到当前目录
+        _mkdir(path);
+    }
+#else
+    // Linux/macOS使用/tmp/tl
+    strcpy(path, "/tmp/tl");
+    if (mkdir(path, 0755) == -1 && errno != EEXIST)
+    {
+        perror("Failed to create directory");
+    }
+#endif
+
+    if (file_type == DATE_FILE)
+    {
+        char year_str[10];
+        snprintf(year_str, sizeof(year_str), "%d", year);
+#ifdef _WIN32
+        strcat(path, "\\date\\"); // 新增date层级，下面再增加year层级
+#else
+        strcat(path, "/date/");
+#endif
+        strcat(path, year_str);
+        LOG_PRINT("path want to create:%s\n",path);
+        if (create_directory(path) != 0)
+        {
+            fprintf(stderr, "Failed to create year directory: %s\n", path);
+        }
+        //         // 添加 DATE_FILE 对应的文件名,不用添加文件名，因为这里是加载该目录下的所有文件，所以只要返回/date/year即可
+        //         char filename[20];
+        //         snprintf(filename, sizeof(filename), "%d.dat", year);
+        // #ifdef _WIN32
+        //         strcat(path, "\\");
+        // #else
+        //         strcat(path, "/");
+        // #endif
+        //         strcat(path, filename);
+    }
+    else if (file_type == SETTING_FILE)
+    {
+        // 添加 SETTING_FILE 对应的文件名
+#ifdef _WIN32
+        strcat(path, "\\");
+#else
+        strcat(path, "/");
+#endif
+        strcat(path, "setting.ini");
+    }
+
+    // #ifdef LOG1
+    LOG_PRINT("AppData path: %s\n", path);
+    // #endif
+    return path;
 }

@@ -39,14 +39,14 @@ int main(int argc, char *argv[])
         init_all_files(all_files, date);
     }
     LOG_PRINT("%s", "All_Files malloc passed!!\n");
+    set_settings_init(all_files->setting);
     load_config(all_files->setting, get_appdata_path(0, SETTING_FILE) /*在这个路径下加载配置文件*/);
-
-    // load_all_files(all_files, get_appdata_path(, DATE_FILE),date);
     // 3.再构造命令节点
     NODE *node = (NODE *)malloc(sizeof(NODE));
     {
         init_node1(node, date);
     }
+    node->date=date;//默认为当天
     LOG_PRINT("%s", "node malloc passed!!\n");
 
     // 4.最后在构造命令，解析+判断，因为这里的判断会涉及文件，所以要先加载文件，虽然每次执行一次都要加载，但是为了统一，只有这样做了！
@@ -57,10 +57,17 @@ int main(int argc, char *argv[])
     LOG_PRINT("%s", "Command malloc passed!!\n");
     // 4.指令个数判断判断(同时解析了指令类型和节点)
     parse_command(node, all_files, command);
+
     LOG_PRINT("%s", "parse_command passed!!\n");
-    // 5.执行了
-    load_all_files(all_files->total_file_year_date, get_appdata_path(date->year, DATE_FILE), date); // 这里日期解析出来了，可以加载对应的文件了！
-    execute(all_files, node, command);                                        // 这就是完备的集合了！
+    // 5.执行了\
+    // set_all_files_init();
+    // 必须要先获取想要的年份才加载对应的文件，顺序不能乱
+    load_all_files(all_files, get_appdata_path(node->date->year, DATE_FILE), node->date);
+    // load_all_files(all_files->total_file_year_date, get_appdata_path(date->year, DATE_FILE), date); // 这里日期解析出来了，可以加载对应的文件了！
+    
+    execute(all_files, node, command); // 这就是完备的集合了！
     LOG_PRINT("%s", "execute passed!!\n");
 }
 //  python D:\3software\todo-listux-1\todo-listux\py\gcc.py
+
+// cd /home/eyk/桌面/todo-listux/todo-listux/build && rm -rf * && cmake .. && clear && make

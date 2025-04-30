@@ -80,6 +80,7 @@ void parse_command_args_4(NODE *node, All_Files *all_files, Command *command)
         }
         node->display_node->date = date;
         node->node_type = DISPLAY;
+        node->date = date;
         return;
     }
 }

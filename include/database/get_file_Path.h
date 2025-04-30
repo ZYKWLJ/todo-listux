@@ -22,7 +22,7 @@ typedef enum FILE_TYPE
 } FILE_TYPE;
 
 // 获取应用数据目录（跨平台）
-const char *get_appdata_path(int year, FILE_TYPE file_type);
+char *get_appdata_path(int year, FILE_TYPE file_type);
 // 跨平台安全的目录创建函数
 int create_directory(const char *path);
 #endif
