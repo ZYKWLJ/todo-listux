@@ -1,10 +1,11 @@
 #include "../../include/include.h"
 // #include "date.h"
 // #include "date.h"
+// #include "date.h"
 
-T_time T_time_init(T_time t)
+T_current_date T_current_date_init(T_current_date t)
 {
-    T_time time_ = (T_time)malloc(sizeof(*t));
+    T_current_date time_ = (T_current_date)malloc(sizeof(*t));
     if (time_ == NULL)
     {
         fprintf(stderr, "内存分配失败\n");
@@ -29,8 +30,14 @@ T_time T_time_init(T_time t)
     return time_;
 }
 
-void T_time_print(T_time t)
+void T_time_print(T_current_date t)
 {
     printf("current time: %04d-%02d-%02d %02d:%02d:%02d\n",
            t->year, t->month, t->day, t->hour, t->minute, t->second);
+}
+
+T_date T_date_init(T_date t)
+{
+    T_date date = (T_date)checked_malloc(sizeof(*t));
+    return date;
 }

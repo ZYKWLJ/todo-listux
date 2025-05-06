@@ -6,6 +6,8 @@
         "node.h": "c",
         "utils.h": "c",
         "stdlib.h": "c",
-        "chrono": "c"
+        "chrono": "c",
+        "log.h": "c",
+        "exec.h": "c"
     }
 }

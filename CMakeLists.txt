@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.5)
 project(my_project)  # 项目名（不影响目标名）
 
 # ===== 可配置变量 =====
-set(TARGET_NAME test_time)  # 只需改这里，所有地方自动生效
+set(TARGET_NAME test_node)  # 只需改这里，所有地方自动生效
 # ======================
 
 # 设置可执行文件输出路径

@@ -29,9 +29,9 @@ typedef struct T_day_task_
             {
                 string content;
                 int is_done;
-                T_time add_time;
-                T_time finish_time;
-                T_time interval_time;
+                T_current_date add_time;
+                T_current_date finish_time;
+                T_current_date interval_time;
             } *task;
         } *days;
     } months[MONTHS_IN_YEAR];
@@ -55,9 +55,9 @@ typedef struct T_week_task_
             {
                 string content;
                 int is_done;
-                T_time add_time;
-                T_time finish_time;
-                T_time interval_time;
+                T_current_date add_time;
+                T_current_date finish_time;
+                T_current_date interval_time;
             } *task;
         } *weeks;
     } months[MONTHS_IN_YEAR];
@@ -77,9 +77,9 @@ typedef struct T_month_task_
         {
             string content;
             int is_done;
-            T_time add_time;
-            T_time finish_time;
-            T_time interval_time;
+            T_current_date add_time;
+            T_current_date finish_time;
+            T_current_date interval_time;
         } *task;
     } months[MONTHS_IN_YEAR]; /*12个月固定的*/
 } *T_month_task;
@@ -96,9 +96,9 @@ typedef struct T_year_task_
     {
         string content;
         int is_done;
-        T_time add_time;
-        T_time finish_time;
-        T_time interval_time;
+        T_current_date add_time;
+        T_current_date finish_time;
+        T_current_date interval_time;
     } *task;
 } *T_year_task;
 

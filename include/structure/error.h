@@ -8,13 +8,20 @@ typedef struct E_error_
 {
     enum
     {
-        no_error, /*这是最开始的，如果检测到不是他，那就有报错！*/
-        error_node_type,
+        no_error,           /*这是最开始的，如果检测到不是他，那就有报错！直接跳过*/
+        error_no_node_type, /*这是没有这个执行节点报错*/
         error_date_out_of_bounds,
         error_date_format,
         error_node_id_out_of_bounds,
     } error_type;
 
+    enum /*这个是用来判断是哪一个节点的报错*/
+    {
+        error_node_type_command,
+        error_node_type_date,
+        error_node_type_node,
+        error_node_type_unknown,
+    } error_node_type;
     enum /*年月周日的格式都有可能错误的*/
     {
         error_date_formats_year,
@@ -26,7 +33,7 @@ typedef struct E_error_
 } *E_error;
 
 /**
-* data descp: 总体思路就是按照node类型来进行的
-*/
+ * data descp: 总体思路就是按照node类型来进行的
+ */
 
 #endif

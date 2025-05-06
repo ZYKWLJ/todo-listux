@@ -9,10 +9,10 @@ typedef struct T_time_
     int hour;
     int minute;
     int second;
-} *T_time;
+} *T_current_date;
 
-T_time T_time_init(T_time t);
-void T_time_print(T_time t);
+T_current_date T_current_date_init(T_current_date t);
+void T_time_print(T_current_date t);
 
 typedef struct T_date_
 {
@@ -23,9 +23,11 @@ typedef struct T_date_
     } T_date_type;
     union
     {
-        T_time T_current_date;
-        T_time T_specific_date;
+        T_current_date T_current_date;
+        T_current_date T_specific_date;
     } T_date_data;
 } *T_date;
+
+T_date T_date_init(T_date t);
 
 #endif
