@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "include.h": "c",
+        "date.h": "c",
+        "error.h": "c",
+        "node.h": "c",
+        "utils.h": "c",
+        "stdlib.h": "c",
+        "chrono": "c"
+    }
+}
