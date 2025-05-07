@@ -39,6 +39,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test_all.dir/src/utils.c.o.d"
   "CMakeFiles/test_all.dir/test/db/data.c.o"
   "CMakeFiles/test_all.dir/test/db/data.c.o.d"
+  "CMakeFiles/test_all.dir/test/db/test_date_file.c.o"
+  "CMakeFiles/test_all.dir/test/db/test_date_file.c.o.d"
   "CMakeFiles/test_all.dir/test/display/help.c.o"
   "CMakeFiles/test_all.dir/test/display/help.c.o.d"
   "CMakeFiles/test_all.dir/test/display/print.c.o"

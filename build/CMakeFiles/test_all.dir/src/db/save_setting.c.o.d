@@ -1,6 +1,6 @@
-CMakeFiles/test_all.dir/src/db/get_file_Path.c.o: \
- /home/eyk/桌面/TL/src/db/get_file_Path.c /usr/include/stdc-predef.h \
- /usr/include/stdio.h \
+CMakeFiles/test_all.dir/src/db/save_setting.c.o: \
+ /home/eyk/桌面/TL/src/db/save_setting.c /usr/include/stdc-predef.h \
+ /home/eyk/桌面/TL/src/db/../../include/include.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -51,21 +51,48 @@ CMakeFiles/test_all.dir/src/db/get_file_Path.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/strings.h /usr/include/time.h \
- /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/strings.h /usr/include/ctype.h \
+ /home/eyk/桌面/TL/src/db/../../include/structure/command.h \
+ /home/eyk/桌面/TL/src/db/../../include/structure/../include.h \
+ /home/eyk/桌面/TL/src/db/../../include/utils.h \
+ /home/eyk/桌面/TL/src/db/../../include/include.h \
+ /home/eyk/桌面/TL/src/db/../../include/structure/date.h \
+ /usr/include/time.h /usr/include/x86_64-linux-gnu/bits/time.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
- /usr/include/x86_64-linux-gnu/sys/stat.h \
- /usr/include/x86_64-linux-gnu/bits/stat.h \
- /usr/include/x86_64-linux-gnu/bits/struct_stat.h /usr/include/errno.h \
- /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
- /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /home/eyk/桌面/TL/src/db/../../include/structure/error.h \
+ /home/eyk/桌面/TL/src/db/../../include/structure/task.h \
+ /home/eyk/桌面/TL/src/db/../../include/structure/node.h \
+ /home/eyk/桌面/TL/src/db/../../include/structure/setting.h \
+ /home/eyk/桌面/TL/src/db/../../include/display/help.h \
+ /usr/include/locale.h /usr/include/x86_64-linux-gnu/bits/locale.h \
+ /usr/include/wchar.h /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /home/eyk/桌面/TL/src/db/../../include/display/color.h \
+ /home/eyk/桌面/TL/src/db/../../include/display/display.h \
+ /home/eyk/桌面/TL/src/db/../../include/display/../include.h \
+ /home/eyk/桌面/TL/src/db/../../include/display/text_display_width.h \
+ /home/eyk/桌面/TL/src/db/../../include/display/text_print_help.h \
+ /home/eyk/桌面/TL/src/db/../../include/parse/parse_node.h \
+ /home/eyk/桌面/TL/src/db/../../include/parse/../include.h \
+ /home/eyk/桌面/TL/src/db/../../include/exec/exec.h \
+ /home/eyk/桌面/TL/src/db/../../include/exec/../include.h \
+ /home/eyk/桌面/TL/src/db/../../include/db/data.h \
+ /home/eyk/桌面/TL/src/db/../../include/db/../include.h \
+ /home/eyk/桌面/TL/src/db/../../include/db/get_file_Path.h \
+ /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
- /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
- /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+ /home/eyk/桌面/TL/src/db/../../include/db/load_setting.h \
+ /home/eyk/桌面/TL/src/db/../../include/db/save_setting.h

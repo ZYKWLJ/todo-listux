@@ -1,7 +1,7 @@
 #include "../include/include.h"
 void *checked_malloc(int len)
 {
-    void *p = malloc(len);
+    void *p = calloc(1, len);
     if (!p)
     {
         fprintf(stderr, "\nRan out of memory!\n");

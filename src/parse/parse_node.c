@@ -701,7 +701,7 @@ void parse_node(N_node node, C_command command, T_date date)
         parse_add_node(node, command, date);
         break;
     case DELETE:
-        parse_add_node(node, command, date);
+        parse_delete_node(node, command, date);
         break;
     case EDIT_ALL:
     case EDIT_PREFIX:

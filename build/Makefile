@@ -585,6 +585,30 @@ test/db/data.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/db/data.c.s
 .PHONY : test/db/data.c.s
 
+test/db/test_date_file.o: test/db/test_date_file.c.o
+.PHONY : test/db/test_date_file.o
+
+# target to build an object file
+test/db/test_date_file.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/db/test_date_file.c.o
+.PHONY : test/db/test_date_file.c.o
+
+test/db/test_date_file.i: test/db/test_date_file.c.i
+.PHONY : test/db/test_date_file.i
+
+# target to preprocess a source file
+test/db/test_date_file.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/db/test_date_file.c.i
+.PHONY : test/db/test_date_file.c.i
+
+test/db/test_date_file.s: test/db/test_date_file.c.s
+.PHONY : test/db/test_date_file.s
+
+# target to generate assembly for a file
+test/db/test_date_file.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/db/test_date_file.c.s
+.PHONY : test/db/test_date_file.c.s
+
 test/display/help.o: test/display/help.c.o
 .PHONY : test/display/help.o
 
@@ -819,6 +843,9 @@ help:
 	@echo "... test/db/data.o"
 	@echo "... test/db/data.i"
 	@echo "... test/db/data.s"
+	@echo "... test/db/test_date_file.o"
+	@echo "... test/db/test_date_file.i"
+	@echo "... test/db/test_date_file.s"
 	@echo "... test/display/help.o"
 	@echo "... test/display/help.i"
 	@echo "... test/display/help.s"

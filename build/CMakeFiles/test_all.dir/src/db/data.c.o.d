@@ -95,4 +95,5 @@ CMakeFiles/test_all.dir/src/db/data.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
  /home/eyk/桌面/TL/src/db/../../include/db/load_setting.h \
- /home/eyk/桌面/TL/src/db/../../include/db/save_setting.h
+ /home/eyk/桌面/TL/src/db/../../include/db/save_setting.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h

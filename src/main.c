@@ -1,5 +1,6 @@
 #include "../include/include.h"
-
+#define MAIN
+#ifdef MAIN
 string exec_words[] = {
     "NONE",
     "?",
@@ -32,12 +33,16 @@ int get_exec_index(string word)
  */
 KV_ kv;
 S_setting setting;
+C_command command;
 // string S_setting_path="/tmp/";
 int main(int argc, char **argv)
 {
     /**
      * data descp: 本该如此，最先初始化的就是设置！
      */
+    create_file(get_appdata_path(SETTING_FILE));
+    create_file(get_appdata_path(DATE_FILE));
+
     setting = S_setting_init(NULL);
     load_setting(get_appdata_path(SETTING_FILE));
     set_settings_init(setting);
@@ -52,7 +57,7 @@ int main(int argc, char **argv)
     date->T_specific_date = T_current_date_init(NULL);
     date->T_specific_date->date_type = D;
     T_time_print(date->T_current_date);
-    C_command command = C_command_init(NULL, argc, argv);
+    command = C_command_init(NULL, argc, argv);
     // C_command_print(command);
     if (argc < 2)
     {
@@ -66,3 +71,5 @@ int main(int argc, char **argv)
     exec(node, command, date);
     LOG_PRINT("exec over......\n");
 }
+
+#endif

@@ -27,6 +27,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/eyk/桌面/TL/src/structure/task.c" "CMakeFiles/test_all.dir/src/structure/task.c.o" "gcc" "CMakeFiles/test_all.dir/src/structure/task.c.o.d"
   "/home/eyk/桌面/TL/src/utils.c" "CMakeFiles/test_all.dir/src/utils.c.o" "gcc" "CMakeFiles/test_all.dir/src/utils.c.o.d"
   "/home/eyk/桌面/TL/test/db/data.c" "CMakeFiles/test_all.dir/test/db/data.c.o" "gcc" "CMakeFiles/test_all.dir/test/db/data.c.o.d"
+  "/home/eyk/桌面/TL/test/db/test_date_file.c" "CMakeFiles/test_all.dir/test/db/test_date_file.c.o" "gcc" "CMakeFiles/test_all.dir/test/db/test_date_file.c.o.d"
   "/home/eyk/桌面/TL/test/display/help.c" "CMakeFiles/test_all.dir/test/display/help.c.o" "gcc" "CMakeFiles/test_all.dir/test/display/help.c.o.d"
   "/home/eyk/桌面/TL/test/display/print.c" "CMakeFiles/test_all.dir/test/display/print.c.o" "gcc" "CMakeFiles/test_all.dir/test/display/print.c.o.d"
   "/home/eyk/桌面/TL/test/structrue/test_command.c" "CMakeFiles/test_all.dir/test/structrue/test_command.c.o" "gcc" "CMakeFiles/test_all.dir/test/structrue/test_command.c.o.d"

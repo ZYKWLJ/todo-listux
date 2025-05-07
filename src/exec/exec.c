@@ -17,6 +17,7 @@ char to_char(int type)
 
 string get_db_prefix(T_date date)
 {
+    LOG_PRINT("get_db_prefix......");
     string prefix = (string)checked_malloc(sizeof(char) * 100);
     switch (to_char(date->T_specific_date->date_type))
     {
@@ -32,6 +33,8 @@ string get_db_prefix(T_date date)
     case 'Y':
         sprintf(prefix, "%c-%d", to_char(date->T_specific_date->date_type), date->T_specific_date->year);
     }
+    LOG_PRINT("get_db_prefix over......");
+    LOG_PRINT("prefix=%s", prefix);
     return prefix;
 }
 void exec_show_node(T_date date)
@@ -46,6 +49,7 @@ void exec_add_node(N_node node, T_date date)
     /**
      * func descp: 用构造好的前缀去磁盘里面找对应的行！
      */
+    LOG_PRINT("add_node_exec....");
     DB_add_task(node, date, get_db_prefix(date));
 }
 
@@ -119,10 +123,12 @@ void exec(N_node node, C_command command, T_date date)
         break;
     case 2:
         TODO_PRINT("show function ......");
+        // T_time_print(date);
         exec_show_node(date);
         break;
     case 3:
         TODO_PRINT("add function......");
+        // T_time_print(date);
         exec_add_node(node, date); /*task内容都在node里面包含着呢！*/
         break;
     case 4:

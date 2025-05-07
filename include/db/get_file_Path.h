@@ -25,4 +25,5 @@ typedef enum FILE_TYPE
 char *get_appdata_path(FILE_TYPE file_type);
 // 跨平台安全的目录创建函数
 int create_directory(const char *path);
+int create_file(const char *path);
 #endif
