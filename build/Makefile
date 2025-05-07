@@ -177,6 +177,54 @@ src/db/get_file_Path.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/db/get_file_Path.c.s
 .PHONY : src/db/get_file_Path.c.s
 
+src/db/load_setting.o: src/db/load_setting.c.o
+.PHONY : src/db/load_setting.o
+
+# target to build an object file
+src/db/load_setting.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/db/load_setting.c.o
+.PHONY : src/db/load_setting.c.o
+
+src/db/load_setting.i: src/db/load_setting.c.i
+.PHONY : src/db/load_setting.i
+
+# target to preprocess a source file
+src/db/load_setting.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/db/load_setting.c.i
+.PHONY : src/db/load_setting.c.i
+
+src/db/load_setting.s: src/db/load_setting.c.s
+.PHONY : src/db/load_setting.s
+
+# target to generate assembly for a file
+src/db/load_setting.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/db/load_setting.c.s
+.PHONY : src/db/load_setting.c.s
+
+src/db/save_setting.o: src/db/save_setting.c.o
+.PHONY : src/db/save_setting.o
+
+# target to build an object file
+src/db/save_setting.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/db/save_setting.c.o
+.PHONY : src/db/save_setting.c.o
+
+src/db/save_setting.i: src/db/save_setting.c.i
+.PHONY : src/db/save_setting.i
+
+# target to preprocess a source file
+src/db/save_setting.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/db/save_setting.c.i
+.PHONY : src/db/save_setting.c.i
+
+src/db/save_setting.s: src/db/save_setting.c.s
+.PHONY : src/db/save_setting.s
+
+# target to generate assembly for a file
+src/db/save_setting.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/db/save_setting.c.s
+.PHONY : src/db/save_setting.c.s
+
 src/display/display.o: src/display/display.c.o
 .PHONY : src/display/display.o
 
@@ -720,6 +768,12 @@ help:
 	@echo "... src/db/get_file_Path.o"
 	@echo "... src/db/get_file_Path.i"
 	@echo "... src/db/get_file_Path.s"
+	@echo "... src/db/load_setting.o"
+	@echo "... src/db/load_setting.i"
+	@echo "... src/db/load_setting.s"
+	@echo "... src/db/save_setting.o"
+	@echo "... src/db/save_setting.i"
+	@echo "... src/db/save_setting.s"
 	@echo "... src/display/display.o"
 	@echo "... src/display/display.i"
 	@echo "... src/display/display.s"

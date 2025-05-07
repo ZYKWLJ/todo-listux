@@ -32,13 +32,14 @@ int get_exec_index(string word)
  */
 KV_ kv;
 S_setting setting;
+// string S_setting_path="/tmp/";
 int main(int argc, char **argv)
 {
     /**
      * data descp: 本该如此，最先初始化的就是设置！
      */
     setting = S_setting_init(NULL);
-
+    load_setting(get_appdata_path(SETTING_FILE));
     set_settings_init(setting);
     S_settings_print(setting);
     kv = (KV_)checked_malloc(sizeof(*kv));

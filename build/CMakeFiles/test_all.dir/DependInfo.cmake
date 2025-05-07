@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/eyk/桌面/TL/src/db/data.c" "CMakeFiles/test_all.dir/src/db/data.c.o" "gcc" "CMakeFiles/test_all.dir/src/db/data.c.o.d"
   "/home/eyk/桌面/TL/src/db/get_file_Path.c" "CMakeFiles/test_all.dir/src/db/get_file_Path.c.o" "gcc" "CMakeFiles/test_all.dir/src/db/get_file_Path.c.o.d"
+  "/home/eyk/桌面/TL/src/db/load_setting.c" "CMakeFiles/test_all.dir/src/db/load_setting.c.o" "gcc" "CMakeFiles/test_all.dir/src/db/load_setting.c.o.d"
+  "/home/eyk/桌面/TL/src/db/save_setting.c" "CMakeFiles/test_all.dir/src/db/save_setting.c.o" "gcc" "CMakeFiles/test_all.dir/src/db/save_setting.c.o.d"
   "/home/eyk/桌面/TL/src/display/display.c" "CMakeFiles/test_all.dir/src/display/display.c.o" "gcc" "CMakeFiles/test_all.dir/src/display/display.c.o.d"
   "/home/eyk/桌面/TL/src/display/help.c" "CMakeFiles/test_all.dir/src/display/help.c.o" "gcc" "CMakeFiles/test_all.dir/src/display/help.c.o.d"
   "/home/eyk/桌面/TL/src/display/text_display_width.c" "CMakeFiles/test_all.dir/src/display/text_display_width.c.o" "gcc" "CMakeFiles/test_all.dir/src/display/text_display_width.c.o.d"

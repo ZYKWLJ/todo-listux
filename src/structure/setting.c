@@ -57,7 +57,6 @@ void set_settings_init(S_setting settings)
     strcpy(settings->show->value_allow[1], SETTING_SHOW_ALLOW_MONTH);
     strcpy(settings->show->value_allow[2], SETTING_SHOW_ALLOW_WEEK);
     strcpy(settings->show->value_allow[3], SETTING_SHOW_ALLOW_DAY);
-    // strcpy(settings->show->value_allow[4], SETTING_SHOW_ALLOW_CURRENT_DAY);
     strcpy(settings->show->value_allow[4], SETTING_SHOW_ALLOW_ALL);
     settings->show->value_allow[5] = NULL;
 }

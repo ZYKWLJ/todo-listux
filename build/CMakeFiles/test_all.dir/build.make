@@ -97,10 +97,38 @@ CMakeFiles/test_all.dir/src/db/get_file_Path.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test_all.dir/src/db/get_file_Path.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/桌面/TL/src/db/get_file_Path.c -o CMakeFiles/test_all.dir/src/db/get_file_Path.c.s
 
+CMakeFiles/test_all.dir/src/db/load_setting.c.o: CMakeFiles/test_all.dir/flags.make
+CMakeFiles/test_all.dir/src/db/load_setting.c.o: /home/eyk/桌面/TL/src/db/load_setting.c
+CMakeFiles/test_all.dir/src/db/load_setting.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/test_all.dir/src/db/load_setting.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/src/db/load_setting.c.o -MF CMakeFiles/test_all.dir/src/db/load_setting.c.o.d -o CMakeFiles/test_all.dir/src/db/load_setting.c.o -c /home/eyk/桌面/TL/src/db/load_setting.c
+
+CMakeFiles/test_all.dir/src/db/load_setting.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test_all.dir/src/db/load_setting.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/桌面/TL/src/db/load_setting.c > CMakeFiles/test_all.dir/src/db/load_setting.c.i
+
+CMakeFiles/test_all.dir/src/db/load_setting.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test_all.dir/src/db/load_setting.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/桌面/TL/src/db/load_setting.c -o CMakeFiles/test_all.dir/src/db/load_setting.c.s
+
+CMakeFiles/test_all.dir/src/db/save_setting.c.o: CMakeFiles/test_all.dir/flags.make
+CMakeFiles/test_all.dir/src/db/save_setting.c.o: /home/eyk/桌面/TL/src/db/save_setting.c
+CMakeFiles/test_all.dir/src/db/save_setting.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/test_all.dir/src/db/save_setting.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/src/db/save_setting.c.o -MF CMakeFiles/test_all.dir/src/db/save_setting.c.o.d -o CMakeFiles/test_all.dir/src/db/save_setting.c.o -c /home/eyk/桌面/TL/src/db/save_setting.c
+
+CMakeFiles/test_all.dir/src/db/save_setting.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test_all.dir/src/db/save_setting.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/eyk/桌面/TL/src/db/save_setting.c > CMakeFiles/test_all.dir/src/db/save_setting.c.i
+
+CMakeFiles/test_all.dir/src/db/save_setting.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test_all.dir/src/db/save_setting.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/eyk/桌面/TL/src/db/save_setting.c -o CMakeFiles/test_all.dir/src/db/save_setting.c.s
+
 CMakeFiles/test_all.dir/src/display/display.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/src/display/display.c.o: /home/eyk/桌面/TL/src/display/display.c
 CMakeFiles/test_all.dir/src/display/display.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/test_all.dir/src/display/display.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/test_all.dir/src/display/display.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/src/display/display.c.o -MF CMakeFiles/test_all.dir/src/display/display.c.o.d -o CMakeFiles/test_all.dir/src/display/display.c.o -c /home/eyk/桌面/TL/src/display/display.c
 
 CMakeFiles/test_all.dir/src/display/display.c.i: cmake_force
@@ -114,7 +142,7 @@ CMakeFiles/test_all.dir/src/display/display.c.s: cmake_force
 CMakeFiles/test_all.dir/src/display/help.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/src/display/help.c.o: /home/eyk/桌面/TL/src/display/help.c
 CMakeFiles/test_all.dir/src/display/help.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/test_all.dir/src/display/help.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/test_all.dir/src/display/help.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/src/display/help.c.o -MF CMakeFiles/test_all.dir/src/display/help.c.o.d -o CMakeFiles/test_all.dir/src/display/help.c.o -c /home/eyk/桌面/TL/src/display/help.c
 
 CMakeFiles/test_all.dir/src/display/help.c.i: cmake_force
@@ -128,7 +156,7 @@ CMakeFiles/test_all.dir/src/display/help.c.s: cmake_force
 CMakeFiles/test_all.dir/src/display/text_display_width.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/src/display/text_display_width.c.o: /home/eyk/桌面/TL/src/display/text_display_width.c
 CMakeFiles/test_all.dir/src/display/text_display_width.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/test_all.dir/src/display/text_display_width.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/test_all.dir/src/display/text_display_width.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/src/display/text_display_width.c.o -MF CMakeFiles/test_all.dir/src/display/text_display_width.c.o.d -o CMakeFiles/test_all.dir/src/display/text_display_width.c.o -c /home/eyk/桌面/TL/src/display/text_display_width.c
 
 CMakeFiles/test_all.dir/src/display/text_display_width.c.i: cmake_force
@@ -142,7 +170,7 @@ CMakeFiles/test_all.dir/src/display/text_display_width.c.s: cmake_force
 CMakeFiles/test_all.dir/src/display/text_print_help.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/src/display/text_print_help.c.o: /home/eyk/桌面/TL/src/display/text_print_help.c
 CMakeFiles/test_all.dir/src/display/text_print_help.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/test_all.dir/src/display/text_print_help.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/test_all.dir/src/display/text_print_help.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/src/display/text_print_help.c.o -MF CMakeFiles/test_all.dir/src/display/text_print_help.c.o.d -o CMakeFiles/test_all.dir/src/display/text_print_help.c.o -c /home/eyk/桌面/TL/src/display/text_print_help.c
 
 CMakeFiles/test_all.dir/src/display/text_print_help.c.i: cmake_force
@@ -156,7 +184,7 @@ CMakeFiles/test_all.dir/src/display/text_print_help.c.s: cmake_force
 CMakeFiles/test_all.dir/src/exec/exec.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/src/exec/exec.c.o: /home/eyk/桌面/TL/src/exec/exec.c
 CMakeFiles/test_all.dir/src/exec/exec.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/test_all.dir/src/exec/exec.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/test_all.dir/src/exec/exec.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/src/exec/exec.c.o -MF CMakeFiles/test_all.dir/src/exec/exec.c.o.d -o CMakeFiles/test_all.dir/src/exec/exec.c.o -c /home/eyk/桌面/TL/src/exec/exec.c
 
 CMakeFiles/test_all.dir/src/exec/exec.c.i: cmake_force
@@ -170,7 +198,7 @@ CMakeFiles/test_all.dir/src/exec/exec.c.s: cmake_force
 CMakeFiles/test_all.dir/src/main.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/src/main.c.o: /home/eyk/桌面/TL/src/main.c
 CMakeFiles/test_all.dir/src/main.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/test_all.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/test_all.dir/src/main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/src/main.c.o -MF CMakeFiles/test_all.dir/src/main.c.o.d -o CMakeFiles/test_all.dir/src/main.c.o -c /home/eyk/桌面/TL/src/main.c
 
 CMakeFiles/test_all.dir/src/main.c.i: cmake_force
@@ -184,7 +212,7 @@ CMakeFiles/test_all.dir/src/main.c.s: cmake_force
 CMakeFiles/test_all.dir/src/parse/parse_node.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/src/parse/parse_node.c.o: /home/eyk/桌面/TL/src/parse/parse_node.c
 CMakeFiles/test_all.dir/src/parse/parse_node.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/test_all.dir/src/parse/parse_node.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/test_all.dir/src/parse/parse_node.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/src/parse/parse_node.c.o -MF CMakeFiles/test_all.dir/src/parse/parse_node.c.o.d -o CMakeFiles/test_all.dir/src/parse/parse_node.c.o -c /home/eyk/桌面/TL/src/parse/parse_node.c
 
 CMakeFiles/test_all.dir/src/parse/parse_node.c.i: cmake_force
@@ -198,7 +226,7 @@ CMakeFiles/test_all.dir/src/parse/parse_node.c.s: cmake_force
 CMakeFiles/test_all.dir/src/structure/command.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/src/structure/command.c.o: /home/eyk/桌面/TL/src/structure/command.c
 CMakeFiles/test_all.dir/src/structure/command.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/test_all.dir/src/structure/command.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/test_all.dir/src/structure/command.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/src/structure/command.c.o -MF CMakeFiles/test_all.dir/src/structure/command.c.o.d -o CMakeFiles/test_all.dir/src/structure/command.c.o -c /home/eyk/桌面/TL/src/structure/command.c
 
 CMakeFiles/test_all.dir/src/structure/command.c.i: cmake_force
@@ -212,7 +240,7 @@ CMakeFiles/test_all.dir/src/structure/command.c.s: cmake_force
 CMakeFiles/test_all.dir/src/structure/date.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/src/structure/date.c.o: /home/eyk/桌面/TL/src/structure/date.c
 CMakeFiles/test_all.dir/src/structure/date.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/test_all.dir/src/structure/date.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/test_all.dir/src/structure/date.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/src/structure/date.c.o -MF CMakeFiles/test_all.dir/src/structure/date.c.o.d -o CMakeFiles/test_all.dir/src/structure/date.c.o -c /home/eyk/桌面/TL/src/structure/date.c
 
 CMakeFiles/test_all.dir/src/structure/date.c.i: cmake_force
@@ -226,7 +254,7 @@ CMakeFiles/test_all.dir/src/structure/date.c.s: cmake_force
 CMakeFiles/test_all.dir/src/structure/error.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/src/structure/error.c.o: /home/eyk/桌面/TL/src/structure/error.c
 CMakeFiles/test_all.dir/src/structure/error.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/test_all.dir/src/structure/error.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/test_all.dir/src/structure/error.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/src/structure/error.c.o -MF CMakeFiles/test_all.dir/src/structure/error.c.o.d -o CMakeFiles/test_all.dir/src/structure/error.c.o -c /home/eyk/桌面/TL/src/structure/error.c
 
 CMakeFiles/test_all.dir/src/structure/error.c.i: cmake_force
@@ -240,7 +268,7 @@ CMakeFiles/test_all.dir/src/structure/error.c.s: cmake_force
 CMakeFiles/test_all.dir/src/structure/node.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/src/structure/node.c.o: /home/eyk/桌面/TL/src/structure/node.c
 CMakeFiles/test_all.dir/src/structure/node.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/test_all.dir/src/structure/node.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/test_all.dir/src/structure/node.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/src/structure/node.c.o -MF CMakeFiles/test_all.dir/src/structure/node.c.o.d -o CMakeFiles/test_all.dir/src/structure/node.c.o -c /home/eyk/桌面/TL/src/structure/node.c
 
 CMakeFiles/test_all.dir/src/structure/node.c.i: cmake_force
@@ -254,7 +282,7 @@ CMakeFiles/test_all.dir/src/structure/node.c.s: cmake_force
 CMakeFiles/test_all.dir/src/structure/setting.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/src/structure/setting.c.o: /home/eyk/桌面/TL/src/structure/setting.c
 CMakeFiles/test_all.dir/src/structure/setting.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/test_all.dir/src/structure/setting.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/test_all.dir/src/structure/setting.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/src/structure/setting.c.o -MF CMakeFiles/test_all.dir/src/structure/setting.c.o.d -o CMakeFiles/test_all.dir/src/structure/setting.c.o -c /home/eyk/桌面/TL/src/structure/setting.c
 
 CMakeFiles/test_all.dir/src/structure/setting.c.i: cmake_force
@@ -268,7 +296,7 @@ CMakeFiles/test_all.dir/src/structure/setting.c.s: cmake_force
 CMakeFiles/test_all.dir/src/structure/task.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/src/structure/task.c.o: /home/eyk/桌面/TL/src/structure/task.c
 CMakeFiles/test_all.dir/src/structure/task.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/test_all.dir/src/structure/task.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/test_all.dir/src/structure/task.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/src/structure/task.c.o -MF CMakeFiles/test_all.dir/src/structure/task.c.o.d -o CMakeFiles/test_all.dir/src/structure/task.c.o -c /home/eyk/桌面/TL/src/structure/task.c
 
 CMakeFiles/test_all.dir/src/structure/task.c.i: cmake_force
@@ -282,7 +310,7 @@ CMakeFiles/test_all.dir/src/structure/task.c.s: cmake_force
 CMakeFiles/test_all.dir/src/utils.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/src/utils.c.o: /home/eyk/桌面/TL/src/utils.c
 CMakeFiles/test_all.dir/src/utils.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/test_all.dir/src/utils.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/test_all.dir/src/utils.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/src/utils.c.o -MF CMakeFiles/test_all.dir/src/utils.c.o.d -o CMakeFiles/test_all.dir/src/utils.c.o -c /home/eyk/桌面/TL/src/utils.c
 
 CMakeFiles/test_all.dir/src/utils.c.i: cmake_force
@@ -296,7 +324,7 @@ CMakeFiles/test_all.dir/src/utils.c.s: cmake_force
 CMakeFiles/test_all.dir/test/db/data.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/test/db/data.c.o: /home/eyk/桌面/TL/test/db/data.c
 CMakeFiles/test_all.dir/test/db/data.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/test_all.dir/test/db/data.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/test_all.dir/test/db/data.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/test/db/data.c.o -MF CMakeFiles/test_all.dir/test/db/data.c.o.d -o CMakeFiles/test_all.dir/test/db/data.c.o -c /home/eyk/桌面/TL/test/db/data.c
 
 CMakeFiles/test_all.dir/test/db/data.c.i: cmake_force
@@ -310,7 +338,7 @@ CMakeFiles/test_all.dir/test/db/data.c.s: cmake_force
 CMakeFiles/test_all.dir/test/display/help.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/test/display/help.c.o: /home/eyk/桌面/TL/test/display/help.c
 CMakeFiles/test_all.dir/test/display/help.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/test_all.dir/test/display/help.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/test_all.dir/test/display/help.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/test/display/help.c.o -MF CMakeFiles/test_all.dir/test/display/help.c.o.d -o CMakeFiles/test_all.dir/test/display/help.c.o -c /home/eyk/桌面/TL/test/display/help.c
 
 CMakeFiles/test_all.dir/test/display/help.c.i: cmake_force
@@ -324,7 +352,7 @@ CMakeFiles/test_all.dir/test/display/help.c.s: cmake_force
 CMakeFiles/test_all.dir/test/display/print.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/test/display/print.c.o: /home/eyk/桌面/TL/test/display/print.c
 CMakeFiles/test_all.dir/test/display/print.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/test_all.dir/test/display/print.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/test_all.dir/test/display/print.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/test/display/print.c.o -MF CMakeFiles/test_all.dir/test/display/print.c.o.d -o CMakeFiles/test_all.dir/test/display/print.c.o -c /home/eyk/桌面/TL/test/display/print.c
 
 CMakeFiles/test_all.dir/test/display/print.c.i: cmake_force
@@ -338,7 +366,7 @@ CMakeFiles/test_all.dir/test/display/print.c.s: cmake_force
 CMakeFiles/test_all.dir/test/structrue/test_command.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/test/structrue/test_command.c.o: /home/eyk/桌面/TL/test/structrue/test_command.c
 CMakeFiles/test_all.dir/test/structrue/test_command.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/test_all.dir/test/structrue/test_command.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/test_all.dir/test/structrue/test_command.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/test/structrue/test_command.c.o -MF CMakeFiles/test_all.dir/test/structrue/test_command.c.o.d -o CMakeFiles/test_all.dir/test/structrue/test_command.c.o -c /home/eyk/桌面/TL/test/structrue/test_command.c
 
 CMakeFiles/test_all.dir/test/structrue/test_command.c.i: cmake_force
@@ -352,7 +380,7 @@ CMakeFiles/test_all.dir/test/structrue/test_command.c.s: cmake_force
 CMakeFiles/test_all.dir/test/structrue/test_date.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/test/structrue/test_date.c.o: /home/eyk/桌面/TL/test/structrue/test_date.c
 CMakeFiles/test_all.dir/test/structrue/test_date.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/test_all.dir/test/structrue/test_date.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/test_all.dir/test/structrue/test_date.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/test/structrue/test_date.c.o -MF CMakeFiles/test_all.dir/test/structrue/test_date.c.o.d -o CMakeFiles/test_all.dir/test/structrue/test_date.c.o -c /home/eyk/桌面/TL/test/structrue/test_date.c
 
 CMakeFiles/test_all.dir/test/structrue/test_date.c.i: cmake_force
@@ -366,7 +394,7 @@ CMakeFiles/test_all.dir/test/structrue/test_date.c.s: cmake_force
 CMakeFiles/test_all.dir/test/structrue/test_error.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/test/structrue/test_error.c.o: /home/eyk/桌面/TL/test/structrue/test_error.c
 CMakeFiles/test_all.dir/test/structrue/test_error.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/test_all.dir/test/structrue/test_error.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/test_all.dir/test/structrue/test_error.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/test/structrue/test_error.c.o -MF CMakeFiles/test_all.dir/test/structrue/test_error.c.o.d -o CMakeFiles/test_all.dir/test/structrue/test_error.c.o -c /home/eyk/桌面/TL/test/structrue/test_error.c
 
 CMakeFiles/test_all.dir/test/structrue/test_error.c.i: cmake_force
@@ -380,7 +408,7 @@ CMakeFiles/test_all.dir/test/structrue/test_error.c.s: cmake_force
 CMakeFiles/test_all.dir/test/structrue/test_node.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/test/structrue/test_node.c.o: /home/eyk/桌面/TL/test/structrue/test_node.c
 CMakeFiles/test_all.dir/test/structrue/test_node.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/test_all.dir/test/structrue/test_node.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/test_all.dir/test/structrue/test_node.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/test/structrue/test_node.c.o -MF CMakeFiles/test_all.dir/test/structrue/test_node.c.o.d -o CMakeFiles/test_all.dir/test/structrue/test_node.c.o -c /home/eyk/桌面/TL/test/structrue/test_node.c
 
 CMakeFiles/test_all.dir/test/structrue/test_node.c.i: cmake_force
@@ -394,7 +422,7 @@ CMakeFiles/test_all.dir/test/structrue/test_node.c.s: cmake_force
 CMakeFiles/test_all.dir/test/structrue/test_task.c.o: CMakeFiles/test_all.dir/flags.make
 CMakeFiles/test_all.dir/test/structrue/test_task.c.o: /home/eyk/桌面/TL/test/structrue/test_task.c
 CMakeFiles/test_all.dir/test/structrue/test_task.c.o: CMakeFiles/test_all.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/test_all.dir/test/structrue/test_task.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/test_all.dir/test/structrue/test_task.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_all.dir/test/structrue/test_task.c.o -MF CMakeFiles/test_all.dir/test/structrue/test_task.c.o.d -o CMakeFiles/test_all.dir/test/structrue/test_task.c.o -c /home/eyk/桌面/TL/test/structrue/test_task.c
 
 CMakeFiles/test_all.dir/test/structrue/test_task.c.i: cmake_force
@@ -409,6 +437,8 @@ CMakeFiles/test_all.dir/test/structrue/test_task.c.s: cmake_force
 test_all_OBJECTS = \
 "CMakeFiles/test_all.dir/src/db/data.c.o" \
 "CMakeFiles/test_all.dir/src/db/get_file_Path.c.o" \
+"CMakeFiles/test_all.dir/src/db/load_setting.c.o" \
+"CMakeFiles/test_all.dir/src/db/save_setting.c.o" \
 "CMakeFiles/test_all.dir/src/display/display.c.o" \
 "CMakeFiles/test_all.dir/src/display/help.c.o" \
 "CMakeFiles/test_all.dir/src/display/text_display_width.c.o" \
@@ -437,6 +467,8 @@ test_all_EXTERNAL_OBJECTS =
 
 /home/eyk/桌面/TL/bin/test_all: CMakeFiles/test_all.dir/src/db/data.c.o
 /home/eyk/桌面/TL/bin/test_all: CMakeFiles/test_all.dir/src/db/get_file_Path.c.o
+/home/eyk/桌面/TL/bin/test_all: CMakeFiles/test_all.dir/src/db/load_setting.c.o
+/home/eyk/桌面/TL/bin/test_all: CMakeFiles/test_all.dir/src/db/save_setting.c.o
 /home/eyk/桌面/TL/bin/test_all: CMakeFiles/test_all.dir/src/display/display.c.o
 /home/eyk/桌面/TL/bin/test_all: CMakeFiles/test_all.dir/src/display/help.c.o
 /home/eyk/桌面/TL/bin/test_all: CMakeFiles/test_all.dir/src/display/text_display_width.c.o
@@ -461,7 +493,7 @@ test_all_EXTERNAL_OBJECTS =
 /home/eyk/桌面/TL/bin/test_all: CMakeFiles/test_all.dir/test/structrue/test_task.c.o
 /home/eyk/桌面/TL/bin/test_all: CMakeFiles/test_all.dir/build.make
 /home/eyk/桌面/TL/bin/test_all: CMakeFiles/test_all.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking C executable /home/eyk/桌面/TL/bin/test_all"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/eyk/桌面/TL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking C executable /home/eyk/桌面/TL/bin/test_all"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_all.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -9,10 +9,10 @@
 #define SOFTWARE_NAME "tl"
 #define PROCESS_NAME "process"
 #define COMMAND "command"
-#define ARGUMENTS1 "arguments1"
-#define ARGUMENTS2 "arguments2"
-#define ARGUMENTS3 "arguments3"
-#define ARGUMENTS4 "arguments4"
+#define ARGUMENTS1 "argument1"
+#define ARGUMENTS2 "argument2"
+#define ARGUMENTS3 "argument3"
+#define ARGUMENTS4 "argument4"
 #define INSTRUCTION "instruction"
 #define HELP_TOKEN "?"
 #define DISPLAY_TOKEN "^"
@@ -33,8 +33,8 @@
 // 这里引入我们对流层的编排系统，直接用编排系统的接口，实现标准的编排！
 #define HEAD "TaskLite (tl) Command Reference"
 #define USAGE "Usage: tl [command] [arguments]"
-#define DATE_TYPE_HELP "Following date_type means d/day w/week m/month y/year"
-#define DATE_FOMAT_HELP "Following fixed date_fomat : d/day=>xxxx.xx.xx\tw/week=>xxxx.xx.xx\tm/month=>xxxx.xx\ty/year=>xxxx"
+#define DATE_TYPE_HELP "Following date_type means -d/-day -w/-week -m/-month -y/-year"
+#define DATE_FOMAT_HELP "Following fixed date_fomat : -d/-day=>xxxx.xx.xx\t-w/-week=>xxxx.xx.xx\t-m/-month=>xxxx.xx\t-y/-year=>xxxx"
 #define TID_HELP "Following TID means task_index"
 #define SHOW_COMMANDS "SHOW COMMANDS:"
 #define ADD_COMMANDS "ADD COMMANDS:"
@@ -43,8 +43,8 @@
 #define TOGGLE_COMMANDS "TOGGLE COMMANDS:"
 #define CONFIGURATION "CONFIGURATION COMMANDS:"
 #define EDIT_COMMANDS "EDIT COMMANDS:"
-#define DATE_TYPE "-date_type"
-#define DATE_FOMAT "-date_fomat"
+#define DATE_TYPE "date_type"
+#define DATE_FOMAT "date_fomat"
 #define TID "TID"
 #define CONTENT "content"
 #define USER_HELP "Show help"
@@ -66,7 +66,7 @@
 #define APPEND_TO_TASK_SPECIFIC_DATE "Append to task (specific date)"
 #define SET_CONFIGURATION "Set configuration KEY to VALUE"
 #define CONFIGURATION_HELP "Setting available keys:"
-#define KV "KEY=VALUE"
+#define KV "key=value"
 #define CONFIGURATION_COLOR "on/off"
 #define CONFIGURATION_SHOW "d/day/w/week/m/month/y/year"
 #define COLOR_ON "Enable colored output"
@@ -89,4 +89,5 @@ void help_edit_all();
 void help_edit_prefix();
 void help_edit_suffix();
 void help_set();
+
 #endif

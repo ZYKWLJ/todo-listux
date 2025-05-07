@@ -94,4 +94,6 @@ CMakeFiles/test_all.dir/src/structure/task.c.o: \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
- /usr/include/x86_64-linux-gnu/bits/struct_stat.h
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+ /home/eyk/桌面/TL/src/structure/../../include/db/load_setting.h \
+ /home/eyk/桌面/TL/src/structure/../../include/db/save_setting.h

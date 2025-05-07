@@ -93,4 +93,6 @@ CMakeFiles/test_all.dir/src/utils.c.o: /home/eyk/桌面/TL/src/utils.c \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
- /usr/include/x86_64-linux-gnu/bits/struct_stat.h
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+ /home/eyk/桌面/TL/src/../include/db/load_setting.h \
+ /home/eyk/桌面/TL/src/../include/db/save_setting.h

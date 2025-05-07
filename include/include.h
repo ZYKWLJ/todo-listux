@@ -26,5 +26,7 @@
 
 #include "db/data.h"
 #include "db/get_file_Path.h"
+#include "db/load_setting.h"
+#include "db/save_setting.h"
 
 #endif

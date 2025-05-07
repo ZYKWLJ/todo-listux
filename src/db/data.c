@@ -1,5 +1,5 @@
 #include "../../include/include.h"
-
+// extern KV_ kv;
 void DB_show_task(T_date date, string prefix)
 {
     /**
@@ -66,4 +66,6 @@ void DB_set_config(KV_ kv)
      * data descp: 解析出要查找的任务的日期类型和日期即可，都在date里面，不需要参数node.至于查找的路径，已经被写死了，不用传参！
      */
     TODO_PRINT("DB_set_config......K=%s\tv=%s\n", kv->key, kv->value);
+    save_setting(get_appdata_path(SETTING_FILE),kv);
+    
 }
