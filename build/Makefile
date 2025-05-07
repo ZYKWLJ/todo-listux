@@ -153,6 +153,30 @@ src/db/data.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/db/data.c.s
 .PHONY : src/db/data.c.s
 
+src/db/get_file_Path.o: src/db/get_file_Path.c.o
+.PHONY : src/db/get_file_Path.o
+
+# target to build an object file
+src/db/get_file_Path.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/db/get_file_Path.c.o
+.PHONY : src/db/get_file_Path.c.o
+
+src/db/get_file_Path.i: src/db/get_file_Path.c.i
+.PHONY : src/db/get_file_Path.i
+
+# target to preprocess a source file
+src/db/get_file_Path.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/db/get_file_Path.c.i
+.PHONY : src/db/get_file_Path.c.i
+
+src/db/get_file_Path.s: src/db/get_file_Path.c.s
+.PHONY : src/db/get_file_Path.s
+
+# target to generate assembly for a file
+src/db/get_file_Path.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/db/get_file_Path.c.s
+.PHONY : src/db/get_file_Path.c.s
+
 src/display/display.o: src/display/display.c.o
 .PHONY : src/display/display.o
 
@@ -693,6 +717,9 @@ help:
 	@echo "... src/db/data.o"
 	@echo "... src/db/data.i"
 	@echo "... src/db/data.s"
+	@echo "... src/db/get_file_Path.o"
+	@echo "... src/db/get_file_Path.i"
+	@echo "... src/db/get_file_Path.s"
 	@echo "... src/display/display.o"
 	@echo "... src/display/display.i"
 	@echo "... src/display/display.s"

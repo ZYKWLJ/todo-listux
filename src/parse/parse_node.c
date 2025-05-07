@@ -1,4 +1,6 @@
 #include "../../include/include.h"
+extern KV_ kv;
+extern S_setting setting;
 int is_leap_year(int year)
 {
     return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
@@ -632,30 +634,46 @@ void parse_set_node(N_node node, C_command command, T_date date)
         }
 
         size_t key_len = equal_pos - command->argv[2];
-        char *k = malloc(key_len + 1);
-        if (!k)
-            return;
-        strncpy(k, command->argv[2], key_len);
-        k[key_len] = '\0';
+        strncpy(kv->key, command->argv[2], key_len);
+        kv->key[key_len] = '\0';
 
         char *v = strdup(equal_pos + 1);
-        if (!v)
+        strncpy(kv->value, v, strlen(v));
+        kv->value[strlen(v)] = '\0';
+        free(v);
+        // 4. 不能释放内存，因为后面还要使用
+
+        LOG_PRINT("key: %s, value: %s\n", kv->key, kv->value);
+
+        switch (set_settings(setting, kv))
         {
-            free(k);
-            return;
-        }
-        if (!k || !v)
-        {
-            LOG_PRINT("Memory allocation failed\n");
-            free(k);
-            free(v);
-            return;
+        case 0:
+            COMMAND_ERROR(command, " --The key should be color/show, but here is %s\n", kv->key);
+            exit(EXIT_FAILURE);
+        case 2:
+            COMMAND_ERROR(command, " --Invalid value %s\n", kv->value);
+            printf("key of %s have the following vaild values:\n", kv->key);
+
+            if (strcmp(kv->key, "color") == 0)
+            {
+                for (int i = 0; setting->color->value_allow[i]; i++)
+                {
+
+                    printf("%s\t", setting->color->value_allow[i]);
+                }
+            }
+            else if (strcmp(kv->key, "show") == 0)
+            {
+                for (int i = 0; setting->show->value_allow[i]; i++)
+                {
+
+                    printf("%s\t", setting->show->value_allow[i]);
+                }
+            }
+            printf("\n");
+            exit(EXIT_FAILURE);
         }
 
-        // 4. 不能释放内存，因为后面还要使用
-        sprintf(node->task->key, "%s", k);
-        sprintf(node->task->value, "%s", v);
-        LOG_PRINT("key: %s, value: %s\n", node->task->key, node->task->value);
         return;
     }
     else

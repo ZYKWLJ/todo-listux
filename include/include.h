@@ -12,6 +12,7 @@
 
 #include "structure/node.h"
 #include "structure/date.h"
+#include "structure/setting.h"
 
 #include "display/help.h"
 #include "display/color.h"
@@ -24,5 +25,6 @@
 #include "exec/exec.h"
 
 #include "db/data.h"
+#include "db/get_file_Path.h"
 
 #endif

@@ -64,6 +64,7 @@ CMakeFiles/test_all.dir/src/exec/exec.c.o: \
  /home/eyk/桌面/TL/src/exec/../../include/structure/error.h \
  /home/eyk/桌面/TL/src/exec/../../include/structure/task.h \
  /home/eyk/桌面/TL/src/exec/../../include/structure/node.h \
+ /home/eyk/桌面/TL/src/exec/../../include/structure/setting.h \
  /home/eyk/桌面/TL/src/exec/../../include/display/help.h \
  /usr/include/locale.h /usr/include/x86_64-linux-gnu/bits/locale.h \
  /usr/include/wchar.h /usr/include/x86_64-linux-gnu/bits/wchar.h \
@@ -80,4 +81,17 @@ CMakeFiles/test_all.dir/src/exec/exec.c.o: \
  /home/eyk/桌面/TL/src/exec/../../include/exec/exec.h \
  /home/eyk/桌面/TL/src/exec/../../include/exec/../include.h \
  /home/eyk/桌面/TL/src/exec/../../include/db/data.h \
- /home/eyk/桌面/TL/src/exec/../../include/db/../include.h
+ /home/eyk/桌面/TL/src/exec/../../include/db/../include.h \
+ /home/eyk/桌面/TL/src/exec/../../include/db/get_file_Path.h \
+ /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h

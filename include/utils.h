@@ -47,7 +47,7 @@ void COMMAND_ERROR(C_command command, const char *format, ...);
     printf(__VA_ARGS__);                                                  \
     printf("\n")
 #else
-#define LOG_PRINT(msg) \
+#define LOG_PRINT(...) \
     do                 \
     {                  \
     } while (0)

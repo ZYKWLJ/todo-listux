@@ -38,8 +38,8 @@ T_current_date T_current_date_init(T_current_date t)
     time_->minute = timeinfo->tm_min;
     time_->second = timeinfo->tm_sec;
 
-    LOG_PRINT("current time: %04d-%02d-%02d %02d:%02d:%02d,test passed!\n",
-               time_->year, time_->month, time_->day, time_->hour, time_->minute, time_->second);
+    // LOG_PRINT("current time: %04d-%02d-%02d %02d:%02d:%02d,test passed!\n",
+    //            time_->year, time_->month, time_->day, time_->hour, time_->minute, time_->second);
     return time_;
 }
 

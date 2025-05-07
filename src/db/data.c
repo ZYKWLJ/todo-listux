@@ -60,10 +60,10 @@ void DB_toggle_task(N_node node, T_date date, string prefix)
     TODO_PRINT("DB_toggle_task......prefix=%s\n", prefix);
 }
 
-void DB_set_config(N_node node, T_date date, string prefix)
+void DB_set_config(KV_ kv)
 {
     /**
      * data descp: 解析出要查找的任务的日期类型和日期即可，都在date里面，不需要参数node.至于查找的路径，已经被写死了，不用传参！
      */
-    TODO_PRINT("DB_set_config......prefix=%s\n", prefix);
+    TODO_PRINT("DB_set_config......K=%s\tv=%s\n", kv->key, kv->value);
 }

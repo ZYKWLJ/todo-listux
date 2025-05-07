@@ -1,7 +1,6 @@
-CMakeFiles/test_all.dir/src/parse/parse_node.c.o: \
- /home/eyk/桌面/TL/src/parse/parse_node.c /usr/include/stdc-predef.h \
- /home/eyk/桌面/TL/src/parse/../../include/include.h \
- /usr/include/stdio.h \
+CMakeFiles/test_all.dir/src/db/get_file_Path.c.o: \
+ /home/eyk/桌面/TL/src/db/get_file_Path.c /usr/include/stdc-predef.h \
+ /home/eyk/桌面/TL/src/db/../../include/include.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -53,36 +52,36 @@ CMakeFiles/test_all.dir/src/parse/parse_node.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h /usr/include/ctype.h \
- /home/eyk/桌面/TL/src/parse/../../include/structure/command.h \
- /home/eyk/桌面/TL/src/parse/../../include/structure/../include.h \
- /home/eyk/桌面/TL/src/parse/../../include/utils.h \
- /home/eyk/桌面/TL/src/parse/../../include/include.h \
- /home/eyk/桌面/TL/src/parse/../../include/structure/date.h \
+ /home/eyk/桌面/TL/src/db/../../include/structure/command.h \
+ /home/eyk/桌面/TL/src/db/../../include/structure/../include.h \
+ /home/eyk/桌面/TL/src/db/../../include/utils.h \
+ /home/eyk/桌面/TL/src/db/../../include/include.h \
+ /home/eyk/桌面/TL/src/db/../../include/structure/date.h \
  /usr/include/time.h /usr/include/x86_64-linux-gnu/bits/time.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
- /home/eyk/桌面/TL/src/parse/../../include/structure/error.h \
- /home/eyk/桌面/TL/src/parse/../../include/structure/task.h \
- /home/eyk/桌面/TL/src/parse/../../include/structure/node.h \
- /home/eyk/桌面/TL/src/parse/../../include/structure/setting.h \
- /home/eyk/桌面/TL/src/parse/../../include/display/help.h \
+ /home/eyk/桌面/TL/src/db/../../include/structure/error.h \
+ /home/eyk/桌面/TL/src/db/../../include/structure/task.h \
+ /home/eyk/桌面/TL/src/db/../../include/structure/node.h \
+ /home/eyk/桌面/TL/src/db/../../include/structure/setting.h \
+ /home/eyk/桌面/TL/src/db/../../include/display/help.h \
  /usr/include/locale.h /usr/include/x86_64-linux-gnu/bits/locale.h \
  /usr/include/wchar.h /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
  /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
- /home/eyk/桌面/TL/src/parse/../../include/display/color.h \
- /home/eyk/桌面/TL/src/parse/../../include/display/display.h \
- /home/eyk/桌面/TL/src/parse/../../include/display/../include.h \
- /home/eyk/桌面/TL/src/parse/../../include/display/text_display_width.h \
- /home/eyk/桌面/TL/src/parse/../../include/display/text_print_help.h \
- /home/eyk/桌面/TL/src/parse/../../include/parse/parse_node.h \
- /home/eyk/桌面/TL/src/parse/../../include/parse/../include.h \
- /home/eyk/桌面/TL/src/parse/../../include/exec/exec.h \
- /home/eyk/桌面/TL/src/parse/../../include/exec/../include.h \
- /home/eyk/桌面/TL/src/parse/../../include/db/data.h \
- /home/eyk/桌面/TL/src/parse/../../include/db/../include.h \
- /home/eyk/桌面/TL/src/parse/../../include/db/get_file_Path.h \
+ /home/eyk/桌面/TL/src/db/../../include/display/color.h \
+ /home/eyk/桌面/TL/src/db/../../include/display/display.h \
+ /home/eyk/桌面/TL/src/db/../../include/display/../include.h \
+ /home/eyk/桌面/TL/src/db/../../include/display/text_display_width.h \
+ /home/eyk/桌面/TL/src/db/../../include/display/text_print_help.h \
+ /home/eyk/桌面/TL/src/db/../../include/parse/parse_node.h \
+ /home/eyk/桌面/TL/src/db/../../include/parse/../include.h \
+ /home/eyk/桌面/TL/src/db/../../include/exec/exec.h \
+ /home/eyk/桌面/TL/src/db/../../include/exec/../include.h \
+ /home/eyk/桌面/TL/src/db/../../include/db/data.h \
+ /home/eyk/桌面/TL/src/db/../../include/db/../include.h \
+ /home/eyk/桌面/TL/src/db/../../include/db/get_file_Path.h \
  /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \

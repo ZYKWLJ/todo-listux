@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "/home/eyk/桌面/TL/bin/test_all.pdb"
   "CMakeFiles/test_all.dir/src/db/data.c.o"
   "CMakeFiles/test_all.dir/src/db/data.c.o.d"
+  "CMakeFiles/test_all.dir/src/db/get_file_Path.c.o"
+  "CMakeFiles/test_all.dir/src/db/get_file_Path.c.o.d"
   "CMakeFiles/test_all.dir/src/display/display.c.o"
   "CMakeFiles/test_all.dir/src/display/display.c.o.d"
   "CMakeFiles/test_all.dir/src/display/help.c.o"

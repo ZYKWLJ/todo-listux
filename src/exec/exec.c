@@ -1,5 +1,5 @@
 #include "../../include/include.h"
-
+extern KV_ kv;
 char to_char(int type)
 {
     switch (type)
@@ -49,48 +49,55 @@ void exec_add_node(N_node node, T_date date)
     DB_add_task(node, date, get_db_prefix(date));
 }
 
-void exec_delete_task(N_node node, T_date date){
+void exec_delete_task(N_node node, T_date date)
+{
     /**
      * func descp: 用构造好的前缀去磁盘里面找对应的行！
      */
     DB_delete_task(node, date, get_db_prefix(date));
 }
 
-void exec_edit_all_task(N_node node, T_date date){
+void exec_edit_all_task(N_node node, T_date date)
+{
     /**
      * func descp: 用构造好的前缀去磁盘里面找对应的行！
      */
     DB_edit_all_task(node, date, get_db_prefix(date));
 }
-void exec_edit_prefix_task(N_node node, T_date date){
+void exec_edit_prefix_task(N_node node, T_date date)
+{
     /**
      * func descp: 用构造好的前缀去磁盘里面找对应的行！
      */
     DB_edit_prefix_task(node, date, get_db_prefix(date));
 }
-void exec_edit_suffix_task(N_node node, T_date date){
+void exec_edit_suffix_task(N_node node, T_date date)
+{
     /**
      * func descp: 用构造好的前缀去磁盘里面找对应的行！
      */
     DB_edit_suffix_task(node, date, get_db_prefix(date));
 }
-void exec_done_task(N_node node, T_date date){
+void exec_done_task(N_node node, T_date date)
+{
     /**
      * func descp: 用构造好的前缀去磁盘里面找对应的行！
      */
     DB_done_task(node, date, get_db_prefix(date));
-}   
-void exec_toggle_task(N_node node, T_date date){
+}
+void exec_toggle_task(N_node node, T_date date)
+{
     /**
      * func descp: 用构造好的前缀去磁盘里面找对应的行！
      */
     DB_toggle_task(node, date, get_db_prefix(date));
 }
-void exec_set_config(N_node node, T_date date){
+void exec_set_config()
+{
     /**
      * func descp: 用构造好的前缀去磁盘里面找对应的行！
      */
-    DB_set_config(node, date, get_db_prefix(date));
+    DB_set_config(kv);
 }
 
 void exec(N_node node, C_command command, T_date date)
@@ -144,7 +151,7 @@ void exec(N_node node, C_command command, T_date date)
         break;
     case 10:
         TODO_PRINT("setting config function......");
-        exec_set_config(node, date); /*进入setting文件，修改config的K-V键值即可*/
+        exec_set_config(); /*进入setting文件，修改config的K-V键值即可*/
         break;
     }
 }
