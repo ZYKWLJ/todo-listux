@@ -117,24 +117,48 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_node
+# Target rules for targets named test_all
 
 # Build rule for target.
-test_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_node
-.PHONY : test_node
+test_all: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_all
+.PHONY : test_all
 
 # fast build rule for target.
-test_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/build
-.PHONY : test_node/fast
+test_all/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/build
+.PHONY : test_all/fast
+
+src/db/data.o: src/db/data.c.o
+.PHONY : src/db/data.o
+
+# target to build an object file
+src/db/data.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/db/data.c.o
+.PHONY : src/db/data.c.o
+
+src/db/data.i: src/db/data.c.i
+.PHONY : src/db/data.i
+
+# target to preprocess a source file
+src/db/data.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/db/data.c.i
+.PHONY : src/db/data.c.i
+
+src/db/data.s: src/db/data.c.s
+.PHONY : src/db/data.s
+
+# target to generate assembly for a file
+src/db/data.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/db/data.c.s
+.PHONY : src/db/data.c.s
 
 src/display/display.o: src/display/display.c.o
 .PHONY : src/display/display.o
 
 # target to build an object file
 src/display/display.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/display/display.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/display/display.c.o
 .PHONY : src/display/display.c.o
 
 src/display/display.i: src/display/display.c.i
@@ -142,7 +166,7 @@ src/display/display.i: src/display/display.c.i
 
 # target to preprocess a source file
 src/display/display.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/display/display.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/display/display.c.i
 .PHONY : src/display/display.c.i
 
 src/display/display.s: src/display/display.c.s
@@ -150,7 +174,7 @@ src/display/display.s: src/display/display.c.s
 
 # target to generate assembly for a file
 src/display/display.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/display/display.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/display/display.c.s
 .PHONY : src/display/display.c.s
 
 src/display/help.o: src/display/help.c.o
@@ -158,7 +182,7 @@ src/display/help.o: src/display/help.c.o
 
 # target to build an object file
 src/display/help.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/display/help.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/display/help.c.o
 .PHONY : src/display/help.c.o
 
 src/display/help.i: src/display/help.c.i
@@ -166,7 +190,7 @@ src/display/help.i: src/display/help.c.i
 
 # target to preprocess a source file
 src/display/help.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/display/help.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/display/help.c.i
 .PHONY : src/display/help.c.i
 
 src/display/help.s: src/display/help.c.s
@@ -174,7 +198,7 @@ src/display/help.s: src/display/help.c.s
 
 # target to generate assembly for a file
 src/display/help.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/display/help.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/display/help.c.s
 .PHONY : src/display/help.c.s
 
 src/display/text_display_width.o: src/display/text_display_width.c.o
@@ -182,7 +206,7 @@ src/display/text_display_width.o: src/display/text_display_width.c.o
 
 # target to build an object file
 src/display/text_display_width.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/display/text_display_width.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/display/text_display_width.c.o
 .PHONY : src/display/text_display_width.c.o
 
 src/display/text_display_width.i: src/display/text_display_width.c.i
@@ -190,7 +214,7 @@ src/display/text_display_width.i: src/display/text_display_width.c.i
 
 # target to preprocess a source file
 src/display/text_display_width.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/display/text_display_width.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/display/text_display_width.c.i
 .PHONY : src/display/text_display_width.c.i
 
 src/display/text_display_width.s: src/display/text_display_width.c.s
@@ -198,7 +222,7 @@ src/display/text_display_width.s: src/display/text_display_width.c.s
 
 # target to generate assembly for a file
 src/display/text_display_width.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/display/text_display_width.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/display/text_display_width.c.s
 .PHONY : src/display/text_display_width.c.s
 
 src/display/text_print_help.o: src/display/text_print_help.c.o
@@ -206,7 +230,7 @@ src/display/text_print_help.o: src/display/text_print_help.c.o
 
 # target to build an object file
 src/display/text_print_help.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/display/text_print_help.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/display/text_print_help.c.o
 .PHONY : src/display/text_print_help.c.o
 
 src/display/text_print_help.i: src/display/text_print_help.c.i
@@ -214,7 +238,7 @@ src/display/text_print_help.i: src/display/text_print_help.c.i
 
 # target to preprocess a source file
 src/display/text_print_help.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/display/text_print_help.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/display/text_print_help.c.i
 .PHONY : src/display/text_print_help.c.i
 
 src/display/text_print_help.s: src/display/text_print_help.c.s
@@ -222,7 +246,7 @@ src/display/text_print_help.s: src/display/text_print_help.c.s
 
 # target to generate assembly for a file
 src/display/text_print_help.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/display/text_print_help.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/display/text_print_help.c.s
 .PHONY : src/display/text_print_help.c.s
 
 src/exec/exec.o: src/exec/exec.c.o
@@ -230,7 +254,7 @@ src/exec/exec.o: src/exec/exec.c.o
 
 # target to build an object file
 src/exec/exec.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/exec/exec.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/exec/exec.c.o
 .PHONY : src/exec/exec.c.o
 
 src/exec/exec.i: src/exec/exec.c.i
@@ -238,7 +262,7 @@ src/exec/exec.i: src/exec/exec.c.i
 
 # target to preprocess a source file
 src/exec/exec.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/exec/exec.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/exec/exec.c.i
 .PHONY : src/exec/exec.c.i
 
 src/exec/exec.s: src/exec/exec.c.s
@@ -246,7 +270,7 @@ src/exec/exec.s: src/exec/exec.c.s
 
 # target to generate assembly for a file
 src/exec/exec.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/exec/exec.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/exec/exec.c.s
 .PHONY : src/exec/exec.c.s
 
 src/main.o: src/main.c.o
@@ -254,7 +278,7 @@ src/main.o: src/main.c.o
 
 # target to build an object file
 src/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/main.c.o
 .PHONY : src/main.c.o
 
 src/main.i: src/main.c.i
@@ -262,7 +286,7 @@ src/main.i: src/main.c.i
 
 # target to preprocess a source file
 src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/main.c.i
 .PHONY : src/main.c.i
 
 src/main.s: src/main.c.s
@@ -270,15 +294,39 @@ src/main.s: src/main.c.s
 
 # target to generate assembly for a file
 src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/main.c.s
 .PHONY : src/main.c.s
+
+src/parse/parse_node.o: src/parse/parse_node.c.o
+.PHONY : src/parse/parse_node.o
+
+# target to build an object file
+src/parse/parse_node.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/parse/parse_node.c.o
+.PHONY : src/parse/parse_node.c.o
+
+src/parse/parse_node.i: src/parse/parse_node.c.i
+.PHONY : src/parse/parse_node.i
+
+# target to preprocess a source file
+src/parse/parse_node.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/parse/parse_node.c.i
+.PHONY : src/parse/parse_node.c.i
+
+src/parse/parse_node.s: src/parse/parse_node.c.s
+.PHONY : src/parse/parse_node.s
+
+# target to generate assembly for a file
+src/parse/parse_node.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/parse/parse_node.c.s
+.PHONY : src/parse/parse_node.c.s
 
 src/structure/command.o: src/structure/command.c.o
 .PHONY : src/structure/command.o
 
 # target to build an object file
 src/structure/command.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/command.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/command.c.o
 .PHONY : src/structure/command.c.o
 
 src/structure/command.i: src/structure/command.c.i
@@ -286,7 +334,7 @@ src/structure/command.i: src/structure/command.c.i
 
 # target to preprocess a source file
 src/structure/command.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/command.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/command.c.i
 .PHONY : src/structure/command.c.i
 
 src/structure/command.s: src/structure/command.c.s
@@ -294,7 +342,7 @@ src/structure/command.s: src/structure/command.c.s
 
 # target to generate assembly for a file
 src/structure/command.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/command.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/command.c.s
 .PHONY : src/structure/command.c.s
 
 src/structure/date.o: src/structure/date.c.o
@@ -302,7 +350,7 @@ src/structure/date.o: src/structure/date.c.o
 
 # target to build an object file
 src/structure/date.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/date.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/date.c.o
 .PHONY : src/structure/date.c.o
 
 src/structure/date.i: src/structure/date.c.i
@@ -310,7 +358,7 @@ src/structure/date.i: src/structure/date.c.i
 
 # target to preprocess a source file
 src/structure/date.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/date.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/date.c.i
 .PHONY : src/structure/date.c.i
 
 src/structure/date.s: src/structure/date.c.s
@@ -318,7 +366,7 @@ src/structure/date.s: src/structure/date.c.s
 
 # target to generate assembly for a file
 src/structure/date.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/date.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/date.c.s
 .PHONY : src/structure/date.c.s
 
 src/structure/error.o: src/structure/error.c.o
@@ -326,7 +374,7 @@ src/structure/error.o: src/structure/error.c.o
 
 # target to build an object file
 src/structure/error.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/error.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/error.c.o
 .PHONY : src/structure/error.c.o
 
 src/structure/error.i: src/structure/error.c.i
@@ -334,7 +382,7 @@ src/structure/error.i: src/structure/error.c.i
 
 # target to preprocess a source file
 src/structure/error.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/error.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/error.c.i
 .PHONY : src/structure/error.c.i
 
 src/structure/error.s: src/structure/error.c.s
@@ -342,7 +390,7 @@ src/structure/error.s: src/structure/error.c.s
 
 # target to generate assembly for a file
 src/structure/error.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/error.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/error.c.s
 .PHONY : src/structure/error.c.s
 
 src/structure/node.o: src/structure/node.c.o
@@ -350,7 +398,7 @@ src/structure/node.o: src/structure/node.c.o
 
 # target to build an object file
 src/structure/node.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/node.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/node.c.o
 .PHONY : src/structure/node.c.o
 
 src/structure/node.i: src/structure/node.c.i
@@ -358,7 +406,7 @@ src/structure/node.i: src/structure/node.c.i
 
 # target to preprocess a source file
 src/structure/node.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/node.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/node.c.i
 .PHONY : src/structure/node.c.i
 
 src/structure/node.s: src/structure/node.c.s
@@ -366,7 +414,7 @@ src/structure/node.s: src/structure/node.c.s
 
 # target to generate assembly for a file
 src/structure/node.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/node.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/node.c.s
 .PHONY : src/structure/node.c.s
 
 src/structure/setting.o: src/structure/setting.c.o
@@ -374,7 +422,7 @@ src/structure/setting.o: src/structure/setting.c.o
 
 # target to build an object file
 src/structure/setting.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/setting.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/setting.c.o
 .PHONY : src/structure/setting.c.o
 
 src/structure/setting.i: src/structure/setting.c.i
@@ -382,7 +430,7 @@ src/structure/setting.i: src/structure/setting.c.i
 
 # target to preprocess a source file
 src/structure/setting.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/setting.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/setting.c.i
 .PHONY : src/structure/setting.c.i
 
 src/structure/setting.s: src/structure/setting.c.s
@@ -390,7 +438,7 @@ src/structure/setting.s: src/structure/setting.c.s
 
 # target to generate assembly for a file
 src/structure/setting.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/setting.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/setting.c.s
 .PHONY : src/structure/setting.c.s
 
 src/structure/task.o: src/structure/task.c.o
@@ -398,7 +446,7 @@ src/structure/task.o: src/structure/task.c.o
 
 # target to build an object file
 src/structure/task.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/task.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/task.c.o
 .PHONY : src/structure/task.c.o
 
 src/structure/task.i: src/structure/task.c.i
@@ -406,7 +454,7 @@ src/structure/task.i: src/structure/task.c.i
 
 # target to preprocess a source file
 src/structure/task.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/task.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/task.c.i
 .PHONY : src/structure/task.c.i
 
 src/structure/task.s: src/structure/task.c.s
@@ -414,7 +462,7 @@ src/structure/task.s: src/structure/task.c.s
 
 # target to generate assembly for a file
 src/structure/task.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/structure/task.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/structure/task.c.s
 .PHONY : src/structure/task.c.s
 
 src/utils.o: src/utils.c.o
@@ -422,7 +470,7 @@ src/utils.o: src/utils.c.o
 
 # target to build an object file
 src/utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/utils.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/utils.c.o
 .PHONY : src/utils.c.o
 
 src/utils.i: src/utils.c.i
@@ -430,7 +478,7 @@ src/utils.i: src/utils.c.i
 
 # target to preprocess a source file
 src/utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/utils.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/utils.c.i
 .PHONY : src/utils.c.i
 
 src/utils.s: src/utils.c.s
@@ -438,15 +486,87 @@ src/utils.s: src/utils.c.s
 
 # target to generate assembly for a file
 src/utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/src/utils.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/src/utils.c.s
 .PHONY : src/utils.c.s
+
+test/db/data.o: test/db/data.c.o
+.PHONY : test/db/data.o
+
+# target to build an object file
+test/db/data.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/db/data.c.o
+.PHONY : test/db/data.c.o
+
+test/db/data.i: test/db/data.c.i
+.PHONY : test/db/data.i
+
+# target to preprocess a source file
+test/db/data.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/db/data.c.i
+.PHONY : test/db/data.c.i
+
+test/db/data.s: test/db/data.c.s
+.PHONY : test/db/data.s
+
+# target to generate assembly for a file
+test/db/data.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/db/data.c.s
+.PHONY : test/db/data.c.s
+
+test/display/help.o: test/display/help.c.o
+.PHONY : test/display/help.o
+
+# target to build an object file
+test/display/help.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/display/help.c.o
+.PHONY : test/display/help.c.o
+
+test/display/help.i: test/display/help.c.i
+.PHONY : test/display/help.i
+
+# target to preprocess a source file
+test/display/help.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/display/help.c.i
+.PHONY : test/display/help.c.i
+
+test/display/help.s: test/display/help.c.s
+.PHONY : test/display/help.s
+
+# target to generate assembly for a file
+test/display/help.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/display/help.c.s
+.PHONY : test/display/help.c.s
+
+test/display/print.o: test/display/print.c.o
+.PHONY : test/display/print.o
+
+# target to build an object file
+test/display/print.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/display/print.c.o
+.PHONY : test/display/print.c.o
+
+test/display/print.i: test/display/print.c.i
+.PHONY : test/display/print.i
+
+# target to preprocess a source file
+test/display/print.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/display/print.c.i
+.PHONY : test/display/print.c.i
+
+test/display/print.s: test/display/print.c.s
+.PHONY : test/display/print.s
+
+# target to generate assembly for a file
+test/display/print.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/display/print.c.s
+.PHONY : test/display/print.c.s
 
 test/structrue/test_command.o: test/structrue/test_command.c.o
 .PHONY : test/structrue/test_command.o
 
 # target to build an object file
 test/structrue/test_command.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/test/structrue/test_command.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/structrue/test_command.c.o
 .PHONY : test/structrue/test_command.c.o
 
 test/structrue/test_command.i: test/structrue/test_command.c.i
@@ -454,7 +574,7 @@ test/structrue/test_command.i: test/structrue/test_command.c.i
 
 # target to preprocess a source file
 test/structrue/test_command.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/test/structrue/test_command.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/structrue/test_command.c.i
 .PHONY : test/structrue/test_command.c.i
 
 test/structrue/test_command.s: test/structrue/test_command.c.s
@@ -462,7 +582,7 @@ test/structrue/test_command.s: test/structrue/test_command.c.s
 
 # target to generate assembly for a file
 test/structrue/test_command.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/test/structrue/test_command.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/structrue/test_command.c.s
 .PHONY : test/structrue/test_command.c.s
 
 test/structrue/test_date.o: test/structrue/test_date.c.o
@@ -470,7 +590,7 @@ test/structrue/test_date.o: test/structrue/test_date.c.o
 
 # target to build an object file
 test/structrue/test_date.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/test/structrue/test_date.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/structrue/test_date.c.o
 .PHONY : test/structrue/test_date.c.o
 
 test/structrue/test_date.i: test/structrue/test_date.c.i
@@ -478,7 +598,7 @@ test/structrue/test_date.i: test/structrue/test_date.c.i
 
 # target to preprocess a source file
 test/structrue/test_date.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/test/structrue/test_date.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/structrue/test_date.c.i
 .PHONY : test/structrue/test_date.c.i
 
 test/structrue/test_date.s: test/structrue/test_date.c.s
@@ -486,7 +606,7 @@ test/structrue/test_date.s: test/structrue/test_date.c.s
 
 # target to generate assembly for a file
 test/structrue/test_date.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/test/structrue/test_date.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/structrue/test_date.c.s
 .PHONY : test/structrue/test_date.c.s
 
 test/structrue/test_error.o: test/structrue/test_error.c.o
@@ -494,7 +614,7 @@ test/structrue/test_error.o: test/structrue/test_error.c.o
 
 # target to build an object file
 test/structrue/test_error.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/test/structrue/test_error.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/structrue/test_error.c.o
 .PHONY : test/structrue/test_error.c.o
 
 test/structrue/test_error.i: test/structrue/test_error.c.i
@@ -502,7 +622,7 @@ test/structrue/test_error.i: test/structrue/test_error.c.i
 
 # target to preprocess a source file
 test/structrue/test_error.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/test/structrue/test_error.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/structrue/test_error.c.i
 .PHONY : test/structrue/test_error.c.i
 
 test/structrue/test_error.s: test/structrue/test_error.c.s
@@ -510,7 +630,7 @@ test/structrue/test_error.s: test/structrue/test_error.c.s
 
 # target to generate assembly for a file
 test/structrue/test_error.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/test/structrue/test_error.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/structrue/test_error.c.s
 .PHONY : test/structrue/test_error.c.s
 
 test/structrue/test_node.o: test/structrue/test_node.c.o
@@ -518,7 +638,7 @@ test/structrue/test_node.o: test/structrue/test_node.c.o
 
 # target to build an object file
 test/structrue/test_node.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/test/structrue/test_node.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/structrue/test_node.c.o
 .PHONY : test/structrue/test_node.c.o
 
 test/structrue/test_node.i: test/structrue/test_node.c.i
@@ -526,7 +646,7 @@ test/structrue/test_node.i: test/structrue/test_node.c.i
 
 # target to preprocess a source file
 test/structrue/test_node.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/test/structrue/test_node.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/structrue/test_node.c.i
 .PHONY : test/structrue/test_node.c.i
 
 test/structrue/test_node.s: test/structrue/test_node.c.s
@@ -534,7 +654,7 @@ test/structrue/test_node.s: test/structrue/test_node.c.s
 
 # target to generate assembly for a file
 test/structrue/test_node.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/test/structrue/test_node.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/structrue/test_node.c.s
 .PHONY : test/structrue/test_node.c.s
 
 test/structrue/test_task.o: test/structrue/test_task.c.o
@@ -542,7 +662,7 @@ test/structrue/test_task.o: test/structrue/test_task.c.o
 
 # target to build an object file
 test/structrue/test_task.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/test/structrue/test_task.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/structrue/test_task.c.o
 .PHONY : test/structrue/test_task.c.o
 
 test/structrue/test_task.i: test/structrue/test_task.c.i
@@ -550,7 +670,7 @@ test/structrue/test_task.i: test/structrue/test_task.c.i
 
 # target to preprocess a source file
 test/structrue/test_task.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/test/structrue/test_task.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/structrue/test_task.c.i
 .PHONY : test/structrue/test_task.c.i
 
 test/structrue/test_task.s: test/structrue/test_task.c.s
@@ -558,7 +678,7 @@ test/structrue/test_task.s: test/structrue/test_task.c.s
 
 # target to generate assembly for a file
 test/structrue/test_task.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_node.dir/build.make CMakeFiles/test_node.dir/test/structrue/test_task.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_all.dir/build.make CMakeFiles/test_all.dir/test/structrue/test_task.c.s
 .PHONY : test/structrue/test_task.c.s
 
 # Help Target
@@ -569,7 +689,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test_node"
+	@echo "... test_all"
+	@echo "... src/db/data.o"
+	@echo "... src/db/data.i"
+	@echo "... src/db/data.s"
 	@echo "... src/display/display.o"
 	@echo "... src/display/display.i"
 	@echo "... src/display/display.s"
@@ -588,6 +711,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/parse/parse_node.o"
+	@echo "... src/parse/parse_node.i"
+	@echo "... src/parse/parse_node.s"
 	@echo "... src/structure/command.o"
 	@echo "... src/structure/command.i"
 	@echo "... src/structure/command.s"
@@ -609,6 +735,15 @@ help:
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"
+	@echo "... test/db/data.o"
+	@echo "... test/db/data.i"
+	@echo "... test/db/data.s"
+	@echo "... test/display/help.o"
+	@echo "... test/display/help.i"
+	@echo "... test/display/help.s"
+	@echo "... test/display/print.o"
+	@echo "... test/display/print.i"
+	@echo "... test/display/print.s"
 	@echo "... test/structrue/test_command.o"
 	@echo "... test/structrue/test_command.i"
 	@echo "... test/structrue/test_command.s"

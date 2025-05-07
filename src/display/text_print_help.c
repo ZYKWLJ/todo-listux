@@ -96,7 +96,7 @@ void text_print_help(const char **str[], int columns_num)
             {
                 text_print_padded("", col_max_widths[i]);
             }
-            printf(" %s",BORDER_VERTICAL_LINE);
+            printf(" %s", BORDER_VERTICAL_LINE);
             // printf(BORDER_VERTICAL_LINE);
         }
         printf("\n");
@@ -114,7 +114,7 @@ void text_print_help(const char **str[], int columns_num)
         }
     }
     // printf("%s\n",BORDER_PLUS);
-    printf("%s\n",BORDER_PLUS);
+    printf("%s\n", BORDER_PLUS);
 }
 
 // 打印表格内容的函数（通用版本）
@@ -161,7 +161,7 @@ void text_print(const char **str[], int columns_num)
             printf(BORDER_MINUS);
         }
     }
-    printf("%s\n",BORDER_PLUS);
+    printf("%s\n", BORDER_PLUS);
 
     // 4. 打印表格内容（从第2行开始）
     for (int row = 0; row < max_rows; row++)
@@ -178,7 +178,7 @@ void text_print(const char **str[], int columns_num)
             {
                 text_print_padded("", col_max_widths[i]);
             }
-            printf(" %s",BORDER_VERTICAL_LINE);
+            printf(" %s", BORDER_VERTICAL_LINE);
         }
         printf("\n");
     }
@@ -192,5 +192,5 @@ void text_print(const char **str[], int columns_num)
             printf(BORDER_MINUS);
         }
     }
-    printf("%s\n",BORDER_PLUS);
+    printf("%s\n", BORDER_PLUS);
 }
