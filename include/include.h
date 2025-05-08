@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdbool.h>
 #include "structure/command.h"
 #include "utils.h"
 #include "structure/date.h"

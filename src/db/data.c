@@ -132,6 +132,8 @@ void DB_show_task(T_date date, string prefix)
     printf("Tasks for %s (Total: %d):\n", prefix, total);
     fseek(fp, 0, SEEK_SET);
     int index = 0;
+            LOG_PRINT("settings before show:\n%s=%s\n%s=%s", setting->color->key, setting->color->value_set, setting->show->key, setting->show->value_set);
+
     while (fgets(line, 100000, fp) != NULL)
     {
 
@@ -294,27 +296,276 @@ void DB_delete_task(N_node node, T_date date, string prefix)
     // 5. 显示更新后的任务列表
     DB_show_task(date, prefix);
 }
+// void DB_edit_all_task(N_node node, T_date date, string prefix)
+// {
+//     /**
+//      * data descp: 解析出要查找的任务的日期类型和日期即可，都在date里面，不需要参数node.至于查找的路径，已经被写死了，不用传参！
+//      */
+//     TODO_PRINT("DB_edit_all_task......prefix=%s\n", prefix);
+// }
+
 void DB_edit_all_task(N_node node, T_date date, string prefix)
 {
-    /**
-     * data descp: 解析出要查找的任务的日期类型和日期即可，都在date里面，不需要参数node.至于查找的路径，已经被写死了，不用传参！
-     */
-    TODO_PRINT("DB_edit_all_task......prefix=%s\n", prefix);
+    TODO_PRINT("DB_edit_task_content......prefix=%s\n", prefix);
+
+    // 1. 打开文件
+    FILE *fp = fopen(get_appdata_path(DATE_FILE), "r");
+    if (fp == NULL)
+    {
+        printf("%s open failed\n", get_appdata_path(DATE_FILE));
+        exit(EXIT_FAILURE);
+    }
+
+    // 2. 创建临时文件
+    char tmp_file[256];
+    snprintf(tmp_file, sizeof(tmp_file), "%s.tmp", get_appdata_path(DATE_FILE));
+    FILE *tmp_fp = fopen(tmp_file, "w");
+    if (tmp_fp == NULL)
+    {
+        fclose(fp);
+        printf("Failed to create temp file\n");
+        exit(EXIT_FAILURE);
+    }
+
+    char line[100000];
+    bool changed = false;
+    int index = 0;
+    // 3. 处理每一行
+    while (fgets(line, sizeof(line), fp) != NULL)
+    {
+        // 检查是否匹配前缀
+        if (strncmp(line, prefix, strlen(prefix)) == 0)
+        {
+            index++;
+            if (index == node->task->id)
+            {
+                // 解析原有行内容
+                char old_prefix[100], old_desc[1000], old_status[10];
+                char old_create_time[20], old_complete_time[20], old_duration[20];
+
+                int count = sscanf(line, "%s %s %s %s %s %s",
+                                   old_prefix, old_desc, old_status,
+                                   old_create_time, old_complete_time, old_duration);
+
+                if (count == 6)
+                {
+                    // 只替换描述部分，其他保持不变
+                    char new_line[100000];
+                    snprintf(new_line, sizeof(new_line), "%s %s %s %s %s %s\n",
+                             old_prefix,
+                             node->task->content, // 新描述
+                             old_status,
+                             old_create_time,
+                             old_complete_time,
+                             old_duration);
+
+                    fputs(new_line, tmp_fp);
+                    changed = true;
+                    continue;
+                }
+            }
+        }
+        // 不匹配或解析失败的行原样写入
+        fputs(line, tmp_fp);
+    }
+
+    fclose(fp);
+    fclose(tmp_fp);
+
+    // 4. 替换原文件
+    if (changed)
+    {
+        if (rename(tmp_file, get_appdata_path(DATE_FILE)) != 0)
+        {
+            printf("Failed to replace file\n");
+            exit(EXIT_FAILURE);
+        }
+    }
+    else
+    {
+        remove(tmp_file);
+        printf("No matching tasks found\n");
+    }
+    DB_show_task(date, prefix);
 }
 void DB_edit_prefix_task(N_node node, T_date date, string prefix)
 {
-    /**
-     * data descp: 解析出要查找的任务的日期类型和日期即可，都在date里面，不需要参数node.至于查找的路径，已经被写死了，不用传参！
-     */
-    TODO_PRINT("DB_edit_prefix_task......prefix=%s\n", prefix);
+    TODO_PRINT("DB_edit_task_content......prefix=%s\n", prefix);
+
+    // 1. 打开文件
+    FILE *fp = fopen(get_appdata_path(DATE_FILE), "r");
+    if (fp == NULL)
+    {
+        printf("%s open failed\n", get_appdata_path(DATE_FILE));
+        exit(EXIT_FAILURE);
+    }
+
+    // 2. 创建临时文件
+    char tmp_file[256];
+    snprintf(tmp_file, sizeof(tmp_file), "%s.tmp", get_appdata_path(DATE_FILE));
+    FILE *tmp_fp = fopen(tmp_file, "w");
+    if (tmp_fp == NULL)
+    {
+        fclose(fp);
+        printf("Failed to create temp file\n");
+        exit(EXIT_FAILURE);
+    }
+
+    char line[100000];
+    bool changed = false;
+    int index = 0;
+    // 3. 处理每一行
+    while (fgets(line, sizeof(line), fp) != NULL)
+    {
+        // 检查是否匹配前缀
+        if (strncmp(line, prefix, strlen(prefix)) == 0)
+        {
+            index++;
+            if (index == node->task->id)
+            {
+                // 解析原有行内容
+                char old_prefix[100], old_desc[1000], old_status[10];
+                char old_create_time[20], old_complete_time[20], old_duration[20];
+
+                int count = sscanf(line, "%s %s %s %s %s %s",
+                                   old_prefix, old_desc, old_status,
+                                   old_create_time, old_complete_time, old_duration);
+
+                if (count == 6)
+                {
+                    // 只替换描述部分，其他保持不变
+                    char new_line[100000];
+                    snprintf(new_line, sizeof(new_line), "%s %s %s %s %s %s\n",
+                             old_prefix,
+                             strcat(old_desc, node->task->content), // 新描述
+                             old_status,
+                             old_create_time,
+                             old_complete_time,
+                             old_duration);
+
+                    fputs(new_line, tmp_fp);
+                    changed = true;
+                    continue;
+                }
+            }
+        }
+        // 不匹配或解析失败的行原样写入
+        fputs(line, tmp_fp);
+    }
+
+    fclose(fp);
+    fclose(tmp_fp);
+
+    // 4. 替换原文件
+    if (changed)
+    {
+        if (rename(tmp_file, get_appdata_path(DATE_FILE)) != 0)
+        {
+            printf("Failed to replace file\n");
+            exit(EXIT_FAILURE);
+        }
+    }
+    else
+    {
+        remove(tmp_file);
+        printf("No matching tasks found\n");
+    }
+    DB_show_task(date, prefix);
 }
+
+// void DB_edit_suffix_task(N_node node, T_date date, string prefix)
+// {
+//     /**
+//      * data descp: 解析出要查找的任务的日期类型和日期即可，都在date里面，不需要参数node.至于查找的路径，已经被写死了，不用传参！
+//      */
+//     TODO_PRINT("DB_edit_suffix_task......prefix=%s\n", prefix);
+// }
+
 void DB_edit_suffix_task(N_node node, T_date date, string prefix)
 {
-    /**
-     * data descp: 解析出要查找的任务的日期类型和日期即可，都在date里面，不需要参数node.至于查找的路径，已经被写死了，不用传参！
-     */
-    TODO_PRINT("DB_edit_suffix_task......prefix=%s\n", prefix);
+    TODO_PRINT("DB_edit_task_content......prefix=%s\n", prefix);
+
+    // 1. 打开文件
+    FILE *fp = fopen(get_appdata_path(DATE_FILE), "r");
+    if (fp == NULL)
+    {
+        printf("%s open failed\n", get_appdata_path(DATE_FILE));
+        exit(EXIT_FAILURE);
+    }
+
+    // 2. 创建临时文件
+    char tmp_file[256];
+    snprintf(tmp_file, sizeof(tmp_file), "%s.tmp", get_appdata_path(DATE_FILE));
+    FILE *tmp_fp = fopen(tmp_file, "w");
+    if (tmp_fp == NULL)
+    {
+        fclose(fp);
+        printf("Failed to create temp file\n");
+        exit(EXIT_FAILURE);
+    }
+
+    char line[100000];
+    bool changed = false;
+    int index = 0;
+    // 3. 处理每一行
+    while (fgets(line, sizeof(line), fp) != NULL)
+    {
+        // 检查是否匹配前缀
+        if (strncmp(line, prefix, strlen(prefix)) == 0)
+        {
+            index++;
+            if (index == node->task->id)
+            {
+                // 解析原有行内容
+                char old_prefix[100], old_desc[1000], old_status[10];
+                char old_create_time[20], old_complete_time[20], old_duration[20];
+
+                int count = sscanf(line, "%s %s %s %s %s %s",
+                                   old_prefix, old_desc, old_status,
+                                   old_create_time, old_complete_time, old_duration);
+
+                if (count == 6)
+                {
+                    // 只替换描述部分，其他保持不变
+                    char new_line[100000];
+                    snprintf(new_line, sizeof(new_line), "%s %s %s %s %s %s\n",
+                             old_prefix,
+                             strcat(node->task->content, old_desc), // 新描述
+                             old_status,
+                             old_create_time,
+                             old_complete_time,
+                             old_duration);
+
+                    fputs(new_line, tmp_fp);
+                    changed = true;
+                    continue;
+                }
+            }
+        }
+        // 不匹配或解析失败的行原样写入
+        fputs(line, tmp_fp);
+    }
+
+    fclose(fp);
+    fclose(tmp_fp);
+
+    // 4. 替换原文件
+    if (changed)
+    {
+        if (rename(tmp_file, get_appdata_path(DATE_FILE)) != 0)
+        {
+            printf("Failed to replace file\n");
+            exit(EXIT_FAILURE);
+        }
+    }
+    else
+    {
+        remove(tmp_file);
+        printf("No matching tasks found\n");
+    }
+    DB_show_task(date, prefix);
 }
+
 void DB_done_task(N_node node, T_date date, string prefix)
 {
     TODO_PRINT("DB_done_task......prefix=%s\n", prefix);
@@ -530,5 +781,8 @@ void DB_set_config(KV_ kv)
      * data descp: 解析出要查找的任务的日期类型和日期即可，都在date里面，不需要参数node.至于查找的路径，已经被写死了，不用传参！
      */
     TODO_PRINT("DB_set_config......K=%s\tv=%s\n", kv->key, kv->value);
+    LOG_PRINT("settings before set:\n%s=%s\n%s=%s", setting->color->key, setting->color->value_set, setting->show->key, setting->show->value_set);
     save_setting(get_appdata_path(SETTING_FILE), kv);
+    load_setting(get_appdata_path(SETTING_FILE));
+    LOG_PRINT("settings after set:\n%s=%s\n%s=%s", setting->color->key, setting->color->value_set, setting->show->key, setting->show->value_set);
 }

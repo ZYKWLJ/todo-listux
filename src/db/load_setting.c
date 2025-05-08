@@ -7,6 +7,7 @@ extern S_setting setting;
 */
 void load_setting(const char *path)
 {
+    LOG_PRINT("LOG_setting......\n");
     FILE *fp = fopen(path, "r");
     if (fp == NULL)
     {
@@ -47,4 +48,5 @@ void load_setting(const char *path)
         }
         fclose(fp);
     }
+    LOG_PRINT("LOG_setting  over......\n");
 }

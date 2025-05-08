@@ -6,5 +6,6 @@
 #include "../include.h"
 
 void parse_node(N_node node, C_command command, T_date date);
+void only_parse_date(C_command command, char *date_type, T_date date);
 
 #endif

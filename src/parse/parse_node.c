@@ -298,6 +298,35 @@ void validate_year_format(C_command command, char *date_str, T_date date)
     // LOG_PRINT("year parser passed!!!\n");
 }
 
+void only_parse_date(C_command command, char *date_type, T_date date)
+{
+    if (strcmp(date_type, "-day") == 0 || strcmp(date_type, "-d") == 0)
+    {
+        date->T_specific_date->date_type = D;
+        return;
+    }
+    else if (strcmp(date_type, "-week") == 0 || strcmp(date_type, "-w") == 0)
+    {
+        date->T_specific_date->date_type = W;
+        return;
+    }
+    else if (strcmp(date_type, "-month") == 0 || strcmp(date_type, "-m") == 0)
+    {
+        date->T_specific_date->date_type = M;
+        return;
+    }
+    else if (strcmp(date_type, "-year") == 0 || strcmp(date_type, "-y") == 0)
+    {
+        date->T_specific_date->date_type = Y;
+        return;
+    }
+    else
+    {
+        COMMAND_ERROR(command, " --Error date_type,it should be -d/day,-w/week,-m/month,-y/year,but here is %s\n", date_type);
+        exit(EXIT_FAILURE);
+    }
+}
+
 void parse_date(C_command command, char *date_type, char *specific_date_str, T_date date)
 {
     if (strcmp(date_type, "-day") == 0 || strcmp(date_type, "-d") == 0)
@@ -340,6 +369,16 @@ void parse_show_node(N_node node, C_command command, T_date date)
         // 日期默认当前，不必在做
         return; // 提前返回了
     }
+/**
+ * data descp: 应该新增三参数的指定当前周的任务的功能，比如tl ^ -w 就是直接显示当前周的计划，否则很麻烦
+ */
+#if 1
+    else if (command->argc == 3)
+    {
+        only_parse_date(command, command->argv[2], date);
+    }
+
+#endif
     else if (command->argc == 4)
     {
         /**
@@ -380,6 +419,13 @@ void parse_add_node(N_node node, C_command command, T_date date)
         sprintf(node->task->content, "%s", command->argv[2]);
         return;
     }
+    /**
+     * data descp: 增加4各参数的指定当前日期的功能，如tl + xxxx -w指的是在当前周添加任务
+     */
+    else if (command->argc == 4)
+    {
+        only_parse_date(command, command->argv[3], date);
+    }
     else if (command->argc == 5)
     {
         /**
@@ -418,13 +464,31 @@ void parse_delete_node(N_node node, C_command command, T_date date)
          */
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"delete\" command is as follows:", command->argv[2]);
+            help_delete();
             exit(EXIT_FAILURE);
         }
         node->task->id = atoi(command->argv[2]);
         return;
     }
-
+    /**
+     * data descp: 新增4个参数的指定当前日期的功能，如tl / 1 -w指的是删除当前周的某个任务
+     */
+    else if (command->argc == 4)
+    {
+        /**
+         * data descp: 先判断日期类型是不是合法
+         */
+        only_parse_date(command, command->argv[3], date);
+        /**
+         * data descp: 再判断是不是id数字
+         */
+        if (!is_all_digits(command->argv[2]))
+        {
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"delete\" command is as follows:", command->argv[2]);
+        }
+        node->task->id = atoi(command->argv[2]);
+    }
     /**
      * data descp: 新增指定日期的任务 tl / 1 -date_type date
      */
@@ -435,7 +499,8 @@ void parse_delete_node(N_node node, C_command command, T_date date)
         parse_date(command, command->argv[3], command->argv[4], date);
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"delete\" command is as follows:", command->argv[2]);
+            help_delete();
             exit(EXIT_FAILURE);
         }
         node->task->id = atoi(command->argv[2]);
@@ -447,7 +512,7 @@ void parse_delete_node(N_node node, C_command command, T_date date)
         /**
          * data descp: 参数数量不匹配
          */
-        COMMAND_ERROR(command, " --The number of parameters does not match. \nThe correct format of the \"add\" command is as follows:");
+        COMMAND_ERROR(command, " --The number of parameters does not match. \nThe correct format of the \"delete\" command is as follows:");
         help_delete();
         exit(EXIT_FAILURE);
     }
@@ -469,13 +534,31 @@ void parse_done_node(N_node node, C_command command, T_date date)
          */
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"done\" command is as follows:", command->argv[2]);
+            help_done();
             exit(EXIT_FAILURE);
         }
         node->task->id = atoi(command->argv[2]);
         return;
     }
-
+    /**
+     * data descp: 新增4个参数的指定当前日期的功能，如tl - 1 -w指的是在当前周完成任务
+     */
+    else if (command->argc == 4)
+    {
+        /**
+         * data descp: 先判断日期类型是不是合法
+         */
+        only_parse_date(command, command->argv[3], date);
+        /**
+         * data descp: 再判断是不是id数字
+         */
+        if (!is_all_digits(command->argv[2]))
+        {
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"delete\" command is as follows:", command->argv[2]);
+        }
+        node->task->id = atoi(command->argv[2]);
+    }
     /**
      * data descp: 新增指定日期的任务 tl - 1 -date_type date
      */
@@ -486,7 +569,8 @@ void parse_done_node(N_node node, C_command command, T_date date)
         parse_date(command, command->argv[3], command->argv[4], date);
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"done\" command is as follows:", command->argv[2]);
+            help_done();
             exit(EXIT_FAILURE);
         }
         node->task->id = atoi(command->argv[2]);
@@ -498,7 +582,7 @@ void parse_done_node(N_node node, C_command command, T_date date)
         /**
          * data descp: 参数数量不匹配
          */
-        COMMAND_ERROR(command, " --The number of parameters does not match. \nThe correct format of the \"add\" command is as follows:");
+        COMMAND_ERROR(command, " --The number of parameters does not match. \nThe correct format of the \"done\" command is as follows:");
         help_done();
         exit(EXIT_FAILURE);
     }
@@ -520,13 +604,30 @@ void parse_toggle_node(N_node node, C_command command, T_date date)
          */
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %sThe correct format of the \"toggle\" command is as follows:\n", command->argv[2]);
             exit(EXIT_FAILURE);
         }
         node->task->id = atoi(command->argv[2]);
         return;
     }
-
+    /**
+     * data descp: 新增4个参数的指定当前日期的功能，如tl ! 1 -w指的是翻转当前周的某个任务
+     */
+    else if (command->argc == 4)
+    {
+        /**
+         * data descp: 先判断日期类型是不是合法
+         */
+        only_parse_date(command, command->argv[3], date);
+        /**
+         * data descp: 再判断是不是id数字
+         */
+        if (!is_all_digits(command->argv[2]))
+        {
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"delete\" command is as follows:", command->argv[2]);
+        }
+        node->task->id = atoi(command->argv[2]);
+    }
     /**
      * data descp: 新增指定日期的任务 tl ! 1 -date_type date
      */
@@ -537,7 +638,7 @@ void parse_toggle_node(N_node node, C_command command, T_date date)
         parse_date(command, command->argv[3], command->argv[4], date);
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"toggle\" command is as follows:", command->argv[2]);
             exit(EXIT_FAILURE);
         }
         node->task->id = atoi(command->argv[2]);
@@ -549,7 +650,7 @@ void parse_toggle_node(N_node node, C_command command, T_date date)
         /**
          * data descp: 参数数量不匹配
          */
-        COMMAND_ERROR(command, " --The number of parameters does not match. \nThe correct format of the \"add\" command is as follows:");
+        COMMAND_ERROR(command, " --The number of parameters does not match.\nThe correct format of the \"toggle\" command is as follows:");
         help_toggle();
         exit(EXIT_FAILURE);
     }
@@ -570,14 +671,34 @@ void parse_edit_node(N_node node, C_command command, T_date date)
          */
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"edit\" command is as follows:\n", command->argv[2]);
+            help_edit();
             exit(EXIT_FAILURE);
         }
         node->task->id = atoi(command->argv[2]);
         sprintf(node->task->content, "%s", command->argv[3]);
         return;
     }
-
+    /**
+     * data descp: 新增4个参数的指定当前日期的功能，如tl = 1 -w指的是编辑当前周的某个任务
+     */
+    else if (command->argc == 4)
+    {
+        /**
+         * data descp: 先判断日期类型是不是合法
+         */
+        only_parse_date(command, command->argv[3], date);
+        /**
+         * data descp: 再判断是不是id数字
+         */
+        if (!is_all_digits(command->argv[2]))
+        {
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"delete\" command is as follows:", command->argv[2]);
+        }
+        node->task->id = atoi(command->argv[2]);
+        sprintf(node->task->content, "%s", command->argv[3]);
+        return;
+    }
     /**
      * data descp: 新增指定日期的任务 tl = id content -date_type date
      */
@@ -588,7 +709,8 @@ void parse_edit_node(N_node node, C_command command, T_date date)
         parse_date(command, command->argv[4], command->argv[5], date);
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nthe correct format of the \"edit\" command is as follows:\n", command->argv[2]);
+            help_edit();
             exit(EXIT_FAILURE);
         }
         node->task->id = atoi(command->argv[2]);
@@ -604,7 +726,8 @@ void parse_edit_node(N_node node, C_command command, T_date date)
         /**
          * data descp: 参数数量不匹配
          */
-        COMMAND_ERROR(command, " --The number of parameters does not match. \nThe correct format of the \"add\" command is as follows:");
+        COMMAND_ERROR(command, " --The number of parameters does not match.\nThe correct format of the \"edit\" command is as follows:");
+        // help_edit();
         help_edit();
         exit(EXIT_FAILURE);
     }
@@ -630,6 +753,8 @@ void parse_set_node(N_node node, C_command command, T_date date)
         if (!equal_pos)
         {
             LOG_PRINT("No '=' found in argument\n");
+            COMMAND_ERROR(command, " --Parameters does not match.\nThe correct format of the \"set\" command is as follows:");
+            help_set();
             return;
         }
 
@@ -681,7 +806,7 @@ void parse_set_node(N_node node, C_command command, T_date date)
         /**
          * data descp: 参数数量不匹配
          */
-        COMMAND_ERROR(command, " --The number of parameters does not match. \nThe correct format of the \"add\" command is as follows:");
+        COMMAND_ERROR(command, " --The number of parameters does not match. \nThe correct format of the \"set\" command is as follows:");
         help_set();
         exit(EXIT_FAILURE);
     }

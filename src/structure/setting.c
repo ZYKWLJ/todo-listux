@@ -13,7 +13,7 @@ S_setting_item S_setting_item_init(S_setting_item t)
     // 初始化 value_allow 数组
     for (int i = 0; i < 10; i++)
     {
-        s_it->value_allow[i] =(char*)checked_malloc(100 * sizeof(char));
+        s_it->value_allow[i] = (char *)checked_malloc(100 * sizeof(char));
     }
 
     return s_it;
@@ -30,8 +30,16 @@ S_setting S_setting_init(S_setting s)
 // set_settings_init 修正
 void set_settings_init(S_setting settings)
 {
+    /**
+     * data descp: 初始化在外面设置了
+     */
     // 首先判断是不是存在了默认配置,这个不需要，因为我们一定会在后面加载默认配置的！
-
+    // FILE *fp = fopen(get_appdata_path(SETTING_FILE), "r");
+    // if (fp != NULL)
+    // {
+    //     load_setting(get_appdata_path(SETTING_FILE));
+    //     return;
+    // }
     if (!settings)
     {
         LOG_PRINT("set_settings_allow: settings is NULL\n");
@@ -109,5 +117,3 @@ void S_settings_print(S_setting settings)
     LOG_PRINT("color: %s\n", settings->color->value_set);
     LOG_PRINT("show: %s\n", settings->show->value_set);
 }
-
-

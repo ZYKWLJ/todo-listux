@@ -60,14 +60,14 @@ void COMMAND_ERROR(C_command command, const char *format, ...);
  * create time:2025/05/01 14:42:08
  */
 
-#define TODO
+// #define TODO
 #ifdef TODO
 #define TODO_PRINT(...)                                                    \
     printf("[TODO %s %s %s:%d] ", __DATE__, __TIME__, __FILE__, __LINE__); \
     printf(__VA_ARGS__);                                                  \
     printf("\n")
 #else
-#define TODO_PRINT(msg) \
+#define TODO_PRINT(...) \
     do                 \
     {                  \
     } while (0)

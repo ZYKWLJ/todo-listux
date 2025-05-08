@@ -44,8 +44,8 @@ int main(int argc, char **argv)
     create_file(get_appdata_path(DATE_FILE));
 
     setting = S_setting_init(NULL);
-    load_setting(get_appdata_path(SETTING_FILE));
     set_settings_init(setting);
+    load_setting(get_appdata_path(SETTING_FILE));
     S_settings_print(setting);
     kv = (KV_)checked_malloc(sizeof(*kv));
     /**
@@ -68,6 +68,9 @@ int main(int argc, char **argv)
     node->node_type = get_exec_index(command->argv[1]);
     node->task = T_task_init(NULL);
     LOG_PRINT("node_type: %d\n", node->node_type);
+    /**
+     * func descp: 真正开始执行命令！(内含解析命令)
+     */
     exec(node, command, date);
     LOG_PRINT("exec over......\n");
 }

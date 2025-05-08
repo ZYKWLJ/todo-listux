@@ -116,7 +116,9 @@ void exec(N_node node, C_command command, T_date date)
     switch (node->node_type)
     {
     case 0:
-        printf("unkown node type of %s\n", command->argv[1]);
+        // printf("unkown node type of %s\n", command->argv[1]);
+        COMMAND_ERROR(command, " --unkown command type of %s\nThe valid command type is as follows:", command->argv[1]);
+        printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n", "?", "$", "+", "-", "/", "!", "=", "=%", "%=");
         break;
     case 1:
         help();
