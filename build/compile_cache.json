@@ -1,0 +1,77 @@
+{
+  "src\\db\\load_setting.c": {
+    "last_modified": 1746688932.8521297,
+    "last_compiled": 1746689585.9368386,
+    "object_file": "build\\db\\load_setting.o"
+  },
+  "src\\db\\save_setting.c": {
+    "last_modified": 1746686844.3847287,
+    "last_compiled": 1746689587.0032759,
+    "object_file": "build\\db\\save_setting.o"
+  },
+  "src\\display\\display.c": {
+    "last_modified": 1746544625.0,
+    "last_compiled": 1746689587.067539,
+    "object_file": "build\\display\\display.o"
+  },
+  "src\\display\\help.c": {
+    "last_modified": 1746687285.3058105,
+    "last_compiled": 1746689588.2474208,
+    "object_file": "build\\display\\help.o"
+  },
+  "src\\display\\text_display_width.c": {
+    "last_modified": 1746682926.1306007,
+    "last_compiled": 1746689589.3365018,
+    "object_file": "build\\display\\text_display_width.o"
+  },
+  "src\\display\\text_print_help.c": {
+    "last_modified": 1746689742.664456,
+    "last_compiled": 1746689746.6625464,
+    "object_file": "build\\display\\text_print_help.o"
+  },
+  "src\\exec\\exec.c": {
+    "last_modified": 1746688123.0101826,
+    "last_compiled": 1746689591.6919224,
+    "object_file": "build\\exec\\exec.o"
+  },
+  "src\\parse\\parse_node.c": {
+    "last_modified": 1746690554.4143815,
+    "last_compiled": 1746690577.2132163,
+    "object_file": "build\\parse\\parse_node.o"
+  },
+  "src\\structure\\command.c": {
+    "last_modified": 1746537977.0,
+    "last_compiled": 1746689593.9918118,
+    "object_file": "build\\structure\\command.o"
+  },
+  "src\\structure\\date.c": {
+    "last_modified": 1746607177.0,
+    "last_compiled": 1746689595.0900338,
+    "object_file": "build\\structure\\date.o"
+  },
+  "src\\structure\\error.c": {
+    "last_modified": 1746536274.0,
+    "last_compiled": 1746689596.174044,
+    "object_file": "build\\structure\\error.o"
+  },
+  "src\\structure\\node.c": {
+    "last_modified": 1746545985.0,
+    "last_compiled": 1746689597.3198059,
+    "object_file": "build\\structure\\node.o"
+  },
+  "src\\structure\\setting.c": {
+    "last_modified": 1746687457.5886476,
+    "last_compiled": 1746689598.390397,
+    "object_file": "build\\structure\\setting.o"
+  },
+  "src\\structure\\task.c": {
+    "last_modified": 1746607708.0,
+    "last_compiled": 1746689599.4547422,
+    "object_file": "build\\structure\\task.o"
+  },
+  "src\\db\\data.c": {
+    "last_modified": 1746690573.88389,
+    "last_compiled": 1746690576.105605,
+    "object_file": "build\\db\\data.o"
+  }
+}
