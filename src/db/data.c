@@ -132,8 +132,12 @@ void DB_show_task(T_date date, string prefix)
     printf("Tasks for %s (Total: %d):\n", prefix, total);
     fseek(fp, 0, SEEK_SET);
     int index = 0;
-            LOG_PRINT("settings before show:\n%s=%s\n%s=%s", setting->color->key, setting->color->value_set, setting->show->key, setting->show->value_set);
-
+    LOG_PRINT("settings before show:\n%s=%s\n%s=%s", setting->color->key, setting->color->value_set, setting->show->key, setting->show->value_set);
+    // 定义四个数组
+    static const char *arr1[100];
+    static const char *arr2[100];
+    static const char *arr3[100];
+    static const char *arr4[100];
     while (fgets(line, 100000, fp) != NULL)
     {
 
@@ -159,6 +163,7 @@ void DB_show_task(T_date date, string prefix)
             printf("part[%d]=%s\n", j, part[j]);
         }
 #endif
+
         if (strcmp(line, prefix) == 0)
         {
             index++;
@@ -172,15 +177,47 @@ void DB_show_task(T_date date, string prefix)
                                                            : RED;
                 color_suffix = RESET;
             }
-
-            printf("%s%2d. %s %s%s\n",
+/**
+ * data descp: 这里可根据设置的内容，增加时间的显示
+ */
+/**
+ * data descp: 要增加显示风格的话，需要将所有的输入到一个数组里面，具体是4个数组，然后再使用特制的print函数即可。
+ */
+#if 0
+            printf("%s%2d. %s %s%s",
                    color_prefix,
                    index,
                    status,
                    part[1],
                    color_suffix);
+            // if (strcmp(setting->time->value_set, "on") == 0)
+
+            printf(" %s", part[3]);
+            printf(" %s", part[4]);
+            printf(" %s\n", part[5]);
+#endif
+
+            // 格式化字符串
+            char temp[200];
+            snprintf(temp, sizeof(temp), "%s%2d. %s %s%s", color_prefix, index, status, part[1], color_suffix);
+            arr1[index - 1] = strdup(temp);
+            // arr2[index - 1] = strdup(part[3]);
+            // arr3[index - 1] = strdup(part[4]);
+            // arr4[index - 1] = strdup(part[5]);
+            snprintf(temp, sizeof(temp), "%s%s%s", color_prefix, part[3], color_suffix);
+            arr2[index - 1] = strdup(temp);
+
+            snprintf(temp, sizeof(temp), "%s%s%s", color_prefix, part[4], color_suffix);
+            arr3[index - 1] = strdup(temp);
+
+            snprintf(temp, sizeof(temp), "%s%s%s", color_prefix, part[5], color_suffix);
+            arr4[index - 1] = strdup(temp);
+            // 调用特制的 print 函数
+            // text_print_help(arr1, arr2, arr3, arr4, index);
         }
     }
+    const char **columns[4] = {arr1, arr2, arr3, arr4};
+    text_print(columns, sizeof(columns) / sizeof(columns[0]));
     free(line);
     fclose(fp);
 #endif
