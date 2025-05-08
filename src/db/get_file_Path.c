@@ -11,6 +11,7 @@
 #include <windows.h>
 #include <shlobj.h>
 #include <io.h>
+#include <direct.h> // 添加这个头文件以使用 _wmkdir
 #define open _open
 #define close _close
 #endif

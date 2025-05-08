@@ -40,7 +40,7 @@ def count_lines_in_directory(directory):
 
 
 if __name__ == "__main__":
-    directory = r"/home/eyk/桌面/TL/"
+    directory = r"D:\1code\TL"
     c_lines, h_lines = count_lines_in_directory(directory)
     print(f".c 文件: {c_lines}")
     print(f".h 文件: {h_lines}")

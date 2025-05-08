@@ -396,7 +396,7 @@ void parse_show_node(N_node node, C_command command, T_date date)
          * 1.直接show
          * 2.show ^ -date_type date
          */
-        COMMAND_ERROR(command, " --The number of parameters does not match. \nThe correct format of the \"show\" command is as follows:");
+        COMMAND_ERROR(command, " --The number of parameters does not match. \n, the correct format of the \"show\" command is as follows:");
         help_show();
         exit(EXIT_FAILURE);
     }
@@ -417,6 +417,7 @@ void parse_add_node(N_node node, C_command command, T_date date)
          * data descp: 交过后面的exec环节去解析，日期等等都已经指定了
          */
         sprintf(node->task->content, "%s", command->argv[2]);
+        strcpy(node->task->content, command->argv[2]);
         return;
     }
     /**
@@ -425,6 +426,7 @@ void parse_add_node(N_node node, C_command command, T_date date)
     else if (command->argc == 4)
     {
         only_parse_date(command, command->argv[3], date);
+        strcpy(node->task->content, command->argv[2]);
     }
     else if (command->argc == 5)
     {
@@ -442,7 +444,7 @@ void parse_add_node(N_node node, C_command command, T_date date)
         /**
          * data descp: 参数数量不匹配
          */
-        COMMAND_ERROR(command, " --The number of parameters does not match. \nThe correct format of the \"add\" command is as follows:");
+        COMMAND_ERROR(command, " --The number of parameters does not match. \n, the correct format of the \"add\" command is as follows:");
         help_add();
         exit(EXIT_FAILURE);
     }
@@ -450,11 +452,13 @@ void parse_add_node(N_node node, C_command command, T_date date)
 
 void parse_delete_node(N_node node, C_command command, T_date date)
 {
+    LOG_PRINT("parse_delete_node");
     /**
      * data descp: 还是先数量，后质量 tl / 1
      */
     if (command->argc == 3)
     {
+
         /**
          * data descp: 新增当天的任务
          */
@@ -464,11 +468,12 @@ void parse_delete_node(N_node node, C_command command, T_date date)
          */
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"delete\" command is as follows:", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n, the correct format of the \"delete\" command is as follows:", command->argv[2]);
             help_delete();
             exit(EXIT_FAILURE);
         }
         node->task->id = atoi(command->argv[2]);
+        LOG_PRINT("node_task_id=%d", node->task->id);
         return;
     }
     /**
@@ -485,9 +490,11 @@ void parse_delete_node(N_node node, C_command command, T_date date)
          */
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"delete\" command is as follows:", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n, the correct format of the \"delete\" command is as follows:", command->argv[2]);
+            help_delete();
         }
         node->task->id = atoi(command->argv[2]);
+        LOG_PRINT("node_task_id=%d", node->task->id);
     }
     /**
      * data descp: 新增指定日期的任务 tl / 1 -date_type date
@@ -499,7 +506,7 @@ void parse_delete_node(N_node node, C_command command, T_date date)
         parse_date(command, command->argv[3], command->argv[4], date);
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"delete\" command is as follows:", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n, the correct format of the \"delete\" command is as follows:", command->argv[2]);
             help_delete();
             exit(EXIT_FAILURE);
         }
@@ -512,7 +519,7 @@ void parse_delete_node(N_node node, C_command command, T_date date)
         /**
          * data descp: 参数数量不匹配
          */
-        COMMAND_ERROR(command, " --The number of parameters does not match. \nThe correct format of the \"delete\" command is as follows:");
+        COMMAND_ERROR(command, " --The number of parameters does not match. \n, the correct format of the \"delete\" command is as follows:");
         help_delete();
         exit(EXIT_FAILURE);
     }
@@ -534,7 +541,7 @@ void parse_done_node(N_node node, C_command command, T_date date)
          */
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"done\" command is as follows:", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n, the correct format of the \"done\" command is as follows:", command->argv[2]);
             help_done();
             exit(EXIT_FAILURE);
         }
@@ -555,7 +562,8 @@ void parse_done_node(N_node node, C_command command, T_date date)
          */
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"delete\" command is as follows:", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n, the correct format of the \"delete\" command is as follows:", command->argv[2]);
+            help_done();
         }
         node->task->id = atoi(command->argv[2]);
     }
@@ -569,7 +577,7 @@ void parse_done_node(N_node node, C_command command, T_date date)
         parse_date(command, command->argv[3], command->argv[4], date);
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"done\" command is as follows:", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n, the correct format of the \"done\" command is as follows:", command->argv[2]);
             help_done();
             exit(EXIT_FAILURE);
         }
@@ -582,7 +590,7 @@ void parse_done_node(N_node node, C_command command, T_date date)
         /**
          * data descp: 参数数量不匹配
          */
-        COMMAND_ERROR(command, " --The number of parameters does not match. \nThe correct format of the \"done\" command is as follows:");
+        COMMAND_ERROR(command, " --The number of parameters does not match. \n, the correct format of the \"done\" command is as follows:");
         help_done();
         exit(EXIT_FAILURE);
     }
@@ -604,7 +612,9 @@ void parse_toggle_node(N_node node, C_command command, T_date date)
          */
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %sThe correct format of the \"toggle\" command is as follows:\n", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s, the correct format of the \"toggle\" command is as follows:\n", command->argv[2]);
+            help_toggle();
+
             exit(EXIT_FAILURE);
         }
         node->task->id = atoi(command->argv[2]);
@@ -624,7 +634,8 @@ void parse_toggle_node(N_node node, C_command command, T_date date)
          */
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"delete\" command is as follows:", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n, the correct format of the \"delete\" command is as follows:", command->argv[2]);
+            help_toggle();
         }
         node->task->id = atoi(command->argv[2]);
     }
@@ -638,7 +649,9 @@ void parse_toggle_node(N_node node, C_command command, T_date date)
         parse_date(command, command->argv[3], command->argv[4], date);
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"toggle\" command is as follows:", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n, the correct format of the \"toggle\" command is as follows:", command->argv[2]);
+            help_toggle();
+
             exit(EXIT_FAILURE);
         }
         node->task->id = atoi(command->argv[2]);
@@ -650,7 +663,7 @@ void parse_toggle_node(N_node node, C_command command, T_date date)
         /**
          * data descp: 参数数量不匹配
          */
-        COMMAND_ERROR(command, " --The number of parameters does not match.\nThe correct format of the \"toggle\" command is as follows:");
+        COMMAND_ERROR(command, " --The number of parameters does not match.\n, the correct format of the \"toggle\" command is as follows:");
         help_toggle();
         exit(EXIT_FAILURE);
     }
@@ -671,7 +684,7 @@ void parse_edit_node(N_node node, C_command command, T_date date)
          */
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"edit\" command is as follows:\n", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n, the correct format of the \"edit\" command is as follows:\n", command->argv[2]);
             help_edit();
             exit(EXIT_FAILURE);
         }
@@ -693,7 +706,8 @@ void parse_edit_node(N_node node, C_command command, T_date date)
          */
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nThe correct format of the \"delete\" command is as follows:", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n, the correct format of the \"edit\" command is as follows:", command->argv[2]);
+            help_edit();
         }
         node->task->id = atoi(command->argv[2]);
         sprintf(node->task->content, "%s", command->argv[3]);
@@ -709,7 +723,7 @@ void parse_edit_node(N_node node, C_command command, T_date date)
         parse_date(command, command->argv[4], command->argv[5], date);
         if (!is_all_digits(command->argv[2]))
         {
-            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nthe correct format of the \"edit\" command is as follows:\n", command->argv[2]);
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\n, the correct format of the \"edit\" command is as follows:\n", command->argv[2]);
             help_edit();
             exit(EXIT_FAILURE);
         }
@@ -726,7 +740,7 @@ void parse_edit_node(N_node node, C_command command, T_date date)
         /**
          * data descp: 参数数量不匹配
          */
-        COMMAND_ERROR(command, " --The number of parameters does not match.\nThe correct format of the \"edit\" command is as follows:");
+        COMMAND_ERROR(command, " --The number of parameters does not match.\n, the correct format of the \"edit\" command is as follows:");
         // help_edit();
         help_edit();
         exit(EXIT_FAILURE);
@@ -753,7 +767,7 @@ void parse_set_node(N_node node, C_command command, T_date date)
         if (!equal_pos)
         {
             LOG_PRINT("No '=' found in argument\n");
-            COMMAND_ERROR(command, " --Parameters does not match.\nThe correct format of the \"set\" command is as follows:");
+            COMMAND_ERROR(command, " --Parameters does not match.\n, the correct format of the \"set\" command is as follows:");
             help_set();
             return;
         }
@@ -795,6 +809,14 @@ void parse_set_node(N_node node, C_command command, T_date date)
                     printf("%s\t", setting->show->value_allow[i]);
                 }
             }
+            else if (strcmp(kv->key, "time") == 0)
+            {
+                for (int i = 0; setting->time->value_allow[i]; i++)
+                {
+
+                    printf("%s\t", setting->time->value_allow[i]);
+                }
+            }
             printf("\n");
             exit(EXIT_FAILURE);
         }
@@ -806,7 +828,7 @@ void parse_set_node(N_node node, C_command command, T_date date)
         /**
          * data descp: 参数数量不匹配
          */
-        COMMAND_ERROR(command, " --The number of parameters does not match. \nThe correct format of the \"set\" command is as follows:");
+        COMMAND_ERROR(command, " --The number of parameters does not match. \n, the correct format of the \"set\" command is as follows:");
         help_set();
         exit(EXIT_FAILURE);
     }
@@ -814,6 +836,7 @@ void parse_set_node(N_node node, C_command command, T_date date)
 
 void parse_node(N_node node, C_command command, T_date date)
 {
+    LOG_PRINT("parse_node......");
     /**
      * func descp: 解析语法树
      */
@@ -825,7 +848,8 @@ void parse_node(N_node node, C_command command, T_date date)
     case ADD:
         parse_add_node(node, command, date);
         break;
-    case DELETE:
+    case DELETE_:
+        LOG_PRINT("delete_node......");
         parse_delete_node(node, command, date);
         break;
     case EDIT_ALL:

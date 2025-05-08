@@ -3,8 +3,15 @@
 #include "../include.h"
 #define SETTING_COLOR_KEY "color"
 #define SETTING_SHOW_KEY "show"
+#define SETTING_TIME_KEY "time"
+
 #define SETTING_COLOR_ALLOW_ON "on"
 #define SETTING_COLOR_ALLOW_OFF "off"
+
+#define SETTING_TIME_ALLOW_ON "on"
+#define SETTING_TIME_ALLOW_OFF "off"
+
+
 #define SETTING_SHOW_ALLOW_YEAR "year"
 #define SETTING_SHOW_ALLOW_MONTH "month"
 #define SETTING_SHOW_ALLOW_WEEK "week"
@@ -38,6 +45,8 @@ typedef struct S_setting_
 {
     S_setting_item color;
     S_setting_item show;
+    // 增加是否显示时间的设置
+    S_setting_item time;
 } *S_setting;
 S_setting_item S_setting_item_init(S_setting_item s);
 

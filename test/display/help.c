@@ -24,7 +24,7 @@
 // #define EDIT_PREFIX_TOKEN "=%"
 // #define EDIT_SUFFIX_TOKEN "%="
 // #define EQUAL "="
-
+   
 // #define SETTING_COLOR_KEY "color"
 // #define SETTING_SHOW_KEY "show"
 

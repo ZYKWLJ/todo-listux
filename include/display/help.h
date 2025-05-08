@@ -15,7 +15,7 @@
 #define ARGUMENTS4 "argument4"
 #define INSTRUCTION "instruction"
 #define HELP_TOKEN "?"
-#define DISPLAY_TOKEN "^"
+#define DISPLAY_TOKEN "\\"
 #define ADD_TOKEN "+"
 #define COMPLETE_TOKEN "-"
 #define DELETE_TOKEN "/"
@@ -28,6 +28,7 @@
 
 #define SETTING_COLOR_KEY "color"
 #define SETTING_SHOW_KEY "show"
+#define SETTING_TIME_KEY "time"
 
 // 用户手册
 // 这里引入我们对流层的编排系统，直接用编排系统的接口，实现标准的编排！
@@ -68,6 +69,7 @@
 #define CONFIGURATION_HELP "Setting available keys:"
 #define KV "key=value"
 #define CONFIGURATION_COLOR "on/off"
+#define CONFIGURATION_TIME "on/off"
 #define CONFIGURATION_SHOW "d/day/w/week/m/month/y/year"
 #define COLOR_ON "Enable colored output"
 #define COLOR_OFF "Disable colored output"

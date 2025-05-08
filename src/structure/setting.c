@@ -24,6 +24,7 @@ S_setting S_setting_init(S_setting s)
     S_setting settings = (S_setting)checked_malloc(sizeof(*s));
     settings->color = S_setting_item_init(NULL);
     settings->show = S_setting_item_init(NULL);
+    settings->time = S_setting_item_init(NULL);
     return settings;
 }
 
@@ -55,6 +56,16 @@ void set_settings_init(S_setting settings)
     strcpy(settings->color->value_allow[0], SETTING_COLOR_ALLOW_ON);
     // LOG_PRINT("color value_allow[0]: %s\n", settings->color->value_allow[0]);
     strcpy(settings->color->value_allow[1], SETTING_COLOR_ALLOW_OFF);
+
+    // 初始化time显示
+    // 初始化 color
+    strcpy(settings->time->key, SETTING_TIME_KEY);
+    // LOG_PRINT("color key: %s\n", settings->color->key);
+    strcpy(settings->time->value_set, SETTING_TIME_ALLOW_ON);
+    // LOG_PRINT("color value_set: %s\n", settings->color->value_set);
+    strcpy(settings->time->value_allow[0], SETTING_TIME_ALLOW_ON);
+    // LOG_PRINT("color value_allow[0]: %s\n", settings->color->value_allow[0]);
+    strcpy(settings->time->value_allow[1], SETTING_TIME_ALLOW_OFF);
 
     // LOG_PRINT("color value_allow[1]: %s\n", settings->color->value_allow[1]);
     settings->color->value_allow[2] = NULL;
@@ -96,14 +107,19 @@ int set_settings(S_setting setting, KV_ node)
         fprintf(stderr, "Invalid arguments\n");
         return 0;
     }
-    if (strcmp(node->key, "color") == 0)
+    else if (strcmp(node->key, "color") == 0)
     {
         int ret = try_set_value(setting->color, node->key, node->value);
         return ret; // color 匹配
     }
-    if (strcmp(node->key, "show") == 0)
+    else if (strcmp(node->key, "show") == 0)
     {
         int ret = try_set_value(setting->show, node->key, node->value);
+        return ret; // color 匹配
+    }
+    else if (strcmp(node->key, "time") == 0)
+    {
+        int ret = try_set_value(setting->time, node->key, node->value);
         return ret; // color 匹配
     }
     return 0; // key不匹配
@@ -115,5 +131,6 @@ void S_settings_print(S_setting settings)
         LOG_PRINT("S_settings_print: settings is NULL\n");
     }
     LOG_PRINT("color: %s\n", settings->color->value_set);
+    LOG_PRINT("time: %s\n", settings->time->value_set);
     LOG_PRINT("show: %s\n", settings->show->value_set);
 }

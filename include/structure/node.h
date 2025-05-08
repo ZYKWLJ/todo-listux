@@ -23,7 +23,7 @@ typedef struct N_node_
         HELP,        /*帮助信息*/
         SHOW,        /*显示*/
         ADD,         /*添加*/
-        DELETE,      /*删除*/
+        DELETE_,      /*删除*/
         EDIT_ALL,    /*编辑*/
         EDIT_PREFIX, /*编辑前缀*/
         EDIT_SUFFIX, /*编辑后缀*/

@@ -20,11 +20,13 @@ void load_setting(const char *path)
         }
         fprintf(fp, "color=on\n");
         fprintf(fp, "show=day\n");
+        fprintf(fp, "time=on\n");
         fclose(fp);
 
         // 同时将默认数据加载到setting中
         strcpy(setting->color->value_set, "on");
         strcpy(setting->show->value_set, "day");
+        strcpy(setting->time->value_set, "on");
     }
     else
     {
@@ -43,6 +45,9 @@ void load_setting(const char *path)
                 else if (strcmp(key, "show") == 0)
                 {
                     strcpy(setting->show->value_set, value);
+                }else if (strcmp(key, "time") == 0)
+                {
+                    strcpy(setting->time->value_set, value);
                 }
             }
         }

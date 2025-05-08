@@ -58,6 +58,7 @@ void exec_delete_task(N_node node, T_date date)
     /**
      * func descp: 用构造好的前缀去磁盘里面找对应的行！
      */
+    LOG_PRINT("delete_node_exec....");
     DB_delete_task(node, date, get_db_prefix(date));
 }
 
@@ -118,7 +119,7 @@ void exec(N_node node, C_command command, T_date date)
     case 0:
         // printf("unkown node type of %s\n", command->argv[1]);
         COMMAND_ERROR(command, " --unkown command type of %s\nThe valid command type is as follows:", command->argv[1]);
-        printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n", "?", "$", "+", "-", "/", "!", "=", "=%", "%=");
+        printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n", "?", "$", "\\", "+", "-", "/", "!", "=", "=%", "%=");
         break;
     case 1:
         help();
@@ -146,7 +147,7 @@ void exec(N_node node, C_command command, T_date date)
         exec_edit_prefix_task(node, date); /*找到指定前缀，编辑即可*/
         break;
     case 7:
-        TODO_PRINT("edit suffix function......");
+        TODO_PRINT("edit suffix function.......");
         exec_edit_suffix_task(node, date); /*找到指定前缀，编辑即可*/
         break;
     case 8:

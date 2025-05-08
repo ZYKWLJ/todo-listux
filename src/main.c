@@ -4,7 +4,7 @@
 string exec_words[] = {
     "NONE",
     "?",
-    "^",
+    "\\",
     "+",
     "/",
     "=",
@@ -37,6 +37,7 @@ C_command command;
 // string S_setting_path="/tmp/";
 int main(int argc, char **argv)
 {
+    LOG_PRINT("MAIN_start......");
     /**
      * data descp: 本该如此，最先初始化的就是设置！
      */
@@ -72,7 +73,8 @@ int main(int argc, char **argv)
      * func descp: 真正开始执行命令！(内含解析命令)
      */
     exec(node, command, date);
-    LOG_PRINT("exec over......\n");
+    LOG_PRINT("exec over......... \n");
+    // printf("hello ");
 }
 
 #endif
