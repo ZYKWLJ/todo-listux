@@ -105,6 +105,11 @@ void exec_set_config()
     DB_set_config(kv);
 }
 
+void exec_help_node(C_command command)
+{
+
+}
+
 void exec(N_node node, C_command command, T_date date)
 {
     /**
@@ -121,13 +126,16 @@ void exec(N_node node, C_command command, T_date date)
         COMMAND_ERROR(command, " --unkown command type of %s\nThe valid command type is as follows:", command->argv[1]);
         // printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n", "?", "$", "\\", "+", "-", "/", "!", "=", "=%", "%=");
         // GREEN_PRINT("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n", "?", "$", "\\", "+", "-", "/", "!", "=", "=%", "%=");
-        
+
         GREEN_PRINT("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n\n",
                     HELP_TOKEN, CONFIGURATION_TOKEN, DISPLAY_TOKEN, ADD_TOKEN, COMPLETE_TOKEN, DELETE_TOKEN, TOGGLE_TOKEN, EQUAL, EDIT_PREFIX_TOKEN, EDIT_SUFFIX_TOKEN);
-    
+
         break;
     case 1:
-        help();
+        TODO_PRINT("help function......");
+        // 这里新开一个专业的命令帮助手册
+        exec_help_node(command);
+        // help();
         break;
     case 2:
         TODO_PRINT("show function ......");

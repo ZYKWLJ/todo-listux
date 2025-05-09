@@ -52,22 +52,39 @@
 #define TID "TID"
 #define CONTENT "content"
 #define USER_HELP "Show help"
+
 #define DISPLAY_TODAY_TASK "Show task (today)"
+#define DISPLAY_CURRENT_DATE_TASK "Show task (current date)"
 #define DISPLAY_SPECIFIC_DATE_TASK "Show task (specific date)"
+
 #define ADD_TASK_TO_TODAY "Add task (today)"
+#define ADD_TASK_TO_CURRENT_DATE "Add task (current date)"
 #define ADD_TASK_TO_SPECIFIC_DATE "Add task (specific date)"
+
 #define MARK_TASK_AS_DONE_TODAY "Mark task as done (today)"
+#define MARK_TASK_AS_DONE_CURRENT_DATE "Mark task as done (current date)"
 #define MARK_TASK_AS_DONE_SPECIFIC_DATE "Mark task as done (specific date)"
+
 #define DELETE_TASK_TODAY "Delete task (today)"
+#define DELETE_TASK_CURRENT_DATE "Delete task (current date)"
 #define DELETE_TASK_SPECIFIC_DATE "Delete task (specific date)"
+
 #define TOGGLE_TASK_TODAY "Toggle task (today)"
+#define TOGGLE_TASK_CURRENT_DATE "Toggle task (current date)"
 #define TOGGLE_TASK_SPECIFIC_DATE "Toggle task (specific date)"
+
 #define REPLACE_TASK_TODAY "Replace task (today)"
+#define REPLACE_TASK_CURRENT_DATE "Replace task (current date)"
 #define REPLACE_TASK_SPECIFIC_DATE "Replace task (specific date)"
+
 #define PREPEND_TO_TASK_TODAY "Prepend to task (today)"
+#define PREPEND_TO_TASK_CURRENT_DATE "Prepend to task (current date)"
 #define PREPEND_TO_TASK_SPECIFIC_DATE "Prepend to task (specific date)"
+
 #define APPEND_TO_TASK_TODAY "Append to task (today)"
+#define APPEND_TO_TASK_CURRENT_DATE "Append to task (current date)"
 #define APPEND_TO_TASK_SPECIFIC_DATE "Append to task (specific date)"
+
 #define SET_CONFIGURATION "Set configuration key to value"
 #define CONFIGURATION_HELP "Setting available keys:"
 #define KV "key=value"
@@ -100,5 +117,5 @@ void help_edit_all();
 void help_edit_prefix();
 void help_edit_suffix();
 void help_set();
-
+void help_help();
 #endif
