@@ -68,7 +68,7 @@
 #define PREPEND_TO_TASK_SPECIFIC_DATE "Prepend to task (specific date)"
 #define APPEND_TO_TASK_TODAY "Append to task (today)"
 #define APPEND_TO_TASK_SPECIFIC_DATE "Append to task (specific date)"
-#define SET_CONFIGURATION "Set configuration KEY to VALUE"
+#define SET_CONFIGURATION "Set configuration key to value"
 #define CONFIGURATION_HELP "Setting available keys:"
 #define KV "key=value"
 #define CONFIGURATION_COLOR "on/off"

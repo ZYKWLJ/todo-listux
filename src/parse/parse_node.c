@@ -801,6 +801,7 @@ void parse_set_node(N_node node, C_command command, T_date date)
                     printf("%s\t", setting->color->value_allow[i]);
                 }
             }
+            #ifdef SHOW_SETTING_START
             else if (strcmp(kv->key, "show") == 0)
             {
                 for (int i = 0; setting->show->value_allow[i]; i++)
@@ -809,6 +810,7 @@ void parse_set_node(N_node node, C_command command, T_date date)
                     printf("%s\t", setting->show->value_allow[i]);
                 }
             }
+            #endif
             else if (strcmp(kv->key, "time") == 0)
             {
                 for (int i = 0; setting->time->value_allow[i]; i++)
