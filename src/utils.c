@@ -6,7 +6,25 @@ int color_enabled()
     // 实际实现可能需要根据您的项目结构调整
     return (setting != NULL &&
             setting->color != NULL &&
-            strcmp(setting->color->value_set, "on") == 0);
+            strcmp(setting->color->value_set, SETTING_COLOR_ALLOW_ON) == 0);
+}
+
+int border_enabled()
+{
+    // 这里假设您有一个全局的 setting 结构体
+    // 实际实现可能需要根据您的项目结构调整
+    return (setting != NULL &&
+            setting->border != NULL &&
+            strcmp(setting->border->value_set, SETTING_BORDER_ALLOW_ON) == 0);
+}
+
+int time_enabled()
+{
+    // 这里假设您有一个全局的 setting 结构体
+    // 实际实现可能需要根据您的项目结构调整
+    return (setting != NULL &&
+            setting->time != NULL &&
+            strcmp(setting->time->value_set, SETTING_TIME_ALLOW_ON) == 0);
 }
 void *checked_malloc(int len)
 {

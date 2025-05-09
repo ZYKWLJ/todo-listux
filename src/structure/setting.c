@@ -27,6 +27,7 @@ S_setting S_setting_init(S_setting s)
     settings->show = S_setting_item_init(NULL);
 #endif
     settings->time = S_setting_item_init(NULL);
+    settings->border = S_setting_item_init(NULL);
     return settings;
 }
 
@@ -71,6 +72,17 @@ void set_settings_init(S_setting settings)
 
     // LOG_PRINT("color value_allow[1]: %s\n", settings->color->value_allow[1]);
     settings->color->value_allow[2] = NULL;
+
+    // 初始化边框显示
+    strcpy(settings->border->key, SETTING_BORDER_KEY);
+    // LOG_PRINT("color key: %s\n", settings->color->key);
+    strcpy(settings->border->value_set, SETTING_BORDER_ALLOW_OFF);
+    // LOG_PRINT("color value_set: %s\n", settings->color->value_set);
+    strcpy(settings->border->value_allow[0], SETTING_BORDER_ALLOW_ON);
+    // LOG_PRINT("color value_allow[0]: %s\n", settings->color->value_allow[0]);
+    strcpy(settings->border->value_allow[1], SETTING_BORDER_ALLOW_OFF);
+    settings->border->value_allow[2] = NULL;
+
 // LOG_PRINT("init show......\n");
 #ifdef SHOW_SETTING_START
     strcpy(settings->show->key, SETTING_SHOW_KEY);
@@ -128,6 +140,11 @@ int set_settings(S_setting setting, KV_ node)
         int ret = try_set_value(setting->time, node->key, node->value);
         return ret; // color 匹配
     }
+    else if (strcmp(node->key, "border") == 0)
+    {
+        int ret = try_set_value(setting->time, node->key, node->value);
+        return ret; // color 匹配
+    }
     return 0; // key不匹配
 }
 void S_settings_print(S_setting settings)
@@ -141,4 +158,6 @@ void S_settings_print(S_setting settings)
 #ifdef SHOW_SETTING_START
     LOG_PRINT("show: %s\n", settings->show->value_set);
 #endif
+    LOG_PRINT("border: %s\n", settings->border->value_set);
+
 }

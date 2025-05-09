@@ -15,6 +15,9 @@
 #define SETTING_TIME_ALLOW_ON "on"
 #define SETTING_TIME_ALLOW_OFF "off"
 
+#define SETTING_BORDER_ALLOW_ON "on"
+#define SETTING_BORDER_ALLOW_OFF "off"
+
 #ifdef SHOW_SETTING_START
 
 #define SETTING_SHOW_ALLOW_YEAR "year"
@@ -57,6 +60,9 @@ typedef struct S_setting_
 #endif
     // 增加是否显示时间的设置
     S_setting_item time;
+    // 增加边框显示的设置
+    S_setting_item border;
+
 } *S_setting;
 S_setting_item S_setting_item_init(S_setting_item s);
 

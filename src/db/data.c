@@ -230,8 +230,8 @@ void DB_show_task(T_date date, string prefix)
 }
 
 #else
-
-void DB_show_task(T_date date, string prefix)
+// #if 0
+void DB_show_task_without_border(T_date date, string prefix)
 {
     /**
      * data descp: 解析出要查找的任务的日期类型和日期即可，都在date里面，不需要参数node.至于查找的路径，已经被写死了，不用传参！
@@ -264,7 +264,7 @@ void DB_show_task(T_date date, string prefix)
     }
     fseek(fp, 0, SEEK_SET);
     int index = 0;
-    LOG_PRINT("settings before show:\n%s=%s\n%s=%s\n%s=%s", setting->color->key, setting->color->value_set, setting->time->key, setting->time->value_set, setting->show->key, setting->show->value_set);
+    LOG_PRINT("settings before show:\n%s=%s\n%s=%s\n%s=%s", setting->color->key, setting->color->value_set, setting->time->key, setting->time->value_set, setting->border->key, setting->border->value_set);
     // 定义四个数组
     static const char *arr1[1000];
     static const char *arr2[1000];
@@ -316,21 +316,7 @@ void DB_show_task(T_date date, string prefix)
              * data descp: 要增加显示风格的话，需要将所有的输入到一个数组里面，具体是4个数组，然后再使用特制的print函数即可。
              */
 
-            if (strcmp(setting->time->value_set, "on") != 0)
-            {
-                if (index == 1)
-                {
-                    printf("\n");
-                }
-                LOG_PRINT("time is off\n");
-                printf(" %s%2d. %s %s%s\n",
-                       color_prefix,
-                       index,
-                       status,
-                       part[1],
-                       color_suffix);
-            }
-            else
+            if (time_enabled())
             {
                 LOG_PRINT("time is on\n");
 
@@ -340,18 +326,39 @@ void DB_show_task(T_date date, string prefix)
                 // 格式化字符串
                 char temp[200];
                 snprintf(temp, sizeof(temp), "%s%2d. %s %s%s", color_prefix, index, status, part[1], color_suffix);
-                arr1[index - 1] = strdup(temp);
+                arr1[index] = strdup(temp);
                 snprintf(temp, sizeof(temp), "%s%s%s", color_prefix, part[3], color_suffix);
-                arr2[index - 1] = strdup(temp);
+                arr2[index] = strdup(temp);
                 snprintf(temp, sizeof(temp), "%s%s%s", color_prefix, part[4], color_suffix);
-                arr3[index - 1] = strdup(temp);
+                arr3[index] = strdup(temp);
                 snprintf(temp, sizeof(temp), "%s%s%s", color_prefix, part[5], color_suffix);
-                arr4[index - 1] = strdup(temp);
+                arr4[index] = strdup(temp);
+            }
+            else
+            {
+                LOG_PRINT("time is off\n");
+                if (index == 1)
+                {
+                    printf("\n");
+                }
+
+                printf(" %s%2d. %s %s%s\n",
+                       color_prefix,
+                       index,
+                       status,
+                       part[1],
+                       color_suffix);
             }
         }
     }
-    if (strcmp(setting->time->value_set, "on") == 0)
+    if (time_enabled())
     {
+        // 占个位置哈哈
+        arr1[0] = "0";
+        arr2[0] = "0";
+        arr3[0] = "0";
+        arr4[0] = "0";
+        total++;
         arr1[total] = NULL;
         arr2[total] = NULL;
         arr3[total] = NULL;
@@ -367,7 +374,164 @@ void DB_show_task(T_date date, string prefix)
     free(line);
     fclose(fp);
 }
+// #endif
+void DB_show_task_with_border(T_date date, string prefix)
+{
+    /**
+     * data descp: 解析出要查找的任务的日期类型和日期即可，都在date里面，不需要参数node.至于查找的路径，已经被写死了，不用传参！
+     */
+    // TODO_PRINT("DB_show_task......prefix=%s\n", prefix);
+    FILE *fp = fopen(get_appdata_path(DATE_FILE), "r");
+    int total = 0;
+    char *line = (char *)checked_malloc(sizeof(char) * 100000);
+
+    // 定义六个数组
+    static const char *arr1[1000]; // 序号
+    static const char *arr2[1000]; // 状态
+    static const char *arr3[1000]; // 内容
+    static const char *arr4[1000]; // add time
+    static const char *arr5[1000]; // finish time
+    static const char *arr6[1000]; // cosnt time
+
+    // 统计匹配的任务数量
+    while (fgets(line, 100000, fp) != NULL)
+    {
+        line[strlen(prefix)] = '\0';
+        if (strcmp(line, prefix) == 0)
+        {
+            total++;
+        }
+    }
+
+    printf("Tasks for %s (Total: %d):\n", prefix, total);
+
+    /**
+     * filename:data.c
+     * description: 是0直接退出，不必继续！
+     * author:EthanYankang
+     * create time:2025/05/08 15:42:08
+     */
+    if (total == 0)
+    {
+        free(line);
+        fclose(fp);
+        return;
+    }
+
+    fseek(fp, 0, SEEK_SET);
+    int index = 1;
+    LOG_PRINT("settings before show:\n%s=%s\n%s=%s\n%s=%s",
+              setting->color->key, setting->color->value_set,
+              setting->time->key, setting->time->value_set,
+              setting->border->key, setting->border->value_set);
+
+    while (fgets(line, 100000, fp) != NULL)
+    {
+        /// 去除换行符
+        size_t len = strlen(line);
+        if (len > 0 && line[len - 1] == '\n')
+        {
+            line[len - 1] = '\0';
+        }
+
+        char part[6][100000] = {0};
+        char *token = strtok(line, " ");
+        int i = 0;
+        while (token != NULL && i < 6)
+        {
+            strcpy(part[i++], token);
+            token = strtok(NULL, " ");
+        }
+
+        if (strcmp(line, prefix) == 0)
+        {
+            const char *color_prefix = "";
+            const char *color_suffix = "";
+            const char *status = (strcmp(part[2], "1") == 0) ? "-" : "+";
+
+            // 格式化字符串并存储到数组
+            char temp[200];
+
+            // 第一列：序号+状态+内容
+            // id
+            snprintf(temp, sizeof(temp), "%2d",
+                     index);
+            arr1[index] = strdup(temp);
+            // status
+            snprintf(temp, sizeof(temp), "%s",
+                     status);
+            arr2[index] = strdup(temp);
+            // content
+            snprintf(temp, sizeof(temp), "%s",
+                     part[1]);
+            arr3[index] = strdup(temp);
+
+            // add_time
+            snprintf(temp, sizeof(temp), "%s",
+                     part[3]);
+            arr4[index] = strdup(temp);
+
+            // finish_time
+            snprintf(temp, sizeof(temp), "%s",
+                     part[4]);
+            arr5[index] = strdup(temp);
+
+            // cost_time
+            snprintf(temp, sizeof(temp), "%s",
+                     part[5]);
+            arr6[index] = strdup(temp);
+
+            // // 第五列和第六列：可根据需要扩展其他信息
+            // arr5[index] = strdup(""); // 示例：留空
+            // arr6[index] = strdup(""); // 示例：留空
+
+            index++;
+        }
+    }
+    // 添加表头
+    arr1[0] = ID;
+    arr2[0] = STATUS;
+    arr3[0] = CONTENT;
+    arr4[0] = ADD_TIME;
+    arr5[0] = FINISH_TIME;
+    arr6[0] = COST_TIME;
+    // 添加数组结束标记
+    arr1[total] = NULL;
+    arr2[total] = NULL;
+    arr3[total] = NULL;
+    arr4[total] = NULL;
+    arr5[total] = NULL;
+    arr6[total] = NULL;
+    // char **header[] = {ID, STATUS, CONTENT, ADD_TIME, FINISH_TIME, COST_TIME,NULL};
+    // 使用text_print_help函数格式化输出
+
+    // setting->color->value_set="off";
+    if (time_enabled())
+    {
+        const char **columns[] = {arr1, arr2, arr3, arr4, arr5, arr6};
+        text_print_help_task(columns, sizeof(columns) / sizeof(columns[0]));
+    }
+    else
+    {
+        const char **columns[] = {arr1, arr2, arr3};
+        text_print_help_task(columns, sizeof(columns) / sizeof(columns[0]));
+    }
+    free(line);
+    fclose(fp);
+}
 #endif
+
+void DB_show_task(T_date date, string prefix)
+{
+    if (border_enabled())
+    {
+        DB_show_task_with_border(date, prefix);
+    }
+    else
+    {
+        DB_show_task_without_border(date, prefix);
+    }
+}
 void DB_add_task(N_node node, T_date date, string prefix)
 {
     /**
@@ -1641,11 +1805,11 @@ void DB_set_config(KV_ kv)
     /**
      * data descp: 解析出要查找的任务的日期类型和日期即可，都在date里面，不需要参数node.至于查找的路径，已经被写死了，不用传参！
      */
-    TODO_PRINT("DB_set_config......K=%s\tv=%s\n", kv->key, kv->value);
-    LOG_PRINT("settings before set:\n%s=%s\n%s=%s\n%s=%s", setting->color->key, setting->color->value_set, setting->time->key, setting->time->value_set /*, setting->show->key, setting->show->value_set*/);
+    // TODO_PRINT("DB_set_config......K=%s\tv=%s\n", kv->key, kv->value);
+    LOG_PRINT("settings before set:\n%s=%s\n%s=%s\n%s=%s", setting->color->key, setting->color->value_set, setting->time->key, setting->time->value_set /*, setting->show->key, setting->show->value_set*/, setting->border->key, setting->border->value_set);
     save_setting(get_appdata_path(SETTING_FILE), kv);
     load_setting(get_appdata_path(SETTING_FILE));
     // 这里要获取今天的日期
     DB_show_task(date, get_db_prefix(date));
-    LOG_PRINT("settings after set:\n%s=%s\n%s=%s\n%s=%s", setting->color->key, setting->color->value_set, setting->time->key, setting->time->value_set /*, setting->show->key, setting->show->value_set*/);
+    LOG_PRINT("settings after set:\n%s=%s\n%s=%s\n%s=%s", setting->color->key, setting->color->value_set, setting->time->key, setting->time->value_set /*, setting->show->key, setting->show->value_set*/, setting->border->key, setting->border->value_set);
 }

@@ -113,10 +113,6 @@ void exec_help_node(C_command command)
 void exec(N_node node, C_command command, T_date date)
 {
     /**
-     * func descp: 先将命令解析，没有错后，再在下面的环节执行命令！
-     */
-    parse_node(node, command, date);
-    /**
      * func descp: 接下来的命令一定没有错，所以直接执行命令！
      */
     switch (node->node_type)

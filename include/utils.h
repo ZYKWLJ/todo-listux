@@ -46,10 +46,18 @@ void COMMAND_ERROR(C_command command, const char *format, ...);
     {                   \
     } while (0)
 #endif
-
-// 检查颜色是否启用的函数（需要您根据实际情况实现）
+/**
+ * func descp: 检查颜色是否启用的函数（需要您根据实际情况实现）
+ */
 int color_enabled();
-
+/**
+ * func descp: 检查是否设置边框显示
+ */
+int border_enabled();
+/**
+ * func descp: 检查是否设置时间显示
+ */
+int time_enabled();
 /**
  * func descp: 红色打印，专注于错误信息
  */

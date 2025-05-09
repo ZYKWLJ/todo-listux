@@ -61,16 +61,28 @@ int text_display_width(const char *str)
     }
     return width;
 }
-
+// extern S_setting setting;
 // 打印固定宽度的字符串，考虑中文字符
+// 这是给非待办打印的！
 void text_print_padded(const char *str, int width)
 {
     int str_width = text_display_width(str);
     printf("%s", str);
+    // printf("%s", str);
     for (int i = str_width; i < width; i++)
     {
         printf(" ");
     }
 }
 
+// // 这是带颜色打印的，给待办打印的
+// void text_print_padded(const char *str, int width)
+// {
+//     int str_width = text_display_width(str);
+//     // printf("%s", str);
+//     for (int i = str_width; i < width; i++)
+//     {
+//         printf(" ");
+//     }
+// }
 #endif

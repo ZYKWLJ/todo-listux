@@ -87,6 +87,10 @@ int main(int argc, char **argv)
     node->task = T_task_init(NULL);
     LOG_PRINT("node_type: %d\n", node->node_type);
     /**
+     * func descp: 先将命令解析，没有错后，再在下面的环节执行命令！
+     */
+    parse_node(node, command, date);
+    /**
      * func descp: 真正开始执行命令！(内含解析命令)
      */
     exec(node, command, date);

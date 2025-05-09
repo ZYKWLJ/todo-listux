@@ -23,6 +23,7 @@ void load_setting(const char *path)
         fprintf(fp, "show=day\n");
 #endif
         fprintf(fp, "time=on\n");
+        fprintf(fp, "border=off\n");
         fclose(fp);
 
         // 同时将默认数据加载到setting中
@@ -31,6 +32,7 @@ void load_setting(const char *path)
         strcpy(setting->show->value_set, "day");
 #endif
         strcpy(setting->time->value_set, "on");
+        strcpy(setting->border->value_set, "off");
     }
     else
     {
@@ -55,6 +57,10 @@ void load_setting(const char *path)
                 else if (strcmp(key, "time") == 0)
                 {
                     strcpy(setting->time->value_set, value);
+                }
+                else if (strcmp(key, "border") == 0)
+                {
+                    strcpy(setting->border->value_set, value);
                 }
             }
         }

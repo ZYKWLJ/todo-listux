@@ -32,13 +32,14 @@
 #define SETTING_SHOW_KEY "show"
 #endif
 #define SETTING_TIME_KEY "time"
+#define SETTING_BORDER_KEY "border"
 
 // 用户手册
 // 这里引入我们对流层的编排系统，直接用编排系统的接口，实现标准的编排！
 #define HEAD "TaskLite (tl) Command Reference"
 #define USAGE "Usage: tl [command] [arguments]"
-#define DATE_TYPE_HELP "Following date_type means -d/-day -w/-week -m/-month -y/-year"
-#define DATE_FOMAT_HELP "Following fixed date_fomat : -d/-day=>xxxx.xx.xx\t-w/-week=>xxxx.xx.xx\t-m/-month=>xxxx.xx\t-y/-year=>xxxx"
+#define DATE_TYPE_HELP "Following date_type : -d/-day -w/-week -m/-month -y/-year"
+#define DATE_FOMAT_HELP "Following fixed date_fomat : -d/-day=>xxxx.xx.xx -w/-week=>xxxx.xx.xx -m/-month=>xxxx.xx -y/-year=>xxxx"
 #define TID_HELP "Following TID means task_index"
 #define SHOW_COMMANDS "SHOW COMMANDS:"
 #define ADD_COMMANDS "ADD COMMANDS:"
@@ -86,10 +87,18 @@
 #define APPEND_TO_TASK_SPECIFIC_DATE "Append to task (specific date)"
 
 #define SET_CONFIGURATION "Set configuration key to value"
+#define SET_COLOR_ON "Set color on"
+#define SET_COLOR_OFF "Set color off"
+#define SET_TIME_ON "Set time on"
+#define SET_TIME_OFF "Set time off"
+#define SET_BORDER_ON "Set border on"
+#define SET_BORDER_OFF "Set border off"
+
 #define CONFIGURATION_HELP "Setting available keys:"
 #define KV "key=value"
 #define CONFIGURATION_COLOR "on/off"
 #define CONFIGURATION_TIME "on/off"
+#define CONFIGURATION_BORDER "on/off"
 #ifdef SHOW_SETTING_START
 
 #define CONFIGURATION_SHOW "d/day/w/week/m/month/y/year"
@@ -106,6 +115,20 @@
 #define NO_WORD ""
 #define TL SOFTWARE_NAME
 
+// 打印表框的控制符
+char BORDER_PLUS[3];
+char BORDER_MINUS[3];
+char BORDER_VERTICAL_LINE[3];
+
+// 打印待办的边框
+// 待办表头
+#define STATUS "status"
+#define ID "id"
+#define CONTENT "content"
+#define ADD_TIME "add_time"
+#define FINISH_TIME "finish_time"
+#define COST_TIME "cost_time"
+
 void help();
 void help_show();
 void help_add();
@@ -118,4 +141,26 @@ void help_edit_prefix();
 void help_edit_suffix();
 void help_set();
 void help_help();
+// tips函数，把显示help命令的权利交给用户！
+
+// 显示help命令帮助信息提示
+void help_help_tips(void);
+// 显示set命令帮助信息提示
+void help_set_tips(void);
+// 显示show命令帮助信息提示
+void help_show_tips(void);
+// 显示add命令帮助信息提示
+void help_add_tips(void);
+// 显示done命令帮助信息提示
+void help_done_tips(void);
+// 显示delete命令帮助信息提示
+void help_delete_tips(void);
+// 显示toggle命令帮助信息提示
+void help_toggle_tips(void);
+// 显示replace命令帮助信息提示
+void help_replace_tips(void);
+// 显示append命令帮助信息提示
+void help_append_tips(void);
+// 显示prepend命令帮助信息提示
+void help_prepend_tips(void);
 #endif
