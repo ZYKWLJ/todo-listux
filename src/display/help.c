@@ -28,8 +28,8 @@ void help()
     text_print_help(columns1, sizeof(columns1) / sizeof(columns1[0]));
     // 可选的设置全文
     printf("\n%s\n", CONFIGURATION_HELP);
-    const char *KEY[] = {"KEY", SETTING_COLOR_KEY, SETTING_TIME_KEY, SETTING_SHOW_KEY, NULL};
-    const char *VALUE[] = {"VALUE", CONFIGURATION_COLOR, CONFIGURATION_TIME, CONFIGURATION_SHOW, NULL};
+    const char *KEY[] = {"KEY", SETTING_COLOR_KEY, SETTING_TIME_KEY, /*SETTING_SHOW_KEY,*/ NULL};
+    const char *VALUE[] = {"VALUE", CONFIGURATION_COLOR, CONFIGURATION_TIME, /*CONFIGURATION_SHOW,*/ NULL};
     const char **columns2[] = {KEY, VALUE};
     // text_print(columns2, sizeof(columns2) / sizeof(columns2[0]));
     text_print_help(columns2, sizeof(columns2) / sizeof(columns2[0]));
@@ -255,8 +255,8 @@ void help_set()
     text_print_help(columns1, sizeof(columns1) / sizeof(columns1[0]));
     // 可选的设置全文
     printf("\n%s\n", CONFIGURATION_HELP);
-    const char *KEY[] = {"KEY", SETTING_COLOR_KEY, SETTING_SHOW_KEY, NULL};
-    const char *VALUE[] = {"VALUE", CONFIGURATION_COLOR, CONFIGURATION_SHOW, NULL};
+    const char *KEY[] = {"KEY", SETTING_COLOR_KEY, /*SETTING_SHOW_KEY,*/ NULL};
+    const char *VALUE[] = {"VALUE", CONFIGURATION_COLOR, /*CONFIGURATION_SHOW,*/ NULL};
     const char **columns2[] = {KEY, VALUE};
     text_print_help(columns2, sizeof(columns2) / sizeof(columns2[0]));
 }

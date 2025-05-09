@@ -14,6 +14,7 @@
 #define ARGUMENTS3 "argument3"
 #define ARGUMENTS4 "argument4"
 #define INSTRUCTION "instruction"
+#define ERROR_TOKEN "ERROR_NODE"
 #define HELP_TOKEN "?"
 #define DISPLAY_TOKEN "\\"
 #define ADD_TOKEN "+"
@@ -27,7 +28,9 @@
 #define EQUAL "="
 
 #define SETTING_COLOR_KEY "color"
+#ifdef SHOW_SETTING_START
 #define SETTING_SHOW_KEY "show"
+#endif
 #define SETTING_TIME_KEY "time"
 
 // 用户手册
@@ -70,13 +73,19 @@
 #define KV "key=value"
 #define CONFIGURATION_COLOR "on/off"
 #define CONFIGURATION_TIME "on/off"
+#ifdef SHOW_SETTING_START
+
 #define CONFIGURATION_SHOW "d/day/w/week/m/month/y/year"
+#endif
 #define COLOR_ON "Enable colored output"
 #define COLOR_OFF "Disable colored output"
+#ifdef SHOW_SETTING_START
 #define SHOW_DAY "Default display mode (day)"
 #define SHOW_WEEK "Default display mode (week)"
 #define SHOW_MONTH "Default display mode (month)"
 #define SHOW_YEAR "Default display mode (year)"
+#endif
+
 #define NO_WORD ""
 #define TL SOFTWARE_NAME
 

@@ -1,9 +1,7 @@
 import os
 import subprocess
 import sys
-import json
 import time
-from datetime import datetime
 
 # 配置部分
 COMPILER = "gcc"
@@ -11,112 +9,108 @@ CFLAGS = ["-Wall", "-Wextra", "-O2"]
 SOURCE_DIR = "src"
 BUILD_DIR = "build"
 BIN_DIR = "bin"
-CACHE_FILE = os.path.join(BUILD_DIR, "compile_cache.json")
+EXECUTABLE = "tl"  # 可执行文件名
 
 def ensure_dirs():
     """确保所有需要的目录存在"""
     os.makedirs(BUILD_DIR, exist_ok=True)
     os.makedirs(BIN_DIR, exist_ok=True)
 
-def load_cache():
-    """加载编译缓存"""
-    if not os.path.exists(CACHE_FILE):
-        return {}
-    
-    try:
-        with open(CACHE_FILE, "r") as f:
-            return json.load(f)
-    except (json.JSONDecodeError, IOError):
-        return {}
-
-def save_cache(cache):
-    """保存编译缓存"""
-    try:
-        with open(CACHE_FILE, "w") as f:
-            json.dump(cache, f, indent=2)
-    except IOError:
-        print("Warning: Failed to save cache file")
-
 def get_source_files():
-    """获取所有源文件"""
+    """获取所有源文件（返回绝对路径）"""
     source_files = []
     for root, _, files in os.walk(SOURCE_DIR):
         for file in files:
             if file.endswith(".c"):
-                source_files.append(os.path.join(root, file))
+                source_files.append(os.path.abspath(os.path.join(root, file)))
     return source_files
 
-def needs_compile(source_file, object_file):
+def needs_recompile(source_file, object_file):
     """
-    基于修改时间的编译检查
+    检查是否需要重新编译
     返回True如果:
     1. 目标文件不存在
     2. 源文件比目标文件新
-    3. 依赖的头文件比目标文件新(需要实现头文件依赖分析)
     """
     if not os.path.exists(object_file):
         return True
-    
-    # 获取文件修改时间
-    try:
-        src_mtime = os.path.getmtime(source_file)
-        obj_mtime = os.path.getmtime(object_file)
-    except OSError:
-        return True
-    
-    # 基本规则：源文件比目标文件新
-    if src_mtime > obj_mtime:
-        return True
-    
-    # TODO: 可以添加头文件依赖检查
-    # 例如：if any_header_newer_than_object(source_file, object_file)
-    
-    return False
+    return os.path.getmtime(source_file) > os.path.getmtime(object_file)
 
-def compile_file(source_file, object_file, cache):
+def compile_file(source_file, object_file):
     """编译单个源文件"""
+    # 确保目标目录存在
+    os.makedirs(os.path.dirname(object_file), exist_ok=True)
+    
+    # 删除旧的.o文件（如果存在）
+    if os.path.exists(object_file):
+        os.remove(object_file)
+    
+    # 构造编译命令
     cmd = [COMPILER] + CFLAGS + ["-c", source_file, "-o", object_file]
     
+    # 设置环境变量确保英文输出
+    env = os.environ.copy()
+    env["LC_ALL"] = "C"
+    
     try:
-        print(f"Compiling {os.path.relpath(source_file, SOURCE_DIR)}")
-        result = subprocess.run(cmd, check=True, 
-                              stderr=subprocess.PIPE,
-                              universal_newlines=True)
+        rel_path = os.path.relpath(source_file, SOURCE_DIR)
+        print(f"[CC] {rel_path}")
         
-        # 更新缓存记录
-        cache[source_file] = {
-            "last_modified": os.path.getmtime(source_file),
-            "last_compiled": time.time(),
-            "object_file": object_file
-        }
+        # 运行编译命令
+        result = subprocess.run(
+            cmd,
+            check=True,
+            stderr=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            universal_newlines=True,
+            encoding='utf-8',
+            errors='replace',
+            env=env
+        )
         
+        # 输出警告信息
         if result.stderr:
             print(result.stderr)
         
         return True
     except subprocess.CalledProcessError as e:
-        print(f"Error compiling {source_file}:")
+        print(f"\nError compiling {os.path.relpath(source_file, SOURCE_DIR)}:")
         print(e.stderr)
+        return False
+    except Exception as e:
+        print(f"\nUnexpected error compiling {source_file}:")
+        print(str(e))
         return False
 
 def link_executable(object_files):
     """链接生成可执行文件"""
-    executable = os.path.join(BIN_DIR, "tl")
-    cmd = [COMPILER] + object_files + ["-o", executable]
+    executable_path = os.path.join(BIN_DIR, EXECUTABLE)
     
-    print("\nLinking executable...")
+    # 删除旧的可执行文件（如果存在）
+    if os.path.exists(executable_path):
+        os.remove(executable_path)
+    
+    print("\n[LD] Linking executable...")
+    
     try:
-        result = subprocess.run(cmd, check=True,
-                              stderr=subprocess.PIPE,
-                              universal_newlines=True)
+        result = subprocess.run(
+            [COMPILER] + object_files + ["-o", executable_path],
+            check=True,
+            stderr=subprocess.PIPE,
+            universal_newlines=True,
+            encoding='utf-8',
+            errors='replace'
+        )
         
         if result.stderr:
             print(result.stderr)
         
-        print(f"Created {os.path.relpath(executable, os.getcwd())}")
+        # 显示生成的可执行文件路径
+        exec_rel_path = os.path.relpath(executable_path, os.getcwd())
+        print(f"\nCreated executable: {exec_rel_path}")
         return True
     except subprocess.CalledProcessError as e:
-        print("Linking failed:")
+        print("\nLinking failed:")
         print(e.stderr)
         return False
 
@@ -125,42 +119,49 @@ def compile_project():
     start_time = time.time()
     ensure_dirs()
     
-    # 加载缓存和源文件
-    cache = load_cache()
+    # 获取源文件和初始化变量
     source_files = get_source_files()
     object_files = []
-    compiled_files = 0
+    compiled_count = 0
+    success = True
     
     # 编译每个源文件
-    for src in source_files:
-        # 生成目标文件路径
-        rel_path = os.path.relpath(src, SOURCE_DIR)
-        obj = os.path.join(BUILD_DIR, os.path.splitext(rel_path)[0] + ".o")
-        os.makedirs(os.path.dirname(obj), exist_ok=True)
+    for src_file in source_files:
+        # 生成目标文件路径（保持src目录结构）
+        rel_path = os.path.relpath(src_file, SOURCE_DIR)
+        obj_file = os.path.join(BUILD_DIR, os.path.splitext(rel_path)[0] + ".o")
         
-        # 检查是否需要编译
-        if needs_compile(src, obj):
-            if not compile_file(src, obj, cache):
-                return False
-            compiled_files += 1
+        # 检查是否需要重新编译
+        if needs_recompile(src_file, obj_file):
+            if compile_file(src_file, obj_file):
+                compiled_count += 1
+            else:
+                success = False
+                break
         else:
-            print(f"Skipping {os.path.relpath(src, SOURCE_DIR)} (up to date)")
+            print(f"[SKIP] {os.path.relpath(src_file, SOURCE_DIR)} (up to date)")
         
-        object_files.append(obj)
+        object_files.append(obj_file)
     
-    # 保存缓存并链接
-    save_cache(cache)
-    
-    if not link_executable(object_files):
-        return False
+    # 如果编译成功则进行链接
+    if success and object_files:
+        success = link_executable(object_files)
     
     # 输出统计信息
     total_time = time.time() - start_time
-    print(f"\nCompilation complete. {compiled_files}/{len(source_files)} files compiled.")
-    print(f"Total time: {total_time:.2f} seconds")
+    print("\nCompilation summary:")
+    print(f"  Total files:    {len(source_files)}")
+    print(f"  Recompiled:     {compiled_count}")
+    print(f"  Time elapsed:   {total_time:.2f} seconds")
+    print(f"  Build status:   {'SUCCESS' if success else 'FAILED'}")
     
-    return True
+    return success
 
 if __name__ == "__main__":
+    # 添加彩色输出支持
+    if sys.platform == "win32":
+        os.system("color")
+    
+    # 运行编译流程
     if not compile_project():
         sys.exit(1)

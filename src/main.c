@@ -1,6 +1,7 @@
 #include "../include/include.h"
 #define MAIN
 #ifdef MAIN
+#if 0
 string exec_words[] = {
     "NONE",
     "?",
@@ -13,6 +14,21 @@ string exec_words[] = {
     "-",
     "!",
     "$",
+};
+#endif
+
+string exec_words[] = {
+    ERROR_TOKEN,
+    HELP_TOKEN,
+    DISPLAY_TOKEN,
+    ADD_TOKEN,
+    DELETE_TOKEN,
+    EDIT_ALL_TOKEN,
+    EDIT_PREFIX_TOKEN,
+    EDIT_SUFFIX_TOKEN,
+    COMPLETE_TOKEN,
+    TOGGLE_TOKEN,
+    CONFIGURATION_TOKEN,
 };
 int get_exec_index(string word)
 {
@@ -34,6 +50,7 @@ int get_exec_index(string word)
 KV_ kv;
 S_setting setting;
 C_command command;
+T_date date;
 // string S_setting_path="/tmp/";
 int main(int argc, char **argv)
 {
@@ -52,7 +69,7 @@ int main(int argc, char **argv)
     /**
      * data descp: 然后初始化时间！
      */
-    T_date date = T_date_init(NULL);
+    date = T_date_init(NULL);
     date->T_current_date = T_current_date_init(NULL);
     date->T_current_date->date_type = D;
     date->T_specific_date = T_current_date_init(NULL);
@@ -74,7 +91,10 @@ int main(int argc, char **argv)
      */
     exec(node, command, date);
     LOG_PRINT("exec over......... \n");
-    // printf("hello ");
+// printf("hello ");
+#if 0
+    RED_PRINT("hello world\n");
+#endif
 }
 
 #endif

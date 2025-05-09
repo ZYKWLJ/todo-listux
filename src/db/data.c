@@ -253,11 +253,11 @@ void DB_show_task(T_date date, string prefix)
     }
     printf("Tasks for %s (Total: %d):\n", prefix, total);
     /**
-    * filename:data.c
-    * description: 是0直接退出，不必继续！
-    * author:EthanYankang
-    * create time:2025/05/08 15:42:08
-    */
+     * filename:data.c
+     * description: 是0直接退出，不必继续！
+     * author:EthanYankang
+     * create time:2025/05/08 15:42:08
+     */
     if (total == 0)
     {
         return;
@@ -1635,15 +1635,17 @@ void DB_toggle_task(N_node node, T_date date, char *prefix)
     DB_show_task(date, prefix);
 }
 #endif
+extern T_date date;
 void DB_set_config(KV_ kv)
 {
     /**
      * data descp: 解析出要查找的任务的日期类型和日期即可，都在date里面，不需要参数node.至于查找的路径，已经被写死了，不用传参！
      */
     TODO_PRINT("DB_set_config......K=%s\tv=%s\n", kv->key, kv->value);
-    LOG_PRINT("settings before set:\n%s=%s\n%s=%s\n%s=%s", setting->color->key, setting->color->value_set, setting->time->key, setting->time->value_set, setting->show->key, setting->show->value_set);
+    LOG_PRINT("settings before set:\n%s=%s\n%s=%s\n%s=%s", setting->color->key, setting->color->value_set, setting->time->key, setting->time->value_set /*, setting->show->key, setting->show->value_set*/);
     save_setting(get_appdata_path(SETTING_FILE), kv);
     load_setting(get_appdata_path(SETTING_FILE));
-    // DB_show_task(date, prefix);
-    LOG_PRINT("settings after set:\n%s=%s\n%s=%s\n%s=%s", setting->color->key, setting->color->value_set, setting->time->key, setting->time->value_set, setting->show->key, setting->show->value_set);
+    // 这里要获取今天的日期
+    DB_show_task(date, get_db_prefix(date));
+    LOG_PRINT("settings after set:\n%s=%s\n%s=%s\n%s=%s", setting->color->key, setting->color->value_set, setting->time->key, setting->time->value_set /*, setting->show->key, setting->show->value_set*/);
 }

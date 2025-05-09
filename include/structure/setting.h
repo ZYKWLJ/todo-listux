@@ -2,7 +2,11 @@
 #define SETTING_H
 #include "../include.h"
 #define SETTING_COLOR_KEY "color"
+
+#ifdef SHOW_SETTING_START
 #define SETTING_SHOW_KEY "show"
+#endif
+
 #define SETTING_TIME_KEY "time"
 
 #define SETTING_COLOR_ALLOW_ON "on"
@@ -11,6 +15,7 @@
 #define SETTING_TIME_ALLOW_ON "on"
 #define SETTING_TIME_ALLOW_OFF "off"
 
+#ifdef SHOW_SETTING_START
 
 #define SETTING_SHOW_ALLOW_YEAR "year"
 #define SETTING_SHOW_ALLOW_MONTH "month"
@@ -18,6 +23,8 @@
 #define SETTING_SHOW_ALLOW_DAY "day"
 #define SETTING_SHOW_ALLOW_CURRENT_DAY "current_day"
 #define SETTING_SHOW_ALLOW_ALL "all"
+
+#endif
 #define SHOW_DAY_1 "-d"
 #define SHOW_DAY_2 "-day"
 #define SHOW_WEEK_1 "-w"
@@ -44,7 +51,10 @@ typedef struct S_setting_item_
 typedef struct S_setting_
 {
     S_setting_item color;
+#ifdef SHOW_SETTING_START
+
     S_setting_item show;
+#endif
     // 增加是否显示时间的设置
     S_setting_item time;
 } *S_setting;
@@ -55,4 +65,5 @@ void set_settings_init(S_setting settings);
 
 void S_settings_print(S_setting settings);
 int set_settings(S_setting setting, KV_ node);
+
 #endif

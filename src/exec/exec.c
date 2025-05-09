@@ -119,7 +119,12 @@ void exec(N_node node, C_command command, T_date date)
     case 0:
         // printf("unkown node type of %s\n", command->argv[1]);
         COMMAND_ERROR(command, " --unkown command type of %s\nThe valid command type is as follows:", command->argv[1]);
-        printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n", "?", "$", "\\", "+", "-", "/", "!", "=", "=%", "%=");
+        // printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n", "?", "$", "\\", "+", "-", "/", "!", "=", "=%", "%=");
+        // GREEN_PRINT("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n", "?", "$", "\\", "+", "-", "/", "!", "=", "=%", "%=");
+        
+        GREEN_PRINT("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n\n",
+                    HELP_TOKEN, CONFIGURATION_TOKEN, DISPLAY_TOKEN, ADD_TOKEN, COMPLETE_TOKEN, DELETE_TOKEN, TOGGLE_TOKEN, EQUAL, EDIT_PREFIX_TOKEN, EDIT_SUFFIX_TOKEN);
+    
         break;
     case 1:
         help();

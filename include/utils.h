@@ -1,6 +1,8 @@
 #ifndef UTILS_H
 #define UTILS_H
 #include "include.h"
+
+// extern S_setting setting;
 /**
  * func descp: 丐版，直接按照红色打印原来的命令
  */
@@ -45,14 +47,64 @@ void COMMAND_ERROR(C_command command, const char *format, ...);
     } while (0)
 #endif
 
+// 检查颜色是否启用的函数（需要您根据实际情况实现）
+int color_enabled();
+
 /**
  * func descp: 红色打印，专注于错误信息
  */
-// #define RED_PRINT(msg) printf("%s%s%s\n", RED, msg, RESET)
-#define RED_PRINT(...)   \
-    printf(RED);         \
-    printf(__VA_ARGS__); \
-    printf("%s", RESET);
+// 带颜色的打印宏
+#define RED_PRINT(...)           \
+    do                           \
+    {                            \
+        if (color_enabled())     \
+        {                        \
+            printf(RED);         \
+            printf(__VA_ARGS__); \
+            printf("%s", RESET); \
+        }                        \
+        else                     \
+        {                        \
+            printf(__VA_ARGS__); \
+        }                        \
+    } while (0)
+
+/**
+ * func descp: 绿色打印，专注于核心智能信息提示
+ */
+#define GREEN_PRINT(...)         \
+    do                           \
+    {                            \
+        if (color_enabled())     \
+        {                        \
+            printf(GREEN);       \
+            printf(__VA_ARGS__); \
+            printf("%s", RESET); \
+        }                        \
+        else                     \
+        {                        \
+            printf(__VA_ARGS__); \
+        }                        \
+    } while (0)
+
+/**
+ * func descp: 黄色打印，专注于警告信息
+ */
+#define YELLOW_PRINT(...)        \
+    do                           \
+    {                            \
+        if (color_enabled())     \
+        {                        \
+            printf(YELLOW);      \
+            printf(__VA_ARGS__); \
+            printf("%s", RESET); \
+        }                        \
+        else                     \
+        {                        \
+            printf(__VA_ARGS__); \
+        }                        \
+    } while (0)
+
 void *checked_malloc(int len) /*返回了通用指针 */;
 
 #endif

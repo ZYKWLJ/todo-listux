@@ -23,7 +23,9 @@ S_setting S_setting_init(S_setting s)
 {
     S_setting settings = (S_setting)checked_malloc(sizeof(*s));
     settings->color = S_setting_item_init(NULL);
+#ifdef SHOW_SETTING_START
     settings->show = S_setting_item_init(NULL);
+#endif
     settings->time = S_setting_item_init(NULL);
     return settings;
 }
@@ -69,7 +71,8 @@ void set_settings_init(S_setting settings)
 
     // LOG_PRINT("color value_allow[1]: %s\n", settings->color->value_allow[1]);
     settings->color->value_allow[2] = NULL;
-    // LOG_PRINT("init show......\n");
+// LOG_PRINT("init show......\n");
+#ifdef SHOW_SETTING_START
     strcpy(settings->show->key, SETTING_SHOW_KEY);
     strcpy(settings->show->value_set, SETTING_SHOW_ALLOW_DAY);
     strcpy(settings->show->value_allow[0], SETTING_SHOW_ALLOW_YEAR);
@@ -78,6 +81,7 @@ void set_settings_init(S_setting settings)
     strcpy(settings->show->value_allow[3], SETTING_SHOW_ALLOW_DAY);
     strcpy(settings->show->value_allow[4], SETTING_SHOW_ALLOW_ALL);
     settings->show->value_allow[5] = NULL;
+#endif
 }
 
 // try_set_value 修正
@@ -112,11 +116,13 @@ int set_settings(S_setting setting, KV_ node)
         int ret = try_set_value(setting->color, node->key, node->value);
         return ret; // color 匹配
     }
+#ifdef SHOW_SETTING_START
     else if (strcmp(node->key, "show") == 0)
     {
         int ret = try_set_value(setting->show, node->key, node->value);
         return ret; // color 匹配
     }
+#endif
     else if (strcmp(node->key, "time") == 0)
     {
         int ret = try_set_value(setting->time, node->key, node->value);
@@ -132,5 +138,7 @@ void S_settings_print(S_setting settings)
     }
     LOG_PRINT("color: %s\n", settings->color->value_set);
     LOG_PRINT("time: %s\n", settings->time->value_set);
+#ifdef SHOW_SETTING_START
     LOG_PRINT("show: %s\n", settings->show->value_set);
+#endif
 }
