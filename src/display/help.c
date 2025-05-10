@@ -25,8 +25,9 @@ void help()
     }
     printf("%s\n", HEAD);
     printf("%s\n", USAGE);
+    printf("All invalid commands: %s\n", COMMANDS);
     printf("%s\n", DATE_TYPE_HELP);
-    printf("%s\n", DATE_FOMAT_HELP);
+    printf("%s\n", DATE_FOMAT_HELP);    
     printf("%s\n", TID_HELP);
 #ifdef ONE
 #else
@@ -127,7 +128,7 @@ void help()
     /* 第三列（参数1列） */
     const char *arguments1[] = {
         /*0*/ ARGUMENTS1,
-        /*1*/ NO_WORD,
+        /*1*/ "command",
         /*2*/ KV,
         /*3*/ NO_WORD,
         /*4*/ DATE_TYPE,
@@ -1502,7 +1503,7 @@ void help_edit_all()
 
 void help_edit_prefix()
 {
-    printf("Here are correct usage of edit_prefix(=%) command\n");
+    printf("Here are correct usage of edit_prefix(=%%) command\n");
 
     /* 第一列（进程名列） */
     const char *soft_name[] = {
@@ -1677,7 +1678,7 @@ void help_edit_prefix()
 
 void help_edit_suffix()
 {
-    printf("Here are correct usage of edit_suffix(%=) command\n");
+    printf("Here are correct usage of edit_suffix(%%=) command\n");
 
     /* 第一列（进程名列） */
     const char *soft_name[] = {
@@ -1989,6 +1990,12 @@ void help_set()
 
     const char **columns1_eg[] = {soft_name_eg, command_eg, arguments1_eg, arguments2_eg, arguments3_eg, arguments4_eg, instruction_eg};
     text_print(columns1_eg, sizeof(columns1_eg) / sizeof(columns1_eg[0]));
+}
+void help_show_more_tips()
+{
+    printf("Type command ");
+    GREEN_PRINT("\"tl \\\"");
+    printf(" to see all data.\n");
 }
 
 void help_show_tips()

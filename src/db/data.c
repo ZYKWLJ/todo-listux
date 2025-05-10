@@ -353,7 +353,7 @@ void DB_show_task_without_border(T_date date, string prefix)
     }
     if (time_enabled())
     {
-        // 占个位置哈哈
+        // 占个位置,就是表头
         arr1[0] = "0";
         arr2[0] = "0";
         arr3[0] = "0";
@@ -496,6 +496,7 @@ void DB_show_task_with_border(T_date date, string prefix)
     arr5[0] = FINISH_TIME;
     arr6[0] = COST_TIME;
     // 添加数组结束标记
+    total++;
     arr1[total] = NULL;
     arr2[total] = NULL;
     arr3[total] = NULL;
@@ -618,7 +619,9 @@ void DB_delete_task(N_node node, T_date date, string prefix)
 
         DB_show_task(date, prefix);
         printf("\n");
-        COMMAND_ERROR(command, " --task id: %d is not found", node->task->id);
+        // COMMAND_ERROR(command, " --task id: %d is not found", node->task->id);
+        COMMAND_ERROR(command, " --task id: %d is not found,the id is in the range of [1, %d].\n", node->task->id, index);
+        help_show_more_tips();
         exit(EXIT_FAILURE);
     }
 
@@ -721,9 +724,19 @@ void DB_delete_task(N_node node, T_date date, string prefix)
     {
         fclose(tmp_fp);
         remove(temp_filename); // 删除临时文件
-        // DB_show_task(date, prefix);
-        // printf("\n");
-        COMMAND_ERROR(command, " --task id: %d is not found\n", node->task->id);
+                               // DB_show_task(date, prefix);
+                               // printf("\n");
+                               // COMMAND_ERROR(command, " \n", node->task->id);
+
+        if (index == 0)
+        {
+            COMMAND_ERROR(command, " --No tasks\n");
+        }
+        else
+        {
+            COMMAND_ERROR(command, " --task id: %d is not found,the id is in the range of [1, %d].\n", node->task->id, index);
+        }
+        help_show_more_tips();
         exit(EXIT_FAILURE);
     }
 
@@ -934,7 +947,16 @@ void DB_edit_all_task(N_node node, T_date date, char *prefix)
     if (!found)
     {
         remove(tmp_filename);
-        COMMAND_ERROR(command, "--task id: %d is not found", node->task->id);
+        // COMMAND_ERROR(command, "--task id: %d is not found", node->task->id);
+        if (index == 0)
+        {
+            COMMAND_ERROR(command, " --No tasks\n");
+        }
+        else
+        {
+            COMMAND_ERROR(command, " --task id: %d is not found,the id is in the range of [1, %d].\n", node->task->id, index);
+        }
+        help_show_more_tips();
         exit(EXIT_FAILURE);
     }
 
@@ -1132,7 +1154,16 @@ void DB_edit_prefix_task(N_node node, T_date date, char *prefix)
     if (!found)
     {
         remove(tmp_filename);
-        COMMAND_ERROR(command, "--task id: %d is not found", node->task->id);
+        // COMMAND_ERROR(command, "--task id: %d is not found", node->task->id);
+        if (index == 0)
+        {
+            COMMAND_ERROR(command, " --No tasks\n");
+        }
+        else
+        {
+            COMMAND_ERROR(command, " --task id: %d is not found,the id is in the range of [1, %d].\n", node->task->id, index);
+        }
+        help_show_more_tips();
         exit(EXIT_FAILURE);
     }
 
@@ -1337,7 +1368,16 @@ void DB_edit_suffix_task(N_node node, T_date date, char *prefix)
     if (!found)
     {
         remove(tmp_filename);
-        COMMAND_ERROR(command, "--task id: %d is not found", node->task->id);
+        // COMMAND_ERROR(command, "--task id: %d is not found", node->task->id);
+        if (index == 0)
+        {
+            COMMAND_ERROR(command, " --No tasks\n");
+        }
+        else
+        {
+            COMMAND_ERROR(command, " --task id: %d is not found,the id is in the range of [1, %d].\n", node->task->id, index);
+        }
+        help_show_more_tips();
         exit(EXIT_FAILURE);
     }
 
@@ -1450,7 +1490,16 @@ void DB_done_task(N_node node, T_date date, string prefix)
     if (!found)
     {
         remove(tmp_filename);
-        COMMAND_ERROR(command, "--task id: %d is not found", node->task->id);
+        // COMMAND_ERROR(command, "--task id: %d is not found", node->task->id);
+        if (index == 0)
+        {
+            COMMAND_ERROR(command, " --No tasks\n");
+        }
+        else
+        {
+            COMMAND_ERROR(command, " --task id: %d is not found,the id is in the range of [1, %d].\n", node->task->id, index);
+        }
+        help_show_more_tips();
         exit(EXIT_FAILURE);
     }
 
@@ -1555,7 +1604,16 @@ void DB_done_task(N_node node, T_date date, char *prefix)
     if (!found)
     {
         remove(tmp_filename);
-        COMMAND_ERROR(command, "--task id: %d is not found", node->task->id);
+        // COMMAND_ERROR(command, "--task id: %d is not found", node->task->id);
+        if (index == 0)
+        {
+            COMMAND_ERROR(command, " --No tasks\n");
+        }
+        else
+        {
+            COMMAND_ERROR(command, " --task id: %d is not found,the id is in the range of [1, %d].\n", node->task->id, index);
+        }
+        help_show_more_tips();
         exit(EXIT_FAILURE);
     }
 
@@ -1673,7 +1731,16 @@ void DB_toggle_task(N_node node, T_date date, string prefix)
     if (!found)
     {
         remove(tmp_filename);
-        COMMAND_ERROR(command, "--task id: %d is not found", node->task->id);
+        // COMMAND_ERROR(command, "--task id: %d is not found", node->task->id);
+        if (index == 0)
+        {
+            COMMAND_ERROR(command, " --No tasks\n");
+        }
+        else
+        {
+            COMMAND_ERROR(command, " --task id: %d is not found,the id is in the range of [1, %d].\n", node->task->id, index);
+        }
+        help_show_more_tips();
         exit(EXIT_FAILURE);
     }
 
@@ -1778,7 +1845,16 @@ void DB_toggle_task(N_node node, T_date date, char *prefix)
     if (!found)
     {
         remove(tmp_filename);
-        COMMAND_ERROR(command, "--task id: %d is not found", node->task->id);
+        // COMMAND_ERROR(command, "--task id: %d is not found", node->task->id);
+        if (index == 0)
+        {
+            COMMAND_ERROR(command, " --No tasks\n");
+        }
+        else
+        {
+            COMMAND_ERROR(command, " --task id: %d is not found,the id is in the range of [1, %d].\n", node->task->id, index);
+        }
+        help_show_more_tips();
         exit(EXIT_FAILURE);
     }
 

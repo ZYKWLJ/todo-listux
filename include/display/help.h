@@ -38,6 +38,8 @@
 // 这里引入我们对流层的编排系统，直接用编排系统的接口，实现标准的编排！
 #define HEAD "TaskLite (tl) Command Reference"
 #define USAGE "Usage: tl [command] [arguments]"
+// #define COMMANDS "? $ \\ + - / ! = %= %="
+#define COMMANDS "?\t\t$\t\\\t+\t-\t/\t!\t=\t%=\t%="
 #define DATE_TYPE_HELP "Following date_type : -d/-day -w/-week -m/-month -y/-year"
 #define DATE_FOMAT_HELP "Following fixed date_fomat : -d/-day=>xxxx.xx.xx -w/-week=>xxxx.xx.xx -m/-month=>xxxx.xx -y/-year=>xxxx"
 #define TID_HELP "Following TID means task_index"
@@ -52,8 +54,8 @@
 #define DATE_FOMAT "date_fomat"
 #define TID "TID"
 #define CONTENT "content"
-#define USER_HELP "Show help"
-
+#define USER_HELP "Show command help information"
+// #define HELP_INFO 
 #define DISPLAY_TODAY_TASK "Show task (today)"
 #define DISPLAY_CURRENT_DATE_TASK "Show task (current date)"
 #define DISPLAY_SPECIFIC_DATE_TASK "Show task (specific date)"
@@ -142,6 +144,7 @@ void help_edit_suffix();
 void help_set();
 void help_help();
 // tips函数，把显示help命令的权利交给用户！
+void help_show_more_tips(void);
 
 // 显示help命令帮助信息提示
 void help_help_tips(void);
@@ -163,4 +166,5 @@ void help_replace_tips(void);
 void help_append_tips(void);
 // 显示prepend命令帮助信息提示
 void help_prepend_tips(void);
+
 #endif

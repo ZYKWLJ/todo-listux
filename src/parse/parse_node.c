@@ -5,6 +5,7 @@ int is_leap_year(int year)
 {
     return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 }
+
 void validate_day_format(C_command command, char *date_str, T_date date)
 {
     // 基础格式检查
@@ -33,6 +34,7 @@ void validate_day_format(C_command command, char *date_str, T_date date)
     int month = (date_str[5] - '0') * 10 + (date_str[6] - '0');
     int year = (date_str[0] - '0') * 1000 + (date_str[1] - '0') * 100 +
                (date_str[2] - '0') * 10 + (date_str[3] - '0');
+
     char current_day[11] = {0};
     sprintf(current_day, "%04d.%02d.%02d",
             date->T_current_date->year, date->T_current_date->month, date->T_current_date->day);
@@ -45,7 +47,7 @@ void validate_day_format(C_command command, char *date_str, T_date date)
         exit(EXIT_FAILURE);
         return;
     }
-    else
+    else if (year == date->T_current_date->year)
     {
         if (month < date->T_current_date->month)
         {
@@ -147,60 +149,31 @@ void validate_week_format(C_command command, char *date_str, T_date date)
     // 检查日期不小于今天
     if (year < date->T_current_date->year)
     {
-
         LOG_PRINT("exit!!!\n");
-        COMMAND_ERROR(command, " --Error week date_type,it should be not less than current week(%s),but here is %s", current_week, date_str);
-        // help_show();
-
+        COMMAND_ERROR(command, " --Error day date_type,it should be not less than current week(%s),but here is %s\n", current_week, date_str);
         exit(EXIT_FAILURE);
         return;
     }
-    else
+    else if (year == date->T_current_date->year)
     {
-
         if (month < date->T_current_date->month)
         {
-
             LOG_PRINT("exit!!!\n");
-            COMMAND_ERROR(command, " --Error week date_type,it should be not less than current week(%s),but here is %s", current_week, date_str);
-            // help_show();
-
-            exit(EXIT_FAILURE);
-            return;
-        }
-        // 月份检查
-        if (month < 1 || month > 12)
-        {
-            LOG_PRINT("exit!!!\n");
-
-            COMMAND_ERROR(command, " --month should between 1 and 12,but here is %s\n", date_str);
-            // help_show();
-
-            exit(EXIT_FAILURE);
-        }
-        if (week > 4 || week < 0)
-        {
-
-            LOG_PRINT("exit!!!\n");
-            COMMAND_ERROR(command, " --week should between 1 and 4,but here is %s\n", date_str);
-            // help_show();
-
+            COMMAND_ERROR(command, " --Error day date_type,it should be not less than current week(%s),but here is %s\n", current_week, date_str);
             exit(EXIT_FAILURE);
             return;
         }
         else if (month == date->T_current_date->month)
         {
-            if (week < date->T_current_date->week) // 不能小于当前周
+            if (week < date->T_current_date->week)
             {
-                COMMAND_ERROR(command, " --Error week date_type,it should be not less than current week(%s),but here is %s", current_week, date_str);
-                // help_show();
-
                 LOG_PRINT("exit!!!\n");
+                COMMAND_ERROR(command, " --Error day date_type,it should be not less than current week(%s),but here is %s\n", current_week, date_str);
                 exit(EXIT_FAILURE);
-                return;
             }
         }
     }
+
     /**
      * data descp: 到这里就将格式解析出来了！
      */
@@ -730,6 +703,30 @@ void parse_edit_node(N_node node, C_command command, T_date date)
         return;
     }
     /**
+     * data descp: 新增指定日期的任务 tl = id content -date_type
+     */
+    else if (command->argc == 5)
+    {
+
+        TODO_PRINT("add Specific date\n");
+        /**
+         * data descp: 先判断日期类型是不是合法
+         */
+        only_parse_date(command, command->argv[4], date);
+        /**
+         * data descp: 再判断是不是id数字
+         */
+        if (!is_all_digits(command->argv[2]))
+        {
+            COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nthe correct format of the \"edit(=)\" command are as follows:", command->argv[2]);
+            help_replace_tips();
+        }
+        node->task->id = atoi(command->argv[2]);
+        sprintf(node->task->content, "%s", command->argv[3]);
+         LOG_PRINT("show Specific date\tparser passed!!!\n");
+        return;
+    }
+    /**
      * data descp: 新增指定日期的任务 tl = id content -date_type date
      */
     else if (command->argc == 6)
@@ -833,7 +830,7 @@ void parse_help_node(N_node node, C_command command, T_date date)
     switch (command->argc)
     {
     case 2:
-        help();
+        help_help();
         return;
     case 3:
 
