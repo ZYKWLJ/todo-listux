@@ -39,6 +39,7 @@ https://github.com/ZYKWLJ/todo-listux/releases/tag/V1.0
 https://blog.csdn.net/palmer_kai/article/details/80588594
 
 视频：
+https://www.bilibili.com/video/BV1LBETzLEDL?vd_source=9e5ae99f9a8c68dacf39c2666928fc81
 
 **如果还不行，请您联系WeChat：2126483838。备注来意。**
 
