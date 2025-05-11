@@ -513,6 +513,7 @@ void text_print_help(const char **str[], int columns_num)
 // 给代办打印的函数，用于颜色处理！
 void text_print_help_task(const char **str[], int columns_num)
 {
+    // printf("这是带边框的打印\n");
     // 判断边框打印否
     print_border_or_not();
     setlocale(LC_ALL, ""); // 设置本地化，支持宽字符
@@ -638,52 +639,85 @@ void text_print_help_task(const char **str[], int columns_num)
         }
     }
     printf("%s\n", BORDER_PLUS);
-
-    // 6. 打印表格内容（从第2行开始，只打印可见列）
-    for (int row = 1; row < max_rows; row++)
-    {
-        // 从这里开始绿色红色判断了！
-        int f = 1;
-        if (str[1][row] != NULL && str[1][row][0] == '-')
+    // 这是一定要颜色的分支
+    if (color_enabled())
+    { // 6. 打印表格内容（从第2行开始，只打印可见列）
+        for (int row = 1; row < max_rows; row++)
         {
-            f = 1; // 绿色
-            // printf("绿色");
-        }
-        else if (str[1][row] != NULL && str[1][row][0] == '+')
-        {
-            f = 0; // 红色
-            // printf("红色");
-        }
-        printf("%s", BORDER_VERTICAL_LINE);
-        for (int i = 0; i < columns_num; i++)
-        {
-            if (!print_column[i])
-                continue;
-
-            printf(" ");
-            if (str[i][row] != NULL)
+            // printf("这是有条件分支的......\n");
+            // 从这里开始绿色红色判断了！
+            int f = 1;
+            if (str[1][row] != NULL && str[1][row][0] == '-')
             {
-                if (f)
+                f = 1; // 绿色
+                // printf("绿色");
+            }
+            else if (str[1][row] != NULL && str[1][row][0] == '+')
+            {
+                f = 0; // 红色
+                // printf("红色");
+            }
+            printf("%s", BORDER_VERTICAL_LINE);
+            for (int i = 0; i < columns_num; i++)
+            {
+                if (!print_column[i])
+                    continue;
+
+                printf(" ");
+                if (str[i][row] != NULL)
                 {
-                    printf("\033[32m");
-                    // printf("绿色");
+                    if (f)
+                    {
+                        printf("\033[32m");
+                        // printf("绿色");
+                    }
+                    else
+                    {
+                        printf("\033[31m");
+                        // printf("红色");
+                    }
+                    text_print_padded(str[i][row], col_max_widths[i]);
+                    // printf("打印待办颜色了吗?");
+                    printf("\033[0m");
                 }
                 else
                 {
-                    printf("\033[31m");
-                    // printf("红色");
+                    text_print_padded("", col_max_widths[i]);
                 }
-                text_print_padded(str[i][row], col_max_widths[i]);
-                // printf("打印待办颜色了吗?");
-                printf("\033[0m");
+                printf(" %s", BORDER_VERTICAL_LINE);
             }
-            else
-            {
-                text_print_padded("", col_max_widths[i]);
-            }
-            printf(" %s", BORDER_VERTICAL_LINE);
+            printf("\n");
         }
-        printf("\n");
+    }
+    // 这是一定没有颜色的分支
+    else
+    {
+        // printf("这是没有条件分支的......\n");
+
+        // 6. 打印表格内容（从第2行开始，只打印可见列）
+        for (int row = 1; row < max_rows; row++)
+        {
+
+            printf("%s", BORDER_VERTICAL_LINE);
+            for (int i = 0; i < columns_num; i++)
+            {
+                if (!print_column[i])
+                    continue;
+
+                printf(" ");
+                if (str[i][row] != NULL)
+                {
+                    text_print_padded(str[i][row], col_max_widths[i]);
+                    // printf("打印待办颜色了吗?");
+                }
+                else
+                {
+                    text_print_padded("", col_max_widths[i]);
+                }
+                printf(" %s", BORDER_VERTICAL_LINE);
+            }
+            printf("\n");
+        }
     }
 
     // 7. 打印下边框（只打印可见列）

@@ -423,7 +423,12 @@ void DB_show_task_with_border(T_date date, string prefix)
     LOG_PRINT("settings before show:\n%s=%s\n%s=%s\n%s=%s",
               setting->color->key, setting->color->value_set,
               setting->time->key, setting->time->value_set,
-              setting->border->key, setting->border->value_set);
+              setting->border->key, setting->border->value_set); 
+              
+    // printf("settings before show:\n%s=%s\n%s=%s\n%s=%s",
+    //           setting->color->key, setting->color->value_set,
+    //           setting->time->key, setting->time->value_set,
+    //           setting->border->key, setting->border->value_set);
 
     while (fgets(line, 100000, fp) != NULL)
     {
@@ -448,6 +453,7 @@ void DB_show_task_with_border(T_date date, string prefix)
             const char *color_prefix = "";
             const char *color_suffix = "";
             const char *status = (strcmp(part[2], "1") == 0) ? "-" : "+";
+            // const char *status = (strcmp(part[2], "1") == 0) ? "------" : "++++++";
 
             // 格式化字符串并存储到数组
             char temp[200];
@@ -509,11 +515,13 @@ void DB_show_task_with_border(T_date date, string prefix)
     // setting->color->value_set="off";
     if (time_enabled())
     {
+        // printf("这是带时间的\n");
         const char **columns[] = {arr1, arr2, arr3, arr4, arr5, arr6};
         text_print_help_task(columns, sizeof(columns) / sizeof(columns[0]));
     }
     else
     {
+        // printf("这是不带时间的\n");
         const char **columns[] = {arr1, arr2, arr3};
         text_print_help_task(columns, sizeof(columns) / sizeof(columns[0]));
     }

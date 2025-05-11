@@ -55,7 +55,7 @@
 #define TID "TID"
 #define CONTENT "content"
 #define USER_HELP "Show command help information"
-// #define HELP_INFO 
+// #define HELP_INFO
 #define DISPLAY_TODAY_TASK "Show task (today)"
 #define DISPLAY_CURRENT_DATE_TASK "Show task (current date)"
 #define DISPLAY_SPECIFIC_DATE_TASK "Show task (specific date)"
@@ -113,6 +113,11 @@
 #define SHOW_MONTH "Default display mode (month)"
 #define SHOW_YEAR "Default display mode (year)"
 #endif
+
+#define AUTHOR "Author: EthanYankang"
+#define WECHAT "Wechat: 2126483838"
+#define GITHUB "Github: https://github.com/ZYKWLJ/todo-listux"
+#define LINK "HelpRefence: https://blog.csdn.net/m0_68657832/article/details/147869804"
 
 #define NO_WORD ""
 #define TL SOFTWARE_NAME

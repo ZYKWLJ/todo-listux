@@ -657,6 +657,28 @@ void parse_toggle_node(N_node node, C_command command, T_date date)
         exit(EXIT_FAILURE);
     }
 }
+
+void edit_type_tips(N_node node, C_command command, T_date date)
+{
+    switch (node->node_type)
+    {
+    case EDIT_ALL:
+    {
+        help_edit_all();
+        return;
+    }
+    case EDIT_PREFIX:
+    {
+        help_edit_prefix();
+        return;
+    }
+    case EDIT_SUFFIX:
+    {
+        help_edit_suffix();
+        return;
+    }
+    }
+}
 void parse_edit_node(N_node node, C_command command, T_date date)
 {
     /**
@@ -674,7 +696,8 @@ void parse_edit_node(N_node node, C_command command, T_date date)
         if (!is_all_digits(command->argv[2]))
         {
             COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nthe correct format of the \"edit(=)\" command are as follows:\n", command->argv[2]);
-            help_replace_tips();
+            edit_type_tips(node,command,date);
+
             exit(EXIT_FAILURE);
         }
         node->task->id = atoi(command->argv[2]);
@@ -696,7 +719,7 @@ void parse_edit_node(N_node node, C_command command, T_date date)
         if (!is_all_digits(command->argv[2]))
         {
             COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nthe correct format of the \"edit(=)\" command are as follows:", command->argv[2]);
-            help_replace_tips();
+            edit_type_tips(node,command,date);
         }
         node->task->id = atoi(command->argv[2]);
         sprintf(node->task->content, "%s", command->argv[3]);
@@ -719,11 +742,11 @@ void parse_edit_node(N_node node, C_command command, T_date date)
         if (!is_all_digits(command->argv[2]))
         {
             COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nthe correct format of the \"edit(=)\" command are as follows:", command->argv[2]);
-            help_replace_tips();
+            edit_type_tips(node,command,date);
         }
         node->task->id = atoi(command->argv[2]);
         sprintf(node->task->content, "%s", command->argv[3]);
-         LOG_PRINT("show Specific date\tparser passed!!!\n");
+        LOG_PRINT("show Specific date\tparser passed!!!\n");
         return;
     }
     /**
@@ -737,7 +760,7 @@ void parse_edit_node(N_node node, C_command command, T_date date)
         if (!is_all_digits(command->argv[2]))
         {
             COMMAND_ERROR(command, " --The TID should be a number, but here is %s\nthe correct format of the \"edit(=)\" command are as follows:\n", command->argv[2]);
-            help_replace_tips();
+            edit_type_tips(node,command,date);
             exit(EXIT_FAILURE);
         }
         node->task->id = atoi(command->argv[2]);
@@ -755,7 +778,7 @@ void parse_edit_node(N_node node, C_command command, T_date date)
          */
         COMMAND_ERROR(command, " --The number of parameters does not match.\nthe correct format of the \"edit(=)\" command are as follows:");
         // help_edit();
-        help_replace_tips();
+        edit_type_tips(node,command,date);
         exit(EXIT_FAILURE);
     }
 }

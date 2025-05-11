@@ -16,18 +16,19 @@ char *replace_name_with_space(char *str)
 
 void help()
 {
-
+#if 0
     int flag = 0;
     if (strcmp(setting->color->value_set, "on") == 0)
     {
         strcpy(setting->color->value_set, "off");
         flag = 1;
     }
+#endif
     printf("%s\n", HEAD);
     printf("%s\n", USAGE);
     printf("All invalid commands: %s\n", COMMANDS);
     printf("%s\n", DATE_TYPE_HELP);
-    printf("%s\n", DATE_FOMAT_HELP);    
+    printf("%s\n", DATE_FOMAT_HELP);
     printf("%s\n", TID_HELP);
 #ifdef ONE
 #else
@@ -294,10 +295,17 @@ void help()
     const char **columns2[] = {KEY, VALUE};
     // text_print(columns2, sizeof(columns2) / sizeof(columns2[0]));
     text_print_help(columns2, sizeof(columns2) / sizeof(columns2[0]));
+#if 0
     if (flag == 1)
     {
         strcpy(setting->color->value_set, "on");
     }
+#endif
+    printf("\n");
+    printf("%s\n", AUTHOR);
+    printf("%s\n", WECHAT);
+    printf("%s\n", GITHUB);
+    printf("%s\n", LINK);
 }
 
 void help_show()
@@ -1561,9 +1569,9 @@ void help_edit_prefix()
     /* 第七列（命令解释列） */
     const char *instruction[] = {
         /*0*/ INSTRUCTION,
-        /*6*/ REPLACE_TASK_TODAY,
-        /*6*/ REPLACE_TASK_CURRENT_DATE,
-        /*7*/ REPLACE_TASK_SPECIFIC_DATE,
+        /*10*/ PREPEND_TO_TASK_TODAY,
+        /*11*/ PREPEND_TO_TASK_CURRENT_DATE,
+        /*11*/ PREPEND_TO_TASK_SPECIFIC_DATE,
         NULL,
     };
 
@@ -1736,9 +1744,9 @@ void help_edit_suffix()
     /* 第七列（命令解释列） */
     const char *instruction[] = {
         /*0*/ INSTRUCTION,
-        /*6*/ REPLACE_TASK_TODAY,
-        /*6*/ REPLACE_TASK_CURRENT_DATE,
-        /*7*/ REPLACE_TASK_SPECIFIC_DATE,
+        /*10*/ APPEND_TO_TASK_TODAY,
+        /*11*/ APPEND_TO_TASK_CURRENT_DATE,
+        /*11*/ APPEND_TO_TASK_SPECIFIC_DATE,
         NULL,
     };
 
